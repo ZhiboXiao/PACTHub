@@ -1,324 +1,258 @@
 [
   {
-    "id": "DEMO-001",
+    "id": "SAMPLE-001",
     "title": {
-      "zh": "几何体组合 A",
-      "en": "Geometric forms A"
+      "zh": "小鼠 1",
+      "en": "Mouse 1"
     },
-    "is_demo": true,
-    "category": "phantom",
-    "split": "train",
-    "tags": [
-      "synthetic-metadata",
-      "abstract-illustration",
-      "geometry"
-    ],
-    "description": {
-      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
-      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
-    },
-    "preview": "assets/images/sample-01.svg",
-    "dimensions": [
-      128,
-      128,
-      96
-    ],
-    "axis_order": [
-      "z",
-      "y",
-      "x"
-    ],
-    "spacing_mm": [
-      0.1,
-      0.1,
-      0.1
-    ],
-    "wavelength_nm": null,
-    "intensity_unit": {
-      "zh": "任意单位（仅演示）",
-      "en": "arbitrary unit (DEMO only)"
-    },
-    "data_version": null,
-    "provenance": {
-      "source_id": null,
-      "acquisition": {
-        "zh": "合成演示元数据，无实际采集。",
-        "en": "Synthetic demo metadata. No actual acquisition."
-      },
-      "reconstruction": {
-        "zh": "合成演示元数据，无实际重建。",
-        "en": "Synthetic demo metadata. No actual reconstruction."
-      },
-      "standardization_reference": null
-    },
-    "files": []
-  },
-  {
-    "id": "DEMO-002",
-    "title": {
-      "zh": "折线结构 A",
-      "en": "Polyline structure A"
-    },
-    "is_demo": true,
-    "category": "simulation",
+    "is_demo": false,
+    "category": "other",
     "split": "validation",
     "tags": [
-      "synthetic-metadata",
-      "abstract-illustration",
-      "polyline"
+      "01_mouse1"
     ],
     "description": {
-      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
-      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+      "zh": "项目提供的样本图像。名称依据原文件名；采集、重建与体数据元数据待补充。展示视图可调整取景、方向和亮度；完整原图不应用这些调整，原始像素不变。",
+      "en": "Project-supplied sample image. The name follows its source filename; acquisition, reconstruction and volume metadata are pending. Display views may adjust framing, orientation and brightness. Full-original views disable those adjustments; original pixels are unchanged."
     },
-    "preview": "assets/images/sample-02.svg",
-    "dimensions": [
-      128,
-      128,
-      96
-    ],
-    "axis_order": [
-      "z",
-      "y",
-      "x"
-    ],
-    "spacing_mm": [
-      0.1,
-      0.1,
-      0.1
-    ],
+    "preview": "assets/images/01_mouse1_20241213_151351.png",
+    "preview_layout": {
+      "source_width": 400,
+      "source_height": 800,
+      "rotation_deg": 90,
+      "crop": [
+        0,
+        0,
+        800,
+        400
+      ],
+      "display_gamma": 0.8
+    },
+    "dimensions": null,
+    "axis_order": null,
+    "spacing_mm": null,
     "wavelength_nm": null,
-    "intensity_unit": {
-      "zh": "任意单位（仅演示）",
-      "en": "arbitrary unit (DEMO only)"
-    },
+    "intensity_unit": null,
     "data_version": null,
     "provenance": {
-      "source_id": null,
-      "acquisition": {
-        "zh": "合成演示元数据，无实际采集。",
-        "en": "Synthetic demo metadata. No actual acquisition."
-      },
-      "reconstruction": {
-        "zh": "合成演示元数据，无实际重建。",
-        "en": "Synthetic demo metadata. No actual reconstruction."
-      },
+      "source_id": "01_mouse1_20241213_151351.png",
+      "acquisition": null,
+      "reconstruction": null,
       "standardization_reference": null
     },
     "files": []
   },
   {
-    "id": "DEMO-003",
+    "id": "SAMPLE-002",
     "title": {
-      "zh": "环形结构 A",
-      "en": "Ring structure A"
+      "zh": "小鼠 2",
+      "en": "Mouse 2"
     },
-    "is_demo": true,
-    "category": "phantom",
-    "split": "test",
+    "is_demo": false,
+    "category": "other",
+    "split": "validation",
     "tags": [
-      "synthetic-metadata",
-      "abstract-illustration",
-      "rings"
+      "02_mouse2"
     ],
     "description": {
-      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
-      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+      "zh": "项目提供的样本图像。名称依据原文件名；采集、重建与体数据元数据待补充。展示视图可调整取景、方向和亮度；完整原图不应用这些调整，原始像素不变。",
+      "en": "Project-supplied sample image. The name follows its source filename; acquisition, reconstruction and volume metadata are pending. Display views may adjust framing, orientation and brightness. Full-original views disable those adjustments; original pixels are unchanged."
     },
-    "preview": "assets/images/sample-03.svg",
-    "dimensions": [
-      128,
-      128,
-      96
-    ],
-    "axis_order": [
-      "z",
-      "y",
-      "x"
-    ],
-    "spacing_mm": [
-      0.1,
-      0.1,
-      0.1
-    ],
+    "preview": "assets/images/02_mouse2_20250103_173519.png",
+    "preview_layout": {
+      "source_width": 400,
+      "source_height": 800,
+      "rotation_deg": 90,
+      "crop": [
+        0,
+        0,
+        800,
+        400
+      ],
+      "display_gamma": 0.95
+    },
+    "dimensions": null,
+    "axis_order": null,
+    "spacing_mm": null,
     "wavelength_nm": null,
-    "intensity_unit": {
-      "zh": "任意单位（仅演示）",
-      "en": "arbitrary unit (DEMO only)"
-    },
+    "intensity_unit": null,
     "data_version": null,
     "provenance": {
-      "source_id": null,
-      "acquisition": {
-        "zh": "合成演示元数据，无实际采集。",
-        "en": "Synthetic demo metadata. No actual acquisition."
-      },
-      "reconstruction": {
-        "zh": "合成演示元数据，无实际重建。",
-        "en": "Synthetic demo metadata. No actual reconstruction."
-      },
+      "source_id": "02_mouse2_20250103_173519.png",
+      "acquisition": null,
+      "reconstruction": null,
       "standardization_reference": null
     },
     "files": []
   },
   {
-    "id": "DEMO-004",
+    "id": "SAMPLE-003",
     "title": {
-      "zh": "几何体组合 B",
-      "en": "Geometric forms B"
+      "zh": "小鼠脑",
+      "en": "Mouse brain"
     },
-    "is_demo": true,
-    "category": "simulation",
-    "split": "train",
+    "is_demo": false,
+    "category": "other",
+    "split": "validation",
     "tags": [
-      "synthetic-metadata",
-      "abstract-illustration",
-      "geometry"
+      "03_mouse_brain"
     ],
     "description": {
-      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
-      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+      "zh": "项目提供的样本图像。名称依据原文件名；采集、重建与体数据元数据待补充。展示视图可调整取景、方向和亮度；完整原图不应用这些调整，原始像素不变。",
+      "en": "Project-supplied sample image. The name follows its source filename; acquisition, reconstruction and volume metadata are pending. Display views may adjust framing, orientation and brightness. Full-original views disable those adjustments; original pixels are unchanged."
     },
-    "preview": "assets/images/sample-04.svg",
-    "dimensions": [
-      192,
-      192,
-      128
-    ],
-    "axis_order": [
-      "z",
-      "y",
-      "x"
-    ],
-    "spacing_mm": [
-      0.08,
-      0.08,
-      0.08
-    ],
+    "preview": "assets/images/03_mouse_brain_20230705_160311.png",
+    "preview_layout": {
+      "source_width": 400,
+      "source_height": 800,
+      "rotation_deg": 90,
+      "crop": [
+        260,
+        95,
+        300,
+        240
+      ],
+      "display_gamma": 1
+    },
+    "dimensions": null,
+    "axis_order": null,
+    "spacing_mm": null,
     "wavelength_nm": null,
-    "intensity_unit": {
-      "zh": "任意单位（仅演示）",
-      "en": "arbitrary unit (DEMO only)"
-    },
+    "intensity_unit": null,
     "data_version": null,
     "provenance": {
-      "source_id": null,
-      "acquisition": {
-        "zh": "合成演示元数据，无实际采集。",
-        "en": "Synthetic demo metadata. No actual acquisition."
-      },
-      "reconstruction": {
-        "zh": "合成演示元数据，无实际重建。",
-        "en": "Synthetic demo metadata. No actual reconstruction."
-      },
+      "source_id": "03_mouse_brain_20230705_160311.png",
+      "acquisition": null,
+      "reconstruction": null,
       "standardization_reference": null
     },
     "files": []
   },
   {
-    "id": "DEMO-005",
+    "id": "SAMPLE-004",
     "title": {
-      "zh": "折线结构 B",
-      "en": "Polyline structure B"
+      "zh": "叶片仿体",
+      "en": "Leaf phantom"
     },
-    "is_demo": true,
+    "is_demo": false,
     "category": "phantom",
     "split": "validation",
     "tags": [
-      "synthetic-metadata",
-      "abstract-illustration",
-      "polyline"
+      "04_leaf_phantom"
     ],
     "description": {
-      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
-      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+      "zh": "项目提供的样本图像。名称依据原文件名；采集、重建与体数据元数据待补充。展示视图可调整取景、方向和亮度；完整原图不应用这些调整，原始像素不变。",
+      "en": "Project-supplied sample image. The name follows its source filename; acquisition, reconstruction and volume metadata are pending. Display views may adjust framing, orientation and brightness. Full-original views disable those adjustments; original pixels are unchanged."
     },
-    "preview": "assets/images/sample-05.svg",
-    "dimensions": [
-      192,
-      192,
-      128
-    ],
-    "axis_order": [
-      "z",
-      "y",
-      "x"
-    ],
-    "spacing_mm": [
-      0.08,
-      0.08,
-      0.08
-    ],
+    "preview": "assets/images/04_leaf_phantom_20241115_104329.png",
+    "preview_layout": {
+      "source_width": 400,
+      "source_height": 800,
+      "rotation_deg": 90,
+      "crop": [
+        175,
+        0,
+        455,
+        400
+      ],
+      "display_gamma": 1
+    },
+    "dimensions": null,
+    "axis_order": null,
+    "spacing_mm": null,
     "wavelength_nm": null,
-    "intensity_unit": {
-      "zh": "任意单位（仅演示）",
-      "en": "arbitrary unit (DEMO only)"
-    },
+    "intensity_unit": null,
     "data_version": null,
     "provenance": {
-      "source_id": null,
-      "acquisition": {
-        "zh": "合成演示元数据，无实际采集。",
-        "en": "Synthetic demo metadata. No actual acquisition."
-      },
-      "reconstruction": {
-        "zh": "合成演示元数据，无实际重建。",
-        "en": "Synthetic demo metadata. No actual reconstruction."
-      },
+      "source_id": "04_leaf_phantom_20241115_104329.png",
+      "acquisition": null,
+      "reconstruction": null,
       "standardization_reference": null
     },
     "files": []
   },
   {
-    "id": "DEMO-006",
+    "id": "SAMPLE-005",
     "title": {
-      "zh": "环形结构 B",
-      "en": "Ring structure B"
+      "zh": "分辨率仿体",
+      "en": "Resolution phantom"
     },
-    "is_demo": true,
-    "category": "simulation",
-    "split": "test",
+    "is_demo": false,
+    "category": "phantom",
+    "split": "validation",
     "tags": [
-      "synthetic-metadata",
-      "abstract-illustration",
-      "rings"
+      "05_resolution_phantom"
     ],
     "description": {
-      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
-      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+      "zh": "项目提供的样本图像。名称依据原文件名；采集、重建与体数据元数据待补充。展示视图可调整取景、方向和亮度；完整原图不应用这些调整，原始像素不变。",
+      "en": "Project-supplied sample image. The name follows its source filename; acquisition, reconstruction and volume metadata are pending. Display views may adjust framing, orientation and brightness. Full-original views disable those adjustments; original pixels are unchanged."
     },
-    "preview": "assets/images/sample-06.svg",
-    "dimensions": [
-      192,
-      192,
-      128
-    ],
-    "axis_order": [
-      "z",
-      "y",
-      "x"
-    ],
-    "spacing_mm": [
-      0.08,
-      0.08,
-      0.08
-    ],
+    "preview": "assets/images/05_resolution_phantom_20241219_103441.png",
+    "preview_layout": {
+      "source_width": 400,
+      "source_height": 800,
+      "rotation_deg": 90,
+      "crop": [
+        0,
+        0,
+        800,
+        400
+      ],
+      "display_gamma": 1
+    },
+    "dimensions": null,
+    "axis_order": null,
+    "spacing_mm": null,
     "wavelength_nm": null,
-    "intensity_unit": {
-      "zh": "任意单位（仅演示）",
-      "en": "arbitrary unit (DEMO only)"
-    },
+    "intensity_unit": null,
     "data_version": null,
     "provenance": {
-      "source_id": null,
-      "acquisition": {
-        "zh": "合成演示元数据，无实际采集。",
-        "en": "Synthetic demo metadata. No actual acquisition."
-      },
-      "reconstruction": {
-        "zh": "合成演示元数据，无实际重建。",
-        "en": "Synthetic demo metadata. No actual reconstruction."
-      },
+      "source_id": "05_resolution_phantom_20241219_103441.png",
+      "acquisition": null,
+      "reconstruction": null,
+      "standardization_reference": null
+    },
+    "files": []
+  },
+  {
+    "id": "SAMPLE-006",
+    "title": {
+      "zh": "手部",
+      "en": "Hand"
+    },
+    "is_demo": false,
+    "category": "other",
+    "split": "validation",
+    "tags": [
+      "06_hand"
+    ],
+    "description": {
+      "zh": "项目提供的样本图像。名称依据原文件名；采集、重建与体数据元数据待补充。展示视图可调整取景、方向和亮度；完整原图不应用这些调整，原始像素不变。",
+      "en": "Project-supplied sample image. The name follows its source filename; acquisition, reconstruction and volume metadata are pending. Display views may adjust framing, orientation and brightness. Full-original views disable those adjustments; original pixels are unchanged."
+    },
+    "preview": "assets/images/06_hand_20241128_174227.png",
+    "preview_layout": {
+      "source_width": 800,
+      "source_height": 800,
+      "rotation_deg": 0,
+      "crop": [
+        0,
+        0,
+        800,
+        800
+      ],
+      "display_gamma": 0.97
+    },
+    "dimensions": null,
+    "axis_order": null,
+    "spacing_mm": null,
+    "wavelength_nm": null,
+    "intensity_unit": null,
+    "data_version": null,
+    "provenance": {
+      "source_id": "06_hand_20241128_174227.png",
+      "acquisition": null,
+      "reconstruction": null,
       "standardization_reference": null
     },
     "files": []
