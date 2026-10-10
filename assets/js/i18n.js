@@ -2,6 +2,16 @@
 'use strict';
 (() => {
   const messages = {
+"enhancement.title":{"zh": "增强前后，直观对比。", "en": "Before and after, side by side."},
+"enhancement.help":{"zh": "拖动中间分界线查看增强前后；也可使用方向键、Home 和 End。", "en": "Drag the divider to compare, or use the arrow keys, Home and End."},
+"enhancement.slider":{"zh": "增强前后分界线", "en": "Before and after comparison divider"},
+"enhancement.before":{"zh": "增强前", "en": "Before"},
+"enhancement.after":{"zh": "增强后", "en": "After"},
+"enhancement.gt":{"zh": "GT · 参考图像", "en": "GT · Reference"},
+"enhancement.gtAlt":{"zh": "GT 参考图像，与上方保持相同方向和视野", "en": "GT reference image, matching the orientation and field of view above"},
+"enhancement.note":{"zh": "项目提供图像 · 统一旋转 90° · 完整视野 · 未作额外亮度调整", "en": "Project-supplied images · Rotated 90° together · Full field of view · No added brightness adjustments"},
+"enhancement.value":{"zh": "增强前 {value}%，增强后 {after}%", "en": "Before {value}%, after {after}%"},
+
   "sample.displayAdjusted": {"zh":"项目图像 · 展示亮度调整", "en":"Project image · display brightness adjusted"},
 "sample.imageProvided":{"zh": "项目提供图像", "en": "Project-supplied image"},"sample.showOriginal":{"zh": "查看完整原图 ↗", "en": "View full original ↗"},"sample.showFramed":{"zh": "返回展示视图 ↩", "en": "Back to framed view ↩"},
   "hero.videoCaption": {
