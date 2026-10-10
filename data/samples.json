@@ -1,0 +1,326 @@
+[
+  {
+    "id": "DEMO-001",
+    "title": {
+      "zh": "几何体组合 A",
+      "en": "Geometric forms A"
+    },
+    "is_demo": true,
+    "category": "phantom",
+    "split": "train",
+    "tags": [
+      "synthetic-metadata",
+      "abstract-illustration",
+      "geometry"
+    ],
+    "description": {
+      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
+      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+    },
+    "preview": "assets/images/sample-01.svg",
+    "dimensions": [
+      128,
+      128,
+      96
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": {
+      "zh": "任意单位（仅演示）",
+      "en": "arbitrary unit (DEMO only)"
+    },
+    "data_version": null,
+    "provenance": {
+      "source_id": null,
+      "acquisition": {
+        "zh": "合成演示元数据，无实际采集。",
+        "en": "Synthetic demo metadata. No actual acquisition."
+      },
+      "reconstruction": {
+        "zh": "合成演示元数据，无实际重建。",
+        "en": "Synthetic demo metadata. No actual reconstruction."
+      },
+      "standardization_reference": null
+    },
+    "files": []
+  },
+  {
+    "id": "DEMO-002",
+    "title": {
+      "zh": "折线结构 A",
+      "en": "Polyline structure A"
+    },
+    "is_demo": true,
+    "category": "simulation",
+    "split": "validation",
+    "tags": [
+      "synthetic-metadata",
+      "abstract-illustration",
+      "polyline"
+    ],
+    "description": {
+      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
+      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+    },
+    "preview": "assets/images/sample-02.svg",
+    "dimensions": [
+      128,
+      128,
+      96
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": {
+      "zh": "任意单位（仅演示）",
+      "en": "arbitrary unit (DEMO only)"
+    },
+    "data_version": null,
+    "provenance": {
+      "source_id": null,
+      "acquisition": {
+        "zh": "合成演示元数据，无实际采集。",
+        "en": "Synthetic demo metadata. No actual acquisition."
+      },
+      "reconstruction": {
+        "zh": "合成演示元数据，无实际重建。",
+        "en": "Synthetic demo metadata. No actual reconstruction."
+      },
+      "standardization_reference": null
+    },
+    "files": []
+  },
+  {
+    "id": "DEMO-003",
+    "title": {
+      "zh": "环形结构 A",
+      "en": "Ring structure A"
+    },
+    "is_demo": true,
+    "category": "phantom",
+    "split": "test",
+    "tags": [
+      "synthetic-metadata",
+      "abstract-illustration",
+      "rings"
+    ],
+    "description": {
+      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
+      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+    },
+    "preview": "assets/images/sample-03.svg",
+    "dimensions": [
+      128,
+      128,
+      96
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": {
+      "zh": "任意单位（仅演示）",
+      "en": "arbitrary unit (DEMO only)"
+    },
+    "data_version": null,
+    "provenance": {
+      "source_id": null,
+      "acquisition": {
+        "zh": "合成演示元数据，无实际采集。",
+        "en": "Synthetic demo metadata. No actual acquisition."
+      },
+      "reconstruction": {
+        "zh": "合成演示元数据，无实际重建。",
+        "en": "Synthetic demo metadata. No actual reconstruction."
+      },
+      "standardization_reference": null
+    },
+    "files": []
+  },
+  {
+    "id": "DEMO-004",
+    "title": {
+      "zh": "几何体组合 B",
+      "en": "Geometric forms B"
+    },
+    "is_demo": true,
+    "category": "simulation",
+    "split": "train",
+    "tags": [
+      "synthetic-metadata",
+      "abstract-illustration",
+      "geometry"
+    ],
+    "description": {
+      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
+      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+    },
+    "preview": "assets/images/sample-04.svg",
+    "dimensions": [
+      192,
+      192,
+      128
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.08,
+      0.08,
+      0.08
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": {
+      "zh": "任意单位（仅演示）",
+      "en": "arbitrary unit (DEMO only)"
+    },
+    "data_version": null,
+    "provenance": {
+      "source_id": null,
+      "acquisition": {
+        "zh": "合成演示元数据，无实际采集。",
+        "en": "Synthetic demo metadata. No actual acquisition."
+      },
+      "reconstruction": {
+        "zh": "合成演示元数据，无实际重建。",
+        "en": "Synthetic demo metadata. No actual reconstruction."
+      },
+      "standardization_reference": null
+    },
+    "files": []
+  },
+  {
+    "id": "DEMO-005",
+    "title": {
+      "zh": "折线结构 B",
+      "en": "Polyline structure B"
+    },
+    "is_demo": true,
+    "category": "phantom",
+    "split": "validation",
+    "tags": [
+      "synthetic-metadata",
+      "abstract-illustration",
+      "polyline"
+    ],
+    "description": {
+      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
+      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+    },
+    "preview": "assets/images/sample-05.svg",
+    "dimensions": [
+      192,
+      192,
+      128
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.08,
+      0.08,
+      0.08
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": {
+      "zh": "任意单位（仅演示）",
+      "en": "arbitrary unit (DEMO only)"
+    },
+    "data_version": null,
+    "provenance": {
+      "source_id": null,
+      "acquisition": {
+        "zh": "合成演示元数据，无实际采集。",
+        "en": "Synthetic demo metadata. No actual acquisition."
+      },
+      "reconstruction": {
+        "zh": "合成演示元数据，无实际重建。",
+        "en": "Synthetic demo metadata. No actual reconstruction."
+      },
+      "standardization_reference": null
+    },
+    "files": []
+  },
+  {
+    "id": "DEMO-006",
+    "title": {
+      "zh": "环形结构 B",
+      "en": "Ring structure B"
+    },
+    "is_demo": true,
+    "category": "simulation",
+    "split": "test",
+    "tags": [
+      "synthetic-metadata",
+      "abstract-illustration",
+      "rings"
+    ],
+    "description": {
+      "zh": "这是一条完全合成的网站索引演示记录；数字仅用于测试字段显示，不对应真实体数据、采集参数或正式数据划分。",
+      "en": "This is a fully synthetic website index demo. Numbers only test field display and do not represent real volume data, acquisition parameters or official dataset splits."
+    },
+    "preview": "assets/images/sample-06.svg",
+    "dimensions": [
+      192,
+      192,
+      128
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.08,
+      0.08,
+      0.08
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": {
+      "zh": "任意单位（仅演示）",
+      "en": "arbitrary unit (DEMO only)"
+    },
+    "data_version": null,
+    "provenance": {
+      "source_id": null,
+      "acquisition": {
+        "zh": "合成演示元数据，无实际采集。",
+        "en": "Synthetic demo metadata. No actual acquisition."
+      },
+      "reconstruction": {
+        "zh": "合成演示元数据，无实际重建。",
+        "en": "Synthetic demo metadata. No actual reconstruction."
+      },
+      "standardization_reference": null
+    },
+    "files": []
+  }
+]

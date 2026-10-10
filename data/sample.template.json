@@ -1,0 +1,29 @@
+{
+  "id": "REPLACE-WITH-PUBLIC-ID",
+  "title": {
+    "zh": "待填写公开样本名称",
+    "en": "Public sample name to be provided"
+  },
+  "is_demo": false,
+  "category": "phantom",
+  "split": "unspecified",
+  "tags": [],
+  "description": {
+    "zh": "将已有标准化数据映射到公开索引。发布前补齐真实维度、单位和来源，并移除此说明。",
+    "en": "Map existing standardized data into this public index. Provide real dimensions, units and provenance before release, then remove this placeholder."
+  },
+  "preview": null,
+  "dimensions": null,
+  "axis_order": null,
+  "spacing_mm": null,
+  "wavelength_nm": null,
+  "intensity_unit": null,
+  "data_version": null,
+  "provenance": {
+    "source_id": null,
+    "acquisition": null,
+    "reconstruction": null,
+    "standardization_reference": null
+  },
+  "files": []
+}

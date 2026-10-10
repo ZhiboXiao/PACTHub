@@ -1,0 +1,87 @@
+{
+  "site_title": "PACTHub",
+  "demo_mode": true,
+  "release_version": null,
+  "license": null,
+  "citation": null,
+  "doi": null,
+  "algorithm": {
+    "name": null,
+    "status": {
+      "zh": "方法资料准备中",
+      "en": "Method resources in preparation"
+    },
+    "repository_url": null,
+    "weights_url": null,
+    "summary": null
+  },
+  "downloads": [
+    {
+      "id": "full",
+      "title": {
+        "zh": "数据集",
+        "en": "Dataset"
+      },
+      "description": {
+        "zh": "标准化的三维光声成像数据、样本索引与发布说明。",
+        "en": "Standardized 3D photoacoustic imaging data, sample index and release notes."
+      },
+      "url": null,
+      "version": null,
+      "size_label": null,
+      "sha256": null
+    },
+    {
+      "id": "example",
+      "title": {
+        "zh": "轻量示例包",
+        "en": "Starter sample package"
+      },
+      "description": {
+        "zh": "用于首次读取与流程验证的代表样本和使用示例。",
+        "en": "Representative samples and usage examples for a first read and workflow validation."
+      },
+      "url": null,
+      "version": null,
+      "size_label": null,
+      "sha256": null
+    },
+    {
+      "id": "algorithm",
+      "title": {
+        "zh": "算法与复现资源",
+        "en": "Method and reproduction resources"
+      },
+      "description": {
+        "zh": "配套图像增强方法的代码、配置与复现说明。",
+        "en": "Code, configuration and reproduction instructions for the accompanying image enhancement method."
+      },
+      "url": null,
+      "version": null,
+      "size_label": null,
+      "sha256": null
+    }
+  ],
+  "description": null,
+  "overview_summary": null,
+  "paper": {
+    "title": null,
+    "summary": null,
+    "url": null
+  },
+  "team": {
+    "members": [],
+    "contribution": null,
+    "contribution_url": null
+  },
+  "hero": {
+    "mp4_url": "assets/media/hero-pact.mp4",
+    "webm_url": null,
+    "poster_url": "assets/images/hero-poster.jpg",
+    "object_position": "60% 50%",
+    "media_label": {
+      "zh": "项目提供视频 · 三维影像展示",
+      "en": "Project-provided video · 3D visualization"
+    }
+  }
+}

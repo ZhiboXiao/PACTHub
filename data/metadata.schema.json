@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "3D PACT website public sample index",
+  "description": "Public website index mapping, not a replacement for the source dataset standard. The sample template deliberately allows nulls while preparing content; publication needs release checks.",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/sample"
+  },
+  "$defs": {
+    "sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "is_demo",
+        "category",
+        "split",
+        "tags",
+        "description",
+        "preview",
+        "dimensions",
+        "axis_order",
+        "spacing_mm",
+        "wavelength_nm",
+        "intensity_unit",
+        "data_version",
+        "provenance",
+        "files"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+        },
+        "title": {
+          "$ref": "#/$defs/localizedTitle"
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "phantom",
+            "simulation",
+            "in-vivo",
+            "ex-vivo",
+            "other"
+          ]
+        },
+        "split": {
+          "type": "string",
+          "enum": [
+            "train",
+            "validation",
+            "test",
+            "unspecified"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "description": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "preview": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Relative project URL or HTTPS URL; abstract illustrations must not be described as scans."
+        },
+        "dimensions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Array dimension lengths, ordered by axis_order."
+        },
+        "axis_order": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "x",
+              "y",
+              "z"
+            ]
+          },
+          "uniqueItems": true,
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Array axes, not anatomical orientation; real coordinate convention belongs in documentation."
+        },
+        "spacing_mm": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Voxel spacing in millimetres, ordered by axis_order."
+        },
+        "wavelength_nm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "description": "Single acquisition wavelength in nanometres; extend deliberately if multi-wavelength."
+        },
+        "intensity_unit": {
+          "$ref": "#/$defs/nullableLocalizedText"
+        },
+        "data_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_id",
+            "acquisition",
+            "reconstruction",
+            "standardization_reference"
+          ],
+          "properties": {
+            "source_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "acquisition": {
+              "$ref": "#/$defs/nullableLocalizedText"
+            },
+            "reconstruction": {
+              "$ref": "#/$defs/nullableLocalizedText"
+            },
+            "standardization_reference": {
+              "$ref": "#/$defs/nullableLocalizedText"
+            }
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "format",
+              "url",
+              "size_bytes",
+              "sha256"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "format": {
+                "type": "string"
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "size_bytes": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "localizedText": {
+      "description": "An existing plain string, or an explicit Chinese/English text map. Missing translations fall back to Chinese, then English. The website does not automatically translate scientific content.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "zh": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "localizedTitle": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "zh": {
+              "type": "string",
+              "minLength": 1
+            },
+            "en": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      ]
+    },
+    "nullableLocalizedText": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/localizedText"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}
