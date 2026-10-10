@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" data-i18n-content="docs.description" content="PACTHub 中英双语网站指南。示例为合成 DEMO，真实研究材料待提供与核验。">
+  <title data-i18n="docs.title.algorithm-guide">算法接入 · PACTHub</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style data-doc-style>[data-lang-section][hidden]{display:none!important}.doc-content>.doc-topbar,.doc-content>.doc-nav,.doc-content>.doc-footer{width:100%}.doc-content>.doc-topbar{padding-top:0;align-items:center;flex-wrap:wrap}.doc-content>.doc-nav{padding:18px 0 26px}.doc-toolbar-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.doc-content .language-switch{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--line,#ccd4df);border-radius:24px;background:var(--surface,#fff)}.doc-content .language-switch button{font:inherit;font-size:13px;min-width:44px;min-height:36px;padding:4px 12px;border:0;border-radius:20px;background:transparent;color:var(--text,#17283b);cursor:pointer}.doc-content .language-switch button[aria-pressed=true]{background:var(--accent,#335ac9);color:#fff}.doc-content .language-switch button:focus-visible{outline:3px solid var(--accent,#335ac9);outline-offset:3px}.doc-content [data-lang-section]{margin:0}.doc-content>.doc-footer{margin-top:38px;padding-bottom:0}.doc-content .task-list input{flex-shrink:0}</style>
+  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/docs-i18n.js" defer></script>
+</head>
+<body class="doc-page">
+  <!-- Keep this guide's complete Chinese and English content synchronized with docs/algorithm-guide.md. -->
+  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">跳转到指南正文</a>
+  <main id="main" class="doc-content">
+    <header class="doc-topbar">
+      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="返回 PACTHub 首页"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← 返回首页</a></div>
+      <div class="language-switch" role="group" aria-label="选择语言" data-i18n-aria-label="docs.language">
+        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="true">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </header>
+    <nav class="doc-nav" aria-label="文档导航" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" data-i18n="docs.nav.project-guide">项目说明</a><a href="content-map.html" data-i18n="docs.nav.content-map">内容地图</a><a href="data-guide.html" data-i18n="docs.nav.data-guide">数据接入</a><a href="algorithm-guide.html" aria-current="page" data-i18n="docs.nav.algorithm-guide">算法接入</a><a href="release-checklist.html" data-i18n="docs.nav.release-checklist">发布清单</a></nav>
+    <article id="guide-content" tabindex="-1">
+      <section data-lang-section="zh" lang="zh-CN">
+<h1 id="已有-ai-算法接入指南" data-doc-anchor="已有-ai-算法接入指南">已有 AI 算法接入指南</h1>
+<p>项目方的 AI 算法已经完成。这里说明如何把已有成果接入数据集网站，并整理公开发布所需的可复现信息；不要求重新设计或重新实现算法。</p>
+<h2 id="1-先明确展示与可用性" data-doc-anchor="1-先明确展示与可用性">1. 先明确展示与可用性</h2>
+<p>网站应分别说明：</p>
+<ul>
+<li>算法解决的任务、适用数据和已知限制。</li>
+<li>算法本身的完成状态。</li>
+<li>代码、权重、论文、使用文档是否已公开，以及是否需要申请访问。</li>
+<li>网站接入状态；“算法已完成”不自动意味着“当前站点可运行算法”。</li>
+</ul>
+<p>当前框架没有在线推理后端，也不包含算法源码、模型权重、性能数据或用户数据上传功能。有关资源未提供时保持待接入状态，不能给空链接显示“下载”或“在线运行”。</p>
+<h2 id="2-整理最小公开材料" data-doc-anchor="2-整理最小公开材料">2. 整理最小公开材料</h2>
+<p>建议从现有项目提取以下材料，避免另造技术结论：</p>
+<ol type="1">
+<li>算法名称与简短介绍，明确输入信号/体数据和输出内容。</li>
+<li>实际代码仓库、版本标签或精确提交，以及对应论文或技术说明。</li>
+<li>合法可分发的模型权重、对应配置、版本、文件大小和校验值。</li>
+<li>环境说明：操作系统、语言/框架、依赖锁定文件、CPU/GPU 与显存需求。</li>
+<li>已验证的安装和推理步骤，包括输入目录结构、配置和输出路径。</li>
+<li>使用许可证、权重许可、引用方式，以及适用范围和已知失败情形。</li>
+</ol>
+<p>材料尚未获得公开授权时可以继续完善本地框架；不要先公开文件再补审批。</p>
+<h2 id="3-与已完成数据标准的对应关系" data-doc-anchor="3-与已完成数据标准的对应关系">3. 与已完成数据标准的对应关系</h2>
+<p>算法说明应引用现有数据标准及其版本，并核实：</p>
+<ul>
+<li>数组轴顺序、坐标系、数据类型、单位和体素间距。</li>
+<li>波长、采样率、阵列几何、采集或重建参数中哪些是算法必需输入。</li>
+<li>数据标准中的原字段如何映射到网站索引；网站索引不是模型输入文件格式。</li>
+<li>重采样、归一化、裁剪、掩膜和缺失值处理的实际步骤。</li>
+<li>输出的形状、单位、空间对应关系，以及后处理方式。</li>
+</ul>
+<p>如果实际算法不需要某个字段，明确标注不适用；不要为满足页面模板而捏造参数。网站模板字段不足时，应扩展并校验映射层，而不是静默改变已有标准。</p>
+<h2 id="4-可复现验证" data-doc-anchor="4-可复现验证">4. 可复现验证</h2>
+<p>用已获准用于复现的真实样例验证一次完整流程，记录实际结果：</p>
+<ul>
+<li>数据、代码、权重、配置的版本和校验值。</li>
+<li>环境、硬件、随机种子，以及是否存在非确定性算子。</li>
+<li>预处理 → 推理/重建 → 后处理的真实命令和顺序。</li>
+<li>预期输出名称、格式、维度、单位及可接受误差范围。</li>
+<li>若有评估指标，附定义、参考真值、划分、聚合方式和运行条件。</li>
+<li>若展示速度、内存或 GPU 开销，附测量口径和硬件条件。</li>
+</ul>
+<p>本仓库的 DEMO 是页面测试元数据，不能用于证明算法效果或生成有效科学基准。尚未交付的结果应写“待提供/待核验”，不要用虚构 PSNR、SSIM、准确率或耗时占位。</p>
+<h2 id="5-在网站中接入" data-doc-anchor="5-在网站中接入">5. 在网站中接入</h2>
+<ol type="1">
+<li>更新 <code>data/site-config.json</code> 的 <code>algorithm.name</code>、<code>algorithm.status</code>、<code>algorithm.repository_url</code>、<code>algorithm.weights_url</code>，保留其他未知字段的 <code>null</code>。仓库和权重链接必须实际核验。</li>
+<li>更新算法介绍页面，使用项目方批准的文字、图表和结果。示意图继续注明其性质。</li>
+<li>用清楚的标签区分“阅读文档”“查看代码”“获取权重”“申请访问”。</li>
+<li>同步更新数据版本、算法版本与引用信息。不要让最新数据默认关联到不兼容的旧权重。</li>
+<li>在空白浏览器会话验证每个链接和访问条件，并按<a href="release-checklist.html">发布清单</a>完成审核。</li>
+</ol>
+<p>当前配置提供算法名称、摘要、状态、仓库与权重入口；论文、环境、命令、指标和版本对应关系可先写入此指南的维护版与 HTML 版。若为它们增加结构化配置字段，也需同步页面读取逻辑，不能只添加 JSON 后假定会自动显示。<code>downloads</code> 中的算法资料包入口独立配置，其 <code>url</code>、<code>version</code>、<code>size_label</code>、<code>sha256</code> 也需指向真实发布包。</p>
+<p>此框架可在外部提供已验证的代码、权重和文档链接。若以后需要在线推理，应另行设计后端、访问控制、计算资源、隐私处理和服务限制；当前静态站点不会自动获得这些能力。</p>
+<h2 id="6-尚待项目方提供的接入信息" data-doc-anchor="6-尚待项目方提供的接入信息">6. 尚待项目方提供的接入信息</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>正式算法名与对外简介。</label></li>
+<li><label><input type="checkbox" / disabled>真实代码/文档/论文地址及对应版本。</label></li>
+<li><label><input type="checkbox" / disabled>权重是否开放、下载位置、校验值及许可。</label></li>
+<li><label><input type="checkbox" / disabled>已验证的最小运行示例与环境说明。</label></li>
+<li><label><input type="checkbox" / disabled>获准公开的结果、限制与引用。</label></li>
+</ul>
+<p>以上是网站接入所需材料清单，不是对研究进度的判断。</p>
+
+      </section>
+      <section data-lang-section="en" lang="en" hidden inert aria-hidden="true">
+<h1 id="en-已有-ai-算法接入指南" data-doc-anchor="已有-ai-算法接入指南">Guide to integrating the existing AI algorithm</h1>
+<p>The project team's AI algorithm is already complete. This guide explains how to connect the existing work to the dataset website and assemble the reproducibility information needed for public release. It does not require redesigning or reimplementing the algorithm.</p>
+<h2 id="en-1-先明确展示与可用性" data-doc-anchor="1-先明确展示与可用性">1. Separate presentation from availability</h2>
+<p>The website should describe each of the following separately:</p>
+<ul>
+<li>The task the algorithm addresses, the data it supports, and its known limitations.</li>
+<li>The completion status of the algorithm itself.</li>
+<li>Whether code, weights, papers, and documentation are public, and whether access must be requested.</li>
+<li>Website integration status. “Algorithm complete” does not automatically mean “the current website can run the algorithm.”</li>
+</ul>
+<p>The current framework has no online inference backend and includes no algorithm source code, model weights, performance results, or user-data upload feature. Resources that have not been supplied must remain pending integration. Empty links must not be labeled “Download” or “Run online.”</p>
+<h2 id="en-2-整理最小公开材料" data-doc-anchor="2-整理最小公开材料">2. Assemble the minimum public materials</h2>
+<p>Extract the following from the existing project rather than creating new technical claims:</p>
+<ol type="1">
+<li>The algorithm name and a short introduction, specifying the input signals or volumes and the outputs.</li>
+<li>The actual code repository, release tag or exact commit, and corresponding paper or technical description.</li>
+<li>Model weights that may legally be distributed, with their configuration, version, file size, and checksum.</li>
+<li>Environment requirements: operating system, language/framework, dependency lockfile, CPU/GPU requirements, and GPU memory needs.</li>
+<li>Verified installation and inference steps, including input directory structure, configuration, and output paths.</li>
+<li>Code and weight licenses, citation instructions, intended scope, and known failure cases.</li>
+</ol>
+<p>You can continue improving the local framework while public-release approval is pending. Do not publish files first and seek approval afterward.</p>
+<h2 id="en-3-与已完成数据标准的对应关系" data-doc-anchor="3-与已完成数据标准的对应关系">3. Map to the completed data standard</h2>
+<p>Algorithm documentation should reference the existing data standard and its version, and verify:</p>
+<ul>
+<li>Array axis order, coordinate system, data types, units, and voxel spacing.</li>
+<li>Which wavelengths, sampling rates, array geometries, and acquisition or reconstruction parameters the algorithm actually requires.</li>
+<li>How fields in the data standard map to the website index. The website index is not the model's input-file format.</li>
+<li>The actual resampling, normalization, cropping, masking, and missing-value procedures.</li>
+<li>Output shape, units, spatial alignment, and postprocessing.</li>
+</ul>
+<p>If the algorithm does not need a field, explicitly mark it as not applicable. Do not invent parameters to satisfy a page template. If the website template lacks necessary fields, extend and validate the mapping layer rather than silently changing the existing standard.</p>
+<h2 id="en-4-可复现验证" data-doc-anchor="4-可复现验证">4. Verify reproducibility</h2>
+<p>Run the full workflow on a real example approved for reproducibility, and record the actual results:</p>
+<ul>
+<li>Versions and checksums for the data, code, weights, and configuration.</li>
+<li>Environment, hardware, random seeds, and any nondeterministic operations.</li>
+<li>The actual commands and order for preprocessing → inference/reconstruction → postprocessing.</li>
+<li>Expected output names, formats, dimensions, units, and acceptable error tolerances.</li>
+<li>For evaluation metrics: definitions, reference ground truth, splits, aggregation methods, and execution conditions.</li>
+<li>For speed, memory, or GPU measurements: the measurement method and hardware conditions.</li>
+</ul>
+<p>The DEMO records in this repository are synthetic metadata for page testing. They cannot establish algorithm performance or produce a valid scientific benchmark. Results not yet supplied should be labeled “Pending provision/verification.” Do not insert fabricated PSNR, SSIM, accuracy, or runtime values.</p>
+<h2 id="en-5-在网站中接入" data-doc-anchor="5-在网站中接入">5. Integrate with the website</h2>
+<ol type="1">
+<li>Update <code>algorithm.name</code>, <code>algorithm.status</code>, <code>algorithm.repository_url</code>, and <code>algorithm.weights_url</code> in <code>data/site-config.json</code>. Keep other unknown fields as <code>null</code>. Verify repository and weight links in practice.</li>
+<li>Update the algorithm section using text, figures, and results approved by the project team. Continue identifying illustrative figures as illustrations.</li>
+<li>Distinguish “Read documentation,” “View code,” “Get weights,” and “Request access” with clear labels.</li>
+<li>Update data versions, algorithm versions, and citations together. Do not associate the latest data with incompatible older weights by default.</li>
+<li>Check every link and its access conditions in a fresh browser session, then complete the <a href="release-checklist.html">release checklist</a>.</li>
+</ol>
+<p>The current configuration provides the algorithm name, summary, status, repository, and weights entry points. Papers, environment details, commands, metrics, and version compatibility can initially be maintained in this guide's Markdown and HTML versions. If you add structured configuration fields, update the page's rendering logic too; adding JSON alone does not make it appear automatically. The algorithm resource package in <code>downloads</code> is configured separately. Its <code>url</code>, <code>version</code>, <code>size_label</code>, and <code>sha256</code> must describe an actual released package.</p>
+<p>This framework can link to verified external code, weights, and documentation. Online inference would require a separately designed backend, access control, computing resources, privacy handling, and service limits. The current static website does not automatically provide these capabilities.</p>
+<h2 id="en-6-尚待项目方提供的接入信息" data-doc-anchor="6-尚待项目方提供的接入信息">6. Integration information still needed from the project team</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>Official algorithm name and public introduction.</label></li>
+<li><label><input type="checkbox" / disabled>Real code, documentation, and paper URLs with their corresponding versions.</label></li>
+<li><label><input type="checkbox" / disabled>Whether weights are public, their download location, checksum, and license.</label></li>
+<li><label><input type="checkbox" / disabled>A verified minimum working example and environment instructions.</label></li>
+<li><label><input type="checkbox" / disabled>Results, limitations, and citations approved for publication.</label></li>
+</ul>
+<p>This is a checklist of materials needed for website integration, not an assessment of research progress.</p>
+
+      </section>
+    </article>
+    <footer class="doc-footer"><span data-i18n="docs.footer">网站框架 · 合成 DEMO 仅用于开发与交互演示；真实研究材料待接入。</span> <a href="../index.html" data-i18n="docs.home.footer">返回数据集首页</a></footer>
+  </main>
+</body>
+</html>

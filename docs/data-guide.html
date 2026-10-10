@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" data-i18n-content="docs.description" content="PACTHub 中英双语网站指南。示例为合成 DEMO，真实研究材料待提供与核验。">
+  <title data-i18n="docs.title.data-guide">数据接入 · PACTHub</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style data-doc-style>[data-lang-section][hidden]{display:none!important}.doc-content>.doc-topbar,.doc-content>.doc-nav,.doc-content>.doc-footer{width:100%}.doc-content>.doc-topbar{padding-top:0;align-items:center;flex-wrap:wrap}.doc-content>.doc-nav{padding:18px 0 26px}.doc-toolbar-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.doc-content .language-switch{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--line,#ccd4df);border-radius:24px;background:var(--surface,#fff)}.doc-content .language-switch button{font:inherit;font-size:13px;min-width:44px;min-height:36px;padding:4px 12px;border:0;border-radius:20px;background:transparent;color:var(--text,#17283b);cursor:pointer}.doc-content .language-switch button[aria-pressed=true]{background:var(--accent,#335ac9);color:#fff}.doc-content .language-switch button:focus-visible{outline:3px solid var(--accent,#335ac9);outline-offset:3px}.doc-content [data-lang-section]{margin:0}.doc-content>.doc-footer{margin-top:38px;padding-bottom:0}.doc-content .task-list input{flex-shrink:0}</style>
+  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/docs-i18n.js" defer></script>
+</head>
+<body class="doc-page">
+  <!-- Keep this guide's complete Chinese and English content synchronized with docs/data-guide.md. -->
+  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">跳转到指南正文</a>
+  <main id="main" class="doc-content">
+    <header class="doc-topbar">
+      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="返回 PACTHub 首页"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← 返回首页</a></div>
+      <div class="language-switch" role="group" aria-label="选择语言" data-i18n-aria-label="docs.language">
+        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="true">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </header>
+    <nav class="doc-nav" aria-label="文档导航" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" data-i18n="docs.nav.project-guide">项目说明</a><a href="content-map.html" data-i18n="docs.nav.content-map">内容地图</a><a href="data-guide.html" aria-current="page" data-i18n="docs.nav.data-guide">数据接入</a><a href="algorithm-guide.html" data-i18n="docs.nav.algorithm-guide">算法接入</a><a href="release-checklist.html" data-i18n="docs.nav.release-checklist">发布清单</a></nav>
+    <article id="guide-content" tabindex="-1">
+      <section data-lang-section="zh" lang="zh-CN">
+<h1 id="现有数据标准的网站映射指南" data-doc-anchor="现有数据标准的网站映射指南">现有数据标准的网站映射指南</h1>
+<p>本项目已经完成数据标准化。网站中的 JSON 仅用于公开检索、样本卡片与详情展示，是对现有标准的索引映射，<strong>不替代或重新定义原标准</strong>。真实原始数据、处理后体数据及其权威元数据仍按项目现有规范保存。</p>
+<p>当前 <code>data/samples.json</code> 包含 6 条合成 DEMO 元数据，<code>is_demo</code> 均为 <code>true</code>，<code>files</code> 均为空。它们不是实际扫描、真实划分或已开放下载的数据，数值也不能用于科研分析。</p>
+<h2 id="1-接入顺序" data-doc-anchor="1-接入顺序">1. 接入顺序</h2>
+<ol type="1">
+<li>确定已有标准的名称、版本、字段字典与维护来源；由项目负责人确认哪些字段可公开。</li>
+<li>建立原字段 → 网站字段的对照，明确转换规则、单位和缺失值语义。必要时扩展网站映射层；不要为了迎合页面而改变已有科学含义。</li>
+<li>复制 <code>data/sample.template.json</code>，为一条经批准公开的真实样本填写元数据。模板没有有效实验数值；其 <code>is_demo: false</code> 仅是填报真实条目的预设，不能证明它是真实样本，也不能直接发布。</li>
+<li>对照 <code>data/metadata.schema.json</code> 检查类型、必填项与枚举，再验证实际文件和科学含义。Schema 校验通过不等于数据正确或获准公开。</li>
+<li>将通过审核的条目放入 <code>data/samples.json</code> 的顶层数组，替换或清楚隔离 DEMO。仅在确为真实样本时使用 <code>is_demo: false</code>。</li>
+<li>用 HTTP 服务预览并检查筛选、详情、单位、空值和资源状态，确认后再批量映射。</li>
+</ol>
+<p>权威字段类型、层级和取值范围以当前 Schema 与模板为准；修改它们时也要同步 <code>assets/js/app.js</code> 和本指南。</p>
+<h3 id="当前-json-结构" data-doc-anchor="当前-json-结构">当前 JSON 结构</h3>
+<p><code>samples.json</code> 的根是样本数组，<code>sample.template.json</code> 的根是单个样本对象。<code>metadata.schema.json</code> 使用 JSON Schema Draft 2020-12 并校验数组，因此单条模板需要先包装为 <code>[template]</code> 再校验。不要把模板对象直接作为整个索引提交，也不要额外套上 <code>samples</code> 属性。</p>
+<p>每条样本包含以下字段。列为“可空”的字段仍需保留字段名；准备阶段允许 <code>null</code> 不表示发布审核已经通过。</p>
+<table>
+<thead>
+<tr class="header">
+<th>字段</th>
+<th>当前类型与含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>id</code></td>
+<td>非空字符串；只允许英文字母、数字、点、下划线、短横线，首位为字母或数字；发布时另查唯一性</td>
+</tr>
+<tr class="even">
+<td><code>title</code> / <code>description</code></td>
+<td>公开标题和说明；支持字符串或 <code>{ "zh": "中文", "en": "English" }</code>；标题不可为空</td>
+</tr>
+<tr class="odd">
+<td><code>is_demo</code></td>
+<td>布尔值；合成界面演示为 <code>true</code></td>
+</tr>
+<tr class="even">
+<td><code>category</code></td>
+<td><code>phantom</code>、<code>simulation</code>、<code>in-vivo</code>、<code>ex-vivo</code> 或 <code>other</code></td>
+</tr>
+<tr class="odd">
+<td><code>split</code></td>
+<td><code>train</code>、<code>validation</code>、<code>test</code> 或 <code>unspecified</code></td>
+</tr>
+<tr class="even">
+<td><code>tags</code></td>
+<td>无重复字符串的数组；无标签时用 <code>[]</code></td>
+</tr>
+<tr class="odd">
+<td><code>preview</code></td>
+<td>项目相对路径或 HTTPS 图片地址，可空；示意图必须明确标注</td>
+</tr>
+<tr class="even">
+<td><code>dimensions</code></td>
+<td>三个正整数，按 <code>axis_order</code> 排列，可空</td>
+</tr>
+<tr class="odd">
+<td><code>axis_order</code></td>
+<td><code>x</code>、<code>y</code>、<code>z</code> 各出现一次的三元素数组，可空；不等同于解剖方向</td>
+</tr>
+<tr class="even">
+<td><code>spacing_mm</code></td>
+<td>三个正数，单位毫米，顺序与 <code>axis_order</code> 一致，可空</td>
+</tr>
+<tr class="odd">
+<td><code>wavelength_nm</code></td>
+<td>单个正数，单位纳米，可空；多波长需明确扩展 Schema</td>
+</tr>
+<tr class="even">
+<td><code>intensity_unit</code></td>
+<td>信号/强度单位的字符串或双语对象，可空</td>
+</tr>
+<tr class="odd">
+<td><code>data_version</code></td>
+<td>该条目对应的数据版本字符串，可空</td>
+</tr>
+<tr class="even">
+<td><code>provenance</code></td>
+<td>必须保留的来源对象，见下方四项</td>
+</tr>
+<tr class="odd">
+<td><code>files</code></td>
+<td>文件对象数组；未接入时为 <code>[]</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>provenance</code> 必须包含四个可空字段：<code>source_id</code>（公开来源标识）、<code>acquisition</code>（阵列/采集配置来源）、<code>reconstruction</code>（重建方法与版本来源）、<code>standardization_reference</code>（已有标准及其版本的可追溯说明）。<code>source_id</code> 保持字符串；其余三个说明字段支持字符串或双语对象。当前没有单独的阵列几何对象；需要结构化扩展时同步 Schema 和页面。</p>
+<p>每个 <code>files</code> 元素必须包含 <code>name</code>、<code>format</code>、<code>url</code>、<code>size_bytes</code>、<code>sha256</code>。其中 <code>name</code> 为非空字符串，<code>format</code> 为格式说明字符串；后面三项可为 <code>null</code>。非空 <code>size_bytes</code> 为非负整数，非空 <code>sha256</code> 为 64 位十六进制字符串。Schema 只检查这些基础约束，不自动保证 URL 可访问、单位正确、ID 唯一或资料获准公开。</p>
+<h2 id="2-最低核对内容" data-doc-anchor="2-最低核对内容">2. 最低核对内容</h2>
+<h3 id="身份与分组" data-doc-anchor="身份与分组">身份与分组</h3>
+<ul>
+<li>稳定且唯一的 <code>id</code>、公开 <code>title</code> 和 <code>description</code>。</li>
+<li><code>category</code>、<code>split</code>、<code>tags</code> 应映射真实研究定义。当前 DEMO 展示的 <code>phantom</code>、<code>simulation</code> 及训练/验证/测试分组仅用于界面演示。</li>
+<li>如果真实类别或划分不在当前枚举中，扩展 Schema、界面选项和统计逻辑后再使用；不要把未知类别硬套到已有选项。</li>
+<li>数据分组应遵从原研究方案，核查同一对象、实验或强关联样本跨集合的泄漏风险。</li>
+</ul>
+<h3 id="尺度单位与坐标" data-doc-anchor="尺度单位与坐标">尺度、单位与坐标</h3>
+<ul>
+<li>数组尺寸只说明每一轴的元素数量，必须同时核实轴顺序和空间坐标约定。</li>
+<li><code>spacing_mm</code> 表达体素间距时，要确认与尺寸轴一一对应，并正确完成原单位到毫米的转换。</li>
+<li><code>wavelength_nm</code> 应来自实际记录；多波长资料不得因页面仅显示单个数值而丢失信息。</li>
+<li>明确数值的物理单位、归一化状态及数据类型。任意单位与物理单位不能混用。</li>
+<li>未知、不适用、未提供和零值含义不同，按 Schema 使用允许的缺失表达，不能用 <code>0</code> 代替未知值。</li>
+</ul>
+<h3 id="采集与重建来源" data-doc-anchor="采集与重建来源">采集与重建来源</h3>
+<ul>
+<li>保留可公开的阵列类型/几何、采集配置、重建方法及版本来源。</li>
+<li>原始信号、重建体数据和算法输出之间的关系可追溯。</li>
+<li>来源字段用于说明可信出处，不应包含受试者身份、内部路径、密码或令牌。</li>
+<li>不能公开的来源信息留在受控记录中；公开页面明确其可获得程度，避免伪造说明。</li>
+</ul>
+<h3 id="版本与资源" data-doc-anchor="版本与资源">版本与资源</h3>
+<ul>
+<li>每条资源的版本与对应数据发布版本一致，并在内容变更时更新。</li>
+<li><code>files</code> 仅填写真实存在且经授权公开或受控分发的资源；没有可用文件时保留空数组。</li>
+<li>下载 URL 必须实际验证；永久入口优于会过期的临时签名地址。</li>
+<li>文件大小、格式和 SHA-256 从最终发布文件计算，不能由文件名猜测。</li>
+<li>占位 URL、空的 DOI 和尚未选择的许可证保持空值，不创建看似可用的假链接。</li>
+</ul>
+<h2 id="3-建议保留的映射记录" data-doc-anchor="3-建议保留的映射记录">3. 建议保留的映射记录</h2>
+<p>维护者可在自己的数据处理工程中保存下列对照；只有经审核的公开版本才应进入站点：</p>
+<table>
+<thead>
+<tr class="header">
+<th>原字段</th>
+<th>原标准版本</th>
+<th>网站字段</th>
+<th>转换规则</th>
+<th>缺失处理</th>
+<th>验证方式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>待填写</td>
+<td>待核实</td>
+<td>以 Schema 为准</td>
+<td>如单位换算、轴重排</td>
+<td>以原标准和 Schema 为准</td>
+<td>与源记录/文件比对</td>
+</tr>
+</tbody>
+</table>
+<p>“转换规则”应记录真实操作，尤其是坐标重排、重采样、波长选择和版本合并。若网站只做展示而不转换，明确记录为直接映射。</p>
+<h2 id="4-大文件链接与校验" data-doc-anchor="4-大文件链接与校验">4. 大文件、链接与校验</h2>
+<p>本仓库只保存站点和轻量公开索引。大型扫描文件、压缩包和模型权重建议保存在项目批准的数据仓库或对象存储中，并在网站中链接。受控数据需要具备访问控制的服务；静态 Pages 页面及隐藏按钮不能保护数据。</p>
+<p>对已准备的最终文件可在本地计算 SHA-256：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Linux</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sha256sum</span> path/to/approved-file</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">shasum</span> <span class="at">-a</span> 256 path/to/approved-file</span></code></pre></div>
+<p>把输出的真实哈希填入对应资源字段，并保留文件名、字节大小和版本记录。校验值用于完整性验证，不证明数据科学质量，也不替代发布许可。</p>
+<p>上线前使用无登录的空白浏览器会话核实公共链接，检查最终下载文件、重定向、权限要求和校验值。不要只判断 HTTP 200，因为返回内容可能是登录页或错误页面。</p>
+<h2 id="5-发布边界" data-doc-anchor="5-发布边界">5. 发布边界</h2>
+<ul>
+<li>公开索引自身也属于公开数据；不能夹带身份信息或敏感元数据。</li>
+<li>对人体/动物资料及其他受限制数据，先核实审批、同意、许可和去标识化要求。</li>
+<li>真正数据尚未接入时，保留页面 DEMO 标记及资源待提供状态。</li>
+<li>样本数量、总容量和覆盖范围只能由已验证的真实发布清单得出。</li>
+<li>任何文件、元数据或许可变更都应同步版本、引用和校验记录。</li>
+</ul>
+<p>完成后继续逐项核对<a href="release-checklist.html">发布前检查清单</a>。</p>
+<h2 id="6-双语展示字段" data-doc-anchor="6-双语展示字段">6. 双语展示字段</h2>
+<p><code>title</code>、<code>description</code>、<code>intensity_unit</code> 和 <code>provenance</code> 中的 <code>acquisition</code>、<code>reconstruction</code>、<code>standardization_reference</code> 支持原有字符串或 <code>{ "zh": "中文说明", "en": "English description" }</code>。可空字段仍可为 <code>null</code>。双语对象至少提供 <code>zh</code> 或 <code>en</code> 中的一个字符串，建议补齐两种语言；标题中已提供的语言版本不可为空。运行时先显示当前语言，缺少有效文字时按中文、英文顺序回退。</p>
+<p><code>id</code>、<code>category</code>、<code>split</code>、<code>tags</code>、<code>data_version</code>、<code>provenance.source_id</code>、文件名、URL、数值和校验值保持原始格式。译文只能解释相同事实，不能修改数据、技术标识或演示状态。请核对两种语言均明确标注合成 DEMO，并将未提供或未经核验的研究信息保留为空或待提供。</p>
+
+      </section>
+      <section data-lang-section="en" lang="en" hidden inert aria-hidden="true">
+<h1 id="en-现有数据标准的网站映射指南" data-doc-anchor="现有数据标准的网站映射指南">Website mapping guide for the existing data standard</h1>
+<p>Data standardization for this project is already complete. The website JSON is only an index mapping for public search, sample cards, and detail views. It <strong>does not replace or redefine the original standard</strong>. Real raw data, processed volumes, and their authoritative metadata remain stored according to the project's existing specifications.</p>
+<p><code>data/samples.json</code> currently contains 6 synthetic DEMO metadata records. Every record has <code>is_demo: true</code> and an empty <code>files</code> array. These are not actual scans, real dataset splits, or publicly downloadable research data. Their values must not be used for scientific analysis.</p>
+<h2 id="en-1-接入顺序" data-doc-anchor="1-接入顺序">1. Integration order</h2>
+<ol type="1">
+<li>Establish the existing standard's name, version, field dictionary, and authoritative maintenance source. Have the project lead confirm which fields may be public.</li>
+<li>Map original fields → website fields, documenting conversion rules, units, and missing-value meanings. Extend the website mapping layer if necessary; do not change existing scientific meaning to fit the page.</li>
+<li>Copy <code>data/sample.template.json</code> and enter metadata for one real sample approved for public release. The template contains no valid experimental values. Its preset <code>is_demo: false</code> is intended for preparing a real record; it is not proof of authenticity and does not make the template publishable.</li>
+<li>Check types, required fields, and enumerations against <code>data/metadata.schema.json</code>, then validate the actual files and scientific meaning. Passing Schema validation does not establish correctness or permission to publish.</li>
+<li>Put approved records in the top-level array of <code>data/samples.json</code>, replacing or clearly separating DEMO records. Use <code>is_demo: false</code> only for genuine real samples.</li>
+<li>Preview through an HTTP server and check filters, details, units, missing values, and resource states before mapping records in bulk.</li>
+</ol>
+<p>The current Schema and template are authoritative for field types, nesting, and allowed values. When changing them, also update <code>assets/js/app.js</code> and this guide.</p>
+<h3 id="en-当前-json-结构" data-doc-anchor="当前-json-结构">Current JSON structure</h3>
+<p>The root of <code>samples.json</code> is a sample array; the root of <code>sample.template.json</code> is one sample object. <code>metadata.schema.json</code> uses JSON Schema Draft 2020-12 and validates an array, so wrap a single template as <code>[template]</code> before validation. Do not submit the template object as the entire index or add an extra <code>samples</code> property around it.</p>
+<p>Each sample has the following fields. Fields described as nullable must still retain their field names. Allowing <code>null</code> during preparation does not mean release review has passed.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Current type and meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>id</code></td>
+<td>Nonempty string; letters, digits, periods, underscores, and hyphens only, starting with a letter or digit. Check uniqueness separately before release.</td>
+</tr>
+<tr class="even">
+<td><code>title</code> / <code>description</code></td>
+<td>Public title and description; accept strings or bilingual <code>{ "zh": "中文", "en": "English" }</code> objects. Titles must not be empty.</td>
+</tr>
+<tr class="odd">
+<td><code>is_demo</code></td>
+<td>Boolean; <code>true</code> for synthetic interface demonstrations.</td>
+</tr>
+<tr class="even">
+<td><code>category</code></td>
+<td><code>phantom</code>, <code>simulation</code>, <code>in-vivo</code>, <code>ex-vivo</code>, or <code>other</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>split</code></td>
+<td><code>train</code>, <code>validation</code>, <code>test</code>, or <code>unspecified</code>.</td>
+</tr>
+<tr class="even">
+<td><code>tags</code></td>
+<td>Array of unique strings; use <code>[]</code> when there are no tags.</td>
+</tr>
+<tr class="odd">
+<td><code>preview</code></td>
+<td>Project-relative path or HTTPS image URL; nullable. Clearly label illustrations.</td>
+</tr>
+<tr class="even">
+<td><code>dimensions</code></td>
+<td>Three positive integers in <code>axis_order</code>; nullable.</td>
+</tr>
+<tr class="odd">
+<td><code>axis_order</code></td>
+<td>Three-element array containing <code>x</code>, <code>y</code>, and <code>z</code> once each; nullable. This does not specify anatomical orientation.</td>
+</tr>
+<tr class="even">
+<td><code>spacing_mm</code></td>
+<td>Three positive numbers in millimeters, in the same order as <code>axis_order</code>; nullable.</td>
+</tr>
+<tr class="odd">
+<td><code>wavelength_nm</code></td>
+<td>One positive number in nanometers; nullable. Multiple wavelengths require an explicit Schema extension.</td>
+</tr>
+<tr class="even">
+<td><code>intensity_unit</code></td>
+<td>Signal/intensity unit string or bilingual object; nullable.</td>
+</tr>
+<tr class="odd">
+<td><code>data_version</code></td>
+<td>Data version string for the record; nullable.</td>
+</tr>
+<tr class="even">
+<td><code>provenance</code></td>
+<td>Required provenance object containing the four fields below.</td>
+</tr>
+<tr class="odd">
+<td><code>files</code></td>
+<td>Array of file objects; use <code>[]</code> until resources are integrated.</td>
+</tr>
+</tbody>
+</table>
+<p><code>provenance</code> must contain four nullable fields: <code>source_id</code> (public source identifier), <code>acquisition</code> (source for the array/acquisition configuration), <code>reconstruction</code> (source for the reconstruction method and version), and <code>standardization_reference</code> (traceable reference to the existing standard and version). <code>source_id</code> remains a string; the other three description fields accept strings or bilingual objects. There is currently no separate array-geometry object. Update the Schema and page together if a structured extension is needed.</p>
+<p>Each <code>files</code> element must contain <code>name</code>, <code>format</code>, <code>url</code>, <code>size_bytes</code>, and <code>sha256</code>. <code>name</code> is a nonempty string and <code>format</code> is a format-description string; the last three may be <code>null</code>. A non-null <code>size_bytes</code> is a nonnegative integer, and a non-null <code>sha256</code> is a 64-character hexadecimal string. The Schema checks only these basic constraints. It does not ensure that URLs work, units are correct, IDs are unique, or publication is authorized.</p>
+<h2 id="en-2-最低核对内容" data-doc-anchor="2-最低核对内容">2. Minimum checks</h2>
+<h3 id="en-身份与分组" data-doc-anchor="身份与分组">Identity and grouping</h3>
+<ul>
+<li>A stable, unique <code>id</code>, public <code>title</code>, and <code>description</code>.</li>
+<li><code>category</code>, <code>split</code>, and <code>tags</code> must map to actual research definitions. The DEMO categories <code>phantom</code> and <code>simulation</code>, and its training/validation/test groups, are only interface examples.</li>
+<li>If real categories or splits fall outside current enumerations, extend the Schema, interface options, and statistics logic first. Do not force unknown categories into existing choices.</li>
+<li>Follow the original study design for data splitting. Check for leakage when the same subject, experiment, or strongly related samples occur across sets.</li>
+</ul>
+<h3 id="en-尺度单位与坐标" data-doc-anchor="尺度单位与坐标">Scale, units, and coordinates</h3>
+<ul>
+<li>Array dimensions state only the element count along each axis. Verify axis order and spatial coordinate conventions as well.</li>
+<li>When <code>spacing_mm</code> represents voxel spacing, ensure its entries correspond to the dimension axes and correctly convert original units to millimeters.</li>
+<li>Obtain <code>wavelength_nm</code> from actual records. Do not discard multiwavelength information because a page displays only one number.</li>
+<li>Specify physical units, normalization status, and data type. Arbitrary units and physical units are not interchangeable.</li>
+<li>Unknown, not applicable, not provided, and zero have different meanings. Use missing-value representations permitted by the Schema; do not use <code>0</code> for unknown values.</li>
+</ul>
+<h3 id="en-采集与重建来源" data-doc-anchor="采集与重建来源">Acquisition and reconstruction provenance</h3>
+<ul>
+<li>Retain publicly shareable sources for array type/geometry, acquisition configuration, reconstruction method, and version.</li>
+<li>Keep relationships between raw signals, reconstructed volumes, and algorithm outputs traceable.</li>
+<li>Provenance fields should identify trusted sources. They must not include participant identities, internal paths, passwords, or tokens.</li>
+<li>Keep nonpublic provenance in controlled records. State its availability clearly on public pages rather than fabricating descriptions.</li>
+</ul>
+<h3 id="en-版本与资源" data-doc-anchor="版本与资源">Versions and resources</h3>
+<ul>
+<li>Each resource version must match its associated data release and be updated when content changes.</li>
+<li>Include in <code>files</code> only existing resources authorized for public or controlled distribution. Keep an empty array when no files are available.</li>
+<li>Test download URLs in practice. Prefer permanent entry points to expiring signed URLs.</li>
+<li>Compute file size, format information, and SHA-256 from the final release files; do not infer them from filenames.</li>
+<li>Leave placeholder URLs, absent DOIs, and undecided licenses empty. Do not create apparently usable fake links.</li>
+</ul>
+<h2 id="en-3-建议保留的映射记录" data-doc-anchor="3-建议保留的映射记录">3. Recommended mapping record</h2>
+<p>Maintainers can keep the following record in their own data-processing project. Only an approved public version should enter the website:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Original field</th>
+<th>Original standard version</th>
+<th>Website field</th>
+<th>Conversion rule</th>
+<th>Missing-value handling</th>
+<th>Validation method</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>To be supplied</td>
+<td>To be verified</td>
+<td>Follow the Schema</td>
+<td>For example, unit conversion or axis reordering</td>
+<td>Follow the original standard and Schema</td>
+<td>Compare with source records/files</td>
+</tr>
+</tbody>
+</table>
+<p>Record actual operations under “Conversion rule,” especially coordinate reordering, resampling, wavelength selection, and merging versions. If the website only displays data without conversion, explicitly record a direct mapping.</p>
+<h2 id="en-4-大文件链接与校验" data-doc-anchor="4-大文件链接与校验">4. Large files, links, and checksums</h2>
+<p>This repository holds only the website and lightweight public index. Store large scan files, archives, and model weights in a project-approved data repository or object store, then link to them. Controlled data needs a service with access control. Static Pages hosting and hidden buttons cannot protect data.</p>
+<p>Compute SHA-256 locally for prepared final files:</p>
+<div class="sourceCode" id="en-cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="en-cb1-1"><a href="#en-cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Linux</span></span>
+<span id="en-cb1-2"><a href="#en-cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sha256sum</span> path/to/approved-file</span>
+<span id="en-cb1-3"><a href="#en-cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="en-cb1-4"><a href="#en-cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS</span></span>
+<span id="en-cb1-5"><a href="#en-cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">shasum</span> <span class="at">-a</span> 256 path/to/approved-file</span></code></pre></div>
+<p>Enter the actual hash in the corresponding resource field, retaining filename, byte size, and version records. Checksums verify integrity; they do not establish scientific quality or replace publication permission.</p>
+<p>Before launch, test public links in a fresh, signed-out browser session. Check the final downloaded files, redirects, access requirements, and checksums. An HTTP 200 response alone is insufficient because the content may be a sign-in or error page.</p>
+<h2 id="en-5-发布边界" data-doc-anchor="5-发布边界">5. Release boundaries</h2>
+<ul>
+<li>The public index is itself public data. It must not contain identifying information or sensitive metadata.</li>
+<li>For human, animal, or other restricted data, first verify approval, consent, licensing, and de-identification requirements.</li>
+<li>Retain DEMO labels and pending-resource states while real data has not been integrated.</li>
+<li>Derive sample counts, total size, and coverage only from a verified real release manifest.</li>
+<li>Update versions, citations, and checksum records whenever files, metadata, or licenses change.</li>
+</ul>
+<p>Then work through the <a href="release-checklist.html">pre-release checklist</a>.</p>
+<h2 id="en-6-bilingual-display-fields" data-doc-anchor="6-双语展示字段">6. Bilingual display fields</h2>
+<p><code>title</code>, <code>description</code>, <code>intensity_unit</code>, and provenance fields <code>acquisition</code>, <code>reconstruction</code>, and <code>standardization_reference</code> accept a legacy string or <code>{ "zh": "中文说明", "en": "English description" }</code>. Nullable fields may still be <code>null</code>. A bilingual object must provide at least one <code>zh</code> or <code>en</code> string; supplying both is recommended. Every supplied title translation must be nonempty. The runtime displays the active language first, falling back to Chinese and then English when valid text is missing.</p>
+<p>Keep <code>id</code>, <code>category</code>, <code>split</code>, <code>tags</code>, <code>data_version</code>, <code>provenance.source_id</code>, filenames, URLs, numeric values, and checksums in their original formats. Translations must describe the same facts without changing data, technical identifiers, or demo status. Check that both languages clearly identify synthetic DEMO content and keep missing or unverified research information empty or pending.</p>
+
+      </section>
+    </article>
+    <footer class="doc-footer"><span data-i18n="docs.footer">网站框架 · 合成 DEMO 仅用于开发与交互演示；真实研究材料待接入。</span> <a href="../index.html" data-i18n="docs.home.footer">返回数据集首页</a></footer>
+  </main>
+</body>
+</html>

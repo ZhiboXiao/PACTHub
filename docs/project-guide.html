@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" data-i18n-content="docs.description" content="PACTHub 中英双语网站指南。示例为合成 DEMO，真实研究材料待提供与核验。">
+  <title data-i18n="docs.title.project-guide">项目说明 · PACTHub</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style data-doc-style>[data-lang-section][hidden]{display:none!important}.doc-content>.doc-topbar,.doc-content>.doc-nav,.doc-content>.doc-footer{width:100%}.doc-content>.doc-topbar{padding-top:0;align-items:center;flex-wrap:wrap}.doc-content>.doc-nav{padding:18px 0 26px}.doc-toolbar-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.doc-content .language-switch{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--line,#ccd4df);border-radius:24px;background:var(--surface,#fff)}.doc-content .language-switch button{font:inherit;font-size:13px;min-width:44px;min-height:36px;padding:4px 12px;border:0;border-radius:20px;background:transparent;color:var(--text,#17283b);cursor:pointer}.doc-content .language-switch button[aria-pressed=true]{background:var(--accent,#335ac9);color:#fff}.doc-content .language-switch button:focus-visible{outline:3px solid var(--accent,#335ac9);outline-offset:3px}.doc-content [data-lang-section]{margin:0}.doc-content>.doc-footer{margin-top:38px;padding-bottom:0}.doc-content .task-list input{flex-shrink:0}</style>
+  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/docs-i18n.js" defer></script>
+</head>
+<body class="doc-page">
+  <!-- Keep this guide's complete Chinese and English content synchronized with docs/project-guide.md. -->
+  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">跳转到指南正文</a>
+  <main id="main" class="doc-content">
+    <header class="doc-topbar">
+      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="返回 PACTHub 首页"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← 返回首页</a></div>
+      <div class="language-switch" role="group" aria-label="选择语言" data-i18n-aria-label="docs.language">
+        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="true">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </header>
+    <nav class="doc-nav" aria-label="文档导航" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" aria-current="page" data-i18n="docs.nav.project-guide">项目说明</a><a href="content-map.html" data-i18n="docs.nav.content-map">内容地图</a><a href="data-guide.html" data-i18n="docs.nav.data-guide">数据接入</a><a href="algorithm-guide.html" data-i18n="docs.nav.algorithm-guide">算法接入</a><a href="release-checklist.html" data-i18n="docs.nav.release-checklist">发布清单</a></nav>
+    <article id="guide-content" tabindex="-1">
+      <section data-lang-section="zh" lang="zh-CN">
+<h1 id="pacthub-网站框架" data-doc-anchor="pacthub-网站框架">PACTHub 网站框架</h1>
+<p>面向三维光声计算机断层成像（3D PACT）研究的静态网站，集中展示数据、样本预览、已完成的图像增强方法与复现资源。使用原生 HTML、CSS 和 JavaScript，无构建依赖；全屏视频首屏搭配浅色内容区与文档。</p>
+<h2 id="当前状态" data-doc-anchor="当前状态">当前状态</h2>
+<ul>
+<li><strong>数据标准化与图像增强算法均已完成。</strong> 待补的是获准公开的网站材料；网站 JSON 是现有标准的展示映射，不重新定义数据标准。</li>
+<li>当前 6 条样本均为合成 <code>DEMO</code> 元数据与示意图，不代表真实扫描、正式数据划分或算法结果。未接入真实数据、代码、模型权重和实验结果。</li>
+<li>项目作者、版本、许可、论文、引用与资源链接需按真实资料填写。空值不表示相关研究尚未完成。</li>
+<li>本次未执行远程推送或公开部署。已有 GitHub Pages 工作流仅支持手动触发；公开前必须核实材料与许可。</li>
+</ul>
+<h2 id="六个内容板块" data-doc-anchor="六个内容板块">六个内容板块</h2>
+<ol type="1">
+<li><a href="../index.html#overview">项目概览</a>：研究任务、资源范围、适用人群。</li>
+<li><a href="../index.html#explore">样本与预览</a>：检索、分类筛选、划分筛选与样本详情。</li>
+<li><a href="../index.html#algorithm">图像增强算法</a>：方法概述、输入输出、代码及权重入口。</li>
+<li><a href="../index.html#downloads">下载与使用</a>：数据包、轻量样例、复现资源及指南。</li>
+<li><a href="../index.html#publication">论文与引用</a>：论文入口、DOI 与引用复制。</li>
+<li><a href="../index.html#team">团队与贡献</a>：团队成员、机构、分工与反馈入口。</li>
+</ol>
+<p>完整材料要求见<a href="content-map.html">内容地图与材料清单</a>，其中区分上线必需内容与可后补的增强项。资料未提供时保留明确说明，不用猜测值或虚构链接补齐。</p>
+<h2 id="直接查看前端" data-doc-anchor="直接查看前端">直接查看前端</h2>
+<p>交付包中的 <code>PACTHub-preview.html</code> 是独立离线预览，下载后直接用浏览器打开即可，不需要安装依赖或启动服务。它内嵌与源站一致的样式、交互、项目提供视频、示意样本和说明文档；不会访问真实研究数据，也未公开部署。它不是已完成浏览器验证的截图。</p>
+<p>修改源文件后，可运行 <code>python3 scripts/build-preview.py</code> 重新生成上一级目录的离线预览，再运行 <code>python3 scripts/build-package.py</code> 生成白名单源码 ZIP。GitHub Pages 继续使用原始相对路径文件，不发布此预览文件。</p>
+<h2 id="本地预览" data-doc-anchor="本地预览">本地预览</h2>
+<p>在项目根目录运行：</p>
+<div id="cb1" class="sourceCode">
+
+<pre class="sourceCode"><code>python3 -m http.server 8000 --bind 127.0.0.1</code></pre>
+</div>
+
+<p>浏览器打开 <a href="http://localhost:8000">http://localhost:8000</a>；按 <code>Ctrl+C</code> 停止服务。此命令仅监听本机。源码首页会通过 <code>fetch</code> 加载 JSON，请使用 HTTP 服务，不要直接双击源码 <code>index.html</code>。</p>
+<h2 id="目录与编辑入口" data-doc-anchor="目录与编辑入口">目录与编辑入口</h2>
+<pre class="text"><code>index.html                      六个首页板块、静态文案与图文布局
+assets/css/styles.css           首页与文档的共用响应式样式
+assets/js/app.js                 配置读取、检索筛选、详情与引用复制
+assets/js/i18n.js                中英双语共用运行逻辑
+assets/js/docs-i18n.js           指南标签与语言正文切换
+assets/images/                  网站图片与视频封面
+assets/media/hero-pact.mp4  项目提供的 20 秒三维影像视频
+data/site-config.json           介绍、发布信息、论文、团队与资源链接
+data/samples.json               样本索引；当前仅含 DEMO
+data/metadata.schema.json       网站索引字段约束
+data/sample.template.json       单条真实样本的待填映射模板
+docs/content-map.md / .html     六板块内容地图与材料清单
+docs/project-guide.md / .html    中英双语项目指南
+docs/                           数据、算法接入与发布检查指南
+.github/workflows/pages.yml     手动发布工作流</code></pre>
+<p>网页文档使用 <code>docs/*.html</code>；Markdown 留在源码中维护。没有自动文档构建流程，修改时需同步两种版本。站内资源使用相对路径，避免仓库子路径部署时失效。</p>
+<h3 id="站点配置" data-doc-anchor="站点配置">站点配置</h3>
+<p><code>data/site-config.json</code> 的根是一个对象。下列字段已接入当前页面：</p>
+<ul>
+<li><code>site_title</code>：项目显示名与页面标题。</li>
+<li><code>hero</code>：首屏视频、封面、裁剪位置和来源说明，见下节。</li>
+<li><code>description</code>、<code>overview_summary</code>：首页主介绍与概览摘要。</li>
+<li><code>demo_mode</code>：首屏演示提示开关。设为 <code>false</code> 只隐藏该提示，不会改变示意图、样本的 <code>is_demo</code> 或文档。</li>
+<li><code>license</code>：下载区的许可摘要。数据、代码、权重若许可不同，应在各自资料中完整说明。</li>
+<li><code>citation</code>：正式引用文本或 BibTeX；非空时显示文本并启用复制按钮。剪贴板不可用时会选中文本供手动复制。</li>
+<li><code>doi</code>：完整 DOI 标识符，格式为 <code>10.数字/后缀</code>，不带 <code>https://doi.org/</code> 前缀；格式有效时生成 DOI 链接。只有真实存在的 DOI 才能填写，不能使用占位示例。</li>
+<li><code>algorithm</code>：<code>name</code>、<code>summary</code>、<code>status</code>、<code>repository_url</code>、<code>weights_url</code>，分别控制方法名称、简介、资料状态及代码／权重入口。</li>
+<li><code>downloads</code>：卡片数组，每项包含 <code>id</code>、<code>title</code>、<code>description</code>、<code>url</code>、<code>version</code>、<code>size_label</code>、<code>sha256</code>；有效地址启用入口，版本、大小与校验值按已提供内容显示。</li>
+<li><code>paper</code>：<code>title</code>、<code>summary</code>、<code>url</code>，用于论文题名、说明与阅读入口。</li>
+<li><code>team.members</code>：成员数组，每项可填 <code>name</code>、<code>affiliation</code>、<code>role</code>、<code>url</code>；姓名必需，其余按实际资料填写。</li>
+<li><code>team.contribution</code>、<code>team.contribution_url</code>：贡献说明与联系／贡献页面。</li>
+</ul>
+<p><code>release_version</code> 保留为全站发布记录，目前没有独立展示位置；下载卡片使用各项的 <code>version</code>。</p>
+<p>未知或未核验的信息保留 <code>null</code>，成员未提供时保留 <code>[]</code>。可配置文案为空时保留 HTML 默认说明，资源地址为空或协议不受支持时不启用入口。配置以纯文本显示，不接受 HTML 内容。</p>
+<p>资源与联系链接仅接受 HTTP(S) 协议；站内相对路径在 HTTP(S) 预览中可用。成员主页、贡献入口不要填 <code>mailto:</code>、<code>javascript:</code> 或其他协议；需要公布邮箱时写入经批准的说明文字，并使用团队联系页作入口。协议检查不等于验证链接有效，所有地址仍需实际打开核对。</p>
+<h3 id="全屏视频首屏" data-doc-anchor="全屏视频首屏">全屏视频首屏</h3>
+<p>首屏采用边到边的视频背景、暗色遮罩和精简标题按钮；下方六个板块保持浅色。已接入项目方于 2026-10-10 提供的成片：1920×1080、20 秒、30 fps、H.264，无音轨。保留原始画面与帧率，仅整理 MP4 为渐进加载；封面取自第 9 秒。素材接入不代表数据集或科研结果已正式发布。</p>
+<p>在 <code>data/site-config.json</code> 的 <code>hero</code> 对象中填写：</p>
+<ul>
+<li><code>mp4_url</code>：MP4 文件地址，默认 <code>assets/media/hero-pact.mp4</code>。</li>
+<li><code>webm_url</code>：可选 WebM，默认 <code>null</code>。浏览器先尝试 WebM，再尝试 MP4。</li>
+<li><code>poster_url</code>：静态封面，默认 <code>assets/images/hero-poster.jpg</code>。</li>
+<li><code>object_position</code>：裁剪焦点，如 <code>60% 50%</code>。窄屏采用上方影像、下方文案，影像焦点固定为 75% 50%，保留右侧主体。</li>
+<li><code>media_label</code>：素材来源说明。当前为“项目提供视频 · 三维影像展示”；<code>demo_mode</code> 不隐藏此说明。</li>
+</ul>
+<p>推荐约 8–15 秒、16:9、无关键文字的短循环。MP4 使用 H.264、yuv420p、faststart，尽量控制在 5 MB 左右。背景始终静音；带声音说明的研究视频应另设播放器。更换封面时同步 <code>index.html</code> 中的图片 <code>src</code> 与视频 <code>poster</code>，保证无 JavaScript 时也有封面。修改文件名后更新 Pages 工作流的公开文件白名单。</p>
+<p>视频在允许时自动播放，首屏有暂停／播放按钮。减少动态效果或节省流量设置下不会自动下载或播放，可手动开始。离开标签页或滚出首屏会暂停；手动暂停不会被滚动覆盖。缺少视频、播放失败或自动播放被阻止时保留封面与可用导航。</p>
+<p>离线预览只内嵌项目内的视频和封面，不下载外部媒体。远程或缺失的视频在离线版中留空并保留封面；正式站点仍使用配置地址。重新生成示意素材可运行 <code>python3 scripts/generate-hero-media.py</code>，仅这一步需要已有 NumPy、Pillow 和 ffmpeg；查看与部署网站不需要这些工具。</p>
+<h3 id="接入真实材料" data-doc-anchor="接入真实材料">接入真实材料</h3>
+<ol type="1">
+<li>按<a href="content-map.html">内容地图</a>准备获准公开的文字、图片、链接与文件，先完善 <code>site-config.json</code>。</li>
+<li>按<a href="data-guide.html">数据接入指南</a>将现有标准映射到 <code>samples.json</code>，核实单位、轴顺序、来源、版本及文件校验值；无需重做标准化。</li>
+<li>按<a href="algorithm-guide.html">算法接入指南</a>补充已完成方法的说明、真实对照图、环境与验证过的复现步骤。</li>
+<li>将需要额外图文结构的内容放入 <code>index.html</code>；超出当前配置支持范围的字段必须同步读取逻辑。</li>
+<li>按<a href="release-checklist.html">发布检查清单</a>检查页面、权限、许可、链接及 DEMO 状态。</li>
+</ol>
+<p>公开 JSON 可被直接下载，不得含有内部路径、凭据或敏感信息。大型体数据与模型权重应放在获准使用的数据仓库；本站没有服务端、在线推理、登录鉴权或受控数据分发功能。</p>
+<h2 id="手动发布" data-doc-anchor="手动发布">手动发布</h2>
+<p>本项目附带 <code>.github/workflows/pages.yml</code>。只有明确批准公开后才配置并运行；私有源码仓库不等于已发布网页受控访问。</p>
+<ol type="1">
+<li>把审核后的文件与工作流保存至获准使用的 GitHub 仓库。</li>
+<li>按 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">GitHub Pages 官方说明</a>配置发布源。</li>
+<li>在 Actions 中手动运行 <code>Deploy website to GitHub Pages</code>。当前工作流只响应 <code>workflow_dispatch</code>，普通推送不会自动发布。</li>
+<li>等待构建与部署成功，以部署记录的实际网址为准；复查仓库子路径、JSON、导航、图片及资源权限。</li>
+</ol>
+<p>工作流只复制明确列出的公开网页、静态素材与索引。Markdown、测试、截图和源码压缩包不在公开清单中。新增公开文件需同步该清单；新增内容不会因放入仓库而自动加入站点。执行部署前再次核对官方说明、服务限制与项目授权。</p>
+<h2 id="许可与引用" data-doc-anchor="许可与引用">许可与引用</h2>
+<p>目前未替项目方选定或授予网站、数据、代码或模型许可。上线前分别确认上述资源及第三方素材的许可范围、真实作者与引用方式；研究成果的完成状态不因网站字段为空而改变。</p>
+<h2 id="中英双语与维护" data-doc-anchor="中英双语与维护">中英双语与维护</h2>
+<p>首页、样本详情与全部网页指南共用“中 / EN”切换。默认依据浏览器语言选择中文或英文，已有选择优先。存储可用时，选择保存在 <code>pacthub-language</code>，跨页面和刷新延续；存储被阻止时，本页仍可切换。切换不会更改技术标识、数据值或研究资料的公开状态。</p>
+<p>站点配置中的展示文案可写为普通字符串或 <code>{ "zh": "中文说明", "en": "English description" }</code>。适用字段包括 <code>site_title</code>、<code>description</code>、<code>overview_summary</code>、<code>algorithm.name/summary/status</code>、下载项的 <code>title/description/size_label</code>、<code>paper.title/summary</code>、成员 <code>name/affiliation/role</code>、<code>team.contribution</code>、<code>hero.media_label</code> 和 <code>license</code>。读取时先选当前语言，缺少时回退中文，再回退英文；两种版本都应尽量齐全。</p>
+<p>样本的 <code>title</code>、<code>description</code>、<code>intensity_unit</code> 与来源说明 <code>acquisition</code>、<code>reconstruction</code>、<code>standardization_reference</code> 同样支持双语对象。ID、文件名、URL、类别与划分键、<code>data_version</code>、<code>source_id</code> 和正式引用保持原始字符串，不翻译技术标识或作者提供的正式引用。</p>
+<p>新增界面文案应同时补入 <code>assets/js/i18n.js</code> 的两种语言。指南正文分别维护于 HTML 的 <code>data-lang-section="zh"</code> 和 <code>data-lang-section="en"</code>，共用标签在 <code>assets/js/docs-i18n.js</code> 中维护；不可见语言使用 <code>hidden</code> 和 <code>inert</code> 隐藏，避免屏幕阅读器重复朗读。Markdown 同时保留完整中文和英文，更新后同步 HTML，再重新生成离线预览与源码包。科研信息仍应按真实资料填入，两种语言都不能用示例代替未提供的事实。</p>
+
+<h2 id="verification" data-doc-anchor="verification">验证与打包</h2>
+<p>在项目根目录依次运行以下命令，并确认每一步通过。离线测试读取生成后的预览文件，必须在 <code>build-preview.py</code> 之后运行：</p>
+<pre class="bash"><code>python3 scripts/validate.py
+node scripts/test-interactions.cjs
+node scripts/test-i18n.cjs
+python3 scripts/build-preview.py
+node scripts/test-i18n-offline.cjs
+python3 scripts/build-package.py</code></pre>
+<p>当前测试套件覆盖 51 项原有交互、45 项双语行为与 5 项离线检查。静态检查验证路径、锚点、无障碍标签和 JSON；JavaScript 测试使用模拟 DOM，不代表真实浏览器渲染、原生对话框焦点、视频解码、剪贴板权限或外部下载已经验证。公开前仍需在实际浏览器和目标部署路径复查。</p>
+      </section>
+      <section data-lang-section="en" lang="en" hidden inert aria-hidden="true">
+<h1 id="en-pacthub-网站框架" data-doc-anchor="pacthub-网站框架">PACTHub website framework</h1>
+<p>A static website for three-dimensional photoacoustic computed tomography (3D PACT) research, bringing together data, sample previews, a completed image-enhancement method, and reproducibility resources. It uses plain HTML, CSS, and JavaScript with no build dependencies, combining a full-screen video hero with light content sections and documentation.</p>
+<h2 id="en-当前状态" data-doc-anchor="当前状态">Current status</h2>
+<ul>
+<li><strong>Data standardization and the image-enhancement algorithm are already complete.</strong> The outstanding work is supplying approved public website materials. Website JSON maps the existing standard for presentation; it does not redefine the data standard.</li>
+<li>All 6 current samples are synthetic <code>DEMO</code> metadata and illustrations, not real scans, official dataset splits, or algorithm results. Real data, source code, model weights, and experimental results have not been integrated.</li>
+<li>Project authors, versions, licenses, papers, citations, and resource links must be filled from actual materials. Empty fields do not imply that the associated research is unfinished.</li>
+<li>This delivery has not been pushed to a remote repository or deployed publicly. The included GitHub Pages workflow supports manual triggering only. Verify materials and permissions before publication.</li>
+</ul>
+<h2 id="en-六个内容板块" data-doc-anchor="六个内容板块">Six content sections</h2>
+<ol type="1">
+<li><a href="../index.html#overview">Project overview</a>: Research task, resource scope, and intended audience.</li>
+<li><a href="../index.html#explore">Samples and previews</a>: Search, category and split filters, and sample details.</li>
+<li><a href="../index.html#algorithm">Image-enhancement algorithm</a>: Method overview, inputs and outputs, code, and weights.</li>
+<li><a href="../index.html#downloads">Downloads and usage</a>: Dataset packages, lightweight examples, reproducibility resources, and guides.</li>
+<li><a href="../index.html#publication">Paper and citation</a>: Paper links, DOI, and citation copying.</li>
+<li><a href="../index.html#team">Team and contributions</a>: Members, affiliations, roles, and feedback routes.</li>
+</ol>
+<p>See the <a href="content-map.html">content map and materials checklist</a> for full requirements, distinguishing launch essentials from possible later enhancements. When materials are missing, explain their status clearly instead of filling gaps with guesses or fabricated links.</p>
+<h2 id="en-直接查看前端" data-doc-anchor="直接查看前端">Open the frontend directly</h2>
+<p><code>PACTHub-preview.html</code> in the delivery package is a standalone offline preview. Download it and open it in a browser; no dependencies or server are required. It embeds the source site's styles, interactions, project-provided video, illustrative samples, and documentation. It does not access real research data and has not been publicly deployed. It is not a screenshot that establishes completed browser verification.</p>
+<p>After editing source files, run <code>python3 scripts/build-preview.py</code> to regenerate the offline preview in the parent directory, then <code>python3 scripts/build-package.py</code> to create the allowlisted source ZIP. GitHub Pages continues to use the original relative-path files and does not publish the preview file.</p>
+<h2 id="en-本地预览" data-doc-anchor="本地预览">Local preview</h2>
+<p>Run from the project root:</p>
+<div class="sourceCode" id="en-cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="en-cb1-1"><a href="#en-cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server 8000 <span class="at">--bind</span> 127.0.0.1</span></code></pre></div>
+<p>Open <a href="http://localhost:8000">http://localhost:8000</a> in a browser. Press <code>Ctrl+C</code> to stop the server. This command listens only on the local computer. The source homepage loads JSON with <code>fetch</code>, so use an HTTP server rather than double-clicking the source <code>index.html</code>.</p>
+<h2 id="en-目录与编辑入口" data-doc-anchor="目录与编辑入口">Directories and editing entry points</h2>
+<pre class="text"><code>index.html                      Six homepage sections, static text, and layout
+assets/css/styles.css           Shared responsive homepage/document styles
+assets/js/app.js                 Configuration, search, filters, details, and citation copying
+assets/js/i18n.js                Shared Chinese/English language runtime
+assets/js/docs-i18n.js           Guide labels and language-section switching
+assets/images/                  Website images and video poster
+assets/media/hero-pact.mp4   Project-provided 20-second 3D visualization
+data/site-config.json           Introductions, release info, paper, team, and links
+data/samples.json               Sample index; currently DEMO only
+data/metadata.schema.json       Website index constraints
+data/sample.template.json       Blank mapping template for one real sample
+docs/content-map.md / .html      Six-section content map and materials checklist
+docs/project-guide.md / .html    Bilingual project guide
+docs/                           Data/algorithm integration and release guides
+.github/workflows/pages.yml     Manual publishing workflow</code></pre>
+<p>Published documentation uses <code>docs/*.html</code>; Markdown remains in the source for maintenance. There is no automatic documentation build pipeline, so keep both versions synchronized when editing. Internal resources use relative paths to support deployment under repository subpaths.</p>
+<h3 id="en-站点配置" data-doc-anchor="站点配置">Site configuration</h3>
+<p>The root of <code>data/site-config.json</code> is an object. These fields are connected to the current page:</p>
+<ul>
+<li><code>site_title</code>: Project display name and page title.</li>
+<li><code>hero</code>: Hero video, poster, crop position, and source statement; see below.</li>
+<li><code>description</code>, <code>overview_summary</code>: Homepage introduction and overview summary.</li>
+<li><code>demo_mode</code>: Toggle for the hero's demo notice. Setting it to <code>false</code> only hides that notice; it does not alter illustrations, sample <code>is_demo</code> values, or documentation.</li>
+<li><code>license</code>: License summary in the download section. If data, code, and weights have different licenses, explain them fully in their respective materials.</li>
+<li><code>citation</code>: Official citation text or BibTeX. A nonempty value is displayed and enables copying. If clipboard access is unavailable, the text is selected for manual copying.</li>
+<li><code>doi</code>: A full DOI identifier in <code>10.digits/suffix</code> format, without the <code>https://doi.org/</code> prefix. Valid syntax creates a DOI link. Enter only an existing DOI, never a placeholder.</li>
+<li><code>algorithm</code>: <code>name</code>, <code>summary</code>, <code>status</code>, <code>repository_url</code>, and <code>weights_url</code> control the method name, introduction, material status, and code/weight entry points.</li>
+<li><code>downloads</code>: An array of cards with <code>id</code>, <code>title</code>, <code>description</code>, <code>url</code>, <code>version</code>, <code>size_label</code>, and <code>sha256</code>. A valid URL enables the link; version, size, and checksum appear when provided.</li>
+<li><code>paper</code>: <code>title</code>, <code>summary</code>, and <code>url</code> control the paper title, explanation, and reading link.</li>
+<li><code>team.members</code>: An array of members with <code>name</code>, <code>affiliation</code>, <code>role</code>, and <code>url</code>. The name is required; fill other fields from actual information.</li>
+<li><code>team.contribution</code>, <code>team.contribution_url</code>: Contribution instructions and a contact/contribution page.</li>
+</ul>
+<p><code>release_version</code> is retained as the site-wide release record and currently has no dedicated display. Download cards use their individual <code>version</code> fields.</p>
+<p>Keep unknown or unverified information as <code>null</code>, and missing members as <code>[]</code>. Empty configurable text retains the HTML default explanation; empty or unsupported resource URLs do not enable links. Configuration is rendered as plain text and does not accept HTML content.</p>
+<p>Resource and contact links accept HTTP(S) only. Internal relative paths work during HTTP(S) preview. Do not use <code>mailto:</code>, <code>javascript:</code>, or other schemes for member websites or contribution links. Put approved public email addresses in explanatory text and link to a team contact page. Protocol checks do not establish link validity; open and verify every address.</p>
+<h3 id="en-全屏视频首屏" data-doc-anchor="全屏视频首屏">Full-screen video hero</h3>
+<p>The hero uses an edge-to-edge video background, a dark overlay, and a concise heading and buttons; the six content sections below remain light. The project-provided finished video received on 2026-10-10 is now included: 1920×1080, 20 seconds, 30 fps, H.264, without audio. The original picture and frame rate are preserved; only MP4 fast-start packaging was applied. The poster is taken at 9 seconds. Including this video does not establish a formal dataset or research release.</p>
+<p>Set these fields in the <code>hero</code> object of <code>data/site-config.json</code>:</p>
+<ul>
+<li><code>mp4_url</code>: MP4 file URL; defaults to <code>assets/media/hero-pact.mp4</code>.</li>
+<li><code>webm_url</code>: Optional WebM URL; defaults to <code>null</code>. The browser tries WebM before MP4.</li>
+<li><code>poster_url</code>: Static poster; defaults to <code>assets/images/hero-poster.jpg</code>.</li>
+<li><code>object_position</code>: Crop focus, such as <code>60% 50%</code>. Narrow screens place the video above the copy, with a 75% 50% focal point to retain the right-hand subject.</li>
+<li><code>media_label</code>: Media source statement. Currently “Project-provided video · 3D visualization.” <code>demo_mode</code> does not hide this statement.</li>
+</ul>
+<p>Prefer an approximately 8–15 second, 16:9 loop without essential embedded text. Use H.264, yuv420p, and faststart for MP4, aiming for around 5 MB. The background is always muted; research videos with spoken explanations need a separate player. When replacing the poster, update both the image <code>src</code> and video <code>poster</code> in <code>index.html</code> so a poster remains available without JavaScript. Update the Pages workflow's public-file allowlist after renaming assets.</p>
+<p>The video autoplays when allowed, with a pause/play button in the hero. Reduced-motion or data-saving settings prevent automatic downloading and playback; visitors can start it manually. It pauses when the tab becomes hidden or the hero scrolls out of view, and scrolling does not override a manual pause. Missing video, playback failures, or blocked autoplay leave the poster and navigation available.</p>
+<p>The offline preview embeds only project-local video and poster assets and does not download remote media. External or missing video is left empty in the offline version, retaining the poster; the published site still uses configured URLs. Run <code>python3 scripts/generate-hero-media.py</code> to regenerate illustrative media. Only this regeneration step requires existing NumPy, Pillow, and ffmpeg installations; viewing and deploying the website does not require them.</p>
+<h3 id="en-接入真实材料" data-doc-anchor="接入真实材料">Integrating real materials</h3>
+<ol type="1">
+<li>Prepare approved public text, images, links, and files according to the <a href="content-map.html">content map</a>, starting with <code>site-config.json</code>.</li>
+<li>Follow the <a href="data-guide.html">data integration guide</a> to map the existing standard into <code>samples.json</code>, verifying units, axis order, provenance, versions, and file checksums. No new standardization work is required.</li>
+<li>Follow the <a href="algorithm-guide.html">algorithm integration guide</a> to add descriptions of the completed method, real comparison images, environment details, and verified reproducibility steps.</li>
+<li>Put content requiring additional text/image structure in <code>index.html</code>. Fields beyond current configuration support require matching rendering logic.</li>
+<li>Use the <a href="release-checklist.html">release checklist</a> to check pages, permissions, licenses, links, and DEMO states.</li>
+</ol>
+<p>Public JSON can be downloaded directly and must not contain internal paths, credentials, or sensitive information. Store large volumes and model weights in approved data repositories. This site has no backend, online inference, authentication, or controlled-data distribution feature.</p>
+<h2 id="en-手动发布" data-doc-anchor="手动发布">Manual publishing</h2>
+<p>The project includes <code>.github/workflows/pages.yml</code>. Configure and run it only after explicit approval for public release. A private source repository does not mean the published website has controlled access.</p>
+<ol type="1">
+<li>Save reviewed files and the workflow to an approved GitHub repository.</li>
+<li>Configure the publishing source using the <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">official GitHub Pages instructions</a>.</li>
+<li>Manually run <code>Deploy website to GitHub Pages</code> in Actions. The current workflow responds only to <code>workflow_dispatch</code>; ordinary pushes do not automatically deploy it.</li>
+<li>Wait for successful build and deployment. Use the actual URL in the deployment record, and recheck repository subpaths, JSON, navigation, images, and resource permissions.</li>
+</ol>
+<p>The workflow copies only explicitly listed public pages, static assets, and index files. Markdown, tests, screenshots, and source archives are not on the public allowlist. Update that list when adding public files; simply putting content in the repository does not add it to the website. Recheck official instructions, service limits, and project authorization before deployment.</p>
+<h2 id="en-许可与引用" data-doc-anchor="许可与引用">Licenses and citations</h2>
+<p>No website, data, code, or model license has been selected or granted on the project team's behalf. Before launch, confirm the license scope, actual authors, and citation instructions for each resource and third-party asset. Empty website fields do not change the completion status of the research.</p>
+<h2 id="en-chineseenglish-support-and-maintenance" data-doc-anchor="中英双语与维护">Chinese/English support and maintenance</h2>
+<p>The homepage, sample details, and all web guides share the 中 / EN switch. The initial language follows the browser language (Chinese for Chinese-language browsers, English otherwise), with a saved choice taking precedence. When storage is available, <code>pacthub-language</code> retains the choice across pages and reloads. If storage is blocked, switching still works on the current page. Language changes do not alter technical identifiers, data values, or public resource availability.</p>
+<p>Display text in site configuration accepts a legacy string or <code>{ "zh": "中文说明", "en": "English description" }</code>. Supported fields include <code>site_title</code>, <code>description</code>, <code>overview_summary</code>, <code>algorithm.name/summary/status</code>, download <code>title/description/size_label</code>, <code>paper.title/summary</code>, member <code>name/affiliation/role</code>, <code>team.contribution</code>, <code>hero.media_label</code>, and <code>license</code>. Text uses the active language first, then Chinese, then English when a translation is absent. Supply both versions wherever possible.</p>
+<p>Sample <code>title</code>, <code>description</code>, <code>intensity_unit</code>, and provenance descriptions <code>acquisition</code>, <code>reconstruction</code>, and <code>standardization_reference</code> also accept bilingual objects. IDs, filenames, URLs, category and split keys, <code>data_version</code>, <code>source_id</code>, and canonical citation text remain original strings. Do not translate technical identifiers or the authors' official citation.</p>
+<p>Add new interface text in both languages to <code>assets/js/i18n.js</code>. Maintain guide bodies in HTML sections marked <code>data-lang-section="zh"</code> and <code>data-lang-section="en"</code>, with shared labels in <code>assets/js/docs-i18n.js</code>. Inactive content is hidden using <code>hidden</code> and <code>inert</code> to prevent duplicate screen-reader reading. Markdown retains complete Chinese and English versions. Keep HTML synchronized, then rebuild the offline preview and source package. Research information must still come from actual materials; neither language may replace missing facts with examples.</p>
+
+<h2 id="en-verification" data-doc-anchor="verification">Verification and packaging</h2>
+<p>Run these commands from the project root in order, checking that each succeeds. The offline tests read the generated preview, so run them only after <code>build-preview.py</code>:</p>
+<pre class="bash"><code>python3 scripts/validate.py
+node scripts/test-interactions.cjs
+node scripts/test-i18n.cjs
+python3 scripts/build-preview.py
+node scripts/test-i18n-offline.cjs
+python3 scripts/build-package.py</code></pre>
+<p>The current suites cover 51 original interaction cases, 45 bilingual cases, and 5 offline checks. Static validation checks paths, anchors, accessibility labels, and JSON. JavaScript tests use a simulated DOM; they do not establish real browser rendering, native dialog focus behavior, video decoding, clipboard permissions, or external download availability. Recheck in an actual browser and under the target deployment path before publication.</p>
+      </section>
+    </article>
+    <footer class="doc-footer"><span data-i18n="docs.footer">网站框架 · 合成 DEMO 仅用于开发与交互演示；真实研究材料待接入。</span> <a href="../index.html" data-i18n="docs.home.footer">返回数据集首页</a></footer>
+  </main>
+</body>
+</html>

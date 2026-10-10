@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" data-i18n-content="docs.description" content="PACTHub 中英双语网站指南。示例为合成 DEMO，真实研究材料待提供与核验。">
+  <title data-i18n="docs.title.content-map">内容地图 · PACTHub</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style data-doc-style>[data-lang-section][hidden]{display:none!important}.doc-content>.doc-topbar,.doc-content>.doc-nav,.doc-content>.doc-footer{width:100%}.doc-content>.doc-topbar{padding-top:0;align-items:center;flex-wrap:wrap}.doc-content>.doc-nav{padding:18px 0 26px}.doc-toolbar-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.doc-content .language-switch{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--line,#ccd4df);border-radius:24px;background:var(--surface,#fff)}.doc-content .language-switch button{font:inherit;font-size:13px;min-width:44px;min-height:36px;padding:4px 12px;border:0;border-radius:20px;background:transparent;color:var(--text,#17283b);cursor:pointer}.doc-content .language-switch button[aria-pressed=true]{background:var(--accent,#335ac9);color:#fff}.doc-content .language-switch button:focus-visible{outline:3px solid var(--accent,#335ac9);outline-offset:3px}.doc-content [data-lang-section]{margin:0}.doc-content>.doc-footer{margin-top:38px;padding-bottom:0}.doc-content .task-list input{flex-shrink:0}</style>
+  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/docs-i18n.js" defer></script>
+</head>
+<body class="doc-page">
+  <!-- Keep this guide's complete Chinese and English content synchronized with docs/content-map.md. -->
+  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">跳转到指南正文</a>
+  <main id="main" class="doc-content">
+    <header class="doc-topbar">
+      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="返回 PACTHub 首页"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← 返回首页</a></div>
+      <div class="language-switch" role="group" aria-label="选择语言" data-i18n-aria-label="docs.language">
+        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="true">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </header>
+    <nav class="doc-nav" aria-label="文档导航" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" data-i18n="docs.nav.project-guide">项目说明</a><a href="content-map.html" aria-current="page" data-i18n="docs.nav.content-map">内容地图</a><a href="data-guide.html" data-i18n="docs.nav.data-guide">数据接入</a><a href="algorithm-guide.html" data-i18n="docs.nav.algorithm-guide">算法接入</a><a href="release-checklist.html" data-i18n="docs.nav.release-checklist">发布清单</a></nav>
+    <article id="guide-content" tabindex="-1">
+      <section data-lang-section="zh" lang="zh-CN">
+<h1 id="pacthub-内容地图与材料清单" data-doc-anchor="pacthub-内容地图与材料清单">PACTHub 内容地图与材料清单</h1>
+<p>数据标准化与图像增强算法均已完成。本清单只整理网站展示、下载与复现所需的材料，不代表研究仍待开展。尚未提供的名称、规模、效果、人员与链接保持待补状态，不用示意内容代替研究结论。</p>
+<h2 id="reading-order" data-doc-anchor="reading-order">推荐浏览顺序</h2>
+<ol type="1">
+<li><a href="../index.html#overview"><strong>项目概览</strong></a>：这是什么，适合谁，有什么可用资源？</li>
+<li><a href="../index.html#explore"><strong>样本与预览</strong></a>：数据长什么样，哪些字段影响我的使用？</li>
+<li><a href="../index.html#algorithm"><strong>图像增强算法</strong></a>：方法做什么，输入输出是什么，效果依据是什么？</li>
+<li><a href="../index.html#downloads"><strong>下载与使用</strong></a>：如何获得资料，并完成第一次运行？</li>
+<li><a href="../index.html#publication"><strong>论文与引用</strong></a>：研究依据在哪里，应该如何引用？</li>
+<li><a href="../index.html#team"><strong>团队与贡献</strong></a>：谁在维护，问题与贡献发到哪里？</li>
+</ol>
+<p>先让访客理解资源，再判断是否适用，最后开始使用。首页保留核心信息，完整数据规范与算法步骤分别链接到现有指南。</p>
+<h2 id="overview" data-doc-anchor="overview">01 · 项目概览</h2>
+<p><strong>应回答：</strong> PACTHub 面向什么研究任务，提供哪些已完成的成果？</p>
+<p><strong>正式上线必需</strong></p>
+<ul>
+<li>文字：确认对外项目名称；一句话定位；一段约 100–180 字简介，说明研究对象、使用场景，以及数据与算法的关系。</li>
+<li>事实：已批准公开的数据版本、覆盖范围及数量统计口径。没有核实的总量、性能和覆盖范围不展示。</li>
+<li>首屏视频／封面：提供一段经批准公开的视频和匹配静态封面，附来源与用途说明。已接入项目方提供的 20 秒成片及匹配封面；公开部署前仍需确认素材发布权限与说明。</li>
+<li>图片：可选 1 张经批准公开的代表图，附来源、图注及替代文本；没有真实图时可不放，不用科学结果示意图充当实测图。</li>
+<li>链接／文件：至少确定一个主要行动入口，如浏览样本、查看使用说明或获取数据；无需为概览另制下载文件。</li>
+</ul>
+<p><strong>后续可补：</strong> 项目 Logo、更完整的双语项目背景、更多应用示例。</p>
+<p><strong>编辑位置：</strong> <code>data/site-config.json</code> 的 <code>site_title</code>、<code>description</code>、<code>overview_summary</code>；<code>index.html#overview</code> 管理概览结构与图文。<code>release_version</code> 保存发布记录，目前没有独立展示位置；只有核实后的数值才写入页面。</p>
+<h2 id="samples" data-doc-anchor="samples">02 · 样本与预览</h2>
+<p><strong>应回答：</strong> 我能看到什么数据，它的空间尺度、来源和分组意味着什么？</p>
+<p><strong>正式上线必需</strong></p>
+<ul>
+<li>文字：每条公开样本的唯一 ID、标题、简短说明、真实类别与数据划分。没有划分时明确未指定，不沿用 DEMO 分组。</li>
+<li>字段：按现有数据标准提供可公开的尺寸、轴顺序、体素间距、单位、波长及来源信息，并注明标准与数据版本。未知或不适用字段按现有 Schema 表达，不填猜测值。</li>
+<li>图片：建议先提供 3–6 条有代表性的真实样本，至少 1 条用于验证展示；每条预览有图注，注明切片／投影方式、方向、尺度与显示处理。不能公开图像时保留明确说明。</li>
+<li>链接／文件：对应预览图，以及每条已开放文件的名称、格式、下载地址、实际字节数与 SHA-256；受控数据只链接获准使用的申请入口。</li>
+</ul>
+<p><strong>后续可补：</strong> 更多类别、三视图或切片浏览、筛选标签、轻量三维预览。新增交互另行实现，不视为当前静态站点已有能力。</p>
+<p><strong>编辑位置：</strong> <code>index.html#explore</code> 是浏览入口；样本条目写入 <code>data/samples.json</code>；预览资源放在 <code>assets/images/</code> 或使用经核验的 HTTPS 地址。字段映射参见<a href="data-guide.html">数据接入指南</a>。</p>
+<h2 id="algorithm" data-doc-anchor="algorithm">03 · 图像增强算法</h2>
+<p><strong>应回答：</strong> 已完成的算法改善什么，怎样调用，哪些情况不适用？</p>
+<p><strong>正式上线必需</strong></p>
+<ul>
+<li>文字：算法正式名称；约 100–180 字方法摘要；输入、输出、与现有数据标准的对应关系；适用范围与已知局限。</li>
+<li>图片：展示效果时提供至少 1 组来自同一样本的真实输入／输出对照及图注；保持方向、裁剪与显示尺度可比，并交代处理方式。没有批准公开的对照图时不做效果主张。</li>
+<li>依据：展示指标时同时提供指标定义、测试数据／划分、参考真值、运行条件与结果来源。无已核验结果时不放性能数字。</li>
+<li>链接／文件：代码或方法文档入口、具体发布版本；若开放模型，提供对应权重与许可。准备依赖／环境文件、配置和一个已验证的最小推理示例；不适用的材料明确注明。</li>
+</ul>
+<p><strong>后续可补：</strong> 方法流程图、更多结果、消融实验、运行耗时对比。在线推理需要另行开发服务。</p>
+<p><strong>编辑位置：</strong> <code>index.html#algorithm</code> 的结构与效果图；<code>data/site-config.json</code> 的 <code>algorithm.name</code>、<code>summary</code>、<code>status</code>、<code>repository_url</code>、<code>weights_url</code> 提供文案与资源；完整步骤维护在<a href="algorithm-guide.html">算法接入指南</a>。</p>
+<h2 id="downloads" data-doc-anchor="downloads">04 · 下载与使用</h2>
+<p><strong>应回答：</strong> 哪个包适合我，如何验证、读取和复现，使用限制是什么？</p>
+<p><strong>正式上线必需</strong></p>
+<ul>
+<li>文字：实际文件格式与目录结构；最小读取步骤；已验证的依赖环境与命令；数据许可、代码／权重许可，以及访问限制。</li>
+<li>文件：至少一份可验证的轻量样例与读取示例，或清楚说明申请访问流程。每个实际开放的发布包记录版本、大小与 SHA-256，附 README；不得发布空包或占位下载链接。</li>
+<li>链接：数据集、轻量样例、算法资料包各自的真实入口；未开放项目保持待提供／申请访问状态。确认外部仓库的权限与链接有效性。</li>
+<li>图片：非必需。文字无法清楚解释文件结构或读取过程时再补图。</li>
+</ul>
+<p><strong>后续可补：</strong> Notebook、容器、常见问题、版本更新记录及更多语言的读取示例。</p>
+<p><strong>编辑位置：</strong> <code>data/site-config.json</code> 的 <code>downloads</code> 与 <code>license</code>；<code>index.html#downloads</code> 的使用摘要。读取和复现细节分别补入数据、算法指南；具体样本文件写入 <code>data/samples.json</code> 的 <code>files</code>。</p>
+<h2 id="citation" data-doc-anchor="citation">05 · 论文与引用</h2>
+<p><strong>应回答：</strong> 哪份论文支持这些结果，使用资源时引用哪个版本？</p>
+<p><strong>正式上线必需</strong></p>
+<ul>
+<li>文字：已公开论文的准确题名、作者顺序、年份、发表状态及出处；一段与实际资源版本匹配的引用文本或 BibTeX。</li>
+<li>链接／文件：已存在且经核验的 DOI、论文或预印本链接。PDF 仅在拥有分发权时提供。</li>
+<li>尚无可公开论文时：说明当前公开状态，给出经项目方确认的资源引用方式；没有 DOI 就保留空值，不构造地址。</li>
+<li>图片：非必需，不需要用论文截图补足这一栏。</li>
+</ul>
+<p><strong>后续可补：</strong> 独立 <code>.bib</code> 文件、数据集与算法分别引用的说明、相关论文列表。</p>
+<p><strong>编辑位置：</strong> <code>data/site-config.json</code> 的 <code>paper.title</code>、<code>paper.summary</code>、<code>paper.url</code>、<code>citation</code>、<code>doi</code>；页面对应 <code>index.html#publication</code>。非空引用启用复制；<code>doi</code> 填真实的完整 <code>10.数字/后缀</code> 标识符，格式有效时生成 DOI 链接。</p>
+<h2 id="team" data-doc-anchor="team">06 · 团队与贡献</h2>
+<p><strong>应回答：</strong> 谁负责维护，如何报告问题或参与？</p>
+<p><strong>正式上线必需</strong></p>
+<ul>
+<li>文字：确认可公开的维护者／团队名称与单位；维护范围；简短贡献方式和问题反馈说明。</li>
+<li>链接：至少一个可用的公开联系入口，如仓库 Issues 或团队联系页；获准公开的邮箱可写在说明中。区分技术问题、数据申请与合作联系的去向。</li>
+<li>图片／文件：均非必需；姓名、头像、单位 Logo 与致谢内容需确认可公开。</li>
+</ul>
+<p><strong>后续可补：</strong> 成员介绍、头像、资助／合作单位、完整贡献指南与贡献者名单。</p>
+<p><strong>编辑位置：</strong> <code>data/site-config.json</code> 的 <code>team.members</code>（每项为 <code>name</code>、<code>affiliation</code>、<code>role</code>、<code>url</code>）、<code>team.contribution</code>、<code>team.contribution_url</code>；结构对应 <code>index.html#team</code>。链接仅接受 HTTP(S)，联系入口不支持 <code>mailto:</code>。不要加入未获许可的个人联系方式。</p>
+<h2 id="material-checklist" data-doc-anchor="material-checklist">一次性提供的最小材料包</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>项目正式名称、一句话定位、简介，以及核实后的版本和范围</label></li>
+<li><label><input type="checkbox" / disabled>至少 1 条可公开真实样本的索引信息与可用预览；建议首批 3–6 条</label></li>
+<li><label><input type="checkbox" / disabled>算法名称、摘要、输入输出、局限、版本与文档／代码入口</label></li>
+<li><label><input type="checkbox" / disabled>若展示效果：真实对照图、图注、可比的显示设置和结果依据</label></li>
+<li><label><input type="checkbox" / disabled>数据／样例／算法包的实际链接、大小、校验值与各自许可，或明确的访问申请方式</label></li>
+<li><label><input type="checkbox" / disabled>已验证的读取与推理示例，以及所需环境／配置／权重（如适用）</label></li>
+<li><label><input type="checkbox" / disabled>可公开的论文与引用信息，或经确认的当前公开状态与资源引用方式</label></li>
+<li><label><input type="checkbox" / disabled>团队署名、维护者与可用反馈入口；确认全部材料的公开权限</label></li>
+</ul>
+<p>图片请保留原始文件，并附可直接发布的图注；压缩包和模型权重使用批准的数据仓库托管，不必塞入网页仓库。材料可按现有标准提交，网站负责映射，不要求重新制定数据标准。</p>
+<h2 id="launch-check" data-doc-anchor="launch-check">配置与上线核对</h2>
+<p>未知信息保留 <code>null</code>，未提供成员时保留 <code>[]</code>。可配置文案为空会保留 HTML 默认说明，资源为空不启用入口。新增配置字段须同步渲染逻辑。</p>
+<ol type="1">
+<li>用真实材料替换或明确隔离 DEMO；只有不再展示演示内容时才关闭对应演示状态。</li>
+<li>确认标题、版本、样本清单、论文和下载包彼此一致；研究已完成与资源是否已公开分开表述。</li>
+<li>在无登录会话测试公开链接，并检查手机页面、预览图、筛选、详情及引用复制。</li>
+<li>未获准公开、尚未提供或无法核验的内容继续留空或禁用入口。完整审核见<a href="release-checklist.html">发布检查清单</a>。</li>
+</ol>
+<p>维护入口汇总：<code>index.html</code> 管正文与版面；<code>data/site-config.json</code> 管全站资源与发布信息；<code>data/samples.json</code> 管样本索引。本页 HTML 与 Markdown 应同步维护。</p>
+
+      </section>
+      <section data-lang-section="en" lang="en" hidden inert aria-hidden="true">
+<h1 id="en-pacthub-content-map-and-materials-checklist" data-doc-anchor="pacthub-content-map-and-materials-checklist">PACTHub content map and materials checklist</h1>
+<p>Data standardization and the image-enhancement algorithm are already complete. This checklist organizes only the materials needed for website presentation, downloads, and reproducibility; it does not imply that the research still needs to be carried out. Names, scale, results, people, and links that have not been supplied remain pending. Illustrative content must not stand in for research conclusions.</p>
+<h2 id="en-reading-order" data-doc-anchor="reading-order">Recommended reading order</h2>
+<ol type="1">
+<li><a href="../index.html#overview"><strong>Project overview</strong></a>: What is this, who is it for, and what resources are available?</li>
+<li><a href="../index.html#explore"><strong>Samples and previews</strong></a>: What does the data look like, and which fields affect its use?</li>
+<li><a href="../index.html#algorithm"><strong>Image-enhancement algorithm</strong></a>: What does the method do, what are its inputs and outputs, and what supports its results?</li>
+<li><a href="../index.html#downloads"><strong>Downloads and usage</strong></a>: How do I obtain materials and complete a first run?</li>
+<li><a href="../index.html#publication"><strong>Paper and citation</strong></a>: Where is the research evidence, and how should I cite it?</li>
+<li><a href="../index.html#team"><strong>Team and contributions</strong></a>: Who maintains this, and where should questions or contributions go?</li>
+</ol>
+<p>Help visitors understand the resources first, assess suitability next, and then start using them. Keep core information on the homepage and link to the existing guides for full data specifications and algorithm steps.</p>
+<h2 id="en-overview" data-doc-anchor="overview">01 · Project overview</h2>
+<p><strong>Question to answer:</strong> Which research tasks does PACTHub support, and which completed outputs does it provide?</p>
+<p><strong>Required for public launch</strong></p>
+<ul>
+<li>Text: Confirm the public project name, a one-sentence positioning statement, and a short introduction of roughly 100–180 Chinese characters or equivalent English length, explaining the study subject, use cases, and relationship between data and algorithm.</li>
+<li>Facts: Provide the data version and coverage approved for public release, and explain how counts were calculated. Do not display unverified totals, performance, or coverage.</li>
+<li>Hero video/poster: Provide an approved public video and matching static poster, with source and intended-use notes. The project-provided 20-second video and matching poster are now included. Confirm publication rights and descriptions before public deployment.</li>
+<li>Image: Optionally include one representative image approved for publication, with source, caption, and alternative text. Omit it when no real image is available; do not present a scientific illustration as measured results.</li>
+<li>Links/files: Establish at least one primary action, such as browsing samples, reading instructions, or obtaining data. No separate overview download is needed.</li>
+</ul>
+<p><strong>Possible later additions:</strong> Project logo, more bilingual project background, and additional application examples.</p>
+<p><strong>Edit here:</strong> <code>site_title</code>, <code>description</code>, and <code>overview_summary</code> in <code>data/site-config.json</code>; <code>index.html#overview</code> controls overview structure and imagery. <code>release_version</code> stores the release record and currently has no separate display. Add only verified numbers to the page.</p>
+<h2 id="en-samples" data-doc-anchor="samples">02 · Samples and previews</h2>
+<p><strong>Question to answer:</strong> What data can I inspect, and what do its spatial scale, provenance, and groups mean?</p>
+<p><strong>Required for public launch</strong></p>
+<ul>
+<li>Text: A unique ID, title, short description, real category, and actual dataset split for each public sample. Explicitly mark absent splits as unspecified; do not reuse DEMO groups.</li>
+<li>Fields: Supply publicly shareable dimensions, axis order, voxel spacing, units, wavelength, and provenance under the existing data standard, including standard and data versions. Represent unknown or inapplicable fields according to the current Schema; do not guess values.</li>
+<li>Images: Start with 3–6 representative real samples if possible, with at least one for validating presentation. Each preview needs a caption describing slice/projection method, orientation, scale, and display processing. State clearly when images cannot be public.</li>
+<li>Links/files: Include corresponding preview images and each released file's name, format, download URL, actual byte count, and SHA-256. For controlled data, link only to an approved access-request route.</li>
+</ul>
+<p><strong>Possible later additions:</strong> More categories, three-view or slice browsing, filter tags, and lightweight 3D previews. New interactions require separate implementation; they are not existing capabilities of the static site.</p>
+<p><strong>Edit here:</strong> <code>index.html#explore</code> is the browsing entry point. Store sample records in <code>data/samples.json</code>, and previews in <code>assets/images/</code> or at verified HTTPS URLs. See the <a href="data-guide.html">data integration guide</a> for field mapping.</p>
+<h2 id="en-algorithm" data-doc-anchor="algorithm">03 · Image-enhancement algorithm</h2>
+<p><strong>Question to answer:</strong> What does the completed algorithm improve, how is it run, and when is it unsuitable?</p>
+<p><strong>Required for public launch</strong></p>
+<ul>
+<li>Text: Official algorithm name; a short method summary of roughly 100–180 Chinese characters or equivalent English length; inputs and outputs; relationship to the existing data standard; scope and known limitations.</li>
+<li>Images: If showing results, supply at least one real input/output comparison from the same sample, with captions. Keep orientation, crop, and display scale comparable, and explain processing. Make no performance claims without comparison images approved for publication.</li>
+<li>Evidence: When showing metrics, include their definitions, test data/splits, reference ground truth, execution conditions, and result sources. Omit performance numbers without verified results.</li>
+<li>Links/files: A code or method-documentation entry point and specific release version. If a model is released, provide its matching weights and license. Prepare dependency/environment files, configuration, and a verified minimal inference example. Explicitly mark inapplicable materials.</li>
+</ul>
+<p><strong>Possible later additions:</strong> Method flowchart, more results, ablation studies, and runtime comparisons. Online inference requires a separately developed service.</p>
+<p><strong>Edit here:</strong> Structure and result images in <code>index.html#algorithm</code>; <code>algorithm.name</code>, <code>summary</code>, <code>status</code>, <code>repository_url</code>, and <code>weights_url</code> in <code>data/site-config.json</code> provide text and resources. Maintain full steps in the <a href="algorithm-guide.html">algorithm integration guide</a>.</p>
+<h2 id="en-downloads" data-doc-anchor="downloads">04 · Downloads and usage</h2>
+<p><strong>Question to answer:</strong> Which package fits my needs, how do I verify, read, and reproduce it, and what use restrictions apply?</p>
+<p><strong>Required for public launch</strong></p>
+<ul>
+<li>Text: Actual file formats and directory structure, minimal reading steps, verified environment and commands, data license, code/weight licenses, and access restrictions.</li>
+<li>Files: At least one verifiable lightweight sample and reading example, or a clear access-request process. Record version, size, and SHA-256 for each released package, with a README. Do not publish empty packages or placeholder download links.</li>
+<li>Links: Real entry points for the dataset, lightweight sample, and algorithm resource package. Keep unavailable items marked pending or access-on-request. Confirm external repository permissions and link validity.</li>
+<li>Images: Optional. Add diagrams only when text cannot explain the file structure or reading process clearly.</li>
+</ul>
+<p><strong>Possible later additions:</strong> Notebooks, containers, frequently asked questions, release notes, and reading examples in more languages.</p>
+<p><strong>Edit here:</strong> <code>downloads</code> and <code>license</code> in <code>data/site-config.json</code>; usage summary in <code>index.html#downloads</code>. Add reading and reproducibility details to the data and algorithm guides respectively. List individual sample files in each record's <code>files</code> in <code>data/samples.json</code>.</p>
+<h2 id="en-citation" data-doc-anchor="citation">05 · Paper and citation</h2>
+<p><strong>Question to answer:</strong> Which paper supports the results, and which resource version should I cite?</p>
+<p><strong>Required for public launch</strong></p>
+<ul>
+<li>Text: Exact title, author order, year, publication status, and venue/source for the public paper; citation text or BibTeX matching the actual resource version.</li>
+<li>Links/files: An existing, verified DOI, paper, or preprint URL. Offer PDFs only with distribution rights.</li>
+<li>If no paper can be public yet: Explain its current availability and give a project-approved way to cite the resources. Keep the DOI empty if none exists; do not construct a URL.</li>
+<li>Images: Optional; paper screenshots are not needed to fill this section.</li>
+</ul>
+<p><strong>Possible later additions:</strong> A separate <code>.bib</code> file, instructions for citing the dataset and algorithm separately, and related papers.</p>
+<p><strong>Edit here:</strong> <code>paper.title</code>, <code>paper.summary</code>, <code>paper.url</code>, <code>citation</code>, and <code>doi</code> in <code>data/site-config.json</code>; <code>index.html#publication</code> is the corresponding page section. A nonempty citation enables copying. Enter a real, complete <code>10.digits/suffix</code> identifier in <code>doi</code>; valid syntax generates a DOI link.</p>
+<h2 id="en-team" data-doc-anchor="team">06 · Team and contributions</h2>
+<p><strong>Question to answer:</strong> Who maintains this, and how do I report an issue or contribute?</p>
+<p><strong>Required for public launch</strong></p>
+<ul>
+<li>Text: Confirm publicly shareable maintainer/team names and affiliations, maintenance scope, and short contribution and feedback instructions.</li>
+<li>Links: At least one usable public contact route, such as repository Issues or a team contact page. An approved public email may appear in explanatory text. Distinguish routes for technical issues, data requests, and collaboration.</li>
+<li>Images/files: Optional. Confirm permission to publish names, portraits, affiliation logos, and acknowledgments.</li>
+</ul>
+<p><strong>Possible later additions:</strong> Member profiles, portraits, funders/partner institutions, full contribution guidelines, and a contributor list.</p>
+<p><strong>Edit here:</strong> <code>team.members</code> (each item has <code>name</code>, <code>affiliation</code>, <code>role</code>, and <code>url</code>), <code>team.contribution</code>, and <code>team.contribution_url</code> in <code>data/site-config.json</code>; structure in <code>index.html#team</code>. Links accept only HTTP(S); contact entry points do not support <code>mailto:</code>. Do not include personal contact details without permission.</p>
+<h2 id="en-material-checklist" data-doc-anchor="material-checklist">Minimum materials package to supply together</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>Official project name, one-sentence positioning, introduction, and verified version and scope.</label></li>
+<li><label><input type="checkbox" / disabled>Index information and a usable preview for at least one real sample approved for publication; 3–6 samples are recommended for the first batch.</label></li>
+<li><label><input type="checkbox" / disabled>Algorithm name, summary, inputs, outputs, limitations, version, and documentation/code entry point.</label></li>
+<li><label><input type="checkbox" / disabled>If showing results: real comparison images, captions, comparable display settings, and supporting evidence.</label></li>
+<li><label><input type="checkbox" / disabled>Actual data/sample/algorithm package links, sizes, checksums, and licenses, or a clear access-request process.</label></li>
+<li><label><input type="checkbox" / disabled>Verified reading and inference examples, with required environment, configuration, and weights where applicable.</label></li>
+<li><label><input type="checkbox" / disabled>Publicly shareable paper and citation information, or confirmed current availability and resource citation instructions.</label></li>
+<li><label><input type="checkbox" / disabled>Team credits, maintainers, and a usable feedback route; confirmed public-release permission for all materials.</label></li>
+</ul>
+<p>Keep original image files and provide publishable captions. Host archives and model weights in an approved data repository rather than putting them into the website repository. Materials may follow the existing standard; the website maps them and does not require a new data standard.</p>
+<h2 id="en-launch-check" data-doc-anchor="launch-check">Configuration and launch checks</h2>
+<p>Keep unknown information as <code>null</code> and absent members as <code>[]</code>. Empty configurable text retains the HTML default explanation; missing resources do not enable links. New configuration fields require corresponding rendering logic.</p>
+<ol type="1">
+<li>Replace DEMO material with real content or clearly isolate it. Turn off a demo state only when the corresponding demonstration content is no longer shown.</li>
+<li>Confirm consistency across titles, versions, sample lists, papers, and download packages. Describe research completion separately from public resource availability.</li>
+<li>Test public links while signed out, and check mobile layout, previews, filters, details, and citation copying.</li>
+<li>Leave content empty or entry points disabled when publication is unauthorized, materials are missing, or facts cannot be verified. See the full <a href="release-checklist.html">release checklist</a>.</li>
+</ol>
+<p>Maintenance summary: <code>index.html</code> controls content and layout; <code>data/site-config.json</code> controls site-wide resources and release information; <code>data/samples.json</code> controls the sample index. Maintain this page's HTML and Markdown together.</p>
+
+      </section>
+    </article>
+    <footer class="doc-footer"><span data-i18n="docs.footer">网站框架 · 合成 DEMO 仅用于开发与交互演示；真实研究材料待接入。</span> <a href="../index.html" data-i18n="docs.home.footer">返回数据集首页</a></footer>
+  </main>
+</body>
+</html>

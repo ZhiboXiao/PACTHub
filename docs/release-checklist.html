@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" data-i18n-content="docs.description" content="PACTHub 中英双语网站指南。示例为合成 DEMO，真实研究材料待提供与核验。">
+  <title data-i18n="docs.title.release-checklist">发布清单 · PACTHub</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style data-doc-style>[data-lang-section][hidden]{display:none!important}.doc-content>.doc-topbar,.doc-content>.doc-nav,.doc-content>.doc-footer{width:100%}.doc-content>.doc-topbar{padding-top:0;align-items:center;flex-wrap:wrap}.doc-content>.doc-nav{padding:18px 0 26px}.doc-toolbar-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.doc-content .language-switch{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--line,#ccd4df);border-radius:24px;background:var(--surface,#fff)}.doc-content .language-switch button{font:inherit;font-size:13px;min-width:44px;min-height:36px;padding:4px 12px;border:0;border-radius:20px;background:transparent;color:var(--text,#17283b);cursor:pointer}.doc-content .language-switch button[aria-pressed=true]{background:var(--accent,#335ac9);color:#fff}.doc-content .language-switch button:focus-visible{outline:3px solid var(--accent,#335ac9);outline-offset:3px}.doc-content [data-lang-section]{margin:0}.doc-content>.doc-footer{margin-top:38px;padding-bottom:0}.doc-content .task-list input{flex-shrink:0}</style>
+  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/docs-i18n.js" defer></script>
+</head>
+<body class="doc-page">
+  <!-- Keep this guide's complete Chinese and English content synchronized with docs/release-checklist.md. -->
+  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">跳转到指南正文</a>
+  <main id="main" class="doc-content">
+    <header class="doc-topbar">
+      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="返回 PACTHub 首页"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← 返回首页</a></div>
+      <div class="language-switch" role="group" aria-label="选择语言" data-i18n-aria-label="docs.language">
+        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="true">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </header>
+    <nav class="doc-nav" aria-label="文档导航" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" data-i18n="docs.nav.project-guide">项目说明</a><a href="content-map.html" data-i18n="docs.nav.content-map">内容地图</a><a href="data-guide.html" data-i18n="docs.nav.data-guide">数据接入</a><a href="algorithm-guide.html" data-i18n="docs.nav.algorithm-guide">算法接入</a><a href="release-checklist.html" aria-current="page" data-i18n="docs.nav.release-checklist">发布清单</a></nav>
+    <article id="guide-content" tabindex="-1">
+      <section data-lang-section="zh" lang="zh-CN">
+<h1 id="发布前检查清单" data-doc-anchor="发布前检查清单">发布前检查清单</h1>
+<p>适用于网站首次公开、数据版本更新和算法资源接入。当前交付是本地网站框架；数据标准化与 AI 算法已由项目方完成，下面检查的是<strong>公开材料、网站映射及发布条件</strong>。没有证据的项目保持“待核实”，不要勾选。</p>
+<p>网页版清单为只读参考，不保存审核状态；请在项目自己的发布记录中保存检查结果、证据与负责人。</p>
+<h2 id="1-公开范围与身份" data-doc-anchor="1-公开范围与身份">1. 公开范围与身份</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>项目负责人批准本次公开范围、目标仓库和站点。</label></li>
+<li><label><input type="checkbox" / disabled>正式名称、所属机构、作者顺序、联系人及其公开授权已核实。</label></li>
+<li><label><input type="checkbox" / disabled>页面清楚区分真实发布内容、演示样例、合成示意图和待补充信息。</label></li>
+<li><label><input type="checkbox" / disabled>DEMO 不计入真实样本量、类别占比、数据规模、算法性能或研究结论。</label></li>
+<li><label><input type="checkbox" / disabled>用于演示的条目已移除，或继续明确标注并与真实数据区分。</label></li>
+</ul>
+<h2 id="2-数据与索引映射" data-doc-anchor="2-数据与索引映射">2. 数据与索引映射</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>网站索引与现有标准的字段对应关系、标准版本及解释经负责人确认。</label></li>
+<li><label><input type="checkbox" / disabled>样本 ID 唯一、稳定；标题、类别、描述与真实资料一致。</label></li>
+<li><label><input type="checkbox" / disabled>维度顺序、坐标约定、单位、体素间距、波长及缺失值语义已核实。</label></li>
+<li><label><input type="checkbox" / disabled>阵列/采集/重建来源及参数能够追溯；不能公开的部分留在受控记录中。</label></li>
+<li><label><input type="checkbox" / disabled>数据划分是实际采用的划分；同一对象、实验或关联样本跨集合泄漏风险已检查。</label></li>
+<li><label><input type="checkbox" / disabled>元数据通过 Schema 校验；必要扩展同步修改 Schema、展示逻辑与说明。</label></li>
+<li><label><input type="checkbox" / disabled>索引统计与已获准公开的实际文件一致。</label></li>
+</ul>
+<h2 id="3-伦理隐私与去标识化" data-doc-anchor="3-伦理隐私与去标识化">3. 伦理、隐私与去标识化</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>涉及人体、动物或其他受限制资料时，项目方已核实相应审批、同意和共享条件。</label></li>
+<li><label><input type="checkbox" / disabled>发布内容符合原始同意和授权范围；不能因为去标识化而默认允许公开。</label></li>
+<li><label><input type="checkbox" / disabled>文件名、文件头、嵌入元数据、缩略图、图中标注和压缩包内容均已检查。</label></li>
+<li><label><input type="checkbox" / disabled>已移除身份标识、内部编号关联表、敏感日期、内部存储路径和凭据。</label></li>
+<li><label><input type="checkbox" / disabled>可识别解剖特征、稀有属性组合及重新识别风险已由具备资格的负责人评估。</label></li>
+<li><label><input type="checkbox" / disabled>公开 JSON、代码仓库历史和站点产物均不含受限信息。</label></li>
+</ul>
+<p>此清单是发布操作提醒，不替代机构审批、数据治理或专业法律意见。</p>
+<h2 id="4-许可作者与引用" data-doc-anchor="4-许可作者与引用">4. 许可、作者与引用</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>数据、算法代码、权重、网站代码和第三方素材分别有明确且相容的使用条件。</label></li>
+<li><label><input type="checkbox" / disabled>作者、贡献、资助和致谢经相关人员确认。</label></li>
+<li><label><input type="checkbox" / disabled>已核验引用文本、版本、发布日期和永久标识符；没有 DOI 时不虚构。</label></li>
+<li><label><input type="checkbox" / disabled>引用指向实际发布版本，更新内容保留版本记录和变更摘要。</label></li>
+<li><label><input type="checkbox" / disabled>必要的适用范围、研究用途说明、限制及撤回联系方式清楚可见。</label></li>
+</ul>
+<h2 id="5-数据托管与下载" data-doc-anchor="5-数据托管与下载">5. 数据托管与下载</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>数据文件托管位置经批准；每个下载链接都已实际访问并与描述一致。</label></li>
+<li><label><input type="checkbox" / disabled>文件格式、压缩方式、大小和 SHA-256 校验值从最终文件计算。</label></li>
+<li><label><input type="checkbox" / disabled>用空白会话检查公开资源是否可用；受控资源明确说明申请或登录条件。</label></li>
+<li><label><input type="checkbox" / disabled>没有泄露临时签名 URL、认证令牌或仅供内部使用的分享链接。</label></li>
+<li><label><input type="checkbox" / disabled>对跨域获取、断点续传和大文件下载需求进行实际验证，不把浏览器行为当作保证。</label></li>
+<li><label><input type="checkbox" / disabled>已核对托管服务容量、流量、保留期限及费用；GitHub Pages 仅承载轻量站点与索引。</label></li>
+<li><label><input type="checkbox" / disabled>文件更新后同步版本和校验值；失效资源不会继续显示为可下载。</label></li>
+</ul>
+<p>此清单记录的 GitHub Pages 已发布站点上限为 1 GB，月带宽软限制为 100 GB；实际发布前再次查看<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">官方限制</a>。普通 Git 文件也受平台限制，大型扫描与权重应另行规划托管。</p>
+<h2 id="6-已有算法的网站接入" data-doc-anchor="6-已有算法的网站接入">6. 已有算法的网站接入</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>算法名称、用途、输入输出和适用范围与现有成果一致。</label></li>
+<li><label><input type="checkbox" / disabled>公开代码、模型、说明书及论文链接的实际可用性分别标注。</label></li>
+<li><label><input type="checkbox" / disabled>提供对应提交/版本、运行环境、依赖、硬件需求、随机种子和必要配置。</label></li>
+<li><label><input type="checkbox" / disabled>在获准提供的真实样例上验证推理命令和输出，记录预处理及后处理。</label></li>
+<li><label><input type="checkbox" / disabled>指标附数据划分、定义、单位、实验条件及可追溯结果；不使用占位数字。</label></li>
+<li><label><input type="checkbox" / disabled>明确网站是否只有资源介绍；只有实际实现后才能声明在线推理或数据处理功能。</label></li>
+</ul>
+<p>详见<a href="algorithm-guide.html">算法接入指南</a>。</p>
+<h2 id="7-页面质量与可访问性" data-doc-anchor="7-页面质量与可访问性">7. 页面质量与可访问性</h2>
+<ul class="task-list">
+<li><p><label><input type="checkbox" / disabled>桌面、平板和窄屏手机均无重要内容溢出或遮挡。</label></p></li>
+<li><p><label><input type="checkbox" / disabled>筛选、搜索、清空、空结果、详情开关和重复操作均可使用。</label></p></li>
+<li><p><label><input type="checkbox" / disabled>键盘可到达全部交互；焦点可见，弹窗能关闭并正确恢复焦点。</label></p></li>
+<li><p><label><input type="checkbox" / disabled>标签、替代文本、颜色对比、状态提示和减少动态效果得到检查。</label></p></li>
+<li><p><label><input type="checkbox" / disabled>JSON 加载失败有说明；缺失字段、空值与长标题不会导致脚本报错。</label></p></li>
+<li><p><label><input type="checkbox" / disabled>使用 HTTP 本地预览并检查浏览器控制台和网络错误。</label></p></li>
+<li><p><label><input type="checkbox" / disabled>所有站内路径支持 GitHub Pages 仓库子路径，不能只在域名根路径通过。</label></p></li>
+<li><p><label><input type="checkbox" / disabled>中 / EN 切换可更新完整正文、导航、无障碍标签与已打开的详情；存储可用时可记住选择。</label></p></li>
+<li><p><label><input type="checkbox" / disabled>两种语言均保留合成 DEMO 警示，并明确尚未提供或核验的研究材料。</label></p></li>
+</ul>
+<h2 id="8-最终发布和验证" data-doc-anchor="8-最终发布和验证">8. 最终发布和验证</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>检查 <code>.github/workflows/pages.yml</code> 的 <code>_site</code> 文件白名单。</label></li>
+<li><label><input type="checkbox" / disabled><code>_site</code> 不含测试报告、浏览器截图、源码 ZIP、私密数据或未审核文件。</label></li>
+<li><label><input type="checkbox" / disabled>已审阅本次提交，确认仅在授权后手动点击 <code>Run workflow</code>。</label></li>
+<li><label><input type="checkbox" / disabled>记录实际部署提交、工作流结果和站点地址。</label></li>
+<li><label><input type="checkbox" / disabled>发布后复查首页、指南、JSON、外部下载及引用；记录检查日期。</label></li>
+<li><label><input type="checkbox" / disabled>指定维护人、问题反馈路径和必要时撤下内容的操作责任人。</label></li>
+</ul>
+<p>未完成的检查应列出负责人及需要的材料。若决定先发布框架预览，应保留明显的 DEMO 与待接入标记，不能宣传为真实数据集已开放下载。</p>
+
+      </section>
+      <section data-lang-section="en" lang="en" hidden inert aria-hidden="true">
+<h1 id="en-发布前检查清单" data-doc-anchor="发布前检查清单">Pre-release checklist</h1>
+<p>Use this checklist for the first public website release, data-version updates, and algorithm-resource integration. The current deliverable is a local website framework. The project team has already completed data standardization and the AI algorithm. These checks cover <strong>public materials, website mapping, and release conditions</strong>. Leave unsupported items as “Pending verification”; do not check them off.</p>
+<p>The website checklist is a read-only reference and does not save review status. Keep findings, evidence, and responsible people in the project's own release record.</p>
+<h2 id="en-1-公开范围与身份" data-doc-anchor="1-公开范围与身份">1. Public scope and identity</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>The project lead has approved this release's public scope, target repository, and website.</label></li>
+<li><label><input type="checkbox" / disabled>The official name, affiliation, author order, contacts, and their permission to be publicly named have been verified.</label></li>
+<li><label><input type="checkbox" / disabled>Pages clearly distinguish actual release content, demo samples, synthetic illustrations, and information still to be supplied.</label></li>
+<li><label><input type="checkbox" / disabled>DEMO records do not count toward real sample counts, category proportions, data scale, algorithm performance, or research conclusions.</label></li>
+<li><label><input type="checkbox" / disabled>Demo records have been removed or remain clearly labeled and separated from real data.</label></li>
+</ul>
+<h2 id="en-2-数据与索引映射" data-doc-anchor="2-数据与索引映射">2. Data and index mapping</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>The responsible lead has confirmed the field mapping between the website index and existing standard, the standard version, and field interpretations.</label></li>
+<li><label><input type="checkbox" / disabled>Sample IDs are unique and stable; titles, categories, and descriptions match actual materials.</label></li>
+<li><label><input type="checkbox" / disabled>Dimension order, coordinate conventions, units, voxel spacing, wavelength, and missing-value meanings have been verified.</label></li>
+<li><label><input type="checkbox" / disabled>Array/acquisition/reconstruction sources and parameters are traceable; nonpublic information remains in controlled records.</label></li>
+<li><label><input type="checkbox" / disabled>Dataset splits match those actually used, and leakage risks across sets involving the same subject, experiment, or related samples have been checked.</label></li>
+<li><label><input type="checkbox" / disabled>Metadata passes Schema validation. Any required extensions are reflected in the Schema, rendering logic, and documentation.</label></li>
+<li><label><input type="checkbox" / disabled>Index statistics match the actual files approved for public release.</label></li>
+</ul>
+<h2 id="en-3-伦理隐私与去标识化" data-doc-anchor="3-伦理隐私与去标识化">3. Ethics, privacy, and de-identification</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>For human, animal, or other restricted materials, the project team has verified the necessary approvals, consent, and sharing conditions.</label></li>
+<li><label><input type="checkbox" / disabled>Released content stays within the original consent and authorization. De-identification alone is not assumed to permit publication.</label></li>
+<li><label><input type="checkbox" / disabled>Filenames, file headers, embedded metadata, thumbnails, image annotations, and archive contents have all been checked.</label></li>
+<li><label><input type="checkbox" / disabled>Identifiers, internal-ID linkage tables, sensitive dates, internal storage paths, and credentials have been removed.</label></li>
+<li><label><input type="checkbox" / disabled>A qualified responsible person has assessed identifiable anatomical features, rare combinations of attributes, and re-identification risk.</label></li>
+<li><label><input type="checkbox" / disabled>Public JSON, repository history, and website build artifacts contain no restricted information.</label></li>
+</ul>
+<p>This checklist is an operational release reminder, not a substitute for institutional approval, data governance, or professional legal advice.</p>
+<h2 id="en-4-许可作者与引用" data-doc-anchor="4-许可作者与引用">4. Licenses, authorship, and citations</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>Data, algorithm code, weights, website code, and third-party assets each have clear and compatible terms of use.</label></li>
+<li><label><input type="checkbox" / disabled>Relevant people have confirmed authorship, contributions, funding, and acknowledgments.</label></li>
+<li><label><input type="checkbox" / disabled>Citation text, versions, release dates, and persistent identifiers have been verified. No DOI is invented when none exists.</label></li>
+<li><label><input type="checkbox" / disabled>Citations identify the actual released version; updates retain version history and a change summary.</label></li>
+<li><label><input type="checkbox" / disabled>Intended scope, research-use statements, limitations, and withdrawal contacts are clearly visible where needed.</label></li>
+</ul>
+<h2 id="en-5-数据托管与下载" data-doc-anchor="5-数据托管与下载">5. Data hosting and downloads</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>File hosting is approved, and every download link has been opened and checked against its description.</label></li>
+<li><label><input type="checkbox" / disabled>File format, compression, size, and SHA-256 checksums are determined from the final files.</label></li>
+<li><label><input type="checkbox" / disabled>Public resources have been checked in a fresh session; controlled resources clearly state application or sign-in requirements.</label></li>
+<li><label><input type="checkbox" / disabled>No temporary signed URLs, authentication tokens, or internal-only sharing links are exposed.</label></li>
+<li><label><input type="checkbox" / disabled>Cross-origin fetching, resumable downloads, and large-file requirements have been tested where relevant. Browser behavior is not assumed to be guaranteed.</label></li>
+<li><label><input type="checkbox" / disabled>Hosting capacity, bandwidth, retention, and costs have been checked. GitHub Pages serves only the lightweight website and index.</label></li>
+<li><label><input type="checkbox" / disabled>Versions and checksums are updated after file changes; unavailable resources no longer appear downloadable.</label></li>
+</ul>
+<p>The limits recorded in this guide are 1 GB for a published GitHub Pages site and a soft monthly bandwidth limit of 100 GB. Check the <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">official limits</a> again before deployment. Ordinary Git files also have platform limits; plan separate hosting for large scans and weights.</p>
+<h2 id="en-6-已有算法的网站接入" data-doc-anchor="6-已有算法的网站接入">6. Website integration of the existing algorithm</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>The algorithm name, purpose, inputs, outputs, and scope match the existing work.</label></li>
+<li><label><input type="checkbox" / disabled>Actual availability is labeled separately for public code, models, manuals, and papers.</label></li>
+<li><label><input type="checkbox" / disabled>The corresponding commit/version, environment, dependencies, hardware requirements, random seeds, and necessary configuration are provided.</label></li>
+<li><label><input type="checkbox" / disabled>Inference commands and outputs have been verified on a real example approved for sharing, with preprocessing and postprocessing recorded.</label></li>
+<li><label><input type="checkbox" / disabled>Metrics include dataset splits, definitions, units, experimental conditions, and traceable results. No placeholder numbers are used.</label></li>
+<li><label><input type="checkbox" / disabled>The site clearly states whether it only presents resources. Online inference or data-processing features are claimed only after implementation.</label></li>
+</ul>
+<p>See the <a href="algorithm-guide.html">algorithm integration guide</a>.</p>
+<h2 id="en-7-页面质量与可访问性" data-doc-anchor="7-页面质量与可访问性">7. Page quality and accessibility</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>Important content is neither clipped nor obscured on desktop, tablet, or narrow mobile screens.</label></li>
+<li><label><input type="checkbox" / disabled>Filtering, search, reset, empty results, detail opening/closing, and repeated operations work.</label></li>
+<li><label><input type="checkbox" / disabled>All interactions are keyboard-accessible; focus is visible, dialogs close, and focus returns correctly.</label></li>
+<li><label><input type="checkbox" / disabled>Labels, alternative text, color contrast, status messages, and reduced-motion behavior have been checked.</label></li>
+<li><label><input type="checkbox" / disabled>JSON loading errors are explained; missing fields, nulls, and long titles do not cause script errors.</label></li>
+<li><label><input type="checkbox" / disabled>The site has been previewed over local HTTP, with browser console and network errors checked.</label></li>
+<li><label><input type="checkbox" / disabled>All internal paths work under a GitHub Pages repository subpath, not only at the domain root.</label></li>
+<li><label><input type="checkbox" / disabled>The 中 / EN switch updates complete page content, navigation, accessibility labels, and open detail views; the selected language persists when storage is available.</label></li>
+<li><label><input type="checkbox" / disabled>Both languages preserve synthetic DEMO warnings and clearly mark research materials that have not yet been provided or verified.</label></li>
+</ul>
+<h2 id="en-8-最终发布和验证" data-doc-anchor="8-最终发布和验证">8. Final release and verification</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" / disabled>The <code>_site</code> allowlist in <code>.github/workflows/pages.yml</code> has been checked.</label></li>
+<li><label><input type="checkbox" / disabled><code>_site</code> excludes test reports, browser screenshots, source ZIPs, private data, and unreviewed files.</label></li>
+<li><label><input type="checkbox" / disabled>The changes have been reviewed, and <code>Run workflow</code> is clicked manually only after authorization.</label></li>
+<li><label><input type="checkbox" / disabled>The actual deployed commit, workflow result, and website URL are recorded.</label></li>
+<li><label><input type="checkbox" / disabled>After release, the homepage, guides, JSON, external downloads, and citations are checked again, with the check date recorded.</label></li>
+<li><label><input type="checkbox" / disabled>A maintainer, feedback route, and person responsible for withdrawing content if needed have been designated.</label></li>
+</ul>
+<p>For unfinished checks, identify the responsible person and required materials. If releasing a framework preview first, retain prominent DEMO and pending-integration labels. Do not advertise it as a real dataset already open for download.</p>
+
+      </section>
+    </article>
+    <footer class="doc-footer"><span data-i18n="docs.footer">网站框架 · 合成 DEMO 仅用于开发与交互演示；真实研究材料待接入。</span> <a href="../index.html" data-i18n="docs.home.footer">返回数据集首页</a></footer>
+  </main>
+</body>
+</html>
