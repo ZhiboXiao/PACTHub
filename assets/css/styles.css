@@ -83,3 +83,16 @@ html[lang="en"] .index-footnote{flex-wrap:wrap}
 .hero-video-caption{position:absolute;right:5%;bottom:120px;width:40%;margin:0;color:#bbc8d6;font-size:11px;font-weight:400;line-height:1.6;letter-spacing:.04em;text-align:center;pointer-events:none}
 @media(max-width:600px){.hero.hero-cinematic{padding-top:436px}.hero-video-caption{top:400px;bottom:auto;left:20px;right:20px;width:auto;font-size:10px;letter-spacing:.025em}}
 @media print{.hero-video-caption{display:none}}
+
+/* Presentation-only image windows. Scientific source PNGs remain untouched. */
+.sample-image{aspect-ratio:2 / 1;background:#050505;position:relative;overflow:hidden}
+.sample-crop-window{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);overflow:hidden}
+.sample-crop-window img{position:absolute;max-width:none;object-fit:fill}
+.detail-preview{margin:0 0 24px}.detail-preview .sample-image{border-radius:6px}
+.preview-toggle{border:0;background:transparent;padding:10px 0;font:inherit;font-size:12px;color:var(--accent)}
+.sample-image.original-view{aspect-ratio:auto;min-height:260px;display:flex;justify-content:center}
+.sample-image.original-view img{width:auto;height:auto;max-width:100%;max-height:65vh;object-fit:contain}
+
+.sample-specs span:only-child{font-size:10px;letter-spacing:0}
+
+.display-filter-definitions{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
