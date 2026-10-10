@@ -29,9 +29,9 @@
 <h2 id="当前状态" data-doc-anchor="当前状态">当前状态</h2>
 <ul>
 <li><strong>数据标准化与图像增强算法均已完成。</strong> 待补的是获准公开的网站材料；网站 JSON 是现有标准的展示映射，不重新定义数据标准。</li>
-<li>当前 6 条样本均为合成 <code>DEMO</code> 元数据与示意图，不代表真实扫描、正式数据划分或算法结果。未接入真实数据、代码、模型权重和实验结果。</li>
+<li>当前已接入 6 张项目提供样本图像，均按项目方要求归入验证集。原 PNG 保持不变；展示窗口仅旋转、取景与适度亮度调整；完整原图关闭所有展示调整。采集参数、体数据、代码、权重和实验结果仍待补充。</li>
 <li>项目作者、版本、许可、论文、引用与资源链接需按真实资料填写。空值不表示相关研究尚未完成。</li>
-<li>本次未执行远程推送或公开部署。已有 GitHub Pages 工作流仅支持手动触发；公开前必须核实材料与许可。</li>
+<li>本次图像更新不包含远程推送或公开部署。已有 GitHub Pages 工作流仅支持手动触发；公开前必须核实材料与许可。</li>
 </ul>
 <h2 id="六个内容板块" data-doc-anchor="六个内容板块">六个内容板块</h2>
 <ol type="1">
@@ -44,7 +44,7 @@
 </ol>
 <p>完整材料要求见<a href="content-map.html">内容地图与材料清单</a>，其中区分上线必需内容与可后补的增强项。资料未提供时保留明确说明，不用猜测值或虚构链接补齐。</p>
 <h2 id="直接查看前端" data-doc-anchor="直接查看前端">直接查看前端</h2>
-<p>交付包中的 <code>PACTHub-preview.html</code> 是独立离线预览，下载后直接用浏览器打开即可，不需要安装依赖或启动服务。它内嵌与源站一致的样式、交互、项目提供视频、示意样本和说明文档；不会访问真实研究数据，也未公开部署。它不是已完成浏览器验证的截图。</p>
+<p>交付包中的 <code>PACTHub-preview.html</code> 是独立离线预览，下载后直接用浏览器打开即可，不需要安装依赖或启动服务。它内嵌与源站一致的样式、交互、项目提供视频、样本图像和说明文档；不会访问真实研究数据，；离线预览本身不会发布。它不是已完成浏览器验证的截图。</p>
 <p>修改源文件后，可运行 <code>python3 scripts/build-preview.py</code> 重新生成上一级目录的离线预览，再运行 <code>python3 scripts/build-package.py</code> 生成白名单源码 ZIP。GitHub Pages 继续使用原始相对路径文件，不发布此预览文件。</p>
 <h2 id="本地预览" data-doc-anchor="本地预览">本地预览</h2>
 <p>在项目根目录运行：</p>
@@ -63,7 +63,7 @@ assets/js/docs-i18n.js           指南标签与语言正文切换
 assets/images/                  网站图片与视频封面
 assets/media/hero-pact.mp4  项目提供的 20 秒三维影像视频
 data/site-config.json           介绍、发布信息、论文、团队与资源链接
-data/samples.json               样本索引；当前仅含 DEMO
+data/samples.json               样本索引；6 张项目提供的验证集图像
 data/metadata.schema.json       网站索引字段约束
 data/sample.template.json       单条真实样本的待填映射模板
 docs/content-map.md / .html     六板块内容地图与材料清单
@@ -145,7 +145,7 @@ python3 scripts/build-package.py</code></pre>
 <h2 id="en-当前状态" data-doc-anchor="当前状态">Current status</h2>
 <ul>
 <li><strong>Data standardization and the image-enhancement algorithm are already complete.</strong> The outstanding work is supplying approved public website materials. Website JSON maps the existing standard for presentation; it does not redefine the data standard.</li>
-<li>All 6 current samples are synthetic <code>DEMO</code> metadata and illustrations, not real scans, official dataset splits, or algorithm results. Real data, source code, model weights, and experimental results have not been integrated.</li>
+<li>Six project-supplied sample images are integrated, all assigned to Validation by the project owner. Original PNGs are unchanged; display windows adjust rotation, framing and brightness; full-original views disable all display adjustments. Acquisition metadata, volumes, code, weights, and experimental results remain pending.</li>
 <li>Project authors, versions, licenses, papers, citations, and resource links must be filled from actual materials. Empty fields do not imply that the associated research is unfinished.</li>
 <li>This delivery has not been pushed to a remote repository or deployed publicly. The included GitHub Pages workflow supports manual triggering only. Verify materials and permissions before publication.</li>
 </ul>
@@ -175,7 +175,7 @@ assets/js/docs-i18n.js           Guide labels and language-section switching
 assets/images/                  Website images and video poster
 assets/media/hero-pact.mp4   Project-provided 20-second 3D visualization
 data/site-config.json           Introductions, release info, paper, team, and links
-data/samples.json               Sample index; currently DEMO only
+data/samples.json               Sample index; 6 supplied validation images
 data/metadata.schema.json       Website index constraints
 data/sample.template.json       Blank mapping template for one real sample
 docs/content-map.md / .html      Six-section content map and materials checklist

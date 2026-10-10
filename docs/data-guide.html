@@ -26,7 +26,7 @@
       <section data-lang-section="zh" lang="zh-CN">
 <h1 id="现有数据标准的网站映射指南" data-doc-anchor="现有数据标准的网站映射指南">现有数据标准的网站映射指南</h1>
 <p>本项目已经完成数据标准化。网站中的 JSON 仅用于公开检索、样本卡片与详情展示，是对现有标准的索引映射，<strong>不替代或重新定义原标准</strong>。真实原始数据、处理后体数据及其权威元数据仍按项目现有规范保存。</p>
-<p>当前 <code>data/samples.json</code> 包含 6 条合成 DEMO 元数据，<code>is_demo</code> 均为 <code>true</code>，<code>files</code> 均为空。它们不是实际扫描、真实划分或已开放下载的数据，数值也不能用于科研分析。</p>
+<p>当前样本索引包含 6 张项目提供图像，全部为验证集。名称依据原文件名；图像像素保持原样，仅在网页展示时旋转、取景与适度调整亮度；完整原图保持原貌。体数据元数据保留空值，尚无体数据附件。</p>
 <h2 id="1-接入顺序" data-doc-anchor="1-接入顺序">1. 接入顺序</h2>
 <ol type="1">
 <li>确定已有标准的名称、版本、字段字典与维护来源；由项目负责人确认哪些字段可公开。</li>
@@ -116,7 +116,7 @@
 <h3 id="身份与分组" data-doc-anchor="身份与分组">身份与分组</h3>
 <ul>
 <li>稳定且唯一的 <code>id</code>、公开 <code>title</code> 和 <code>description</code>。</li>
-<li><code>category</code>、<code>split</code>、<code>tags</code> 应映射真实研究定义。当前 DEMO 展示的 <code>phantom</code>、<code>simulation</code> 及训练/验证/测试分组仅用于界面演示。</li>
+<li><code>category</code>、<code>split</code>、<code>tags</code> 应映射真实研究定义。当前六张图像均按项目方要求归入验证集；仿体分类依据文件名，其余不推断在体或离体。</li>
 <li>如果真实类别或划分不在当前枚举中，扩展 Schema、界面选项和统计逻辑后再使用；不要把未知类别硬套到已有选项。</li>
 <li>数据分组应遵从原研究方案，核查同一对象、实验或强关联样本跨集合的泄漏风险。</li>
 </ul>
@@ -195,7 +195,7 @@
       <section data-lang-section="en" lang="en" hidden inert aria-hidden="true">
 <h1 id="en-现有数据标准的网站映射指南" data-doc-anchor="现有数据标准的网站映射指南">Website mapping guide for the existing data standard</h1>
 <p>Data standardization for this project is already complete. The website JSON is only an index mapping for public search, sample cards, and detail views. It <strong>does not replace or redefine the original standard</strong>. Real raw data, processed volumes, and their authoritative metadata remain stored according to the project's existing specifications.</p>
-<p><code>data/samples.json</code> currently contains 6 synthetic DEMO metadata records. Every record has <code>is_demo: true</code> and an empty <code>files</code> array. These are not actual scans, real dataset splits, or publicly downloadable research data. Their values must not be used for scientific analysis.</p>
+<p>The sample index contains six project-supplied images, all in Validation. Names follow source filenames. Original image pixels are unchanged; the webpage adjusts their presentation rotation, framing and brightness, with an unfiltered full-original view. Volume metadata remains null and no volume attachments are available.</p>
 <h2 id="en-1-接入顺序" data-doc-anchor="1-接入顺序">1. Integration order</h2>
 <ol type="1">
 <li>Establish the existing standard's name, version, field dictionary, and authoritative maintenance source. Have the project lead confirm which fields may be public.</li>
@@ -285,7 +285,7 @@
 <h3 id="en-身份与分组" data-doc-anchor="身份与分组">Identity and grouping</h3>
 <ul>
 <li>A stable, unique <code>id</code>, public <code>title</code>, and <code>description</code>.</li>
-<li><code>category</code>, <code>split</code>, and <code>tags</code> must map to actual research definitions. The DEMO categories <code>phantom</code> and <code>simulation</code>, and its training/validation/test groups, are only interface examples.</li>
+<li><code>category</code>, <code>split</code>, and <code>tags</code> must map to actual research definitions. All six images are assigned to Validation by the project owner. Phantom categories follow filenames; in-vivo or ex-vivo status is not inferred.</li>
 <li>If real categories or splits fall outside current enumerations, extend the Schema, interface options, and statistics logic first. Do not force unknown categories into existing choices.</li>
 <li>Follow the original study design for data splitting. Check for leakage when the same subject, experiment, or strongly related samples occur across sets.</li>
 </ul>
