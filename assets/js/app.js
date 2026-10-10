@@ -143,25 +143,50 @@
     if (typeof value === 'object' && !Array.isArray(value) && !contentText(value)) return t('missing');
     return (Array.isArray(value) ? value.join(' × ') : (typeof value === 'object' ? contentText(value) : String(value))) + suffix;
   }
+  function samplePreview(sample, original = false) {
+    const media = node('div', 'sample-image' + (original ? ' original-view' : ''));
+    const preview = safeUrl(sample.preview, true);
+    if (!preview || state.failedPreviews.has(sample.preview)) {
+      media.append(node('span', 'image-caption', t(preview ? 'sample.previewError' : 'sample.noPreview')));
+      return media;
+    }
+    const img = node('img'); img.src = preview;
+    img.alt = sample.is_demo ? t('sample.demoAlt', { title: contentText(sample.title) }) : t('sample.alt', { title: contentText(sample.title) });
+    img.loading = 'lazy';
+    img.addEventListener('error', () => { state.failedPreviews.add(sample.preview); media.replaceChildren(node('span', 'image-caption', t('sample.previewError'))); }, { once: true });
+    const layout = sample.preview_layout;
+    // Endpoint-preserving display gamma: no source pixels are rewritten.
+    const gamma = layout?.display_gamma;
+    if (!original && [0.8, 0.95, 0.97].includes(gamma)) img.style.filter = `url("#sample-gamma-${Math.round(gamma * 100)}")`;
+    if (layout && !original) {
+      const [x, y, width, height] = layout.crop;
+      const rotated = layout.rotation_deg === 90;
+      const rw = rotated ? layout.source_height : layout.source_width;
+      const rh = rotated ? layout.source_width : layout.source_height;
+      const scale = Math.min(2 / width, 1 / height);
+      const window = node('div', 'sample-crop-window');
+      window.style.width = `${width * scale * 50}%`;
+      window.style.height = `${height * scale * 100}%`;
+      img.style.width = `${layout.source_width / width * 100}%`;
+      img.style.height = `${layout.source_height / height * 100}%`;
+      img.style.left = `${(rw / 2 - x) / width * 100}%`;
+      img.style.top = `${(rh / 2 - y) / height * 100}%`;
+      img.style.transform = `translate(-50%, -50%) rotate(${layout.rotation_deg}deg)`;
+      img.width = layout.source_width; img.height = layout.source_height;
+      window.append(img); media.append(window);
+    } else { media.append(img); }
+    return media;
+  }
   function sampleCard(sample) {
     const card = node('article', 'sample-card');
-    const media = node('div', 'sample-image');
+    const media = samplePreview(sample);
     const preview = safeUrl(sample.preview, true);
-    if (preview && !state.failedPreviews.has(sample.preview)) {
-      const img = node('img'); img.src = preview;
-      img.alt = sample.is_demo ? t('sample.demoAlt', { title: contentText(sample.title) }) : t('sample.alt', { title: contentText(sample.title) });
-      img.loading = 'lazy'; img.width = 360; img.height = 190;
-      img.addEventListener('error', () => { state.failedPreviews.add(sample.preview); img.remove(); media.append(node('span', 'image-caption', t('sample.previewError'))); }, { once: true });
-      media.append(img);
-    }
     if (sample.is_demo) media.append(node('span', 'demo-tag', t('sample.demo')));
-    if (preview && state.failedPreviews.has(sample.preview)) media.append(node('span', 'image-caption', t('sample.previewError')));
-    if (!preview) media.append(node('span', 'image-caption', t('sample.noPreview')));
     const content = node('div', 'sample-content');
     const top = node('div', 'sample-topline');
     top.append(node('span', '', sample.id), node('span', 'split-tag', label(sample.split)));
     const specs = node('div', 'sample-specs');
-    specs.append(node('span', '', valueText(sample.dimensions)), node('span', '', t('sample.voxels')));
+    specs.append(node('span', '', sample.dimensions ? valueText(sample.dimensions) + ' ' + t('sample.voxels') : t(sample.preview_layout?.display_gamma < 1 ? 'sample.displayAdjusted' : 'sample.imageProvided')));
     const footer = node('div', 'sample-footer');
     footer.append(node('span', 'sample-category', label(sample.category)));
     const detail = node('button', 'detail-button', t('sample.detail')); detail.type = 'button';
@@ -211,7 +236,20 @@
       const line = node('p'); const a = node('a', 'text-link', file.name); a.href = safeUrl(file.url); a.rel = 'noopener noreferrer';
       line.append(a); files.append(line, node('p', '', `SHA-256: ${valueText(file.sha256)}`));
     }
-    box.replaceChildren(heading, grid, note, provenance, files);
+    const figure = node('figure', 'detail-preview');
+    if (!preserveOpen) state.currentOriginal = false;
+    let original = Boolean(state.currentOriginal);
+    const preview = samplePreview(sample, original);
+    const toggle = node('button', 'text-link preview-toggle', t(original ? 'sample.showFramed' : 'sample.showOriginal'));
+    toggle.type = 'button'; toggle.setAttribute('aria-pressed', String(original));
+    toggle.addEventListener('click', () => {
+      original = !original; state.currentOriginal = original;
+      figure.replaceChildren(samplePreview(sample, original), toggle);
+      toggle.textContent = t(original ? 'sample.showFramed' : 'sample.showOriginal');
+      toggle.setAttribute('aria-pressed', String(original)); toggle.focus();
+    });
+    figure.append(preview, toggle);
+    box.replaceChildren(heading, figure, grid, note, provenance, files);
     $('download-sample').textContent = sample.is_demo ? t('sample.exportDemo') : t('sample.export');
     document.querySelector('.dialog-footer > span').textContent = validFiles.length ? t('sample.fileCount', { count: validFiles.length }) : t('sample.metadataOnly');
     if (!preserveOpen) {

@@ -2,6 +2,8 @@
 'use strict';
 (() => {
   const messages = {
+  "sample.displayAdjusted": {"zh":"项目图像 · 展示亮度调整", "en":"Project image · display brightness adjusted"},
+"sample.imageProvided":{"zh": "项目提供图像", "en": "Project-supplied image"},"sample.showOriginal":{"zh": "查看完整原图 ↗", "en": "View full original ↗"},"sample.showFramed":{"zh": "返回展示视图 ↩", "en": "Back to framed view ↩"},
   "hero.videoCaption": {
     "zh": "单次曝光全鼠成像",
     "en": "Single-exposure whole-mouse imaging"
@@ -147,8 +149,8 @@
     "en": "Explore by category, split or keyword."
   },
   "ui.036": {
-    "zh": "打开样本，查看维度、间距与来源记录。",
-    "en": "Open a sample for dimensions, spacing and provenance."
+    "zh": "打开样本，查看完整原图与来源记录。",
+    "en": "Open a sample for the full original image and provenance."
   },
   "ui.037": {
     "zh": "全部",
@@ -223,12 +225,12 @@
     "en": "Try again"
   },
   "ui.055": {
-    "zh": "示意样本不属于正式研究数据。",
-    "en": "Demo samples are not research data."
+    "zh": "六个样本均为验证集；展示亮度适度调整，详情可查看原图。",
+    "en": "All six samples are in Validation. Display brightness is gently adjusted; full originals are available in details."
   },
   "ui.056": {
-    "zh": "下载样例索引",
-    "en": "Download demo index"
+    "zh": "下载样本索引",
+    "en": "Download sample index"
   },
   "ui.057": {
     "zh": "03 / 图像增强",
