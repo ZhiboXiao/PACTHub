@@ -77,8 +77,8 @@
   "hero": {
     "mp4_url": "assets/media/hero-pact.mp4",
     "webm_url": null,
-    "poster_url": "assets/images/hero-poster.jpg",
-    "object_position": "60% 50%",
+    "poster_url": "assets/images/hero-frontal-poster.png",
+    "object_position": "50% 50%",
     "media_label": {
       "zh": "项目提供视频 · 三维影像展示",
       "en": "Project-provided video · 3D visualization"
