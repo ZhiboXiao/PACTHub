@@ -893,7 +893,7 @@
       let params = {}; try { params = JSON.parse(el.getAttribute('data-i18n-params') || '{}'); } catch { /* Treat invalid params as absent. */ }
       el.textContent = t(el.dataset.i18n, params);
     });
-    for (const attr of ['aria-label', 'title', 'placeholder', 'content']) {
+    for (const attr of ['aria-label', 'title', 'placeholder', 'content', 'alt']) {
       select(`[data-i18n-${attr}]`).forEach((el) => {
         const key = el.getAttribute(`data-i18n-${attr}`);
         if (messages[key]) el.setAttribute(attr, t(key));
