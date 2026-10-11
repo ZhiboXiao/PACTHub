@@ -272,15 +272,39 @@ dialog::backdrop{background:#03090dd9;backdrop-filter:blur(8px)}
 @media(prefers-reduced-motion:reduce){.sample-image{transition:none}}
 @media print{:root{color-scheme:light;--bg:#fff;--surface:#f2f2f2;--surface-blue:#eee;--text:#111;--muted:#444;--line:#bbb;--accent:#17434b}body{background:white;color:#111}.section-block{padding-block:30px}.hero.hero-cinematic{padding:30px 0;background:white;color:#111}.hero-copy{max-width:100%}.sample-card{break-inside:avoid}.explore-section,.downloads-section,.team-section{background:white}.hero-video-caption{display:none}.sample-content h3{color:#111}.download-card{border-color:#bbb}}
 
-/* Meaningful concept illustrations: navigation cues, never scientific results. */
-.feature-visual-row{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:76px;margin-bottom:18px}
-.overview-grid .feature-visual-row .feature-number{position:static;margin:0;align-self:flex-start;padding-top:9px}
-.feature-visual{width:88px;height:75px;flex:none;color:#88d9e2}
-.visual-muted{opacity:.52}
-.pipeline-marker{display:flex;flex-direction:column;align-items:center;gap:10px;flex:none}
+/* Compact real-sample previews; source pixels and comparison processing stay unchanged. */
+.overview-grid article{min-width:0}
+.overview-grid .feature-number{position:static;margin:0 0 14px;padding:0}
+.overview-preview{margin:0 0 20px}
+.overview-strip{height:120px;overflow:hidden;background:#070b10;border-radius:3px}
+.overview-strip img{display:block;width:100%;height:100%;object-fit:cover;filter:none}
+.overview-mouse{position:relative}
+.overview-mouse img{position:absolute;width:200%;max-width:none;height:auto;left:-100%;top:50%;transform:translateY(-50%)}
+.overview-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}
+.overview-pair>div{position:relative;min-width:0;overflow:hidden}
+.overview-pair img{object-position:50% 38%}
+.overview-pair span{position:absolute;bottom:7px;left:8px;padding:1px 5px;background:#080c10bf;color:#d8e0e4;font-size:10px;line-height:1.6}
+.overview-samples img{object-position:50% 49%}
+.overview-preview figcaption{margin-top:8px;font-size:10px;line-height:1.6;color:var(--muted);letter-spacing:.02em}
+.pipeline-marker{display:flex;align-items:center;flex:none}
 .pipeline-marker .pipeline-number{margin:0}
-.step-visual{width:34px;height:34px;flex:none;color:#88d9e2}
-.resource-visual{width:24px;height:24px;flex:none;color:#88d9e2}
-.usage-row .text-link{gap:10px}
-@media(max-width:600px){.overview-grid article{padding:22px 0 0}.feature-visual-row{min-height:61px;margin-bottom:14px}.feature-visual{width:72px;height:61px}.step-visual{width:30px;height:30px}.pipeline-marker{gap:8px}}
-@media print{.feature-visual,.step-visual,.resource-visual{color:#17434b}}
+.pipeline h4{display:flex;align-items:center;gap:8px}
+.step-visual{width:22px;height:22px;flex:none;color:#88d9e2}
+.resource-visual{width:22px;height:22px;flex:none;color:#88d9e2}
+.usage-row .text-link{gap:8px}
+@media(max-width:600px){.overview-grid article{padding:22px 0 0}.overview-strip{height:110px}.overview-preview{margin-bottom:18px}}
+@media print{.step-visual,.resource-visual{color:#17434b}}
+
+
+/* Source-video paired frontal views: contain both grayscale and depth-color views.
+   No CSS tone, color, perspective or synthetic rotation is applied to this media. */
+.hero.hero-cinematic{background:#000}
+.hero-media{inset:110px 6% 195px 54%;height:auto}
+.hero-poster,.hero-video{object-fit:contain;object-position:50% 50%!important;filter:none}
+.hero-shade{display:none}
+@media(max-width:850px) and (min-width:601px){.hero-media{inset:110px 2% 230px 57%}}
+@media(max-width:600px){
+  .hero.hero-cinematic{padding-top:472px}
+  .hero-media{inset:88px 20px auto;height:368px}
+  .hero-poster,.hero-video{object-position:50% 50%!important}
+}
