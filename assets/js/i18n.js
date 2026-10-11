@@ -61,7 +61,7 @@
   },
   "ui.010": {
     "zh": "让三维光声数据，触手可及。",
-    "en": "3D photoacoustic data, within reach."
+    "en": "3D photoacoustic data,\nwithin reach."
   },
   "ui.011": {
     "zh": "连接三维数据、图像增强与可复现研究。",
@@ -869,7 +869,7 @@
   }
 };
   const storageKey = 'pacthub-language';
-  let language = /^zh(?:-|$)/i.test(navigator.language || '') ? 'zh' : 'en';
+  let language = 'en';
   try { const saved = window.localStorage.getItem(storageKey); if (saved === 'zh' || saved === 'en') language = saved; } catch { /* Private browsing/file URLs may deny storage. */ }
   const localize = (value) => {
     if (typeof value === 'string') return value;
