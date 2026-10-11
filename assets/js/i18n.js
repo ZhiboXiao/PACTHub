@@ -2,6 +2,15 @@
 'use strict';
 (() => {
   const messages = {
+"overview.mouseAlt":{"zh": "项目提供的小鼠三维成像展示", "en": "Project-supplied mouse imaging visualization"},
+"overview.mouseCaption":{"zh": "项目图像 · 小鼠成像", "en": "Project image · mouse imaging"},
+"overview.beforeAlt":{"zh": "增强前图像局部", "en": "Detail from the before image"},
+"overview.afterAlt":{"zh": "增强后图像的相同局部", "en": "Matching detail from the after image"},
+"overview.compareCaption":{"zh": "项目对比图 · 同一区域局部", "en": "Project comparison · matching crops"},
+"overview.leafAlt":{"zh": "项目提供的叶片样本局部", "en": "Detail from the project-supplied leaf sample"},
+"overview.handAlt":{"zh": "项目提供的手部样本局部", "en": "Detail from the project-supplied hand sample"},
+"overview.reuseCaption":{"zh": "样本预览 · 叶片 / 手部", "en": "Sample previews · leaf / hand"},
+
 "enhancement.title":{"zh": "增强前后，直观对比。", "en": "Before and after, side by side."},
 "enhancement.help":{"zh": "拖动中间分界线查看增强前后；也可使用方向键、Home 和 End。", "en": "Drag the divider to compare, or use the arrow keys, Home and End."},
 "enhancement.slider":{"zh": "增强前后分界线", "en": "Before and after comparison divider"},
