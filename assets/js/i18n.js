@@ -23,10 +23,6 @@
 
   "sample.displayAdjusted": {"zh":"项目图像 · 展示亮度调整", "en":"Project image · display brightness adjusted"},
 "sample.imageProvided":{"zh": "项目提供图像", "en": "Project-supplied image"},"sample.showOriginal":{"zh": "查看完整原图 ↗", "en": "View full original ↗"},"sample.showFramed":{"zh": "返回展示视图 ↩", "en": "Back to framed view ↩"},
-  "hero.videoCaption": {
-    "zh": "单次曝光全鼠成像",
-    "en": "Single-exposure whole-mouse imaging"
-  },
   "ui.001": {
     "zh": "跳转到主要内容",
     "en": "Skip to main content"
