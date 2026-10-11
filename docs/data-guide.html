@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" data-i18n-content="docs.description" content="PACTHub 中英双语网站指南。示例为合成 DEMO，真实研究材料待提供与核验。">
-  <title data-i18n="docs.title.data-guide">数据接入 · PACTHub</title>
+  <meta name="description" data-i18n-content="docs.description" content="PACTHub Chinese/English website guides. Examples are synthetic DEMO content; actual research materials remain pending provision and verification.">
+  <title data-i18n="docs.title.data-guide">Data integration · PACTHub</title>
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <style data-doc-style>[data-lang-section][hidden]{display:none!important}.doc-content>.doc-topbar,.doc-content>.doc-nav,.doc-content>.doc-footer{width:100%}.doc-content>.doc-topbar{padding-top:0;align-items:center;flex-wrap:wrap}.doc-content>.doc-nav{padding:18px 0 26px}.doc-toolbar-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.doc-content .language-switch{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--line,#ccd4df);border-radius:24px;background:var(--surface,#fff)}.doc-content .language-switch button{font:inherit;font-size:13px;min-width:44px;min-height:36px;padding:4px 12px;border:0;border-radius:20px;background:transparent;color:var(--text,#17283b);cursor:pointer}.doc-content .language-switch button[aria-pressed=true]{background:var(--accent,#335ac9);color:#0b151b}.doc-content .language-switch button:focus-visible{outline:3px solid var(--accent,#335ac9);outline-offset:3px}.doc-content [data-lang-section]{margin:0}.doc-content>.doc-footer{margin-top:38px;padding-bottom:0}.doc-content .task-list input{flex-shrink:0}</style>
@@ -13,17 +13,17 @@
 </head>
 <body class="doc-page">
   <!-- Keep this guide's complete Chinese and English content synchronized with docs/data-guide.md. -->
-  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">跳转到指南正文</a>
+  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">Skip to guide content</a>
   <main id="main" class="doc-content">
     <header class="doc-topbar">
-      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="返回 PACTHub 首页"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← 返回首页</a></div>
-      <div class="language-switch" role="group" aria-label="选择语言" data-i18n-aria-label="docs.language">
-        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="true">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="Back to the PACTHub homepage"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← Back to home</a></div>
+      <div class="language-switch" role="group" aria-label="Choose language" data-i18n-aria-label="docs.language">
+        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="false">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
       </div>
     </header>
-    <nav class="doc-nav" aria-label="文档导航" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" data-i18n="docs.nav.project-guide">项目说明</a><a href="content-map.html" data-i18n="docs.nav.content-map">内容地图</a><a href="data-guide.html" aria-current="page" data-i18n="docs.nav.data-guide">数据接入</a><a href="algorithm-guide.html" data-i18n="docs.nav.algorithm-guide">算法接入</a><a href="release-checklist.html" data-i18n="docs.nav.release-checklist">发布清单</a></nav>
+    <nav class="doc-nav" aria-label="Documentation navigation" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" data-i18n="docs.nav.project-guide">Project guide</a><a href="content-map.html" data-i18n="docs.nav.content-map">Content map</a><a href="data-guide.html" aria-current="page" data-i18n="docs.nav.data-guide">Data integration</a><a href="algorithm-guide.html" data-i18n="docs.nav.algorithm-guide">Algorithm integration</a><a href="release-checklist.html" data-i18n="docs.nav.release-checklist">Release checklist</a></nav>
     <article id="guide-content" tabindex="-1">
-      <section data-lang-section="zh" lang="zh-CN">
+      <section data-lang-section="zh" lang="zh-CN" hidden inert aria-hidden="true">
 <h1 id="现有数据标准的网站映射指南" data-doc-anchor="现有数据标准的网站映射指南">现有数据标准的网站映射指南</h1>
 <p>本项目已经完成数据标准化。网站中的 JSON 仅用于公开检索、样本卡片与详情展示，是对现有标准的索引映射，<strong>不替代或重新定义原标准</strong>。真实原始数据、处理后体数据及其权威元数据仍按项目现有规范保存。</p>
 <p>当前样本索引包含 6 张项目提供图像，全部为验证集。名称依据原文件名；图像像素保持原样，仅在网页展示时旋转、取景与适度调整亮度；完整原图保持原貌。体数据元数据保留空值，尚无体数据附件。</p>
@@ -192,7 +192,7 @@
 <p><code>id</code>、<code>category</code>、<code>split</code>、<code>tags</code>、<code>data_version</code>、<code>provenance.source_id</code>、文件名、URL、数值和校验值保持原始格式。译文只能解释相同事实，不能修改数据、技术标识或演示状态。请核对两种语言均明确标注合成 DEMO，并将未提供或未经核验的研究信息保留为空或待提供。</p>
 
       </section>
-      <section data-lang-section="en" lang="en" hidden inert aria-hidden="true">
+      <section data-lang-section="en" lang="en">
 <h1 id="en-现有数据标准的网站映射指南" data-doc-anchor="现有数据标准的网站映射指南">Website mapping guide for the existing data standard</h1>
 <p>Data standardization for this project is already complete. The website JSON is only an index mapping for public search, sample cards, and detail views. It <strong>does not replace or redefine the original standard</strong>. Real raw data, processed volumes, and their authoritative metadata remain stored according to the project's existing specifications.</p>
 <p>The sample index contains six project-supplied images, all in Validation. Names follow source filenames. Original image pixels are unchanged; the webpage adjusts their presentation rotation, framing and brightness, with an unfiltered full-original view. Volume metadata remains null and no volume attachments are available.</p>
@@ -362,7 +362,7 @@
 
       </section>
     </article>
-    <footer class="doc-footer"><span data-i18n="docs.footer">网站框架 · 合成 DEMO 仅用于开发与交互演示；真实研究材料待接入。</span> <a href="../index.html" data-i18n="docs.home.footer">返回数据集首页</a></footer>
+    <footer class="doc-footer"><span data-i18n="docs.footer">Website framework · Synthetic DEMO content is for development and interaction previews only. Actual research materials are pending integration.</span> <a href="../index.html" data-i18n="docs.home.footer">Back to the dataset homepage</a></footer>
   </main>
 </body>
 </html>

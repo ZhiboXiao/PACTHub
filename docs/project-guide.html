@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" data-i18n-content="docs.description" content="PACTHub 中英双语网站指南。示例为合成 DEMO，真实研究材料待提供与核验。">
-  <title data-i18n="docs.title.project-guide">项目说明 · PACTHub</title>
+  <meta name="description" data-i18n-content="docs.description" content="PACTHub Chinese/English website guides. Examples are synthetic DEMO content; actual research materials remain pending provision and verification.">
+  <title data-i18n="docs.title.project-guide">Project guide · PACTHub</title>
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/styles.css">
   <style data-doc-style>[data-lang-section][hidden]{display:none!important}.doc-content>.doc-topbar,.doc-content>.doc-nav,.doc-content>.doc-footer{width:100%}.doc-content>.doc-topbar{padding-top:0;align-items:center;flex-wrap:wrap}.doc-content>.doc-nav{padding:18px 0 26px}.doc-toolbar-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.doc-content .language-switch{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--line,#ccd4df);border-radius:24px;background:var(--surface,#fff)}.doc-content .language-switch button{font:inherit;font-size:13px;min-width:44px;min-height:36px;padding:4px 12px;border:0;border-radius:20px;background:transparent;color:var(--text,#17283b);cursor:pointer}.doc-content .language-switch button[aria-pressed=true]{background:var(--accent,#335ac9);color:#0b151b}.doc-content .language-switch button:focus-visible{outline:3px solid var(--accent,#335ac9);outline-offset:3px}.doc-content [data-lang-section]{margin:0}.doc-content>.doc-footer{margin-top:38px;padding-bottom:0}.doc-content .task-list input{flex-shrink:0}</style>
@@ -13,17 +13,17 @@
 </head>
 <body class="doc-page">
   <!-- Keep this guide's complete Chinese and English content synchronized with docs/project-guide.md. -->
-  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">跳转到指南正文</a>
+  <a class="skip-link" href="#guide-content" data-i18n="docs.skip">Skip to guide content</a>
   <main id="main" class="doc-content">
     <header class="doc-topbar">
-      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="返回 PACTHub 首页"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← 返回首页</a></div>
-      <div class="language-switch" role="group" aria-label="选择语言" data-i18n-aria-label="docs.language">
-        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="true">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      <div class="doc-toolbar-links"><a href="../index.html" data-i18n-aria-label="docs.home.aria" aria-label="Back to the PACTHub homepage"><strong lang="en">PACTHub</strong></a><a href="../index.html" data-i18n="docs.home">← Back to home</a></div>
+      <div class="language-switch" role="group" aria-label="Choose language" data-i18n-aria-label="docs.language">
+        <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" aria-pressed="false">中</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
       </div>
     </header>
-    <nav class="doc-nav" aria-label="文档导航" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" aria-current="page" data-i18n="docs.nav.project-guide">项目说明</a><a href="content-map.html" data-i18n="docs.nav.content-map">内容地图</a><a href="data-guide.html" data-i18n="docs.nav.data-guide">数据接入</a><a href="algorithm-guide.html" data-i18n="docs.nav.algorithm-guide">算法接入</a><a href="release-checklist.html" data-i18n="docs.nav.release-checklist">发布清单</a></nav>
+    <nav class="doc-nav" aria-label="Documentation navigation" data-i18n-aria-label="docs.navigation"><a href="project-guide.html" aria-current="page" data-i18n="docs.nav.project-guide">Project guide</a><a href="content-map.html" data-i18n="docs.nav.content-map">Content map</a><a href="data-guide.html" data-i18n="docs.nav.data-guide">Data integration</a><a href="algorithm-guide.html" data-i18n="docs.nav.algorithm-guide">Algorithm integration</a><a href="release-checklist.html" data-i18n="docs.nav.release-checklist">Release checklist</a></nav>
     <article id="guide-content" tabindex="-1">
-      <section data-lang-section="zh" lang="zh-CN">
+      <section data-lang-section="zh" lang="zh-CN" hidden inert aria-hidden="true">
 <h1 id="pacthub-网站框架" data-doc-anchor="pacthub-网站框架">PACTHub 网站框架</h1>
 <p>面向三维光声计算机断层成像（3D PACT）研究的静态网站，集中展示数据、样本预览、已完成的图像增强方法与复现资源。使用原生 HTML、CSS 和 JavaScript，无构建依赖；全屏视频首屏搭配浅色内容区与文档。</p>
 <h2 id="当前状态" data-doc-anchor="当前状态">当前状态</h2>
@@ -139,7 +139,7 @@ node scripts/test-i18n-offline.cjs
 python3 scripts/build-package.py</code></pre>
 <p>当前测试套件覆盖 51 项原有交互、45 项双语行为与 5 项离线检查。静态检查验证路径、锚点、无障碍标签和 JSON；JavaScript 测试使用模拟 DOM，不代表真实浏览器渲染、原生对话框焦点、视频解码、剪贴板权限或外部下载已经验证。公开前仍需在实际浏览器和目标部署路径复查。</p>
       </section>
-      <section data-lang-section="en" lang="en" hidden inert aria-hidden="true">
+      <section data-lang-section="en" lang="en">
 <h1 id="en-pacthub-网站框架" data-doc-anchor="pacthub-网站框架">PACTHub website framework</h1>
 <p>A static website for three-dimensional photoacoustic computed tomography (3D PACT) research, bringing together data, sample previews, a completed image-enhancement method, and reproducibility resources. It uses plain HTML, CSS, and JavaScript with no build dependencies, combining a full-screen video hero with light content sections and documentation.</p>
 <h2 id="en-当前状态" data-doc-anchor="当前状态">Current status</h2>
@@ -252,7 +252,7 @@ python3 scripts/build-package.py</code></pre>
 <p>The current suites cover 51 original interaction cases, 45 bilingual cases, and 5 offline checks. Static validation checks paths, anchors, accessibility labels, and JSON. JavaScript tests use a simulated DOM; they do not establish real browser rendering, native dialog focus behavior, video decoding, clipboard permissions, or external download availability. Recheck in an actual browser and under the target deployment path before publication.</p>
       </section>
     </article>
-    <footer class="doc-footer"><span data-i18n="docs.footer">网站框架 · 合成 DEMO 仅用于开发与交互演示；真实研究材料待接入。</span> <a href="../index.html" data-i18n="docs.home.footer">返回数据集首页</a></footer>
+    <footer class="doc-footer"><span data-i18n="docs.footer">Website framework · Synthetic DEMO content is for development and interaction previews only. Actual research materials are pending integration.</span> <a href="../index.html" data-i18n="docs.home.footer">Back to the dataset homepage</a></footer>
   </main>
 </body>
 </html>
