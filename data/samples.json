@@ -155,7 +155,8 @@
         455,
         400
       ],
-      "display_gamma": 1
+      "display_gamma": 1,
+      "display_mask": "leaf-exterior-v1"
     },
     "dimensions": null,
     "axis_order": null,

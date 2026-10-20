@@ -248,6 +248,12 @@
                 1
               ],
               "description": "Display-only sRGB gamma exponent; 1 is unchanged. Supported filters are defined in index.html. The original PNG and full-original view remain unfiltered."
+            },
+            "display_mask": {
+              "enum": [
+                "leaf-exterior-v1"
+              ],
+              "description": "Optional reversible display-only exterior matte. Hand-reviewed for SAMPLE-004 only, not a segmentation annotation. Full-original views bypass this mask."
             }
           },
           "description": "Presentation-only crop [x,y,width,height] in original pixels after clockwise rotation. Raw image is unchanged."
