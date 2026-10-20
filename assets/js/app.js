@@ -143,6 +143,17 @@
     if (typeof value === 'object' && !Array.isArray(value) && !contentText(value)) return t('missing');
     return (Array.isArray(value) ? value.join(' × ') : (typeof value === 'object' ? contentText(value) : String(value))) + suffix;
   }
+  // Hand-reviewed geometric display matte, deliberately outside the visible leaf.
+  // Coordinates are in the 800×400 clockwise-rotated view, then mapped back to
+  // the untouched 400×800 source. The generous margin retains peripheral veins.
+  // This is NOT segmentation, denoising, or a mask for quantitative analysis.
+  const leafExteriorPath = 'M 198 244 C 180 196 191 118 224 79 C 258 33 312 17 368 18 C 413 20 458 28 493 50 C 543 83 573 133 601 181 Q 617 204 608 225 C 590 248 569 281 545 307 C 515 333 467 353 426 368 C 385 385 339 394 298 382 C 249 370 219 325 204 281 Z';
+  const leafExteriorSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800"><defs><filter id="edge" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.5"/></filter></defs><path d="${leafExteriorPath}" transform="matrix(0 -1 1 0 0 800)" fill="white" filter="url(#edge)"/></svg>`;
+  const leafExteriorMask = `url("data:image/svg+xml,${encodeURIComponent(leafExteriorSVG)}")`;
+  function hasExteriorMask(sample) {
+    return sample.id === 'SAMPLE-004' && sample.preview_layout?.display_mask === 'leaf-exterior-v1'
+      && sample.preview_layout.source_width === 400 && sample.preview_layout.source_height === 800;
+  }
   function samplePreview(sample, original = false) {
     const media = node('div', 'sample-image' + (original ? ' original-view' : ''));
     const preview = safeUrl(sample.preview, true);
@@ -157,15 +168,25 @@
     const layout = sample.preview_layout;
     // Endpoint-preserving display gamma: no source pixels are rewritten.
     const gamma = layout?.display_gamma;
+    if (!original && hasExteriorMask(sample)) {
+      // CSS alpha masks are reversible and rotate together with the source image.
+      img.style.maskImage = leafExteriorMask;
+      img.style.webkitMaskImage = leafExteriorMask;
+      img.style.maskSize = img.style.webkitMaskSize = '100% 100%';
+      img.style.maskRepeat = img.style.webkitMaskRepeat = 'no-repeat';
+    }
     if (!original && [0.8, 0.95, 0.97].includes(gamma)) img.style.filter = `url("#sample-gamma-${Math.round(gamma * 100)}")`;
     if (layout && !original) {
       const [x, y, width, height] = layout.crop;
       const rotated = layout.rotation_deg === 90;
       const rw = rotated ? layout.source_height : layout.source_width;
       const rh = rotated ? layout.source_width : layout.source_height;
-      const scale = Math.min(2 / width, 1 / height);
+      // Fit each established crop into an 8:5 stage with quiet, consistent margins.
+      const stageRatio = 8 / 5;
+      const inset = width / height >= 1.8 ? 0.98 : 0.94;
+      const scale = Math.min(stageRatio / width, 1 / height) * inset;
       const window = node('div', 'sample-crop-window');
-      window.style.width = `${width * scale * 50}%`;
+      window.style.width = `${width * scale / stageRatio * 100}%`;
       window.style.height = `${height * scale * 100}%`;
       img.style.width = `${layout.source_width / width * 100}%`;
       img.style.height = `${layout.source_height / height * 100}%`;
@@ -185,14 +206,12 @@
     const content = node('div', 'sample-content');
     const top = node('div', 'sample-topline');
     top.append(node('span', '', sample.id), node('span', 'split-tag', label(sample.split)));
-    const specs = node('div', 'sample-specs');
-    specs.append(node('span', '', sample.dimensions ? valueText(sample.dimensions) + ' ' + t('sample.voxels') : t(sample.preview_layout?.display_gamma < 1 ? 'sample.displayAdjusted' : 'sample.imageProvided')));
     const footer = node('div', 'sample-footer');
-    footer.append(node('span', 'sample-category', label(sample.category)));
+    footer.append(node('h3', '', contentText(sample.title)));
     const detail = node('button', 'detail-button', t('sample.detail')); detail.type = 'button';
     detail.setAttribute('aria-label', t('sample.detailAria', { id: sample.id, title: contentText(sample.title) }));
     detail.append(node('span', '', '↗')); detail.addEventListener('click', () => openDetail(sample));
-    footer.append(detail); content.append(top, node('h3', '', contentText(sample.title)), specs, footer); card.append(media, content); return card;
+    footer.append(detail); content.append(top, footer); card.append(media, content); return card;
   }
   function searchTexts(value) { return typeof value === 'string' ? [value] : [value?.zh || '', value?.en || '']; }
   function render() {
@@ -240,15 +259,25 @@
     if (!preserveOpen) state.currentOriginal = false;
     let original = Boolean(state.currentOriginal);
     const preview = samplePreview(sample, original);
+    const caption = node('figcaption', 'preview-caption');
+    const status = node('span', 'preview-state');
+    const provenanceText = node('span', 'preview-processing');
+    const updateCaption = () => {
+      status.textContent = t(original ? 'sample.originalState' : 'sample.displayState');
+      provenanceText.textContent = original ? t('sample.originalNote') : t('sample.displayNote', { rotation: sample.preview_layout?.rotation_deg || 0, gamma: sample.preview_layout?.display_gamma || 1 }) + (hasExteriorMask(sample) ? ' · ' + t('sample.exteriorMaskNote') : '');
+    };
+    updateCaption();
+    caption.append(status, provenanceText);
     const toggle = node('button', 'text-link preview-toggle', t(original ? 'sample.showFramed' : 'sample.showOriginal'));
     toggle.type = 'button'; toggle.setAttribute('aria-pressed', String(original));
     toggle.addEventListener('click', () => {
       original = !original; state.currentOriginal = original;
-      figure.replaceChildren(samplePreview(sample, original), toggle);
+      updateCaption();
+      figure.replaceChildren(samplePreview(sample, original), caption, toggle);
       toggle.textContent = t(original ? 'sample.showFramed' : 'sample.showOriginal');
       toggle.setAttribute('aria-pressed', String(original)); toggle.focus();
     });
-    figure.append(preview, toggle);
+    figure.append(preview, caption, toggle);
     box.replaceChildren(heading, figure, grid, note, provenance, files);
     $('download-sample').textContent = sample.is_demo ? t('sample.exportDemo') : t('sample.export');
     document.querySelector('.dialog-footer > span').textContent = validFiles.length ? t('sample.fileCount', { count: validFiles.length }) : t('sample.metadataOnly');

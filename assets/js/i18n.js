@@ -2,6 +2,14 @@
 'use strict';
 (() => {
   const messages = {
+"sample.exteriorMaskNote":{"zh":"叶片外部背景遮罩，仅用于展示；非定量分割", "en":"Leaf exterior masked for display only; not quantitative segmentation"},
+"sample.originalState":{"zh": "完整原图", "en": "Full original"},
+"sample.displayState":{"zh": "展示视图", "en": "Display view"},
+"sample.originalNote":{"zh": "完整视野 · 无旋转、裁剪或亮度调整；无背景遮罩", "en": "Full field of view · No rotation, crop or brightness adjustment; no background mask"},
+"sample.displayNote":{"zh": "展示取景 · 旋转 {rotation}° · γ {gamma} · 原始文件未改动", "en": "Display framing · Rotation {rotation}° · γ {gamma} · Source file unchanged"},
+"gallery.legend":{"zh": "展示取景 / 原图可查", "en": "Display framing / Originals available"},
+"gallery.legendNote":{"zh": "六张项目图像 · 验证集", "en": "Six project images · Validation"},
+
 "overview.mouseAlt":{"zh": "项目提供的小鼠三维成像展示", "en": "Project-supplied mouse imaging visualization"},
 "overview.mouseCaption":{"zh": "项目图像 · 小鼠成像", "en": "Project image · mouse imaging"},
 "overview.beforeAlt":{"zh": "增强前图像局部", "en": "Detail from the before image"},
@@ -240,8 +248,8 @@
     "en": "Try again"
   },
   "ui.055": {
-    "zh": "六个样本均为验证集；展示亮度适度调整，详情可查看原图。",
-    "en": "All six samples are in Validation. Display brightness is gently adjusted; full originals are available in details."
+    "zh": "六个样本均为验证集。仅对边界明确的叶片外部背景做展示遮罩；其余保留以免误删微弱信号。详情可查看完整原图。",
+    "en": "All six samples are in Validation. Display-only masking removes the clearly identifiable leaf exterior; other backgrounds are retained to protect faint signals. Full originals are available in details."
   },
   "ui.056": {
     "zh": "下载样本索引",
