@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+reconstruction/runs/
+reconstruction/profiles/
+reconstruction/build/
+reconstruction/dist/
+reconstruction/.venv/
+
+# Proprietary BP cores and obsolete reconstruction archives stay local.
+/reconstruction/pa_pipeline/legacy/core/bp.py
+/reconstruction/pa_pipeline/legacy/core/adpat_device.cu
+/reconstruction/pa_pipeline/backends/bp_reference.py
+/reconstruction/tests/test_bp_reference.py
+/assets/downloads/pacthub-reconstruction-*.zip

@@ -1,0 +1,442 @@
+{
+  "version": "2026-10-25",
+  "assets": [
+    {
+      "file": "assets/images/showcase/mouse-rotation-depth.webp",
+      "sha256": "10f1b13ba110d0a23cf365ee119319ff7a8bcf71657857c35e8384aa2f2f7b8e",
+      "source": "rotation_depth.png",
+      "dimensions": [
+        510,
+        720
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 80.65472078169799,
+        "pixels_per_mm": 16.1309441563396,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-rotation-gray.webp",
+      "sha256": "3f4e0177eddaffe6a7957b64adb80344a50a028101c8caed78516c43d0551e2e",
+      "source": "author_gray.png",
+      "dimensions": [
+        510,
+        720
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 80.65472078169799,
+        "pixels_per_mm": 16.1309441563396,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-rotation-volume.webp",
+      "sha256": "d97564e3aba6fa6b732538e462196bac4dd65efcfef2d26bf95fe5063223e0f5",
+      "source": "rotation_3d.png",
+      "dimensions": [
+        962,
+        1422
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 137.47963769607614,
+        "pixels_per_mm": 27.495927539215227,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-scan-depth.webp",
+      "sha256": "e619035d125cd5bb0dccbf705b65ee3a6a9ad15b1cb79e6f02bff84d9dff011e",
+      "source": "sum_scan_depth.png",
+      "dimensions": [
+        520,
+        965
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 10,
+        "length_pixels": 100,
+        "pixels_per_mm": 10,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-scan-gray.webp",
+      "sha256": "6501b01a51a7b46407e3b4678afc83c748126abb1711c15cc2d343186ceb46c2",
+      "source": "sum_scan_gray.png",
+      "dimensions": [
+        520,
+        965
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 10,
+        "length_pixels": 100,
+        "pixels_per_mm": 10,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-scan-volume.webp",
+      "sha256": "80267f488789049e0f61d73472129b15f562b5eabf269e2262b08749dc381171",
+      "source": "scan_processed.h5",
+      "dimensions": [
+        685,
+        1276
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 10,
+        "length_pixels": 119.40034993341156,
+        "pixels_per_mm": 11.940034993341156,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/leaf-depth.webp",
+      "sha256": "bfac496f4d240440426db92bdd1c2790a63e063a55ac9b434ab8d5e7ea191e5e",
+      "source": "leaf_depth.png",
+      "dimensions": [
+        350,
+        480
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 49.87519025875191,
+        "pixels_per_mm": 9.975038051750381,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/leaf-gray.webp",
+      "sha256": "e70daf50b02df3bade70e2e8ab8ef227899bd78ebf4ed99bd04d1ba2c67e5438",
+      "source": "leaf_gray.png",
+      "dimensions": [
+        350,
+        480
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 49.87519025875191,
+        "pixels_per_mm": 9.975038051750381,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/leaf-volume.webp",
+      "sha256": "12572f37556a0a3b21efc590e046e6ec353601b061bb20ac813658bcd2f22912",
+      "source": "leaf_3d.png",
+      "dimensions": [
+        930,
+        1282
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 111.41641463463236,
+        "pixels_per_mm": 22.28328292692647,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/hand-depth.webp",
+      "sha256": "0853823aef5be51fb79c44696a1d614faee0cd45a529ddb6874bab8c4a5eb7e8",
+      "source": "hand_depth.png",
+      "dimensions": [
+        570,
+        800
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 49.93789766449499,
+        "pixels_per_mm": 9.987579532898998,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/hand-gray.webp",
+      "sha256": "41bb600762736f8d1e5cd5cfcaeb034420300472be5d5add93f59f56f9942a6f",
+      "source": "hand_gray.png",
+      "dimensions": [
+        570,
+        800
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 49.93789766449499,
+        "pixels_per_mm": 9.987579532898998,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/hand-volume.webp",
+      "sha256": "feda37dbb2965bb335b4807747825c97c62ebbb51a57f41db18cb4b4b7986cd8",
+      "source": "hand_3d.png",
+      "dimensions": [
+        863,
+        1282
+      ],
+      "conversion": "Existing display; recorded XY crop for scan; scale rendered as calibrated HTML overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 69.60056680457602,
+        "pixels_per_mm": 13.920113360915204,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/overview-structure.webp",
+      "sha256": "bfa58745c90a08a8779db1961066ff4daab864e9859e73d39f70314f113fbd9d",
+      "dimensions": [
+        965,
+        520
+      ],
+      "conversion": "90-degree lateral overview; no anisotropic stretching; no scale annotation"
+    },
+    {
+      "file": "assets/images/showcase/overview-temporal.webp",
+      "sha256": "825f1b5ab85e9e2feeb6feb14838337e035f49307f90941540904cf01bd40bb2",
+      "dimensions": [
+        800,
+        400
+      ],
+      "conversion": "90-degree lateral overview; no anisotropic stretching; no scale annotation"
+    },
+    {
+      "file": "assets/images/showcase/overview-reconstruction.webp",
+      "sha256": "1bfab87c4881ae154eb357536ddb75f6ddf048b6f40f655ed67e7408fc0a0dd2",
+      "dimensions": [
+        1282,
+        863
+      ],
+      "conversion": "90-degree image-plane camera roll for landscape overview; no scale annotation"
+    },
+    {
+      "file": "assets/images/showcase/mouse-brain-depth.webp",
+      "sha256": "6211034802f0bb492e7ca5a84d98fd3b163e9e08f157969b0929fd437635dc7d",
+      "dimensions": [
+        385,
+        366
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 125.0,
+        "pixels_per_mm": 25.0,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-brain-gray.webp",
+      "sha256": "1881eaefcc7f1e783ad4de887c157e0ad05f3d198836a89395310399e828729b",
+      "dimensions": [
+        385,
+        366
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 125.0,
+        "pixels_per_mm": 25.0,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-brain-volume.webp",
+      "sha256": "72dece47481c53434275f007cb951025bf3d38808a5a71c88dd8a94c6f3012e2",
+      "dimensions": [
+        942,
+        988
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 261.3296495290083,
+        "pixels_per_mm": 52.26592990580166,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/square-phantom-depth.webp",
+      "sha256": "bfba424638bdc37e1417f7fd3233ecc829bf3b30b97dfb83c5d85819d3603e4a",
+      "dimensions": [
+        140,
+        130
+      ],
+      "conversion": "Linear BP display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 2,
+        "length_pixels": 19.95000048679301,
+        "pixels_per_mm": 9.975000243396504,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/square-phantom-gray.webp",
+      "sha256": "e309bb29103d45b055d7a3241d9ec32d903868b643f223301c4175c3450deb89",
+      "dimensions": [
+        140,
+        130
+      ],
+      "conversion": "Linear BP display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 2,
+        "length_pixels": 19.95000048679301,
+        "pixels_per_mm": 9.975000243396504,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/square-phantom-volume.webp",
+      "sha256": "d1a8c1ba09c2d24c12d2ca001759b4bfca4ce62e7a22218207af7ca62095a212",
+      "dimensions": [
+        906,
+        988
+      ],
+      "conversion": "Linear BP display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 2,
+        "length_pixels": 125.57759687163237,
+        "pixels_per_mm": 62.78879843581618,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-body-depth.webp",
+      "sha256": "43917467804f9f96fc4f6d7417e5d17bebf88be08824a1d408649a40bbf7a6e8",
+      "dimensions": [
+        375,
+        875
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 60.004422679284595,
+        "pixels_per_mm": 12.000884535856919,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-body-gray.webp",
+      "sha256": "8fc9c46e0a0d32d8783940312fa50ea3b37e860ccdc9a86806fd548629b4b882",
+      "dimensions": [
+        375,
+        875
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 60.004422679284595,
+        "pixels_per_mm": 12.000884535856919,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-body-volume.webp",
+      "sha256": "5a36a3e5ed9d12c7ae98adee5493d2b1b039e027d6d848523af08487a7fa474a",
+      "dimensions": [
+        469,
+        988
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 60.523427605444965,
+        "pixels_per_mm": 12.104685521088992,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-liver-depth.webp",
+      "sha256": "c6d69572c676032046c2d5fd515af8319da4642163fe88e3311bf2bd5fe1eb49",
+      "dimensions": [
+        378,
+        378
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 88.7146054954676,
+        "pixels_per_mm": 17.742921099093518,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-liver-gray.webp",
+      "sha256": "682143fadaa345e5201b96ca3b00e25a9ea2d9b0a1295136bede1118b8d00f80",
+      "dimensions": [
+        378,
+        378
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 88.7146054954676,
+        "pixels_per_mm": 17.742921099093518,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/images/showcase/mouse-liver-volume.webp",
+      "sha256": "c001ca57627be314c402e546875b2243991a0e9201accb18c7ba62f85a24d0ff",
+      "dimensions": [
+        932,
+        988
+      ],
+      "conversion": "Linear author-released volume display; calibrated HTML scale overlay",
+      "scale_bar": {
+        "length_mm": 5,
+        "length_pixels": 176.64202941701228,
+        "pixels_per_mm": 35.32840588340245,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    {
+      "file": "assets/media/overview-scan-detail.mp4",
+      "sha256": "b11cf77295807be76ba0aab9f0c21472cbd9190e94822f62fc34d76359a46f3b",
+      "source": "scan_sum.h5",
+      "dimensions": [
+        1080,
+        1080
+      ],
+      "conversion": "Full-resolution 3D camera render; fixed window; presentation envelope on black",
+      "settings": "data/overview-film.json"
+    },
+    {
+      "file": "assets/images/showcase/overview-film-poster.webp",
+      "sha256": "7837b9d3ac94c119fc164ea9c1cb7f1e8926998c0fcbd2abad3890d860c9077a",
+      "source": "scan_sum.h5",
+      "dimensions": [
+        1080,
+        1080
+      ],
+      "conversion": "Full-resolution 3D camera render; fixed window; presentation envelope on black",
+      "settings": "data/overview-film.json"
+    }
+  ],
+  "relative_depth": "One Trunk LUT across specimens, normalized to each displayed depth slab. Absolute specimen depths are not equated.",
+  "temporal": "Rigidly registered linear BP MIPs; fixed sequence window; ROI readouts computed after one rigid resampling, before image encoding.",
+  "inputs": [
+    {
+      "file": "author_volume_display.json",
+      "sha256": "491c5fabe7a9e7137ab5718bf5cd7f6ec6ed4dcc342d966bc0d78f4f7793666b"
+    },
+    {
+      "file": "specimen_volume_display.json",
+      "sha256": "365892b382cb5f6be835cf80d0e53dd59be1f3030ee40a6de0c570634755583a"
+    },
+    {
+      "file": "dynamic_display.json",
+      "sha256": "430d4f0fa0cd705f32d61158a5a3b5d595b7b6aab5b9ee288da7ae73b1515c5a"
+    }
+  ]
+}

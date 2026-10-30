@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:07.000
+Pair the reference and blurred candidate on the same three-dimensional grid, using gain one.
+
+00:00:07.000 --> 00:00:14.000
+Compute positive local contrast by subtracting a 0.4 millimetre Gaussian background.
+
+00:00:14.000 --> 00:00:21.000
+Use only the reference to identify tubular support, then split it into weak and strong contrast groups.
+
+00:00:21.000 --> 00:00:28.000
+Measure shared contrast in each group. Q is 100 times the geometric mean of the two overlap scores.
+
+00:00:28.000 --> 00:00:35.000
+Q complements PSNR, full-image SSIM and L1. The three controls retain background and structural changes separately.
+
+00:00:35.000 --> 00:00:41.000
+Measured mouse: extract the local background and positive contrast from GT.
+
+00:00:41.000 --> 00:00:44.000
+Evaluate the test image on the weak and strong support defined by GT.
+
+00:00:44.000 --> 00:00:48.000
+Accumulate shared contrast in both groups throughout the 3D volume to obtain the overlap scores.
+
+00:00:48.000 --> 00:00:51.000
+Measured mouse result: Dweak = 0.7872, Dstrong = 0.8654, Q = 82.53.
+

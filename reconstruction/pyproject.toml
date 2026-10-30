@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pacthub-reconstruction"
+version = "1.4.0"
+description = "Dataset-native PA processing, FOV and sound-speed selection, public literature UBP and model-based reconstruction"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "h5py>=3.8", "Pillow>=9", "opencv-python-headless>=4.8", "scikit-image>=0.21"]
+
+[project.optional-dependencies]
+cuda = ["cupy-cuda12x>=13", "torch>=2.1", "ninja"]
+
+[project.scripts]
+pact-reconstruct = "pa_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pa_pipeline*"]
+
+[tool.setuptools.package-data]
+"pa_pipeline.legacy.mb_backend" = ["*.cu", "*.json"]

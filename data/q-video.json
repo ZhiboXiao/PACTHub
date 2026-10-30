@@ -1,0 +1,138 @@
+{
+  "movie": "assets/media/q-calculation.mp4",
+  "movie_sha256": "88b515e48d7351ac28ebfea1b9f5f1c17bbaea23062daf599d95c535da450552",
+  "poster": "assets/images/showcase/q-film-thumbnail.webp",
+  "poster_sha256": "2d9cd6f4806c7b6d2efe281492bd816a4514df2ca0d0e5b99e0593d499578490",
+  "poster_frame_index": 0,
+  "duration_seconds": 51,
+  "fps": 24,
+  "frame_count": 1224,
+  "frame_size": [
+    1280,
+    720
+  ],
+  "assembly": "Lossless H.264 stream concatenation; no image re-encoding",
+  "sources": [
+    {
+      "file": "assets/media/q-theory.mp4",
+      "sha256": "b29536ce022129b80bbe9afb17080b8a4b0dfa7eb8d4309a4d438815a1ecefa0",
+      "duration_seconds": 35.0
+    },
+    {
+      "file": "assets/media/q-mouse.mp4",
+      "sha256": "b3dd79de40f8ba9198b8d504f08604378aec284c1662c31fea760942b19ed1ee",
+      "duration_seconds": 16.0
+    }
+  ],
+  "chapters": [
+    {
+      "start": 0,
+      "end": 7,
+      "key": "q.pair"
+    },
+    {
+      "start": 7,
+      "end": 14,
+      "key": "q.contrast"
+    },
+    {
+      "start": 14,
+      "end": 21,
+      "key": "q.support"
+    },
+    {
+      "start": 21,
+      "end": 28,
+      "key": "q.overlap"
+    },
+    {
+      "start": 28,
+      "end": 35,
+      "key": "q.complement"
+    },
+    {
+      "start": 35,
+      "end": 51,
+      "key": "q.measured"
+    }
+  ],
+  "captions": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "text": {
+        "en": "Pair the reference and blurred candidate on the same three-dimensional grid, using gain one.",
+        "zh": "在同一三维网格上比较参考体和高斯模糊结果，强度系数为一。"
+      }
+    },
+    {
+      "start": 7.0,
+      "end": 14.0,
+      "text": {
+        "en": "Compute positive local contrast by subtracting a 0.4 millimetre Gaussian background.",
+        "zh": "减去 0.4 毫米高斯平滑背景，保留正的局部对比度。"
+      }
+    },
+    {
+      "start": 14.0,
+      "end": 21.0,
+      "text": {
+        "en": "Use only the reference to identify tubular support, then split it into weak and strong contrast groups.",
+        "zh": "仅从参考体建立管状结构区域，按参考对比度中位数分为弱、强两组。"
+      }
+    },
+    {
+      "start": 21.0,
+      "end": 28.0,
+      "text": {
+        "en": "Measure shared contrast in each group. Q is 100 times the geometric mean of the two overlap scores.",
+        "zh": "分别累计两组的共有对比度，Q 等于两组重叠分数几何平均值的 100 倍。"
+      }
+    },
+    {
+      "start": 28.0,
+      "end": 35.0,
+      "text": {
+        "en": "Q complements PSNR, full-image SSIM and L1. The three controls retain background and structural changes separately.",
+        "zh": "Q 补充 PSNR、全图 SSIM 和 L1，分别反映结构保留与整体一致性。"
+      }
+    },
+    {
+      "start": 35,
+      "end": 41,
+      "text": {
+        "zh": "小鼠实例：从 GT 提取局部背景与正对比度。",
+        "en": "Measured mouse: extract the local background and positive contrast from GT."
+      }
+    },
+    {
+      "start": 41,
+      "end": 44,
+      "text": {
+        "zh": "使用 GT 确定的弱、强结构区域，评价待评估图像。",
+        "en": "Evaluate the test image on the weak and strong support defined by GT."
+      }
+    },
+    {
+      "start": 44,
+      "end": 48,
+      "text": {
+        "zh": "在三维体中累计两组的共有对比度，得到结构重叠分数。",
+        "en": "Accumulate shared contrast in both groups throughout the 3D volume to obtain the overlap scores."
+      }
+    },
+    {
+      "start": 48,
+      "end": 51,
+      "text": {
+        "zh": "小鼠实例结果：Dweak = 0.7872，Dstrong = 0.8654，Q = 82.53。",
+        "en": "Measured mouse result: Dweak = 0.7872, Dstrong = 0.8654, Q = 82.53."
+      }
+    }
+  ],
+  "caption_presentation": "Dedicated text band below the video; no subtitle overlay",
+  "numerical_records": [
+    "data/q-calculation.json",
+    "data/q-mouse-calculation.json"
+  ]
+}

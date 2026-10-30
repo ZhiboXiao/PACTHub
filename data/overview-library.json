@@ -1,0 +1,55 @@
+{
+  "films": [
+    {
+      "id": "structure",
+      "movie": "assets/media/overview-scan-detail.mp4",
+      "poster": "assets/images/showcase/overview-film-poster.webp",
+      "title": {
+        "en": "Structure, in detail",
+        "zh": "看见结构细节"
+      },
+      "description": {
+        "en": "From the whole volume to fine vascular branches.",
+        "zh": "从完整三维体，逐步放大至细小血管。"
+      },
+      "source": "data/overview-film.json",
+      "duration_seconds": 24,
+      "sha256": "b11cf77295807be76ba0aab9f0c21472cbd9190e94822f62fc34d76359a46f3b",
+      "poster_sha256": "7837b9d3ac94c119fc164ea9c1cb7f1e8926998c0fcbd2abad3890d860c9077a"
+    },
+    {
+      "id": "motion",
+      "movie": "assets/media/overview-motion-cutout.mp4",
+      "poster": "assets/images/showcase/overview-motion-cutout.webp",
+      "title": {
+        "en": "Anatomy in motion",
+        "zh": "捕捉生理动态"
+      },
+      "description": {
+        "en": "Grayscale and depth views follow the same motion.",
+        "zh": "灰度与深度编码，同步呈现生理运动。"
+      },
+      "source": "data/motion-cutout.json",
+      "duration_seconds": 15.8,
+      "sha256": "cea8ed3071353bb52148a85dd0da7a107a04d74fe3ee235e12c5b47dfa2e92d4",
+      "poster_sha256": "ec7b54fc8df6eb4c17818ecde2ca2aeb9ce9248ff64e29f43443f6e58dbadecc"
+    },
+    {
+      "id": "rotation",
+      "movie": "assets/media/overview-leaf-compound.mp4",
+      "poster": "assets/images/showcase/overview-leaf.webp",
+      "title": {
+        "en": "Rotation compounding",
+        "zh": "旋转复合"
+      },
+      "description": {
+        "en": "A leaf, reconstructed from 1 to 20 exposures.",
+        "zh": "从 1 到 20 次曝光，看叶脉结构逐步呈现。"
+      },
+      "source": "data/leaf-compounding.json",
+      "duration_seconds": 18,
+      "sha256": "df4a09aaa550813c72ea3816fd65c5ca680d350f4105a20456e48de5355d2ab0",
+      "poster_sha256": "9543c8281510b9a3c39ab9fb268b0e1d0174cc132b493d3369f4596a1b5edcad"
+    }
+  ]
+}

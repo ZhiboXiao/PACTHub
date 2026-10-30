@@ -1,0 +1,279 @@
+[
+  {
+    "id": "panopact",
+    "title": "Cross-regional real-time visualization of systemic physiology and dynamics with 3D panoramic photoacoustic computed tomography (3D-PanoPACT)",
+    "journal": "Nature Communications",
+    "year": 2025,
+    "volume": "16",
+    "issue": null,
+    "article_number": "10077",
+    "doi": "10.1038/s41467-025-65054-x",
+    "publication_date": "2025-11-18",
+    "bibtex_key": "Wang2025PanoPACT",
+    "topic": {
+      "en": "3D-PanoPACT",
+      "zh": "3D-PanoPACT"
+    },
+    "authors": [
+      {
+        "given": "Xuanhao",
+        "family": "Wang"
+      },
+      {
+        "given": "Yuqian",
+        "family": "Meng"
+      },
+      {
+        "given": "Mingli",
+        "family": "Sun"
+      },
+      {
+        "given": "Xiali",
+        "family": "Gao"
+      },
+      {
+        "given": "Yuqi",
+        "family": "Wang"
+      },
+      {
+        "given": "Shaobo",
+        "family": "Wang"
+      },
+      {
+        "given": "Kaiyue",
+        "family": "Wang"
+      },
+      {
+        "given": "Ruofan",
+        "family": "Wang"
+      },
+      {
+        "given": "Danyang",
+        "family": "Ren"
+      },
+      {
+        "given": "Yonggang",
+        "family": "Yin"
+      },
+      {
+        "given": "Chiye",
+        "family": "Li"
+      },
+      {
+        "given": "Ruimin",
+        "family": "Chen"
+      },
+      {
+        "given": "Lihong V.",
+        "family": "Wang"
+      },
+      {
+        "given": "Junhui",
+        "family": "Shi"
+      }
+    ],
+    "metadata_sources": [
+      "https://www.nature.com/articles/s41467-025-65054-x",
+      "https://www.nature.com/articles/s41467-025-65054-x.pdf"
+    ],
+    "first_page_source": "https://www.nature.com/articles/s41467-025-65054-x.pdf",
+    "url": "https://doi.org/10.1038/s41467-025-65054-x",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "first_page": {
+      "image": "assets/images/publications/panopact-page1.webp",
+      "thumbnail": "assets/images/publications/panopact-thumb.webp",
+      "width": 1800,
+      "height": 2392,
+      "source_pdf_sha256": "6fea7e923eb2e0450cda5af8331fad4dfa8cec36b7462f8817a718ff688ddc1c",
+      "image_sha256": "42a8ff08858b3da250f685ee365749a30c734842288e21a59a28ab1c2b757c80",
+      "thumbnail_sha256": "d6239a921f6ff5507c44e1f86b81c3b8ab59287cad1e7654224671325fb7944f",
+      "page": 1,
+      "crop": "complete published first page"
+    },
+    "citation": "Wang X, Meng Y, Sun M, Gao X, Wang Y, Wang S, Wang K, Wang R, Ren D, Yin Y, Li C, Chen R, Wang LV, Shi J. Cross-regional real-time visualization of systemic physiology and dynamics with 3D panoramic photoacoustic computed tomography (3D-PanoPACT). Nature Communications. 2025;16:10077. doi:10.1038/s41467-025-65054-x.",
+    "bibtex_file": "assets/citations/panopact.bib"
+  },
+  {
+    "id": "panopaus",
+    "title": "Spatiotemporally scalable visualization of whole-body anatomy using three-dimensional panoramic photoacoustic and ultrasound tomography",
+    "journal": "Advanced Imaging",
+    "year": 2026,
+    "volume": "3",
+    "issue": "5",
+    "article_number": "C00004",
+    "doi": "10.3788/ai.2026.10028",
+    "publication_date": "2026-09-21",
+    "bibtex_key": "Huang2026PanoPAUS",
+    "topic": {
+      "en": "3D-PanoPAUS",
+      "zh": "3D-PanoPAUS"
+    },
+    "authors": [
+      {
+        "given": "Hao",
+        "family": "Huang"
+      },
+      {
+        "given": "Yang",
+        "family": "Xiao"
+      },
+      {
+        "given": "Xiali",
+        "family": "Gao"
+      },
+      {
+        "given": "Fan",
+        "family": "Meng"
+      },
+      {
+        "given": "Zhibo",
+        "family": "Xiao"
+      },
+      {
+        "given": "Xuran",
+        "family": "Zhou"
+      },
+      {
+        "given": "Yuqi",
+        "family": "Wang"
+      },
+      {
+        "given": "Xiangdi",
+        "family": "Li"
+      },
+      {
+        "given": "Dikui",
+        "family": "Zhou"
+      },
+      {
+        "given": "Yiyin",
+        "family": "Su"
+      },
+      {
+        "given": "Ruimin",
+        "family": "Chen"
+      },
+      {
+        "given": "Xuanhao",
+        "family": "Wang"
+      },
+      {
+        "given": "Junhui",
+        "family": "Shi"
+      }
+    ],
+    "metadata_sources": [
+      "https://api.crossref.org/works/10.3788/ai.2026.10028",
+      "https://doi.org/10.3788/ai.2026.10028"
+    ],
+    "first_page_source": "Author-supplied published PDF; DOI verified on page 1",
+    "url": "https://doi.org/10.3788/ai.2026.10028",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "first_page": {
+      "image": "assets/images/publications/panopaus-page1.webp",
+      "thumbnail": "assets/images/publications/panopaus-thumb.webp",
+      "width": 1800,
+      "height": 2330,
+      "source_pdf_sha256": "2f1d40349a87cde8430368ac988f21a2187e71e43cb5a789e7042e6355c13e74",
+      "image_sha256": "792be9f2276fe6105af8a4f01846707c627c55f5c7c6f566aa6fff2242bae1cb",
+      "thumbnail_sha256": "eeaea49f51b522f8e273c5dc8ddf59de270652283b079d0331db233bf99008ac",
+      "page": 1,
+      "crop": "complete published first page"
+    },
+    "citation": "Huang H, Xiao Y, Gao X, Meng F, Xiao Z, Zhou X, Wang Y, Li X, Zhou D, Su Y, Chen R, Wang X, Shi J. Spatiotemporally scalable visualization of whole-body anatomy using three-dimensional panoramic photoacoustic and ultrasound tomography. Advanced Imaging. 2026;3(5):C00004. doi:10.3788/ai.2026.10028.",
+    "bibtex_file": "assets/citations/panopaus.bib"
+  },
+  {
+    "id": "liver",
+    "title": "Photoacoustic Tomography Tracks Vascular Remodeling and Functional Recovery in Liver Regeneration",
+    "journal": "BME Frontiers",
+    "year": 2026,
+    "volume": "7",
+    "issue": null,
+    "article_number": "0327",
+    "doi": "10.34133/bmef.0327",
+    "publication_date": "2026-10-21",
+    "bibtex_key": "Meng2026LiverRegeneration",
+    "topic": {
+      "en": "Liver regeneration",
+      "zh": "?????"
+    },
+    "authors": [
+      {
+        "given": "Fan",
+        "family": "Meng"
+      },
+      {
+        "given": "Xiali",
+        "family": "Gao"
+      },
+      {
+        "given": "Hao",
+        "family": "Huang"
+      },
+      {
+        "given": "Zhibo",
+        "family": "Xiao"
+      },
+      {
+        "given": "Xuran",
+        "family": "Zhou"
+      },
+      {
+        "given": "Yiyin",
+        "family": "Su"
+      },
+      {
+        "given": "Ruimin",
+        "family": "Chen"
+      },
+      {
+        "given": "Yang",
+        "family": "Xiao"
+      },
+      {
+        "given": "Dikui",
+        "family": "Zhou"
+      },
+      {
+        "given": "Yuqi",
+        "family": "Wang"
+      },
+      {
+        "given": "Xiangdi",
+        "family": "Li"
+      },
+      {
+        "given": "Xuanhao",
+        "family": "Wang"
+      },
+      {
+        "given": "Junhui",
+        "family": "Shi"
+      }
+    ],
+    "metadata_sources": [
+      "https://api.crossref.org/works/10.34133/bmef.0327",
+      "https://doi.org/10.34133/bmef.0327"
+    ],
+    "first_page_source": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13683954.1/PMC13683954.1.pdf",
+    "url": "https://doi.org/10.34133/bmef.0327",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "first_page": {
+      "image": "assets/images/publications/liver-page1.webp",
+      "thumbnail": "assets/images/publications/liver-thumb.webp",
+      "width": 1800,
+      "height": 2400,
+      "source_pdf_sha256": "7841d4ae8d709fb53e893d052bc99f2e5a26ccf62424b9e2350182aa57bc2490",
+      "image_sha256": "8234f35ea7b2d46eb1fe6f49725b8baff84d6e7fbd754297a164bdbce8cc6c07",
+      "thumbnail_sha256": "a4635e86018a7a2db08ae8b7ea7dc3cbb4ffd9e597d066d3ee4fc62236201517",
+      "page": 1,
+      "crop": "complete published first page"
+    },
+    "citation": "Meng F, Gao X, Huang H, Xiao Z, Zhou X, Su Y, Chen R, Xiao Y, Zhou D, Wang Y, Li X, Wang X, Shi J. Photoacoustic Tomography Tracks Vascular Remodeling and Functional Recovery in Liver Regeneration. BME Frontiers. 2026;7:0327. doi:10.34133/bmef.0327.",
+    "bibtex_file": "assets/citations/liver.bib"
+  }
+]

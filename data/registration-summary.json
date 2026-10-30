@@ -1,0 +1,26 @@
+[
+  {
+    "series": "wholebody",
+    "timepoints": 16,
+    "mean_feature_ncc_before": 0.31452952686318675,
+    "mean_feature_ncc_after": 0.39510574103225005,
+    "rotation_range_deg": [
+      0.0,
+      2.9684157371520996
+    ],
+    "max_center_shift_mm": 0.15751992280127633,
+    "minimum_roi_valid_fraction": 1.0
+  },
+  {
+    "series": "abdominal",
+    "timepoints": 20,
+    "mean_feature_ncc_before": 0.33777447854788806,
+    "mean_feature_ncc_after": 0.6354403708975814,
+    "rotation_range_deg": [
+      0.0,
+      1.9827017784118652
+    ],
+    "max_center_shift_mm": 0.1435402787554375,
+    "minimum_roi_valid_fraction": 1.0
+  }
+]

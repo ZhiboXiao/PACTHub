@@ -1,0 +1,375 @@
+{
+  "sample_id": "20241115_104329",
+  "counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "frames_1based": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "reconstruction": {
+    "sample_id": "20241115_104329",
+    "count": 20,
+    "frames_1based": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "source_parameters_sha256": "7df277734e05db7556ae555e167314dcfdf8c0306d59e7fb686a7951446373db",
+    "signal": {
+      "additional_denoising": false,
+      "analytic_signal": false,
+      "bad_channels_1based": [],
+      "channel_calibration_file": null,
+      "channels_1based_range_inclusive": [
+        1,
+        1024
+      ],
+      "crop_stage": "after_filter_and_energy_normalization",
+      "energy_normalization": {
+        "enabled": true,
+        "method": "max_over_time_of_channel_mean",
+        "signal_scale": 1,
+        "window_samples_1based": [
+          1,
+          100
+        ]
+      },
+      "filter": {
+        "band_hz": [
+          500000.0,
+          6000000.0
+        ],
+        "enabled": true,
+        "kind": "butterworth_bandpass",
+        "order_argument": 3,
+        "zero_phase": true
+      },
+      "nan_policy": "replace_with_zero",
+      "polarity": -1,
+      "predelay_samples": -42.0,
+      "sampling_frequency_hz": 40000000,
+      "time_samples_1based": [
+        1,
+        4096
+      ]
+    },
+    "geometry": {
+      "additional_z_rotation_deg": -46.490642288454644,
+      "base_z_rotation_deg": 0.0,
+      "coordinate_unit": "mm",
+      "detector_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "detector_axis_signs": [
+        1,
+        1,
+        -1
+      ],
+      "frame_angle_formula": "-(i_fr_stat-1)*delta_angle + 0",
+      "frame_angle_step_parameter_deg": 0.8044681492904887,
+      "head_tail_resolved": false,
+      "rotation_origin_mm": [
+        0,
+        0,
+        0
+      ],
+      "sensor_axis_model": "toward_origin",
+      "transform_order": [
+        "base_Rz",
+        "frame_Rz",
+        "additional_Rz"
+      ],
+      "base_coordinate_offset_mm": [
+        0,
+        0,
+        0
+      ],
+      "base_coordinate_dtype": "float32"
+    },
+    "grid": {
+      "center_mm": [
+        2.041388890241853,
+        0.3278913892802894,
+        -2.0
+      ],
+      "coordinate_frame": "after_additional_Rz",
+      "grid_rule": "round_length_times_density_inclusive_endpoints",
+      "resolution_px_mm": 10.0,
+      "sampling_rule": "legacy_round_inclusive",
+      "space_mm": [
+        40.0,
+        80.0,
+        20.0
+      ],
+      "shape_xyz": [
+        400,
+        800,
+        200
+      ],
+      "extent_xyz_mm": [
+        [
+          -17.95861053466797,
+          22.04138946533203
+        ],
+        [
+          -39.6721076965332,
+          40.3278923034668
+        ],
+        [
+          -12.0,
+          8.0
+        ]
+      ],
+      "actual_spacing_mm": [
+        0.10025062412023544,
+        0.10012515634298325,
+        0.10050251334905624
+      ]
+    },
+    "reconstruction": {
+      "angle_compensation": true,
+      "apodization": "polynomial_(2cos2_minus_1)^2",
+      "distance_weight": "inverse_squared_distance",
+      "enabled": true,
+      "inner_speed_m_s": null,
+      "mode": "single_speed",
+      "outer_speed_m_s": null,
+      "postprocess": "weighted_mean_then_nonnegative",
+      "receive_half_angle_deg": 45.0,
+      "single_speed_m_s": 1495.0,
+      "sweep_m_s": [
+        1485,
+        1486,
+        1487,
+        1488,
+        1489,
+        1490,
+        1491,
+        1492,
+        1493,
+        1494,
+        1495,
+        1496,
+        1497,
+        1498,
+        1499,
+        1500,
+        1501
+      ],
+      "sweep_variable": "single_speed_m_s",
+      "time_interpolation": "nearest_sample_round"
+    },
+    "crop_xyxy": [
+      25,
+      160,
+      375,
+      640
+    ],
+    "shape_zyx": [
+      200,
+      480,
+      350
+    ],
+    "extent_xyz_mm": [
+      [
+        -15.45234489440918,
+        19.53512191772461
+      ],
+      [
+        -23.652082443237305,
+        24.30786895751953
+      ],
+      [
+        -12.0,
+        8.0
+      ]
+    ],
+    "camera": {
+      "direction": [
+        0.4531633284897209,
+        -0.3039338682272307,
+        0.8380138432368225
+      ],
+      "view_up": [
+        -0.14457087885019915,
+        -0.9526931319918457,
+        -0.26734819476489574
+      ],
+      "axis_flips": "XYZ",
+      "projection": "parallel maximum-intensity ray casting",
+      "pixel_pitch_mm": 0.08102739520124164
+    },
+    "postfilter": null,
+    "added_gain": false,
+    "elapsed_seconds": 59.49287223815918
+  },
+  "display_window": [
+    0.0016085048299282788,
+    0.029245542362332344
+  ],
+  "common_window": true,
+  "extra_gain": false,
+  "views": [
+    "axial MIP"
+  ],
+  "detail_inset": false,
+  "layout": {
+    "image": "left",
+    "hemisphere": "upper right",
+    "exposure_matrix": "lower right",
+    "canvas_px": [
+      1440,
+      1080
+    ]
+  },
+  "final_result_hold_seconds": 3.76,
+  "array_animation": {
+    "shape": "hemisphere",
+    "angle_step_deg": 0.8044681492904887,
+    "matrix": [
+      4,
+      5
+    ],
+    "mode": "consecutive accumulation",
+    "schematic": true
+  },
+  "numerical_outputs": [
+    {
+      "count": 1,
+      "sha256": "4ef205a06c020671556037acd1013d3512f06bc8154c905b4921d72605f831df"
+    },
+    {
+      "count": 2,
+      "sha256": "9b3af96189a67e4e93223c59bbaefc58ebf5b7164c9a60cc960d0d87e6b8a718"
+    },
+    {
+      "count": 3,
+      "sha256": "941718c11bca6610130dc45a49183091d83ad4a0cdcb176c3ec27cfe246ece49"
+    },
+    {
+      "count": 4,
+      "sha256": "3bae48278598c067f76f0ec3a6c41ac79fb830b830b1bda333cd06afc69c8752"
+    },
+    {
+      "count": 5,
+      "sha256": "958a74853966597acfc17e60d607b90882cee8da6d9ba36068fa95f71509b664"
+    },
+    {
+      "count": 6,
+      "sha256": "8b8cf1ec5a69178c22a206b00e9689c92bd15845ea3588530af76871521b125b"
+    },
+    {
+      "count": 7,
+      "sha256": "99fd705b1d11df670b8337dfce8b1048915bd54d2ac321443301d2ebbe398473"
+    },
+    {
+      "count": 8,
+      "sha256": "ed02b8245150487ce07412a68eaac9036ff4cbeef7967045dbc65a574c1b652c"
+    },
+    {
+      "count": 9,
+      "sha256": "d316948e9b64fd6d14648c2a782254d76713d8440d933222d552d1f19faa3020"
+    },
+    {
+      "count": 10,
+      "sha256": "bb2d1d20796327640a88f8b919aa28b5dcbfef3108d323358d7699806e4220b1"
+    },
+    {
+      "count": 11,
+      "sha256": "9ac39829eb51066a08699944dfbafa5a1d1c960ed9c03e1e062382773c9694bf"
+    },
+    {
+      "count": 12,
+      "sha256": "4433167cc4ada26a6b0f931e7bb867af42f3ae940a729c98f53959ac6f48a20a"
+    },
+    {
+      "count": 13,
+      "sha256": "62bccfa491a4ae22e0f6df95a3bbbc23b5398081576e81f083e995be309a499d"
+    },
+    {
+      "count": 14,
+      "sha256": "341d5edd8b12db72d475051f339350d2152b8df968f0571b5c92741184191b87"
+    },
+    {
+      "count": 15,
+      "sha256": "cf72d20edd94a01a28737de6e5e4b9d0d74b0213e9070d422c6796f759c7836c"
+    },
+    {
+      "count": 16,
+      "sha256": "c3641dc526f95172c0cfc8049be331c7d9fc198c449a93120456cabd0e7748ea"
+    },
+    {
+      "count": 17,
+      "sha256": "b80f47de6b2e24c894cfc2d882df96e9f76d8ec4a8cfc6edbc4e51a33e5ec812"
+    },
+    {
+      "count": 18,
+      "sha256": "ba392884a3dc9189dfd9806de29acca6b524b54926ed2944633a6660dae97252"
+    },
+    {
+      "count": 19,
+      "sha256": "c10cac08816ef3ca5b83171a25e13daa11a4e9c16c650e76305cc049e907f470"
+    },
+    {
+      "count": 20,
+      "sha256": "0a2242f4abb15690e0c04355ffed77b07c85a35c552a5c659fe618727ceefeb1"
+    }
+  ]
+}

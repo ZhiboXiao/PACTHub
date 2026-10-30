@@ -1,0 +1,17 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:07.000
+Pair the reference and blurred candidate on the same three-dimensional grid, using gain one.
+
+00:00:07.000 --> 00:00:14.000
+Compute positive local contrast by subtracting a 0.4 millimetre Gaussian background.
+
+00:00:14.000 --> 00:00:21.000
+Use only the reference to identify tubular support, then split it into weak and strong contrast groups.
+
+00:00:21.000 --> 00:00:28.000
+Measure shared contrast in each group. Q is 100 times the geometric mean of the two overlap scores.
+
+00:00:28.000 --> 00:00:35.000
+Q complements PSNR, full-image SSIM and L1. The three controls retain background and structural changes separately.
+

@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-28",
+  "package_version": "1.4.0",
+  "public_bp": "Xu-Wang 2005 UBP, Eqs.20-22",
+  "internal_bp_confidential": true,
+  "internal_bp_distributed": false,
+  "unit_tests": {
+    "total": 27,
+    "passed": 27,
+    "failures": 0,
+    "skipped": 0,
+    "seconds": 1.401
+  },
+  "core_sha256": "92e5dd56b20ce27ca7f6fc60226835be14836c4c02e8d6d4905a2574fea619b5",
+  "real_leaf": {
+    "acquisition_id": "20241115_104329",
+    "validation": "Previously completed local reconstruction with this byte-identical core",
+    "grid_xyz": [
+      200,
+      400,
+      100
+    ],
+    "frames": 20,
+    "cpu_gpu_max_abs_error": 3.814697e-06
+  },
+  "preserved_fov_speed_mb_hashes": {
+    "pa_pipeline/select.py": "3385cac9dc81c15dd0df83ae2b1f1e96b099e508466c7aa2e0efb6c1645506bc",
+    "pa_pipeline/selection/fov_legacy.py": "017c4ed2436fc8631c96ae84de3478b45d5c1f2e70f100802343a314627d3ddb",
+    "pa_pipeline/selection/speed_legacy.py": "f66a7ab9e7aba28c29833c699e816cce96471994516bd831be8c83256f0a5d26",
+    "pa_pipeline/legacy/mb.py": "70e18299e6532ba8a16e3677558090abec2ac9a16613cbb2d7a24f15b7543db3",
+    "pa_pipeline/legacy/mb_backend/operator.py": "663e6279c6f3b4f4114093065079a0fb27eaf9144899e87877628a9481a65696"
+  },
+  "actual_mb_reconstruction_repeated": false
+}

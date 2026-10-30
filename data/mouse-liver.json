@@ -1,0 +1,526 @@
+{
+  "id": "mouse-liver",
+  "title": {
+    "zh": "小鼠肝脏 · 单次曝光",
+    "en": "Mouse liver · single exposure"
+  },
+  "is_demo": false,
+  "category": "animal",
+  "mode": "single",
+  "split": "unspecified",
+  "tags": [
+    "animal",
+    "single",
+    "3D",
+    "official release"
+  ],
+  "description": {
+    "zh": "当前展示结果对应 3D-PanoPACT 的肝脏单次曝光结果。相关候选采集 ID 可定位到数据集中的实际 PA_Data 文件；官方体与具体采集及帧的对应关系尚待确认。",
+    "en": "The displayed volume corresponds to the 3D-PanoPACT single-exposure liver result. The candidate acquisition IDs identify actual PA_Data files in the dataset; the exact acquisition and frame mapping of the released volume remains unconfirmed."
+  },
+  "preview": "assets/images/showcase/mouse-liver-depth.webp",
+  "views": {
+    "depth": "assets/images/showcase/mouse-liver-depth.webp",
+    "gray": "assets/images/showcase/mouse-liver-gray.webp",
+    "volume": "assets/images/showcase/mouse-liver-volume.webp"
+  },
+  "dimensions": [
+    260,
+    378,
+    378
+  ],
+  "axis_order": [
+    "z",
+    "y",
+    "x"
+  ],
+  "spacing_mm": [
+    0.05636050537648447,
+    0.05636050537648447,
+    0.05636050537648447
+  ],
+  "wavelength_nm": null,
+  "intensity_unit": "a.u.",
+  "data_version": "figshare-v3",
+  "acquisition_id": "3DPanoPACT-Fig2a",
+  "display": {
+    "palette": "3D-PanoPACT Trunk",
+    "depth_scale": "Relative position within the displayed Z slab, 0–1",
+    "z_extent_mm": [
+      0.0,
+      14.597370892509478
+    ],
+    "extent_xyz_mm": [
+      [
+        0.6763260645178136,
+        21.92423659145246
+      ],
+      [
+        0.6763260645178136,
+        21.92423659145246
+      ],
+      [
+        0.0,
+        14.597370892509478
+      ]
+    ],
+    "view_extent_xyz_mm": {
+      "depth": [
+        [
+          0.6763260645178136,
+          21.92423659145246
+        ],
+        [
+          0.6763260645178136,
+          21.92423659145246
+        ],
+        [
+          0.0,
+          14.597370892509478
+        ]
+      ],
+      "gray": [
+        [
+          0.6763260645178136,
+          21.92423659145246
+        ],
+        [
+          0.6763260645178136,
+          21.92423659145246
+        ],
+        [
+          0.0,
+          14.597370892509478
+        ]
+      ],
+      "volume": [
+        [
+          0.6763260645178136,
+          21.92423659145246
+        ],
+        [
+          0.6763260645178136,
+          21.92423659145246
+        ],
+        [
+          0.0,
+          14.597370892509478
+        ]
+      ]
+    },
+    "intensity_window": [
+      0.11267522349953651,
+      0.8187442017197607
+    ],
+    "gamma": 1,
+    "added_fluence_gain": false,
+    "xy_crop_pixels": [
+      12,
+      12,
+      390,
+      390
+    ],
+    "crop_frame": "Rotated physical display frame; common XYZ crop for depth, gray and volume",
+    "rotation_deg": 0,
+    "rotation_convention": "Positive is counterclockwise in the displayed XY image",
+    "compact_preview": true,
+    "asset_revision": "f9795262e8f2",
+    "scale_bars": {
+      "depth": {
+        "length_mm": 5,
+        "length_pixels": 88.7146054954676,
+        "pixels_per_mm": 17.742921099093518,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "gray": {
+        "length_mm": 5,
+        "length_pixels": 88.7146054954676,
+        "pixels_per_mm": 17.742921099093518,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "volume": {
+        "length_mm": 5,
+        "length_pixels": 176.64202941701228,
+        "pixels_per_mm": 35.32840588340245,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    "view_notes": {
+      "zh": "三种视图使用同一旋转、同一 XYZ 物理范围和线性窗。",
+      "en": "All three views share one rotation, XYZ field and linear window."
+    },
+    "scale_calibration": {
+      "method": "Transfer manuscript Fig.2a 5-mm bar through orthographic volume-box projection",
+      "spacing_xyz_mm": [
+        0.05636050537648447,
+        0.05636050537648447,
+        0.05636050537648447
+      ],
+      "kind": "Display calibration; native MAT axes absent",
+      "isotropic_grid_assumption": true,
+      "reference_image": "Figure 2.pptx / image1.png",
+      "reference_image_width_emu": 3366000,
+      "reference_bar_emu": 282208,
+      "reference_working_width_pixels": 1200,
+      "reference_corner_pixels": [
+        [
+          510.0,
+          64.0
+        ],
+        [
+          838.0,
+          184.0
+        ],
+        [
+          636.0,
+          266.0
+        ],
+        [
+          308.0,
+          146.0
+        ],
+        [
+          510.0,
+          482.0
+        ],
+        [
+          838.0,
+          602.0
+        ],
+        [
+          636.0,
+          684.0
+        ],
+        [
+          308.0,
+          564.0
+        ]
+      ],
+      "world_corner_voxels_xyz": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          399.0,
+          0.0,
+          0.0
+        ],
+        [
+          399.0,
+          0.0,
+          259.0
+        ],
+        [
+          0.0,
+          0.0,
+          259.0
+        ],
+        [
+          0.0,
+          399.0,
+          0.0
+        ],
+        [
+          399.0,
+          399.0,
+          0.0
+        ],
+        [
+          399.0,
+          399.0,
+          259.0
+        ],
+        [
+          0.0,
+          399.0,
+          259.0
+        ]
+      ],
+      "projection_pixels_per_voxel": [
+        1.133161150189692,
+        1.1349865148779625
+      ],
+      "projection_fit_rms_pixels": 1.3816916405723228e-12
+    },
+    "native_axis_coordinates_mm": null,
+    "post_crop_flip_axes_zyx": [
+      1
+    ]
+  },
+  "provenance": {
+    "source_id": "Real-time_liver_dynamics_Fig.2/liver_singleframe_processed.mat",
+    "acquisition": {
+      "zh": "候选数据集采集：20230112_153445 - 20230112_160337；15 组，5 个位置",
+      "en": "Candidate dataset acquisitions: 20230112_153445 - 20230112_160337; 15 acquisitions across 5 positions"
+    },
+    "reconstruction": {
+      "zh": "作者发布的单次曝光三维处理体",
+      "en": "Author-released single-exposure processed volume"
+    },
+    "standardization_reference": "docs/data-guide.html",
+    "official_release": {
+      "title": "3D-PanoPACT_Data_Code",
+      "authors": [
+        "Xuanhao Wang",
+        "Yuqian Meng",
+        "Xiali Gao"
+      ],
+      "doi": "10.6084/m9.figshare.28443374.v3",
+      "url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+      "version": 3,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "article_doi": "10.1038/s41467-025-65054-x",
+      "acquisition_timestamp": null,
+      "changes": "Axis reordering, a common XYZ crop, an up-down Y-axis flip of the selected numeric volume, linear display and three-view rendering from the released single-frame volume.",
+      "acquisition_annotation": {
+        "dataset_name": "liver/20230112",
+        "source": "Local liver experiment family",
+        "exact_input_frame_mapping": null,
+        "dataset_acquisition_ids": [
+          "20230112_153445",
+          "20230112_153542",
+          "20230112_153636",
+          "20230112_154020",
+          "20230112_154112",
+          "20230112_154204",
+          "20230112_154436",
+          "20230112_154525",
+          "20230112_154613",
+          "20230112_154814",
+          "20230112_155126",
+          "20230112_155311",
+          "20230112_160140",
+          "20230112_160237",
+          "20230112_160337"
+        ],
+        "dataset_acquisition_groups": [
+          {
+            "position": "pos1_LIVER",
+            "acquisitions": [
+              {
+                "id": "20230112_153445",
+                "file": "Data_20230112_153445_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_153445/PA_Data/Data_20230112_153445_PA.mat"
+              },
+              {
+                "id": "20230112_153542",
+                "file": "Data_20230112_153542_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_153542/PA_Data/Data_20230112_153542_PA.mat"
+              },
+              {
+                "id": "20230112_153636",
+                "file": "Data_20230112_153636_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_153636/PA_Data/Data_20230112_153636_PA.mat"
+              }
+            ]
+          },
+          {
+            "position": "pos2",
+            "acquisitions": [
+              {
+                "id": "20230112_154020",
+                "file": "Data_20230112_154020_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_154020/PA_Data/Data_20230112_154020_PA.mat"
+              },
+              {
+                "id": "20230112_154112",
+                "file": "Data_20230112_154112_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_154112/PA_Data/Data_20230112_154112_PA.mat"
+              },
+              {
+                "id": "20230112_154204",
+                "file": "Data_20230112_154204_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_154204/PA_Data/Data_20230112_154204_PA.mat"
+              }
+            ]
+          },
+          {
+            "position": "pos3",
+            "acquisitions": [
+              {
+                "id": "20230112_154436",
+                "file": "Data_20230112_154436_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_154436/PA_Data/Data_20230112_154436_PA.mat"
+              },
+              {
+                "id": "20230112_154525",
+                "file": "Data_20230112_154525_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_154525/PA_Data/Data_20230112_154525_PA.mat"
+              },
+              {
+                "id": "20230112_154613",
+                "file": "Data_20230112_154613_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_154613/PA_Data/Data_20230112_154613_PA.mat"
+              }
+            ]
+          },
+          {
+            "position": "pos4",
+            "acquisitions": [
+              {
+                "id": "20230112_154814",
+                "file": "Data_20230112_154814_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_154814/PA_Data/Data_20230112_154814_PA.mat"
+              },
+              {
+                "id": "20230112_155126",
+                "file": "Data_20230112_155126_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_155126/PA_Data/Data_20230112_155126_PA.mat"
+              },
+              {
+                "id": "20230112_155311",
+                "file": "Data_20230112_155311_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_155311/PA_Data/Data_20230112_155311_PA.mat"
+              }
+            ]
+          },
+          {
+            "position": "pos5",
+            "acquisitions": [
+              {
+                "id": "20230112_160140",
+                "file": "Data_20230112_160140_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_160140/PA_Data/Data_20230112_160140_PA.mat"
+              },
+              {
+                "id": "20230112_160237",
+                "file": "Data_20230112_160237_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_160237/PA_Data/Data_20230112_160237_PA.mat"
+              },
+              {
+                "id": "20230112_160337",
+                "file": "Data_20230112_160337_PA.mat",
+                "dataset_relative_path": "WXH/Animal/20230112/20230112_160337/PA_Data/Data_20230112_160337_PA.mat"
+              }
+            ]
+          }
+        ],
+        "dataset_id_source": "Standardized WXH dataset index and source-intake audit, 2026-10-26",
+        "matching_status": "candidate_acquisitions; exact released-volume input mapping unverified"
+      },
+      "source_data": {
+        "file": "Real-time_liver_dynamics_Fig.2/liver_singleframe_processed.mat",
+        "variable": "pa_img_pro",
+        "shape_hdf5": [
+          260,
+          400,
+          400
+        ],
+        "sha256": "f863d2552b1a9c5166b6ae8a6827bcde304a8692b017ba7628f7cbdf392ea76f",
+        "size_bytes": 117851842,
+        "data_type": "Numeric three-dimensional reconstruction volume"
+      }
+    }
+  },
+  "files": [],
+  "acquisition_name": "20230112_153445 - 20230112_160337",
+  "acquisition_summary": {
+    "zh": "单次曝光",
+    "en": "Single exposure"
+  },
+  "acquisition_groups": [
+    {
+      "position": "pos1_LIVER",
+      "acquisitions": [
+        {
+          "id": "20230112_153445",
+          "file": "Data_20230112_153445_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_153445/PA_Data/Data_20230112_153445_PA.mat"
+        },
+        {
+          "id": "20230112_153542",
+          "file": "Data_20230112_153542_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_153542/PA_Data/Data_20230112_153542_PA.mat"
+        },
+        {
+          "id": "20230112_153636",
+          "file": "Data_20230112_153636_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_153636/PA_Data/Data_20230112_153636_PA.mat"
+        }
+      ]
+    },
+    {
+      "position": "pos2",
+      "acquisitions": [
+        {
+          "id": "20230112_154020",
+          "file": "Data_20230112_154020_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_154020/PA_Data/Data_20230112_154020_PA.mat"
+        },
+        {
+          "id": "20230112_154112",
+          "file": "Data_20230112_154112_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_154112/PA_Data/Data_20230112_154112_PA.mat"
+        },
+        {
+          "id": "20230112_154204",
+          "file": "Data_20230112_154204_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_154204/PA_Data/Data_20230112_154204_PA.mat"
+        }
+      ]
+    },
+    {
+      "position": "pos3",
+      "acquisitions": [
+        {
+          "id": "20230112_154436",
+          "file": "Data_20230112_154436_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_154436/PA_Data/Data_20230112_154436_PA.mat"
+        },
+        {
+          "id": "20230112_154525",
+          "file": "Data_20230112_154525_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_154525/PA_Data/Data_20230112_154525_PA.mat"
+        },
+        {
+          "id": "20230112_154613",
+          "file": "Data_20230112_154613_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_154613/PA_Data/Data_20230112_154613_PA.mat"
+        }
+      ]
+    },
+    {
+      "position": "pos4",
+      "acquisitions": [
+        {
+          "id": "20230112_154814",
+          "file": "Data_20230112_154814_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_154814/PA_Data/Data_20230112_154814_PA.mat"
+        },
+        {
+          "id": "20230112_155126",
+          "file": "Data_20230112_155126_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_155126/PA_Data/Data_20230112_155126_PA.mat"
+        },
+        {
+          "id": "20230112_155311",
+          "file": "Data_20230112_155311_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_155311/PA_Data/Data_20230112_155311_PA.mat"
+        }
+      ]
+    },
+    {
+      "position": "pos5",
+      "acquisitions": [
+        {
+          "id": "20230112_160140",
+          "file": "Data_20230112_160140_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_160140/PA_Data/Data_20230112_160140_PA.mat"
+        },
+        {
+          "id": "20230112_160237",
+          "file": "Data_20230112_160237_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_160237/PA_Data/Data_20230112_160237_PA.mat"
+        },
+        {
+          "id": "20230112_160337",
+          "file": "Data_20230112_160337_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230112/20230112_160337/PA_Data/Data_20230112_160337_PA.mat"
+        }
+      ]
+    }
+  ]
+}

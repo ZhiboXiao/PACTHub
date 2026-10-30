@@ -1,0 +1,19 @@
+{
+  "source_entry": "run_data3_v3_torch_cuda.py",
+  "source_entry_sha256": "8b8667bcc694a538da98a195d8cc188812f5eee8c85a1a734318eff32caa8536",
+  "extracted_definitions": [
+    "temporal_convolution",
+    "ExactV3Operator",
+    "squared_norm",
+    "norm_value",
+    "tv_gradient",
+    "tv_adjoint"
+  ],
+  "extraction": "AST source segments, definition bodies unchanged",
+  "vendored_sha256": {
+    "torch_disk_projector_cuda.cu": "0a678ccb7a13c988aa97c5cf26a2305ae480b99c17f790c951dd378338d8b57a",
+    "matched_temporal.py": "1cc83e8375ed6300dfd84db3d43ea798c22f0895e33337734b278bc6bba4c482",
+    "operator.py": "376d6b2a6916b0d9b7192fc5c953f7dfe949353b31d30bdaf41c8d4f6ae97ecf"
+  },
+  "source_provider": "PACTHub authors; supplied V3 reconstruction implementation"
+}

@@ -1,0 +1,62 @@
+{
+  "source": {
+    "file": "frontal_view_time_point.mat",
+    "variable": "frontal_view_img",
+    "sha256": "1da1461cfc6744af01cb0dfd735af6e1dff428652f30f6c4a4a070d70004eb66",
+    "release_doi": "10.6084/m9.figshare.28443374.v3",
+    "figure": "Figure 5b",
+    "license": "CC BY 4.0"
+  },
+  "presentation": {
+    "axis": "specimen long axis Y",
+    "angle_deg": 12,
+    "cycles": 2,
+    "duration_seconds": 12,
+    "fps": 24,
+    "screen_angle_deg": 30,
+    "head_tail_reversed": true,
+    "display_window": [
+      0.02,
+      0.4
+    ],
+    "layouts": {
+      "desktop": {
+        "size": [
+          1920,
+          1320
+        ],
+        "center": [
+          1000,
+          630
+        ],
+        "scale": 2.0,
+        "screen_angle_deg": 30
+      },
+      "mobile": {
+        "size": [
+          1080,
+          1080
+        ],
+        "center": [
+          540,
+          540
+        ],
+        "scale": 1.24,
+        "screen_angle_deg": 40
+      }
+    },
+    "loop": "Complete 12-second orbit; no physiological-movie transition"
+  },
+  "outputs": {
+    "desktop": {
+      "file": "assets/media/hero-orbit-desktop.mp4",
+      "sha256": "a960b6bda12ae5ea6a1d2f1e46b998fa4ee868100b33931058cbcdb0c7b9890e",
+      "size_bytes": 3584539
+    },
+    "mobile": {
+      "file": "assets/media/hero-orbit-mobile.mp4",
+      "sha256": "8de42b3081983e8fe2eff3272d65857ff05fec422e14f118a9fe1204dbc13437",
+      "size_bytes": 1806577
+    }
+  }
+}

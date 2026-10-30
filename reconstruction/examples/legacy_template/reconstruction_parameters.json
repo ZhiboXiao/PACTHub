@@ -1,0 +1,613 @@
+{
+  "defaults": {
+    "boundary": {
+      "coordinate_frame": null,
+      "enabled": false,
+      "extension": null,
+      "file": null,
+      "inside_sign": null,
+      "onset": {
+        "channels_1based": null,
+        "continuity_parameters_file": null,
+        "enabled": false,
+        "filter_band_hz": null,
+        "frames_1based": null,
+        "search_region": null,
+        "time_window_samples_1based": null
+      },
+      "representation": null,
+      "surface_parameters_file": null
+    },
+    "display": {
+      "axis_flip": null,
+      "colormap": "gray",
+      "gamma": 1,
+      "intensity_limits": null,
+      "normalization": "shared_across_speeds"
+    },
+    "fov_detection": {
+      "enabled": false,
+      "large_resolution_px_mm": 8,
+      "large_space_mm": [
+        100,
+        100,
+        20
+      ],
+      "maximum_clipped_fraction": 0.01,
+      "reference_speed_m_s": null,
+      "segmentation_parameters_file": null,
+      "sigma_upper": 4,
+      "target_space_mm": [
+        40,
+        80,
+        20
+      ],
+      "vessel_continuity_prior": true
+    },
+    "frames": {
+      "available_count": 50,
+      "compound_mode": "joint_signed_weighted_BP_then_nonnegative",
+      "count": 20,
+      "gating": {
+        "baseline_gaussian_window": 5,
+        "baseline_median_window": 15,
+        "binary_median_window": 3,
+        "channels_1based": [
+          1,
+          768
+        ],
+        "method": "correlation_baseline_static_selection",
+        "threshold_noise_std_multiplier": -0.4,
+        "time_samples_1based": [
+          2301,
+          2900
+        ]
+      },
+      "index_reference": "selected_PA_sequence",
+      "indices_1based": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "mode": "explicit_indices"
+    },
+    "geometry": {
+      "additional_z_rotation_deg": -12.145418126852595,
+      "base_z_rotation_deg": 0.0,
+      "coordinate_unit": "mm",
+      "detector_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "detector_axis_signs": [
+        1,
+        1,
+        -1
+      ],
+      "frame_angle_formula": "-(i_fr_stat-1)*delta_angle + 0",
+      "frame_angle_step_parameter_deg": 0.3819421424376151,
+      "head_tail_resolved": false,
+      "rotation_origin_mm": [
+        0,
+        0,
+        0
+      ],
+      "sensor_axis_model": "toward_origin",
+      "transform_order": [
+        "base_Rz",
+        "frame_Rz",
+        "additional_Rz"
+      ],
+      "base_coordinate_offset_mm": [
+        0,
+        0,
+        0
+      ],
+      "base_coordinate_dtype": "float32"
+    },
+    "grid": {
+      "center_mm": [
+        0.5292920293875519,
+        3.3838796094032144,
+        -2.0
+      ],
+      "coordinate_frame": "after_additional_Rz",
+      "grid_rule": "round_length_times_density_inclusive_endpoints",
+      "resolution_px_mm": 10.0,
+      "sampling_rule": "legacy_round_inclusive",
+      "space_mm": [
+        40.0,
+        80.0,
+        20.0
+      ],
+      "shape_xyz": [
+        400,
+        800,
+        200
+      ],
+      "extent_xyz_mm": [
+        [
+          -19.4707088470459,
+          20.5292911529541
+        ],
+        [
+          -36.616119384765625,
+          43.383880615234375
+        ],
+        [
+          -12.0,
+          8.0
+        ]
+      ],
+      "actual_spacing_mm": [
+        0.10025062412023544,
+        0.10012515634298325,
+        0.10050251334905624
+      ]
+    },
+    "output": {
+      "directory": null,
+      "overwrite": false,
+      "save_float_mip_cache": true,
+      "save_individual_speed_png": false,
+      "save_montage_png": true,
+      "save_volume": false,
+      "save_xymip_mat": false
+    },
+    "projection": {
+      "method": "maximum",
+      "plane": "xy",
+      "z_indices_1based_inclusive": [
+        1,
+        160
+      ],
+      "z_policy": "full_grid",
+      "z_range_mm": [
+        -14.0,
+        6.0
+      ]
+    },
+    "reconstruction": {
+      "angle_compensation": true,
+      "apodization": "polynomial_(2cos2_minus_1)^2",
+      "distance_weight": "inverse_squared_distance",
+      "enabled": true,
+      "inner_speed_m_s": null,
+      "mode": "single_speed",
+      "outer_speed_m_s": null,
+      "postprocess": "weighted_mean_then_nonnegative",
+      "receive_half_angle_deg": 45.0,
+      "single_speed_m_s": 1492.5,
+      "sweep_m_s": [
+        1485,
+        1486,
+        1487,
+        1488,
+        1489,
+        1490,
+        1491,
+        1492,
+        1493,
+        1494,
+        1495,
+        1496,
+        1497,
+        1498,
+        1499,
+        1500,
+        1501
+      ],
+      "sweep_variable": "single_speed_m_s",
+      "time_interpolation": "nearest_sample_round"
+    },
+    "signal": {
+      "additional_denoising": false,
+      "analytic_signal": false,
+      "bad_channels_1based": [],
+      "channel_calibration_file": null,
+      "channels_1based_range_inclusive": [
+        1,
+        1024
+      ],
+      "crop_stage": "after_filter_and_energy_normalization",
+      "energy_normalization": {
+        "enabled": true,
+        "method": "max_over_time_of_channel_mean",
+        "signal_scale": 1,
+        "window_samples_1based": [
+          1,
+          100
+        ]
+      },
+      "filter": {
+        "band_hz": [
+          500000.0,
+          6000000.0
+        ],
+        "enabled": true,
+        "kind": "butterworth_bandpass",
+        "order_argument": 3,
+        "zero_phase": true
+      },
+      "nan_policy": "replace_with_zero",
+      "polarity": -1,
+      "predelay_samples": -43.0,
+      "sampling_frequency_hz": 40000000,
+      "time_samples_1based": [
+        1,
+        4096
+      ]
+    },
+    "speed_selection": {
+      "algorithm_parameters_file": null,
+      "automatic_speed_writeback": false,
+      "enabled": false,
+      "methods": [
+        "full_global_normalized_gradient",
+        "morphology_v2"
+      ],
+      "roi_file": null,
+      "roi_mode": "full_mip"
+    },
+    "us": {
+      "demodulation_hz": null,
+      "dynamic_range_db": null,
+      "enabled": false,
+      "parameters_file": null,
+      "receive_configuration": null,
+      "speed_m_s": null,
+      "time_zero_samples": null,
+      "transmit_configuration": null
+    }
+  },
+  "inputs": {
+    "sample_directory": ".",
+    "selected_group_id": "20241213_151351",
+    "acquisition_kind": "single",
+    "specimen_category": "Animal",
+    "modality": "PA-only",
+    "acquisition_groups": [
+      {
+        "group_id": "20241213_151351",
+        "pa_file": "PA/Data_20241213_151351_PA.mat"
+      }
+    ],
+    "pa_files": [
+      "PA/Data_20241213_151351_PA.mat"
+    ],
+    "pa_variable": "pa_data",
+    "detector_file": "Calibration/detector.mat",
+    "input_array_axes": [
+      "channel",
+      "time",
+      "frame"
+    ],
+    "adc_scaling_already_applied": true,
+    "channel_mapping_already_applied": true,
+    "channel_polarity_already_applied": true,
+    "wavelength_nm": null
+  },
+  "sample_id": "20241213_151351",
+  "schema_version": "1.0.0",
+  "source_defaults": {
+    "boundary": {
+      "coordinate_frame": null,
+      "enabled": false,
+      "extension": null,
+      "file": null,
+      "inside_sign": null,
+      "onset": {
+        "channels_1based": null,
+        "continuity_parameters_file": null,
+        "enabled": false,
+        "filter_band_hz": null,
+        "frames_1based": null,
+        "search_region": null,
+        "time_window_samples_1based": null
+      },
+      "representation": null,
+      "surface_parameters_file": null
+    },
+    "display": {
+      "axis_flip": null,
+      "colormap": "gray",
+      "gamma": 1,
+      "intensity_limits": null,
+      "normalization": "shared_across_speeds"
+    },
+    "fov_detection": {
+      "enabled": false,
+      "large_resolution_px_mm": 8,
+      "large_space_mm": [
+        100,
+        100,
+        20
+      ],
+      "maximum_clipped_fraction": 0.01,
+      "reference_speed_m_s": null,
+      "segmentation_parameters_file": null,
+      "sigma_upper": 4,
+      "target_space_mm": [
+        40,
+        80,
+        20
+      ],
+      "vessel_continuity_prior": true
+    },
+    "frames": {
+      "available_count": 50,
+      "compound_mode": "joint_signed_weighted_BP_then_nonnegative",
+      "count": 20,
+      "gating": {
+        "baseline_gaussian_window": 5,
+        "baseline_median_window": 15,
+        "binary_median_window": 3,
+        "channels_1based": [
+          1,
+          768
+        ],
+        "method": "correlation_baseline_static_selection",
+        "threshold_noise_std_multiplier": -0.4,
+        "time_samples_1based": [
+          2301,
+          2900
+        ]
+      },
+      "index_reference": "selected_PA_sequence",
+      "indices_1based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "mode": "explicit_indices"
+    },
+    "geometry": {
+      "additional_z_rotation_deg": 0.0,
+      "base_z_rotation_deg": 0.0,
+      "coordinate_unit": "mm",
+      "detector_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "detector_axis_signs": [
+        1,
+        1,
+        -1
+      ],
+      "frame_angle_formula": "-(i_fr_stat-1)*delta_angle + 0",
+      "frame_angle_step_parameter_deg": 0.3819421424376151,
+      "head_tail_resolved": false,
+      "rotation_origin_mm": [
+        0,
+        0,
+        0
+      ],
+      "sensor_axis_model": "toward_origin",
+      "transform_order": [
+        "base_Rz",
+        "frame_Rz",
+        "additional_Rz"
+      ],
+      "base_coordinate_offset_mm": [
+        0,
+        0,
+        0
+      ],
+      "base_coordinate_dtype": "float32"
+    },
+    "grid": {
+      "center_mm": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "coordinate_frame": "after_additional_Rz",
+      "grid_rule": "round_length_times_density_inclusive_endpoints",
+      "resolution_px_mm": 2.0,
+      "sampling_rule": "legacy_round_inclusive",
+      "space_mm": [
+        80.0,
+        80.0,
+        20.0
+      ],
+      "shape_xyz": [
+        160,
+        160,
+        40
+      ],
+      "extent_xyz_mm": [
+        [
+          -40.0,
+          40.00000762939453
+        ],
+        [
+          -40.0,
+          40.00000762939453
+        ],
+        [
+          -12.0,
+          8.000001907348633
+        ]
+      ],
+      "actual_spacing_mm": [
+        0.5031446814537048,
+        0.5031446814537048,
+        0.5128205418586731
+      ]
+    },
+    "output": {
+      "directory": null,
+      "overwrite": false,
+      "save_float_mip_cache": true,
+      "save_individual_speed_png": false,
+      "save_montage_png": true,
+      "save_volume": false,
+      "save_xymip_mat": false
+    },
+    "projection": {
+      "method": "maximum",
+      "plane": "xy",
+      "z_indices_1based_inclusive": [
+        1,
+        160
+      ],
+      "z_policy": "full_grid",
+      "z_range_mm": [
+        -14.0,
+        6.0
+      ]
+    },
+    "reconstruction": {
+      "angle_compensation": true,
+      "apodization": "polynomial_(2cos2_minus_1)^2",
+      "distance_weight": "inverse_squared_distance",
+      "enabled": true,
+      "inner_speed_m_s": null,
+      "mode": "single_speed",
+      "outer_speed_m_s": null,
+      "postprocess": "weighted_mean_then_nonnegative",
+      "receive_half_angle_deg": 45.0,
+      "single_speed_m_s": 1493.0,
+      "sweep_m_s": [
+        1485,
+        1486,
+        1487,
+        1488,
+        1489,
+        1490,
+        1491,
+        1492,
+        1493,
+        1494,
+        1495,
+        1496,
+        1497,
+        1498,
+        1499,
+        1500,
+        1501
+      ],
+      "sweep_variable": "single_speed_m_s",
+      "time_interpolation": "nearest_sample_round"
+    },
+    "signal": {
+      "additional_denoising": false,
+      "analytic_signal": false,
+      "bad_channels_1based": [],
+      "channel_calibration_file": null,
+      "channels_1based_range_inclusive": [
+        1,
+        1024
+      ],
+      "crop_stage": "after_filter_and_energy_normalization",
+      "energy_normalization": {
+        "enabled": true,
+        "method": "max_over_time_of_channel_mean",
+        "signal_scale": 1,
+        "window_samples_1based": [
+          1,
+          100
+        ]
+      },
+      "filter": {
+        "band_hz": [
+          500000.0,
+          6000000.0
+        ],
+        "enabled": true,
+        "kind": "butterworth_bandpass",
+        "order_argument": 3,
+        "zero_phase": true
+      },
+      "nan_policy": "replace_with_zero",
+      "polarity": -1,
+      "predelay_samples": -43.0,
+      "sampling_frequency_hz": 40000000,
+      "time_samples_1based": [
+        1,
+        4096
+      ]
+    },
+    "speed_selection": {
+      "algorithm_parameters_file": null,
+      "automatic_speed_writeback": false,
+      "enabled": false,
+      "methods": [
+        "full_global_normalized_gradient",
+        "morphology_v2"
+      ],
+      "roi_file": null,
+      "roi_mode": "full_mip"
+    },
+    "us": {
+      "demodulation_hz": null,
+      "dynamic_range_db": null,
+      "enabled": false,
+      "parameters_file": null,
+      "receive_configuration": null,
+      "speed_m_s": null,
+      "time_zero_samples": null,
+      "transmit_configuration": null
+    }
+  },
+  "validation": {
+    "execution_hold": false,
+    "conflicts": [],
+    "pa_defaults_complete": true,
+    "warnings": []
+  },
+  "dataset_management": {
+    "collection": "WXH",
+    "animal_id": null,
+    "split": null,
+    "high_quality": null,
+    "source_category_basis": "Source folder label; specimen identity not independently verified",
+    "provisional_leakage_group": "3D-PACT-DATA/mouse_whole_body_20241213/dualside_illu/rep1",
+    "training_inclusion": "not_added_to_existing_frozen_training_run"
+  },
+  "export_metadata": {
+    "source_collection": "WXH",
+    "acquisition_id": "20241213_151351",
+    "parameter_role": "sample_current_parameters",
+    "source_parameter_sha256": "aa31800029ebe7507cc82b689612bebb4e6f83e4a2d794559183f3ba9c4c38eb",
+    "paths_relative_to": "this JSON file",
+    "US_and_program_files_not_included": true,
+    "numeric_parameters_preserved": true
+  }
+}

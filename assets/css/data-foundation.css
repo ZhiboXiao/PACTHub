@@ -1,0 +1,47 @@
+/* Structured inputs, reproducible workflows and citable releases. */
+.hero-tagline{white-space:pre-line;line-height:1.32;max-width:560px}
+.hero.hero-cinematic .hero-description{max-width:480px;line-height:1.85}
+.hero-capabilities{display:flex;flex-wrap:wrap;gap:9px 19px;list-style:none;padding:0;margin:24px 0 0;color:#d0d6e0;font-size:11px;line-height:1.6}
+.hero-capabilities li{display:flex;align-items:center;gap:8px}
+.hero-capabilities li::before{content:"";width:4px;height:4px;flex-shrink:0;border-radius:50%;background:#d0d6e0}
+.hero.hero-cinematic .hero-actions{margin-top:25px}
+.foundation-lede{max-width:890px;color:#d0d6e0;font-size:15px;line-height:1.9;margin:-20px 0 32px}
+#download-grid{grid-template-columns:1fr 1fr}
+#download-grid .download-card{min-width:0;display:flex;flex-direction:column;align-items:flex-start;padding:28px 40px 28px 0;gap:0}
+#download-grid .download-card+.download-card{border-top:0;border-left:1px solid #3e3e44}
+#download-grid .download-card:last-child{padding-left:40px}
+#download-grid .download-card h3{font-size:26px;line-height:1.4}
+#download-grid .download-card h3{margin:17px 0 12px}
+#download-grid .download-card>p{min-height:3.6em;flex:0;max-width:54ch;margin:0 0 10px}
+#download-grid .download-card .download-meta{min-height:20px;margin-bottom:14px}
+#download-grid .download-card>.button{margin-top:auto;width:fit-content;align-self:flex-start}
+.dataset-citations{padding-top:55px;scroll-margin-top:30px}
+.dataset-cite-heading{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:30px}
+.dataset-cite-heading .eyebrow{margin:0 0 12px;color:#8a8f98;font-size:10px}
+.dataset-cite-heading h3{font-size:32px;font-weight:450;line-height:1.35;letter-spacing:-.025em;margin:0}
+.dataset-cite-heading>p{max-width:57ch;font-size:13px;line-height:1.85;color:#8a8f98;margin:0}
+.dataset-cite-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid #3e3e44;border-radius:6px;overflow:hidden;background:linear-gradient(110deg,#20212288,#191a1b44)}
+.dataset-cite-card{padding:27px 30px 13px;min-width:0}
+.dataset-cite-card+.dataset-cite-card{border-left:1px solid #3e3e44}
+.cite-type{font:10px/1.5 var(--mono);letter-spacing:.08em;color:#8a8f98;margin:0 0 22px}
+.cite-record-heading{display:flex;gap:15px;align-items:center;justify-content:space-between}
+.cite-record-heading h4{font-size:25px;line-height:1.4;font-weight:500;letter-spacing:-.015em;margin:0}
+.cite-badge{font:11px/1.5 var(--mono);border:1px solid #3e3e44;color:#d0d6e0;padding:3px 8px;border-radius:3px;flex-shrink:0}
+.cite-scope{font-size:11px;color:#8a8f98;margin:7px 0 22px}
+.dataset-citation-text{font-size:13px;color:#d0d6e0;line-height:1.9;margin:0 0 17px;overflow-wrap:anywhere;min-height:5.7em}
+.dataset-doi{display:flex;align-items:center;gap:15px;width:fit-content;font:12px/1.6 var(--mono);color:#d0d6e0;overflow-wrap:anywhere}
+.dataset-cite-actions{display:flex;align-items:center;flex-wrap:wrap;gap:25px;margin:22px 0 0}
+.dataset-cite-actions button,.dataset-cite-actions a{border:0;background:none;font:12px/1.6 var(--sans);color:#d0d6e0;padding:8px 0;cursor:pointer;text-decoration:none}
+.dataset-cite-actions button:hover,.dataset-cite-actions a:hover,.dataset-doi:hover{color:#ffffff}
+.dataset-cite-actions button:focus-visible,.dataset-cite-actions a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
+.dataset-copy-feedback{min-height:1.6em;font-size:11px;line-height:1.6;margin:6px 0 0;color:#d0d6e0}
+.paper-forthcoming .cite-badge{color:#8a8f98;border-color:#3e3e44}
+.paper-pending{font-size:12px;line-height:1.8;color:#8a8f98;padding-top:14px;border-top:1px dashed #3e3e44;margin:0}
+.dataset-cite-actions[hidden],.paper-pending[hidden]{display:none}
+#release{margin-top:24px}
+@media(min-width:1101px){.cinematic-header .primary-nav{gap:20px}.hero.hero-cinematic{padding-top:172px}.hero-copy{max-width:48%}}
+@media(max-width:1100px){.dataset-cite-heading h3{font-size:28px}.dataset-cite-card{padding:24px 22px 13px}}
+@media(max-width:850px){.hero.hero-cinematic .hero-description{font-size:13px}.hero-capabilities{font-size:10px;gap:7px 13px}.foundation-lede{font-size:13px;line-height:1.9}.dataset-cite-heading{grid-template-columns:1fr;gap:16px}.dataset-cite-grid{grid-template-columns:1fr}.dataset-cite-card+.dataset-cite-card{border-left:0;border-top:1px solid #3e3e44}.dataset-citation-text{min-height:0}.dataset-cite-card{padding:25px 24px 14px}#download-grid{grid-template-columns:1fr}#download-grid .download-card:last-child{padding-left:0}.dataset-cite-heading h3{font-size:30px}}
+@media(max-width:600px){.hero-tagline{font-size:27px}.hero.hero-cinematic .hero-description{font-size:14px}.hero-capabilities{font-size:11px;gap:9px 16px}.foundation-lede{margin:-10px 0 26px}.dataset-citations{padding-top:38px}.dataset-cite-heading h3{font-size:27px}.cite-record-heading h4{font-size:23px}.dataset-cite-card{padding:23px 20px 13px}.dataset-doi{font-size:11px;gap:8px}.dataset-cite-heading>p{font-size:13px}#download-grid .download-card h3{font-size:24px}}
+@media print{.dataset-cite-grid{background:none}.dataset-cite-card{break-inside:avoid}.dataset-cite-actions,.hero-capabilities{display:none}}
+@media(max-width:850px){#download-grid .download-card{padding:26px 0}#download-grid .download-card+.download-card{border-left:0;border-top:1px solid #3e3e44}#download-grid .download-card>.button{margin-top:15px}#download-grid .download-card>p{min-height:0}}

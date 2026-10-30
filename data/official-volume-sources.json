@@ -1,0 +1,315 @@
+[
+  {
+    "id": "mouse-brain",
+    "release_id": "3DPanoPACT-Fig3",
+    "title": "3D-PanoPACT_Data_Code",
+    "authors": [
+      "Xuanhao Wang",
+      "Yuqian Meng",
+      "Xiali Gao"
+    ],
+    "doi": "10.6084/m9.figshare.28443374.v3",
+    "url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+    "version": 3,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "article_doi": "10.1038/s41467-025-65054-x",
+    "acquisition_timestamp": null,
+    "changes": "Axis reordering, shared XYZ crop, linear display window and re-rendering with the PACTHub depth palette and camera.",
+    "source_data": {
+      "file": "Brain_Anatomy_functions_Fig.3_Fig.4/whole_brain_STINT_processed.mat",
+      "variable": "whole_brain_STINT_processed",
+      "shape_hdf5": [
+        300,
+        450,
+        400
+      ],
+      "sha256": "4bfbcefdabcacfb2e37f13bfbb94e25a9f1e708faf39bdad58be10a758cf0bcd",
+      "size_bytes": 180935209,
+      "data_type": "Numeric three-dimensional reconstruction volume"
+    },
+    "acquisition_annotation": {
+      "dataset_name": "20230705_160311",
+      "source": "Dataset author interpretation, 2026-10-26",
+      "composition": "multi-wavelength",
+      "composition_status": "author-inferred",
+      "wavelengths_nm": null,
+      "note": {
+        "zh": "鼠脑按数据作者的判断标注为多波长复合，具体波长组合及复合权重尚未核实。",
+        "en": "The brain is labeled as a multi-wavelength compound following the dataset author's interpretation; the wavelength combination and weights have not been verified."
+      },
+      "experiment_directory": "mousebrain_20230705/Baseline",
+      "dataset_rf_file": "Data_20230705_160311_PA.mat",
+      "dataset_relative_path": "WXH/Animal/20230705/20230705_160311/PA_Data/Data_20230705_160311_PA.mat",
+      "dataset_wavelength_nm": 800,
+      "displayed_result": "3D-PanoPACT mousebrain",
+      "relationship": "Associated specimen acquisition; the displayed multi-wavelength release has no verified unique RF input manifest."
+    }
+  },
+  {
+    "id": "mouse-body",
+    "release_id": "3DPanoPACT-Fig5d",
+    "title": "3D-PanoPACT_Data_Code",
+    "authors": [
+      "Xuanhao Wang",
+      "Yuqian Meng",
+      "Xiali Gao"
+    ],
+    "doi": "10.6084/m9.figshare.28443374.v3",
+    "url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+    "version": 3,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "article_doi": "10.1038/s41467-025-65054-x",
+    "acquisition_timestamp": null,
+    "changes": "Axis reordering, 180-degree XY orientation, full released XYZ extent, fixed linear display window and re-rendering with the PACTHub depth palette and camera. No spatial volume crop.",
+    "acquisition_annotation": {
+      "dataset_name": "WholebodyProbeTracking/data_0908/MouseData/Back",
+      "source": "Author reconstruction code and local experiment directory",
+      "composition": "scan",
+      "exact_input_frame_mapping": null,
+      "dataset_acquisition_ids": [
+        "20230908_163425",
+        "20230908_163505",
+        "20230908_163556",
+        "20230908_163645",
+        "20230908_163737",
+        "20230908_163846",
+        "20230908_163945",
+        "20230908_164045"
+      ],
+      "dataset_acquisition_groups": [
+        {
+          "position": "p1",
+          "acquisitions": [
+            {
+              "id": "20230908_163425",
+              "file": "Data_20230908_163425_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230908/20230908_163425/PA_Data/Data_20230908_163425_PA.mat"
+            },
+            {
+              "id": "20230908_163505",
+              "file": "Data_20230908_163505_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230908/20230908_163505/PA_Data/Data_20230908_163505_PA.mat"
+            }
+          ]
+        },
+        {
+          "position": "p2",
+          "acquisitions": [
+            {
+              "id": "20230908_163556",
+              "file": "Data_20230908_163556_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230908/20230908_163556/PA_Data/Data_20230908_163556_PA.mat"
+            },
+            {
+              "id": "20230908_163645",
+              "file": "Data_20230908_163645_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230908/20230908_163645/PA_Data/Data_20230908_163645_PA.mat"
+            }
+          ]
+        },
+        {
+          "position": "p3",
+          "acquisitions": [
+            {
+              "id": "20230908_163737",
+              "file": "Data_20230908_163737_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230908/20230908_163737/PA_Data/Data_20230908_163737_PA.mat"
+            },
+            {
+              "id": "20230908_163846",
+              "file": "Data_20230908_163846_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230908/20230908_163846/PA_Data/Data_20230908_163846_PA.mat"
+            }
+          ]
+        },
+        {
+          "position": "p4",
+          "acquisitions": [
+            {
+              "id": "20230908_163945",
+              "file": "Data_20230908_163945_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230908/20230908_163945/PA_Data/Data_20230908_163945_PA.mat"
+            },
+            {
+              "id": "20230908_164045",
+              "file": "Data_20230908_164045_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230908/20230908_164045/PA_Data/Data_20230908_164045_PA.mat"
+            }
+          ]
+        }
+      ],
+      "dataset_id_source": "Standardized WXH dataset index and source-intake audit, 2026-10-26",
+      "matching_status": "candidate_acquisitions; exact released-volume input mapping unverified"
+    },
+    "source_data": {
+      "file": "Whole-trunk_Dynamics_Reconstruction_Fig.5/backside_view_time_point.mat",
+      "variable": "backside_view_img",
+      "shape_hdf5": [
+        250,
+        375,
+        875
+      ],
+      "sha256": "63402f8aa478b497957adba654b5a44891a6b3a3f398c7a1b836293b8dce96f2",
+      "size_bytes": 176270934,
+      "data_type": "Numeric three-dimensional reconstruction volume"
+    }
+  },
+  {
+    "id": "mouse-liver",
+    "release_id": "3DPanoPACT-Fig2a",
+    "title": "3D-PanoPACT_Data_Code",
+    "authors": [
+      "Xuanhao Wang",
+      "Yuqian Meng",
+      "Xiali Gao"
+    ],
+    "doi": "10.6084/m9.figshare.28443374.v3",
+    "url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+    "version": 3,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "article_doi": "10.1038/s41467-025-65054-x",
+    "acquisition_timestamp": null,
+    "changes": "Axis reordering, a common XYZ crop, an up-down Y-axis flip of the selected numeric volume, linear display and three-view rendering from the released single-frame volume.",
+    "acquisition_annotation": {
+      "dataset_name": "liver/20230112",
+      "source": "Local liver experiment family",
+      "exact_input_frame_mapping": null,
+      "dataset_acquisition_ids": [
+        "20230112_153445",
+        "20230112_153542",
+        "20230112_153636",
+        "20230112_154020",
+        "20230112_154112",
+        "20230112_154204",
+        "20230112_154436",
+        "20230112_154525",
+        "20230112_154613",
+        "20230112_154814",
+        "20230112_155126",
+        "20230112_155311",
+        "20230112_160140",
+        "20230112_160237",
+        "20230112_160337"
+      ],
+      "dataset_acquisition_groups": [
+        {
+          "position": "pos1_LIVER",
+          "acquisitions": [
+            {
+              "id": "20230112_153445",
+              "file": "Data_20230112_153445_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_153445/PA_Data/Data_20230112_153445_PA.mat"
+            },
+            {
+              "id": "20230112_153542",
+              "file": "Data_20230112_153542_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_153542/PA_Data/Data_20230112_153542_PA.mat"
+            },
+            {
+              "id": "20230112_153636",
+              "file": "Data_20230112_153636_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_153636/PA_Data/Data_20230112_153636_PA.mat"
+            }
+          ]
+        },
+        {
+          "position": "pos2",
+          "acquisitions": [
+            {
+              "id": "20230112_154020",
+              "file": "Data_20230112_154020_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_154020/PA_Data/Data_20230112_154020_PA.mat"
+            },
+            {
+              "id": "20230112_154112",
+              "file": "Data_20230112_154112_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_154112/PA_Data/Data_20230112_154112_PA.mat"
+            },
+            {
+              "id": "20230112_154204",
+              "file": "Data_20230112_154204_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_154204/PA_Data/Data_20230112_154204_PA.mat"
+            }
+          ]
+        },
+        {
+          "position": "pos3",
+          "acquisitions": [
+            {
+              "id": "20230112_154436",
+              "file": "Data_20230112_154436_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_154436/PA_Data/Data_20230112_154436_PA.mat"
+            },
+            {
+              "id": "20230112_154525",
+              "file": "Data_20230112_154525_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_154525/PA_Data/Data_20230112_154525_PA.mat"
+            },
+            {
+              "id": "20230112_154613",
+              "file": "Data_20230112_154613_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_154613/PA_Data/Data_20230112_154613_PA.mat"
+            }
+          ]
+        },
+        {
+          "position": "pos4",
+          "acquisitions": [
+            {
+              "id": "20230112_154814",
+              "file": "Data_20230112_154814_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_154814/PA_Data/Data_20230112_154814_PA.mat"
+            },
+            {
+              "id": "20230112_155126",
+              "file": "Data_20230112_155126_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_155126/PA_Data/Data_20230112_155126_PA.mat"
+            },
+            {
+              "id": "20230112_155311",
+              "file": "Data_20230112_155311_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_155311/PA_Data/Data_20230112_155311_PA.mat"
+            }
+          ]
+        },
+        {
+          "position": "pos5",
+          "acquisitions": [
+            {
+              "id": "20230112_160140",
+              "file": "Data_20230112_160140_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_160140/PA_Data/Data_20230112_160140_PA.mat"
+            },
+            {
+              "id": "20230112_160237",
+              "file": "Data_20230112_160237_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_160237/PA_Data/Data_20230112_160237_PA.mat"
+            },
+            {
+              "id": "20230112_160337",
+              "file": "Data_20230112_160337_PA.mat",
+              "dataset_relative_path": "WXH/Animal/20230112/20230112_160337/PA_Data/Data_20230112_160337_PA.mat"
+            }
+          ]
+        }
+      ],
+      "dataset_id_source": "Standardized WXH dataset index and source-intake audit, 2026-10-26",
+      "matching_status": "candidate_acquisitions; exact released-volume input mapping unverified"
+    },
+    "source_data": {
+      "file": "Real-time_liver_dynamics_Fig.2/liver_singleframe_processed.mat",
+      "variable": "pa_img_pro",
+      "shape_hdf5": [
+        260,
+        400,
+        400
+      ],
+      "sha256": "f863d2552b1a9c5166b6ae8a6827bcde304a8692b017ba7628f7cbdf392ea76f",
+      "size_bytes": 117851842,
+      "data_type": "Numeric three-dimensional reconstruction volume"
+    }
+  }
+]

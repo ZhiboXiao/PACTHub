@@ -1,0 +1,25 @@
+{
+  "source": "assets/media/hero-pact.mp4",
+  "source_sha256": "536836e85ad7784a3df3a068277415c38493016f7162fa8658622727b3c7c06a",
+  "mask_source_sha256": "3a7f87fdc008e91783b40d0c5fc1c9ebcc21de817efcbf2f421d9e40ac691390",
+  "mask_policy": "Established temporal-union support, fixed for every frame",
+  "original_source_modified": false,
+  "depth_rgb_pedestal": [
+    12,
+    10,
+    0
+  ],
+  "depth_lut_recomputed": false,
+  "native_dimensions": [
+    856,
+    870
+  ],
+  "frame_count": 474,
+  "fps": 30.0,
+  "duration_seconds": 15.8,
+  "exterior_depth_max_before_encoding": 0,
+  "movie": "assets/media/overview-motion-cutout.mp4",
+  "movie_sha256": "cea8ed3071353bb52148a85dd0da7a107a04d74fe3ee235e12c5b47dfa2e92d4",
+  "poster": "assets/images/showcase/overview-motion-cutout.webp",
+  "poster_sha256": "ec7b54fc8df6eb4c17818ecde2ca2aeb9ce9248ff64e29f43443f6e58dbadecc"
+}

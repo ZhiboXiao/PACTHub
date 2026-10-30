@@ -1,0 +1,25 @@
+/* An edge-to-edge volume story. The scrim protects the lower-left copy while
+   allowing the numeric 3D render and depth movie to remain bright on the right. */
+@media screen {
+  .hero.hero-cinematic{align-items:flex-end;padding-block:160px 150px;min-height:max(800px,100svh)}
+  .hero.hero-cinematic .hero-media{inset:0;height:auto}
+  .hero.hero-cinematic .hero-poster,.hero.hero-cinematic .hero-video{object-fit:contain;object-position:50% 50%!important;filter:none}
+  .hero.hero-cinematic .hero-shade{
+    display:block;inset:0;height:auto;
+    background:linear-gradient(50deg,#000000 0%,#000000e8 21%,#0000007a 34%,#00000012 52%,transparent 67%),linear-gradient(0deg,#00000088,transparent 22%);
+  }
+  .hero.hero-cinematic .hero-copy{max-width:47%}
+  .hero.hero-cinematic .hero-statistics{margin-top:44px}
+}
+@media screen and (max-width:900px){
+  .hero.hero-cinematic{display:block;min-height:0;padding-top:calc(min(650px,100vw) + 112px);padding-bottom:44px}
+  .hero.hero-cinematic .hero-media{inset:88px 0 auto;height:min(650px,100vw)}
+  .hero.hero-cinematic .hero-poster,.hero.hero-cinematic .hero-video{object-fit:contain;object-position:50% 50%!important}
+  .hero.hero-cinematic .hero-shade{inset:88px 0 auto;height:min(650px,100vw);background:linear-gradient(35deg,#00000088,transparent 48%),linear-gradient(0deg,#00000099,transparent 16%)}
+  .hero.hero-cinematic .hero-copy{max-width:none}
+  .hero.hero-cinematic .hero-statistics{margin-top:36px}
+  .hero.hero-cinematic .hero-bottom{position:relative;inset:auto;margin-top:36px;padding-top:0}
+}
+@media screen and (min-width:901px) and (max-height:750px){
+  .hero.hero-cinematic{min-height:750px;padding-block:140px 125px}
+}

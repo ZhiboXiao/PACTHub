@@ -1,0 +1,421 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "3D PACT website public sample index",
+  "description": "Public website index mapping, not a replacement for the source dataset standard. The sample template deliberately allows nulls while preparing content; publication needs release checks.",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/sample"
+  },
+  "$defs": {
+    "sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "is_demo",
+        "category",
+        "split",
+        "tags",
+        "description",
+        "preview",
+        "dimensions",
+        "axis_order",
+        "spacing_mm",
+        "wavelength_nm",
+        "intensity_unit",
+        "data_version",
+        "provenance",
+        "files",
+        "acquisition_id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+        },
+        "title": {
+          "$ref": "#/$defs/localizedTitle"
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "phantom",
+            "simulation",
+            "in-vivo",
+            "ex-vivo",
+            "other",
+            "animal",
+            "human"
+          ]
+        },
+        "split": {
+          "type": "string",
+          "enum": [
+            "train",
+            "validation",
+            "test",
+            "unspecified"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "description": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "preview": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Relative project URL or HTTPS URL; abstract illustrations must not be described as scans."
+        },
+        "dimensions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Array dimension lengths, ordered by axis_order."
+        },
+        "axis_order": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "x",
+              "y",
+              "z"
+            ]
+          },
+          "uniqueItems": true,
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Array axes, not anatomical orientation; real coordinate convention belongs in documentation."
+        },
+        "spacing_mm": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Voxel spacing in millimetres, ordered by axis_order."
+        },
+        "wavelength_nm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "description": "Single acquisition wavelength in nanometres; extend deliberately if multi-wavelength."
+        },
+        "intensity_unit": {
+          "$ref": "#/$defs/nullableLocalizedText"
+        },
+        "data_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_id",
+            "acquisition",
+            "reconstruction",
+            "standardization_reference"
+          ],
+          "properties": {
+            "source_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "acquisition": {
+              "$ref": "#/$defs/nullableLocalizedText"
+            },
+            "reconstruction": {
+              "$ref": "#/$defs/nullableLocalizedText"
+            },
+            "standardization_reference": {
+              "$ref": "#/$defs/nullableLocalizedText"
+            },
+            "official_release": {
+              "type": "object",
+              "required": [
+                "doi",
+                "url",
+                "license",
+                "acquisition_timestamp"
+              ]
+            }
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "format",
+              "url",
+              "size_bytes",
+              "sha256"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "format": {
+                "type": "string"
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "size_bytes": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            }
+          }
+        },
+        "preview_layout": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source_width",
+            "source_height",
+            "rotation_deg",
+            "crop"
+          ],
+          "properties": {
+            "source_width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "source_height": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "rotation_deg": {
+              "enum": [
+                0,
+                90
+              ]
+            },
+            "crop": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "display_gamma": {
+              "type": "number",
+              "enum": [
+                0.8,
+                0.95,
+                0.97,
+                1
+              ],
+              "description": "Display-only sRGB gamma exponent; 1 is unchanged. Supported filters are defined in index.html. The original PNG and full-original view remain unfiltered."
+            },
+            "display_mask": {
+              "enum": [
+                "leaf-exterior-v1"
+              ],
+              "description": "Optional reversible display-only exterior matte. Hand-reviewed for SAMPLE-004 only, not a segmentation annotation. Full-original views bypass this mask."
+            }
+          },
+          "description": "Presentation-only crop [x,y,width,height] in original pixels after clockwise rotation. Raw image is unchanged."
+        },
+        "mode": {
+          "enum": [
+            "rotation",
+            "scan",
+            "single"
+          ]
+        },
+        "views": {
+          "type": "object",
+          "required": [
+            "depth",
+            "gray"
+          ],
+          "properties": {
+            "depth": {
+              "type": "string"
+            },
+            "gray": {
+              "type": "string"
+            },
+            "volume": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "display": {
+          "type": "object"
+        },
+        "acquisition_id": {
+          "type": "string",
+          "pattern": "^(20[0-9]{6}_[0-9]{6}.*|3DPanoPACT-Fig[0-9]+[a-z]?)$",
+          "description": "Original acquisition timestamp where known; an official figure-linked release ID for source volumes without a unique timestamp."
+        },
+        "acquisition_name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Dataset or experiment name shown in the acquisition field; figure-linked release IDs remain in acquisition_id."
+        },
+        "acquisition_summary": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "wavelength_description": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "acquisition_groups": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Candidate dataset acquisitions grouped by the recorded position; not a verified input manifest for the released volume.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "position",
+              "acquisitions"
+            ],
+            "properties": {
+              "position": {
+                "type": "string",
+                "minLength": 1
+              },
+              "acquisitions": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "file",
+                    "dataset_relative_path"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^20[0-9]{6}_[0-9]{6}$"
+                    },
+                    "file": {
+                      "type": "string",
+                      "pattern": "^Data_20[0-9]{6}_[0-9]{6}_PA\\.mat$"
+                    },
+                    "dataset_relative_path": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "localizedText": {
+      "description": "An existing plain string, or an explicit Chinese/English text map. Missing translations fall back to Chinese, then English. The website does not automatically translate scientific content.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "zh": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "localizedTitle": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "zh": {
+              "type": "string",
+              "minLength": 1
+            },
+            "en": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      ]
+    },
+    "nullableLocalizedText": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/localizedText"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "leaf",
+  "title": {
+    "zh": "叶片 · 分支结构",
+    "en": "Leaf · branching structure"
+  },
+  "is_demo": false,
+  "category": "phantom",
+  "mode": "rotation",
+  "split": "unspecified",
+  "tags": [
+    "phantom",
+    "rotation",
+    "3D",
+    "BP"
+  ],
+  "description": {
+    "zh": "叶脉网络提供多尺度分支与细弱结构，用于观察结构连续性与空间覆盖。",
+    "en": "A leaf-vein network provides branching and weak structures at multiple scales for examining continuity and coverage."
+  },
+  "preview": "assets/images/showcase/leaf-depth.webp",
+  "views": {
+    "depth": "assets/images/showcase/leaf-depth.webp",
+    "gray": "assets/images/showcase/leaf-gray.webp",
+    "volume": "assets/images/showcase/leaf-volume.webp"
+  },
+  "dimensions": [
+    200,
+    480,
+    350
+  ],
+  "axis_order": [
+    "z",
+    "y",
+    "x"
+  ],
+  "spacing_mm": [
+    0.10050249099731445,
+    0.10012435913085938,
+    0.100250244140625
+  ],
+  "wavelength_nm": null,
+  "intensity_unit": "a.u.",
+  "data_version": "showcase-2026-10-25",
+  "display": {
+    "palette": "3D-PanoPACT Trunk",
+    "depth_scale": "Relative position within the displayed Z slab, 0–1",
+    "z_extent_mm": [
+      -12.0,
+      8.0
+    ],
+    "intensity_window": [
+      0.0016758660785853863,
+      0.027787916362285614
+    ],
+    "gamma": 1,
+    "added_fluence_gain": false,
+    "xy_crop_pixels": [
+      25,
+      160,
+      375,
+      640
+    ],
+    "rotation_deg": 0,
+    "view_notes": {
+      "zh": "灰度为强度；颜色为相对深度。各样本独立线性窗。",
+      "en": "Grayscale encodes intensity; colour encodes relative depth. Each specimen has an independent linear window."
+    },
+    "scale_bars": {
+      "depth": {
+        "length_mm": 5,
+        "length_pixels": 49.87519025875191,
+        "pixels_per_mm": 9.975038051750381,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "gray": {
+        "length_mm": 5,
+        "length_pixels": 49.87519025875191,
+        "pixels_per_mm": 9.975038051750381,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "volume": {
+        "length_mm": 5,
+        "length_pixels": 111.41641463463236,
+        "pixels_per_mm": 22.28328292692647,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    }
+  },
+  "provenance": {
+    "source_id": "20241115_104329",
+    "acquisition": {
+      "zh": "20 次曝光 BP 体",
+      "en": "20-exposure BP volume"
+    },
+    "reconstruction": {
+      "zh": "BP；原有物理 XY 裁剪；保留完整 Z",
+      "en": "BP; established physical XY crop; all Z slices retained"
+    },
+    "standardization_reference": "docs/data-guide.html"
+  },
+  "files": [],
+  "acquisition_id": "20241115_104329"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "hand",
+  "title": {
+    "zh": "人手 · 血管网络",
+    "en": "Hand · vascular network"
+  },
+  "is_demo": false,
+  "category": "human",
+  "mode": "rotation",
+  "split": "unspecified",
+  "tags": [
+    "human",
+    "rotation",
+    "3D",
+    "BP"
+  ],
+  "description": {
+    "zh": "人手血管的深度投影与三维展示，与小鼠和叶片采用一致的深度色系。",
+    "en": "Depth projections and 3D views of human-hand vasculature use the same depth palette as the mouse and leaf."
+  },
+  "preview": "assets/images/showcase/hand-depth.webp",
+  "views": {
+    "depth": "assets/images/showcase/hand-depth.webp",
+    "gray": "assets/images/showcase/hand-gray.webp",
+    "volume": "assets/images/showcase/hand-volume.webp"
+  },
+  "dimensions": [
+    200,
+    800,
+    570
+  ],
+  "axis_order": [
+    "z",
+    "y",
+    "x"
+  ],
+  "spacing_mm": [
+    0.10050249099731445,
+    0.10012435913085938,
+    0.10012435913085938
+  ],
+  "wavelength_nm": null,
+  "intensity_unit": "a.u.",
+  "data_version": "showcase-2026-10-25",
+  "display": {
+    "palette": "3D-PanoPACT Trunk",
+    "depth_scale": "Relative position within the displayed Z slab, 0–1",
+    "z_extent_mm": [
+      2.857147216796875,
+      22.857147216796875
+    ],
+    "intensity_window": [
+      0.0021854322403669357,
+      0.03483181446790695
+    ],
+    "gamma": 1,
+    "added_fluence_gain": false,
+    "xy_crop_pixels": [
+      110,
+      0,
+      680,
+      800
+    ],
+    "rotation_deg": 0,
+    "view_notes": {
+      "zh": "灰度为强度；颜色为相对深度。各样本独立线性窗。",
+      "en": "Grayscale encodes intensity; colour encodes relative depth. Each specimen has an independent linear window."
+    },
+    "scale_bars": {
+      "depth": {
+        "length_mm": 5,
+        "length_pixels": 49.93789766449499,
+        "pixels_per_mm": 9.987579532898998,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "gray": {
+        "length_mm": 5,
+        "length_pixels": 49.93789766449499,
+        "pixels_per_mm": 9.987579532898998,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "volume": {
+        "length_mm": 5,
+        "length_pixels": 69.60056680457602,
+        "pixels_per_mm": 13.920113360915204,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    }
+  },
+  "provenance": {
+    "source_id": "20241128_194710",
+    "acquisition": {
+      "zh": "20 次曝光 BP 体",
+      "en": "20-exposure BP volume"
+    },
+    "reconstruction": {
+      "zh": "BP；原有物理 XY 裁剪；保留完整 Z",
+      "en": "BP; established physical XY crop; all Z slices retained"
+    },
+    "standardization_reference": "docs/data-guide.html"
+  },
+  "files": [],
+  "acquisition_id": "20241128_194710"
+}

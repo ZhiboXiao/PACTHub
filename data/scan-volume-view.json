@@ -1,0 +1,38 @@
+{
+  "sample_id": "20260114_192341_Scan1",
+  "shape_zyx": [
+    201,
+    965,
+    520
+  ],
+  "spacing_xyz_mm": [
+    0.1,
+    0.1,
+    0.1
+  ],
+  "camera_direction": [
+    0.4531633284897209,
+    -0.3039338682272307,
+    0.8380138432368225
+  ],
+  "camera_view_up": [
+    -0.14457087885019915,
+    -0.9526931319918457,
+    -0.26734819476489574
+  ],
+  "method": "Maximum-intensity ray casting of exact 0.7 raw + 0.3 Frangi summed volume",
+  "xy_display_rotation_deg": 2,
+  "shared_xy_crop_pixels": [
+    70,
+    45,
+    590,
+    1010
+  ],
+  "z_slab_mm": [
+    1.9,
+    21.9
+  ],
+  "scale_pixels_per_mm": 11.940034993341156,
+  "source_sha256": "49a193e9fca056ac7e989f5b22d0e4ca1a863dd837531dcfa9651d3d0fc00ea1",
+  "view": "Same oblique camera direction as author mouse, leaf and hand"
+}

@@ -1,0 +1,29 @@
+.temporal-roi-tools{display:flex;align-items:center;gap:14px;padding:14px 24px;border-bottom:1px solid #34343a;color:#d0d6e0}
+.temporal-roi-tools p{flex:1;font-size:12px;line-height:1.6;margin:0}
+.temporal-roi-tools button{background:transparent;border:1px solid #3e3e44;border-radius:4px;color:#d0d6e0;padding:7px 10px;font:inherit;font-size:11px;cursor:pointer;white-space:nowrap}
+.temporal-roi-tools button:disabled{opacity:.4;cursor:default}
+#temporal-roi-count{font:11px ui-monospace,monospace;color:#8a8f98;white-space:nowrap}
+.temporal-image-wrap{width:270px}
+#temporal-rois{touch-action:none;user-select:none;cursor:wait}
+#temporal-rois.ready{cursor:crosshair}
+.roi-box{cursor:move;min-width:0;padding:0;transition:none}
+.roi-box.selected{box-shadow:0 0 0 1px var(--roi)}
+.roi-badge{position:absolute;left:0;top:-18px;background:#232326dd;color:var(--roi);padding:2px 4px;pointer-events:none}
+.roi-handle{position:absolute;width:10px;height:10px;border:1px solid var(--roi);background:#232326;z-index:2}
+.roi-handle.nw{left:-5px;top:-5px;cursor:nwse-resize}.roi-handle.ne{right:-5px;top:-5px;cursor:nesw-resize}
+.roi-handle.sw{left:-5px;bottom:-5px;cursor:nesw-resize}.roi-handle.se{right:-5px;bottom:-5px;cursor:nwse-resize}
+.roi-readout{display:block;cursor:default;padding:10px 12px}
+.roi-readout-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.roi-select,.roi-remove{background:none;border:0;color:var(--roi);padding:0;font:inherit;font-size:12px;cursor:pointer}
+.roi-select{flex:1;text-align:left}.roi-remove{font-size:21px;width:25px;line-height:1}
+.roi-dimensions{display:block;color:#8a8f98;font:10px/1.6 ui-monospace,monospace;margin:4px 0 8px}
+.roi-readout strong{display:block;font-size:21px;padding:0;width:auto}
+.temporal-method{margin-top:auto;padding-top:18px}
+#download-grid{grid-template-columns:1fr}
+#download-grid .download-card{display:grid;grid-template-columns:1fr auto;gap:10px 36px;align-items:center;padding:28px 0;border:0}
+#download-grid .download-card+.download-card{border-top:1px solid var(--line)}
+#download-grid .download-card .status-pill{grid-column:1;justify-self:start}
+#download-grid .download-card h3,#download-grid .download-card p{grid-column:1;margin:0}
+#download-grid .download-card .button{grid-column:2;grid-row:1/4;align-self:center}
+@media(max-width:1000px){.temporal-image-wrap{width:245px}.temporal-roi-tools{flex-wrap:wrap;gap:10px}.temporal-roi-tools p{flex-basis:100%}.temporal-panel-head{padding:14px 12px;font-size:9px}.temporal-panel-foot{padding:14px 12px;letter-spacing:0}}
+@media(max-width:650px){.temporal-image-wrap{width:235px}.temporal-roi-tools{padding:12px 16px}.temporal-roi-tools p{font-size:11px}.roi-readout{padding:9px}.roi-dimensions{font-size:9px}.roi-readout strong{font-size:18px}.temporal-method{margin-top:10px}#download-grid .download-card{display:block}#download-grid .download-card h3{margin:16px 0}#download-grid .download-card .button{margin-top:24px}}

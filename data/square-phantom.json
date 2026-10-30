@@ -1,0 +1,166 @@
+{
+  "id": "square-phantom",
+  "title": {
+    "zh": "方形靶仿体 · 多尺度结构",
+    "en": "Square-target phantom · multiple scales"
+  },
+  "is_demo": false,
+  "category": "phantom",
+  "mode": "rotation",
+  "split": "unspecified",
+  "tags": [
+    "phantom",
+    "rotation",
+    "3D",
+    "BP"
+  ],
+  "description": {
+    "zh": "三个不同大小的方形靶展示实体内部与边缘的光声响应。三种视图来自同一组 20 次曝光 BP 重建。",
+    "en": "Three square targets of different sizes show photoacoustic responses within and along the edges of solid objects. All views use the same 20-exposure BP volume."
+  },
+  "preview": "assets/images/showcase/square-phantom-depth.webp",
+  "views": {
+    "depth": "assets/images/showcase/square-phantom-depth.webp",
+    "gray": "assets/images/showcase/square-phantom-gray.webp",
+    "volume": "assets/images/showcase/square-phantom-volume.webp"
+  },
+  "dimensions": [
+    38,
+    130,
+    140
+  ],
+  "axis_order": [
+    "z",
+    "y",
+    "x"
+  ],
+  "spacing_mm": [
+    0.10050251334905624,
+    0.10012515634298325,
+    0.10025062412023544
+  ],
+  "wavelength_nm": null,
+  "intensity_unit": "a.u.",
+  "data_version": "showcase-2026-10-25",
+  "acquisition_id": "20230920_150300",
+  "display": {
+    "palette": "3D-PanoPACT Trunk",
+    "depth_scale": "Relative position within the displayed Z slab, 0–1",
+    "z_extent_mm": [
+      -0.9447231292724609,
+      2.773869514465332
+    ],
+    "extent_xyz_mm": [
+      [
+        -6.947536617517471,
+        6.987300135195255
+      ],
+      [
+        -6.888482131063938,
+        6.027663037180901
+      ],
+      [
+        -0.9447231292724609,
+        2.773869514465332
+      ]
+    ],
+    "view_extent_xyz_mm": {
+      "depth": [
+        [
+          -6.947536617517471,
+          6.987300135195255
+        ],
+        [
+          -6.888482131063938,
+          6.027663037180901
+        ],
+        [
+          -0.9447231292724609,
+          2.773869514465332
+        ]
+      ],
+      "gray": [
+        [
+          -6.947536617517471,
+          6.987300135195255
+        ],
+        [
+          -6.888482131063938,
+          6.027663037180901
+        ],
+        [
+          -0.9447231292724609,
+          2.773869514465332
+        ]
+      ],
+      "volume": [
+        [
+          -6.947536617517471,
+          6.987300135195255
+        ],
+        [
+          -6.888482131063938,
+          6.027663037180901
+        ],
+        [
+          -0.9447231292724609,
+          2.773869514465332
+        ]
+      ]
+    },
+    "intensity_window": [
+      0.007446743082255125,
+      0.04929733648896217
+    ],
+    "gamma": 1,
+    "added_fluence_gain": false,
+    "xy_crop_pixels": [
+      100,
+      305,
+      240,
+      435
+    ],
+    "crop_frame": "Rotated physical display frame; common XYZ crop for depth, gray and volume",
+    "rotation_deg": 0,
+    "rotation_convention": "Positive is counterclockwise in the displayed XY image",
+    "compact_preview": true,
+    "asset_revision": "f5fbd3f4351a",
+    "scale_bars": {
+      "depth": {
+        "length_mm": 2,
+        "length_pixels": 19.95000048679301,
+        "pixels_per_mm": 9.975000243396504,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "gray": {
+        "length_mm": 2,
+        "length_pixels": 19.95000048679301,
+        "pixels_per_mm": 9.975000243396504,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "volume": {
+        "length_mm": 2,
+        "length_pixels": 125.57759687163237,
+        "pixels_per_mm": 62.78879843581618,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    "view_notes": {
+      "zh": "三种视图使用同一旋转、同一 XYZ 物理范围和线性窗。",
+      "en": "All three views share one rotation, XYZ field and linear window."
+    }
+  },
+  "provenance": {
+    "source_id": "3D-PACT-DATA/FollowingExperiments/LowFrequencyTarget/WithRotation",
+    "acquisition": {
+      "zh": "20 次曝光；采集编号 20230920_150300",
+      "en": "20 exposures; acquisition 20230920_150300"
+    },
+    "reconstruction": {
+      "zh": "BP；声速 1494.5 m/s；0.5–6 MHz 带通",
+      "en": "BP; 1494.5 m/s; 0.5–6 MHz bandpass"
+    },
+    "standardization_reference": "docs/data-guide.html"
+  },
+  "files": []
+}

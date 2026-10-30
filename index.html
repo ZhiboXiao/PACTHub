@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta data-i18n-content="meta.description" name="description" content="PACTHub: a structured data foundation for photoacoustic AI, with a unified JSON parameter interface, FOV and sound-speed selection, BP / MB reconstruction and quantitative evaluation.">
+  <meta name="color-scheme" content="dark">
+  <title data-i18n="meta.title">PACTHub · 3D Photoacoustic Imaging Research</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261027-silver">
+  <link rel="stylesheet" href="assets/css/showcase.css?v=20261027-silver">
+  <link rel="stylesheet" href="assets/css/temporal-roi.css?v=20261027-silver">
+  <link rel="stylesheet" href="assets/css/publications.css?v=20261027-silver">
+  <link rel="stylesheet" href="assets/css/pipeline-films.css?v=20261027-silver">
+  <link rel="stylesheet" href="assets/css/data-foundation.css?v=20261027-silver">
+  <link rel="stylesheet" href="assets/css/parameter-explorer.css?v=20261027-silver">
+  <script src="assets/js/i18n.js?v=20261027-leaf-final" defer></script>
+  <script src="assets/js/dataset-citation.js?v=20261027-readable-v2" defer></script>
+  <script src="assets/js/parameter-explorer.js?v=20261027-clean-b" defer></script>
+  <script src="assets/js/app.js?v=20261027-silver" defer></script>
+  <script src="assets/js/publications.js?v=20261026-papers" defer></script>
+  <script src="assets/js/temporal.js?v=20261027-compact" defer></script>
+  <script src="assets/js/pipeline-films.js?v=20261026-testimage" defer></script>
+  <script src="assets/js/overview-film.js?v=20261027-leaf-column" defer></script>
+<link rel="stylesheet" href="assets/css/readability.css?v=20261027-silver">
+<link rel="stylesheet" href="assets/css/hero-story.css?v=20261027-silver"><link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/linear-theme.css?v=20261027-leaf-type"></head>
+<body>
+
+
+  <a class="skip-link" href="#main"><span data-i18n="ui.001">Skip to main content</span></a>
+  <header class="site-header cinematic-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="PACTHub home" data-i18n-aria-label="a11y.home"><svg width="30" height="32" viewbox="0 0 30 32" aria-hidden="true"><path d="m15 2 12 7v14l-12 7-12-7V9z" fill="none" stroke="currentColor" stroke-width="1.7"></path><path d="m3 9 12 7 12-7M15 16v14M9 5.5l12 7v7" fill="none" stroke="currentColor" stroke-width="1.7"></path></svg><span data-site-title>PACTHub</span></a>
+      <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="a11y.language"><button type="button" data-language="zh" lang="zh-CN" aria-label="切换为中文" aria-pressed="false">中</button><button type="button" data-language="en" lang="en" aria-label="Switch to English" aria-pressed="true">EN</button></div>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" type="button"><span><span data-i18n="ui.002">Menu</span></span><svg width="18" height="18" viewbox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 12h14" stroke="currentColor" stroke-width="1.5"></path></svg></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation" data-i18n-aria-label="a11y.nav"><a href="#overview"><span data-i18n="ui.003">Overview</span></a><a href="#explore"><span data-i18n="ui.004">Samples</span></a><a href="#applications"><span data-i18n="ui.005">Applications</span></a><a href="#pipeline"><span data-i18n="foundation.nav">Pipeline</span></a><a href="#publication"><span data-i18n="ui.006">Publication</span></a><a href="#team"><span data-i18n="ui.007">About</span></a><a class="nav-download" href="#downloads"><span data-i18n="ui.008">Get resources</span> <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero hero-cinematic" id="top" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-poster" id="hero-poster" src="assets/images/hero-orbit-desktop.webp" alt="" width="1920" height="1320" fetchpriority="high">
+        <video class="hero-video" id="hero-video" autoplay muted playsinline preload="none" poster="assets/images/hero-orbit-desktop.webp" tabindex="-1" disablepictureinpicture disableremoteplayback></video>
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+
+          <h1 id="hero-title" data-site-title>PACTHub</h1>
+          <p class="hero-tagline"><span data-i18n="ui.010">3D photoacoustic data,
+within reach.</span></p>
+          <dl class="hero-statistics" aria-label="Dataset scale" data-i18n-aria-label="hero.statistics">
+            <div><dt data-i18n="hero.samples">Samples</dt><dd id="hero-samples-count">1,464</dd></div>
+            <div><dt data-i18n="hero.exposures">Exposures</dt><dd id="hero-exposures-count">99,810</dd></div>
+            <div class="hero-ai"><dt><a href="#pipeline" data-i18n-aria-label="hero.foundationLink"><span data-i18n="hero.foundation">Data foundation</span> <span aria-hidden="true">↗</span></a></dt><dd>AI</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="container hero-bottom">
+
+        <a class="hero-scroll" href="#overview"><span><span data-i18n="ui.017">Explore below</span></span><span aria-hidden="true">↓</span></a>
+        <div class="hero-playback">
+          <span id="hero-media-status" role="status" aria-live="polite" class="sr-only"><span data-i18n="ui.018">Static poster displayed</span></span>
+          <button id="hero-video-toggle" class="hero-video-toggle" type="button" aria-controls="hero-video" aria-label="Play background video" data-i18n-aria-label="a11y.playVideo" hidden><span id="hero-video-icon" aria-hidden="true">▶</span><span id="hero-video-button-label"><span data-i18n="ui.019">Play background</span></span></button>
+        </div>
+      </div>
+    </section>
+    <section class="overview section-block" id="overview" aria-labelledby="overview-title">
+      <div class="container overview-inner">
+      <div class="section-heading horizontal"><div><h2 id="overview-title"><span data-i18n="ui.021">See imaging in action.</span></h2></div></div>
+      <div class="overview-story">
+        <figure class="overview-film" id="overview-film">
+          <div class="overview-film-stage" id="overview-screen" role="tabpanel" aria-labelledby="overview-tab-structure">
+            <video id="overview-video" muted playsinline preload="none" poster="assets/images/showcase/overview-film-poster.webp?v=20261026-immersive" aria-label="Scan and rotation mouse: 3D orbit, whole-body view and vascular detail"><source src="assets/media/overview-scan-detail.mp4?v=20261026-immersive-loop" type="video/mp4"></source></video>
+            <button id="overview-film-toggle" class="film-quiet-toggle" type="button" aria-controls="overview-video" aria-label="Play the specimen film" hidden><svg width="16" height="16" viewbox="0 0 20 20" aria-hidden="true"><path class="film-play-icon" d="M5 3 16 10 5 17Z" fill="currentColor"></path><path class="film-pause-icon" d="M5 3h3v14H5zm7 0h3v14h-3z" fill="currentColor"></path><path class="film-replay-icon" d="M3 8a7 7 0 1 1 1 7M3 3v5h5" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></button>
+          </div>
+        </figure>
+        <div class="overview-selection"><ol class="overview-introductions" role="tablist" aria-label="Imaging films"><li role="presentation"><button class="overview-choice" id="overview-tab-structure" data-overview-film="structure" role="tab" aria-selected="true" tabindex="0" aria-controls="overview-screen" type="button"><span class="overview-choice-title" data-i18n="library.structure.title">Structure, in detail</span><span class="overview-choice-text" data-i18n="library.structure.text">From the whole volume to fine vascular branches.</span></button></li><li role="presentation"><button class="overview-choice" id="overview-tab-motion" data-overview-film="motion" role="tab" aria-selected="false" tabindex="-1" aria-controls="overview-screen" type="button"><span class="overview-choice-title" data-i18n="library.motion.title">Anatomy in motion</span><span class="overview-choice-text" data-i18n="library.motion.text">Grayscale and depth views follow the same motion.</span></button></li><li role="presentation"><button class="overview-choice" id="overview-tab-rotation" data-overview-film="rotation" role="tab" aria-selected="false" tabindex="-1" aria-controls="overview-screen" type="button"><span class="overview-choice-title" data-i18n="library.rotation.title">Rotation compounding</span><span class="overview-choice-text" data-i18n="library.rotation.text">A leaf, reconstructed from 1 to 20 exposures.</span></button></li></ol></div>
+      </div>
+      </div>
+    </section>
+    <section class="explore-section section-block" id="explore" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-heading horizontal"><div><h2 id="explore-title"><span data-i18n="ui.034">Start with a sample.</span></h2></div><p><span data-i18n="ui.035">Browse specimens and switch between 3D, depth and intensity views.</span></p></div>
+        <div class="explorer-toolbar">
+          <div class="filter-group" id="category-filters" role="group" aria-label="Filter by sample category" data-i18n-aria-label="a11y.categoryFilter"><button class="filter-chip active" type="button" data-category="all" aria-pressed="true"><span data-i18n="ui.037">All</span></button><button class="filter-chip" type="button" data-category="phantom" aria-pressed="false"><span data-i18n="ui.038">Phantom</span></button><button class="filter-chip" type="button" data-category="simulation" aria-pressed="false"><span data-i18n="ui.039">Simulation</span></button></div>
+          <div class="search-controls"><label class="search-field"><svg viewbox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.4"></circle><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.4"></path></svg><span class="sr-only"><span data-i18n="ui.040">Search sample IDs, names or tags</span></span><input id="sample-search" type="search" placeholder="Search samples…" data-i18n-placeholder="a11y.search" autocomplete="off"></label><label><span class="sr-only"><span data-i18n="ui.041">Filter by acquisition mode</span></span><select id="mode-filter"><option value="all" data-i18n="all-modes">All acquisition modes</option><option value="single" data-i18n="single">Single exposure</option><option value="rotation" data-i18n="rotation">Rotation</option><option value="scan" data-i18n="scan">Scan + rotation</option></select></label></div>
+        </div>
+        <div class="results-meta"><p id="results-count" role="status" aria-live="polite"><span data-i18n="ui.047">Loading the sample index…</span></p><span class="mono"></span></div>
+        <div class="gallery-legend"><div class="view-switch" id="gallery-views" role="group" aria-label="Image representation"><button type="button" data-view="depth" aria-pressed="false"><span data-i18n="view.depth">Depth MIP</span></button><button type="button" data-view="gray" aria-pressed="false"><span data-i18n="view.gray">Intensity MIP</span></button><button type="button" class="active" data-view="volume" aria-pressed="true"><span data-i18n="view.volume">3D view</span></button></div><div class="depth-legend" hidden><span data-i18n="gallery.legend">Relative depth</span> <span>0</span><img src="assets/images/showcase/depth-lut.png" alt="Relative depth colour scale from 0 to 1" width="180" height="12"><span>1</span></div></div>
+        <div id="sample-grid" class="sample-grid" aria-label="Sample collection" data-i18n-aria-label="a11y.sampleList"></div>
+        <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">⌕</span><h3><span data-i18n="ui.049">No matching samples</span></h3><p><span data-i18n="ui.050">Try another keyword or clear the current filters.</span></p><button id="clear-filters" class="button button-secondary" type="button"><span data-i18n="ui.051">Clear filters</span></button></div>
+        <div id="load-error" class="load-error" role="alert" hidden><h3><span data-i18n="ui.052">The sample index could not be loaded</span></h3><p id="error-detail"><span data-i18n="ui.053">Please check that the sample file exists.</span></p><button id="retry-load" class="button button-secondary" type="button"><span data-i18n="ui.054">Try again</span></button></div>
+        <noscript><p class="load-error">Interactive samples require JavaScript. <a href="docs/data-guide.html">Read the bilingual data guide</a>.</p></noscript>
+        <div class="index-footnote"><span><span data-i18n="ui.055">Colour encodes depth; grayscale shows intensity.</span></span></div>
+      </div>
+    </section>
+    <section class="container section-block" id="applications" aria-labelledby="applications-title">
+ <div class="section-heading horizontal"><div><h2 id="applications-title"><span data-i18n="temporal.title">Watch the signal unfold.</span></h2></div><p><span data-i18n="temporal.intro">Select a region to follow its signal over time.</span></p></div>
+ <p id="temporal-loading" role="status"><span data-i18n="temporal.loading">Loading measured image sequences…</span></p>
+ <div class="temporal-player" id="temporal-player" hidden>
+  <div class="temporal-toolbar"><label><span data-i18n="temporal.series">Image sequence</span><select id="temporal-series"></select></label><p id="temporal-summary"></p><label><span data-i18n="temporal.unit">Intensity readout</span><select id="temporal-unit"><option value="relative_mean" data-i18n="temporal.relative">Relative to first frame</option><option value="mean_linear" data-i18n="temporal.linear">Linear BP mean</option></select></label></div>
+  <div class="temporal-roi-tools"><p id="temporal-roi-status" role="status" aria-live="polite">Loading quantitative MIPs…</p><span id="temporal-roi-count">0 / 6</span><button type="button" id="temporal-roi-examples" data-i18n="temporal.examples">Example regions</button><button type="button" id="temporal-roi-clear" data-i18n="temporal.clear">Clear regions</button></div>
+  <div class="temporal-stage">
+   <div class="temporal-imaging"><div class="temporal-panel-head"><span><span data-i18n="temporal.image">Imaging</span></span><strong id="temporal-time">0.00 min</strong></div><div class="temporal-image-wrap"><img id="temporal-image" alt="Measured BP projection" width="400" height="800"><div id="temporal-rois"></div></div><div class="temporal-panel-foot"><span id="temporal-acquisition"></span><span id="temporal-frame"></span></div></div>
+   <div class="temporal-quantification"><div class="temporal-panel-head"><span><span data-i18n="temporal.traces">Intensity traces</span></span></div><svg id="temporal-chart" viewbox="0 0 660 365" role="img"></svg><div id="temporal-readouts"></div><p class="temporal-method"><span data-i18n="temporal.note">Traces use mean intensity from registered BP MIPs; relative intensity is I(t)/I(0).</span></p></div>
+  </div>
+  <div class="temporal-controls"><button type="button" class="button button-primary" id="temporal-play"><span data-i18n="temporal.play">Play</span></button><button type="button" class="text-link" id="temporal-restart"><span data-i18n="temporal.restart">Restart</span></button><div class="temporal-scrubber"><input id="temporal-range" type="range" min="0" max="15" step="1" value="0" aria-label="Scrub through measured timepoints" data-i18n-aria-label="temporal.scrub"><span id="temporal-duration"></span></div><label class="temporal-speed"><span class="sr-only"><span data-i18n="temporal.speed">Playback speed</span></span><select id="temporal-speed" aria-label="Playback speed" data-i18n-aria-label="temporal.speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
+ </div>
+</section>
+<section class="container section-block" id="pipeline" aria-labelledby="pipeline-title"><div class="section-heading pipeline-heading"><div><h2 id="pipeline-title"><span data-i18n="pipeline.title">Structured data.
+A foundation for AI.</span></h2></div><a class="pipeline-github" href="https://github.com/ZhiboXiao/PACTHub/blob/main/assets/downloads/pacthub-workflow-v1.4.0.zip" target="_blank" rel="noopener noreferrer" aria-label="Open the reconstruction download on GitHub" data-i18n-aria-label="film.github">
+  <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.3 1.8 1.3 1 1.9 2.7 1.4 3.4 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.2-.3-.6-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.3 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"></path></svg><span class="pipeline-code-copy"><strong data-i18n="github.pipeline">Pipeline code</strong><small data-i18n="github.scope">FOV · Sound speed · BP · MB</small></span><span class="pipeline-code-arrow" aria-hidden="true">↗</span>
+</a></div>
+<div class="workflow-overview compact-workflow"><div class="baseline-grid">
+ <article><h3 data-i18n="pipeline.input">Structured inputs</h3><p data-i18n="pipeline.inputText">Load PAdata through a unified JSON interface.</p><div class="workflow-essentials"><code>PAdata</code><code>reconstruction_parameters.json</code></div></article>
+ <article><h3 data-i18n="pipeline.recon">Reconstruction</h3><p data-i18n="pipeline.reconText">Select the FOV and sound speed, then run BP or MB.</p><div class="workflow-essentials"><span data-i18n="github.scope">FOV · Sound speed · BP · MB</span></div></article>
+ <article><h3 data-i18n="pipeline.eval">Quantitative evaluation</h3><p data-i18n="pipeline.evalText">Export 3D volumes and MIPs, then measure image quality.</p><div class="workflow-essentials"><span>PSNR · SSIM · L1 <b>+ Q</b></span></div></article>
+</div></div>
+<section class="repository-workflow" id="docs" aria-labelledby="parameter-file-title"><div class="parameter-explorer" id="parameter-explorer">
+ <header class="parameter-file-heading"><div><span aria-hidden="true">{ }</span><h3 id="parameter-file-title">reconstruction_parameters.json</h3></div><p id="parameter-sample">20241213_151351</p></header>
+ <div class="parameter-layout">
+  <div class="parameter-tree"><p class="parameter-parent">defaults <span>{</span></p><div class="demo-groups"><button class="parameter-node" type="button" data-parameter="signal" aria-controls="demo-json-signal parameter-detail" aria-expanded="false" aria-pressed="false"><code>signal</code><span class="demo-click" aria-hidden="true"></span></button><button class="parameter-node" type="button" data-parameter="frames" aria-controls="demo-json-frames parameter-detail" aria-expanded="false" aria-pressed="false"><code>frames</code><span class="demo-click" aria-hidden="true"></span></button><button class="parameter-node" type="button" data-parameter="grid" aria-controls="demo-json-grid parameter-detail" aria-expanded="false" aria-pressed="false"><code>grid</code><span class="demo-click" aria-hidden="true"></span></button><button class="parameter-node" type="button" data-parameter="geometry" aria-controls="demo-json-geometry parameter-detail" aria-expanded="false" aria-pressed="false"><code>geometry</code><span class="demo-click" aria-hidden="true"></span></button><svg class="demo-cursor" id="demo-cursor" viewbox="0 0 24 28" aria-hidden="true"><path d="M2 2v21l6-5 4 8 4-2-4-8h8Z"></path></svg></div><div class="demo-json-deck"><div class="demo-json-panel" id="demo-json-signal" data-json-panel="signal" role="region" aria-label="signal parameters" tabindex="0" hidden></div><div class="demo-json-panel" id="demo-json-frames" data-json-panel="frames" role="region" aria-label="frames parameters" tabindex="0" hidden></div><div class="demo-json-panel" id="demo-json-grid" data-json-panel="grid" role="region" aria-label="grid parameters" tabindex="0" hidden></div><div class="demo-json-panel" id="demo-json-geometry" data-json-panel="geometry" role="region" aria-label="geometry parameters" tabindex="0" hidden></div></div><p class="parameter-parent parameter-end">}</p></div><div class="parameter-detail" id="parameter-detail"><div class="demo-scene-heading"><h4 id="demo-step-title" data-i18n="workflow.signal">Bandpass filter</h4></div><div id="demo-scene"><p role="status" data-i18n="workflow.loading">Loading the workflow animation…</p></div><div class="demo-readout" id="demo-readout"></div></div>
+ </div>
+ <div class="demo-controls"><button type="button" id="demo-play" aria-controls="demo-scene" data-i18n="workflow.play">Play</button><span class="demo-mode" id="demo-mode" data-i18n="workflow.auto">Workflow playback</span><span id="demo-clock">00:00 / 00:28</span><button type="button" id="demo-explore" data-i18n="workflow.skip">Explore parameters</button><button type="button" id="demo-restart" data-i18n="workflow.replayAll">Replay full workflow</button></div>
+</div>
+</section>
+<div class="workflow-films" aria-label="Workflow videos" data-i18n-aria-label="film.collection">
+  <article class="workflow-film">
+    <button class="workflow-preview" type="button" data-workflow-film="calibration" aria-haspopup="dialog" aria-controls="workflow-video-dialog" aria-label="Play the FOV and sound-speed video" data-i18n-aria-label="film.openCalibration">
+      <img src="assets/images/showcase/calibration-poster.webp?v=20261026-finalfov" alt="Measured BP candidates and sound-speed focus curve" data-i18n-alt="film.calibrationAlt" width="1280" height="720" loading="lazy">
+      <span class="workflow-play" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="M6 3 21 12 6 21Z"></path></svg></span><span class="workflow-duration" aria-hidden="true">00:32</span>
+    </button>
+    <div class="workflow-film-heading"><h3 data-i18n="film.calibrationTitle">FOV &amp; sound-speed selection</h3></div>
+    <p data-i18n="film.calibrationIntro">Follow FOV positioning, orientation and sound-speed selection.</p>
+  </article>
+  <article class="workflow-film">
+    <button class="workflow-preview" type="button" data-workflow-film="q" aria-haspopup="dialog" aria-controls="workflow-video-dialog" aria-label="Play the complete Q calculation video" data-i18n-aria-label="film.openQ">
+      <img src="assets/images/showcase/q-film-thumbnail.webp?v=20261026-testimage" alt="First frame of the Q video: paired line-phantom comparison" data-i18n-alt="film.qAlt" width="1280" height="720" loading="lazy">
+      <span class="workflow-play" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="M6 3 21 12 6 21Z"></path></svg></span><span class="workflow-duration" aria-hidden="true">00:51</span>
+    </button>
+    <div class="workflow-film-heading"><h3 data-i18n="q.title">How Q is calculated.</h3></div>
+    <p data-i18n="film.qIntro">Follow the Q calculation from a line phantom to mouse vessels.</p>
+  </article>
+</div>
+<a class="text-link pipeline-guide" href="docs/algorithm-guide.html"><span data-i18n="ui.087">Reconstruction guide</span> ↗</a></section>
+    <section class="downloads-section section-block" id="downloads" aria-labelledby="downloads-title"><div class="container"><div class="section-heading horizontal"><div><h2 id="downloads-title"><span data-i18n="ui.077">Take the research further.</span></h2></div><p><span data-i18n="ui.078">Download the data and reconstruction code.</span></p></div><div class="download-grid" id="download-grid">
+ <article class="download-card"><h3>Representative samples · Zenodo</h3><p>A subset of the dataset, archived with a persistent DOI and a citable data record.</p><div class="download-meta"><span>45.28 GB · CC BY 4.0</span></div><a class="button button-primary" href="https://doi.org/10.5281/zenodo.23496053" target="_blank" rel="noopener noreferrer" data-i18n="resource.zenodo">Open Zenodo ↗</a></article>
+ <article class="download-card"><h3>Dataset · Google Drive</h3><p data-i18n="ui.082">Standardized 3D photoacoustic imaging data and its accompanying index.</p><a class="button button-primary" href="https://drive.google.com/drive/folders/1zBrduTKe5gnsNmlOfsDCgB9y5JTp5x3b" target="_blank" rel="noopener noreferrer" data-i18n="resource.drive">Open Google Drive ↗</a></article>
+</div><section class="dataset-citations" id="cite" aria-labelledby="dataset-cite-title">
+ <div class="dataset-cite-heading"><div><h3 id="dataset-cite-title" data-i18n="cite.title">Using the dataset? Please cite.</h3></div><p data-i18n="cite.intro">Please cite the Zenodo record and the dataset paper when available.</p></div>
+ <div class="dataset-cite-grid">
+  <article class="dataset-cite-card"><div class="cite-record-heading"><h4>PACTHub</h4><span class="cite-badge">Zenodo</span></div><p class="cite-scope" data-i18n="cite.subset">Representative sample subset</p><p class="dataset-citation-text" id="citation-dataset">Xiao, Z. (2026). PACTHub [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23496053</p><a class="dataset-doi" id="dataset-doi" href="https://doi.org/10.5281/zenodo.23496053" target="_blank" rel="noopener noreferrer">10.5281/zenodo.23496053 <span aria-hidden="true">↗</span></a><div class="dataset-cite-actions"><button type="button" data-copy-dataset="dataset" data-i18n="cite.copy">Copy citation</button><a id="dataset-bibtex" href="assets/citations/pacthub-dataset.bib" download>BibTeX ↓</a></div><p class="dataset-copy-feedback" id="dataset-copy-feedback" role="status" aria-live="polite"></p></article>
+  <article class="dataset-cite-card paper-forthcoming" id="dataset-paper"><div class="cite-record-heading"><h4 id="dataset-paper-title" data-i18n="cite.paperTitle">PACTHub dataset paper</h4><span class="cite-badge">arXiv</span></div><p class="cite-scope" id="dataset-paper-status" data-i18n="cite.forthcoming">Forthcoming</p><p class="paper-pending" id="dataset-paper-pending" data-i18n="cite.paperPending">The arXiv link and citation will be added here on publication.</p><div class="dataset-cite-actions" id="dataset-paper-actions" hidden></div><p class="dataset-copy-feedback" id="paper-copy-feedback" role="status" aria-live="polite"></p></article>
+ </div>
+</section>
+<div class="release-note" id="release"><p><span id="license-status" data-i18n="cite.license">The Zenodo subset is licensed under CC BY 4.0. Other resources carry the terms stated on their release pages.</span></p></div></div></section>
+    <section class="container section-block publications-section" id="publication" aria-labelledby="publication-title">
+  <div class="section-heading horizontal"><div><h2 id="publication-title" data-i18n="pub.title">The research behind the data.</h2></div></div>
+  <div class="publications-grid"><article class="publication-card" data-publication="panopact">
+  <button type="button" class="publication-preview" data-paper-preview="assets/images/publications/panopact-page1.webp" aria-label="View first page: Cross-regional real-time visualization of systemic physiology and dynamics with 3D panoramic photoacoustic computed tomography (3D-PanoPACT)">
+    <img src="assets/images/publications/panopact-thumb.webp" alt="First page of Cross-regional real-time visualization of systemic physiology and dynamics with 3D panoramic photoacoustic computed tomography (3D-PanoPACT)" width="600" height="797" loading="lazy" decoding="async">
+    <span class="publication-preview-hint"><span data-i18n="pub.preview">View first page</span> <span aria-hidden="true">⤢</span></span>
+  </button>
+  <div class="publication-copy">
+    <div class="publication-meta"><span>Nature Communications</span><time datetime="2025-11-18">2025</time></div>
+
+    <h3><a href="https://doi.org/10.1038/s41467-025-65054-x" target="_blank" rel="noopener noreferrer">Cross-regional real-time visualization of systemic physiology and dynamics with 3D panoramic photoacoustic computed tomography (3D-PanoPACT)</a></h3>
+    <p class="publication-authors">Xuanhao Wang, Yuqian Meng, Mingli Sun, et al.</p>
+    <p class="publication-location">Nature Communications 16:10077 (2025)</p>
+    <a class="publication-doi" href="https://doi.org/10.1038/s41467-025-65054-x" target="_blank" rel="noopener noreferrer">doi:10.1038/s41467-025-65054-x</a>
+    <div class="publication-actions"><a href="https://doi.org/10.1038/s41467-025-65054-x" target="_blank" rel="noopener noreferrer"><span data-i18n="pub.read">Read article</span> ↗</a><button type="button" data-copy-publication="panopact" data-i18n="pub.copy">Copy citation</button><a href="assets/citations/panopact.bib" download>BibTeX ↓</a></div>
+    <details class="publication-citation"><summary data-i18n="pub.citation">Full citation</summary><p id="citation-panopact">Wang X, Meng Y, Sun M, Gao X, Wang Y, Wang S, Wang K, Wang R, Ren D, Yin Y, Li C, Chen R, Wang LV, Shi J. Cross-regional real-time visualization of systemic physiology and dynamics with 3D panoramic photoacoustic computed tomography (3D-PanoPACT). Nature Communications. 2025;16:10077. doi:10.1038/s41467-025-65054-x.</p></details>
+    <p class="publication-feedback" data-copy-feedback="panopact" role="status" aria-live="polite"></p>
+  </div>
+</article>
+<article class="publication-card" data-publication="panopaus">
+  <button type="button" class="publication-preview" data-paper-preview="assets/images/publications/panopaus-page1.webp" aria-label="View first page: Spatiotemporally scalable visualization of whole-body anatomy using three-dimensional panoramic photoacoustic and ultrasound tomography">
+    <img src="assets/images/publications/panopaus-thumb.webp" alt="First page of Spatiotemporally scalable visualization of whole-body anatomy using three-dimensional panoramic photoacoustic and ultrasound tomography" width="600" height="777" loading="lazy" decoding="async">
+    <span class="publication-preview-hint"><span data-i18n="pub.preview">View first page</span> <span aria-hidden="true">⤢</span></span>
+  </button>
+  <div class="publication-copy">
+    <div class="publication-meta"><span>Advanced Imaging</span><time datetime="2026-09-21">2026</time></div>
+
+    <h3><a href="https://doi.org/10.3788/ai.2026.10028" target="_blank" rel="noopener noreferrer">Spatiotemporally scalable visualization of whole-body anatomy using three-dimensional panoramic photoacoustic and ultrasound tomography</a></h3>
+    <p class="publication-authors">Hao Huang, Yang Xiao, Xiali Gao, et al.</p>
+    <p class="publication-location">Advanced Imaging 3(5):C00004 (2026)</p>
+    <a class="publication-doi" href="https://doi.org/10.3788/ai.2026.10028" target="_blank" rel="noopener noreferrer">doi:10.3788/ai.2026.10028</a>
+    <div class="publication-actions"><a href="https://doi.org/10.3788/ai.2026.10028" target="_blank" rel="noopener noreferrer"><span data-i18n="pub.read">Read article</span> ↗</a><button type="button" data-copy-publication="panopaus" data-i18n="pub.copy">Copy citation</button><a href="assets/citations/panopaus.bib" download>BibTeX ↓</a></div>
+    <details class="publication-citation"><summary data-i18n="pub.citation">Full citation</summary><p id="citation-panopaus">Huang H, Xiao Y, Gao X, Meng F, Xiao Z, Zhou X, Wang Y, Li X, Zhou D, Su Y, Chen R, Wang X, Shi J. Spatiotemporally scalable visualization of whole-body anatomy using three-dimensional panoramic photoacoustic and ultrasound tomography. Advanced Imaging. 2026;3(5):C00004. doi:10.3788/ai.2026.10028.</p></details>
+    <p class="publication-feedback" data-copy-feedback="panopaus" role="status" aria-live="polite"></p>
+  </div>
+</article>
+<article class="publication-card" data-publication="liver">
+  <button type="button" class="publication-preview" data-paper-preview="assets/images/publications/liver-page1.webp" aria-label="View first page: Photoacoustic Tomography Tracks Vascular Remodeling and Functional Recovery in Liver Regeneration">
+    <img src="assets/images/publications/liver-thumb.webp" alt="First page of Photoacoustic Tomography Tracks Vascular Remodeling and Functional Recovery in Liver Regeneration" width="600" height="800" loading="lazy" decoding="async">
+    <span class="publication-preview-hint"><span data-i18n="pub.preview">View first page</span> <span aria-hidden="true">⤢</span></span>
+  </button>
+  <div class="publication-copy">
+    <div class="publication-meta"><span>BME Frontiers</span><time datetime="2026-10-21">2026</time></div>
+
+    <h3><a href="https://doi.org/10.34133/bmef.0327" target="_blank" rel="noopener noreferrer">Photoacoustic Tomography Tracks Vascular Remodeling and Functional Recovery in Liver Regeneration</a></h3>
+    <p class="publication-authors">Fan Meng, Xiali Gao, Hao Huang, et al.</p>
+    <p class="publication-location">BME Frontiers 7:0327 (2026)</p>
+    <a class="publication-doi" href="https://doi.org/10.34133/bmef.0327" target="_blank" rel="noopener noreferrer">doi:10.34133/bmef.0327</a>
+    <div class="publication-actions"><a href="https://doi.org/10.34133/bmef.0327" target="_blank" rel="noopener noreferrer"><span data-i18n="pub.read">Read article</span> ↗</a><button type="button" data-copy-publication="liver" data-i18n="pub.copy">Copy citation</button><a href="assets/citations/liver.bib" download>BibTeX ↓</a></div>
+    <details class="publication-citation"><summary data-i18n="pub.citation">Full citation</summary><p id="citation-liver">Meng F, Gao X, Huang H, Xiao Z, Zhou X, Su Y, Chen R, Xiao Y, Zhou D, Wang Y, Li X, Wang X, Shi J. Photoacoustic Tomography Tracks Vascular Remodeling and Functional Recovery in Liver Regeneration. BME Frontiers. 2026;7:0327. doi:10.34133/bmef.0327.</p></details>
+    <p class="publication-feedback" data-copy-feedback="liver" role="status" aria-live="polite"></p>
+  </div>
+</article></div>
+  <div class="publications-foot"><p><span data-i18n="pub.credit">Article first pages © their respective authors.</span> <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p><a class="text-link" href="assets/citations/pacthub-related-papers.bib" download><span data-i18n="pub.all">Download all citations</span> ↓</a></div>
+</section>
+    <section class="team-section section-block" id="team" aria-labelledby="team-title"><div class="container"><div class="section-heading horizontal"><div><h2 id="team-title"><span data-i18n="ui.102">Team &amp; contact</span></h2></div><p><span data-i18n="ui.103">Research team and contact.</span></p></div><div class="team-grid"><article><div id="team-members"><h3><span data-i18n="ui.106">Research team</span></h3><p><span data-i18n="ui.107">Team details will be added here.</span></p></div></article><article><h3><span data-i18n="ui.109">Contact &amp; feedback</span></h3><p id="contribution-summary"><span data-i18n="ui.110">Share data and usage feedback through GitHub Issues.</span></p><div id="contribution-resources" class="resource-buttons"><button type="button" class="button button-secondary" disabled><span data-i18n="ui.111">Contact and contribute · Pending</span></button></div></article></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#top"><span data-site-title>PACTHub</span></a></div><div class="container footer-bottom"><a href="#top"><span data-i18n="ui.115">Back to top</span> <span aria-hidden="true">↑</span></a></div></footer>
+<dialog id="workflow-video-dialog" class="workflow-video-dialog" aria-labelledby="workflow-video-title">
+  <div class="workflow-video-shell">
+    <header class="workflow-video-header"><div><h3 id="workflow-video-title">Workflow video</h3></div><button type="button" id="workflow-close" class="workflow-video-close" aria-label="Close video" data-i18n-aria-label="film.close">×</button></header>
+    <video id="workflow-video" controls muted playsinline preload="none" aria-label="Full workflow video" data-i18n-aria-label="film.videoAlt"></video>
+    <div class="workflow-caption" aria-label="Video captions" data-i18n-aria-label="q.captionLabel"><p id="workflow-caption-text"></p></div>
+    <div class="workflow-controls" hidden>
+      <button type="button" id="workflow-toggle" aria-controls="workflow-video" data-i18n="q.play">Play</button>
+      <span id="workflow-current" class="workflow-time">00:00</span><input id="workflow-range" type="range" min="0" max="51" step="0.05" value="0" aria-label="Video timeline" data-i18n-aria-label="film.timeline"><span id="workflow-duration" class="workflow-time">00:51</span>
+      <button type="button" id="workflow-restart" data-i18n="q.restart">Restart ↺</button><button type="button" id="workflow-fullscreen" data-i18n="film.fullscreen">Full screen</button>
+    </div>
+    <div id="workflow-chapters" class="workflow-chapters" role="group" aria-label="Video chapters" data-i18n-aria-label="q.chapters"></div>
+    <div class="workflow-video-foot"><p id="workflow-note"></p><a id="workflow-download" href="assets/media/fov-sound-speed.mp4" download data-i18n="q.download">Download video ↓</a></div>
+  </div>
+</dialog>
+  <dialog id="sample-dialog" aria-labelledby="detail-title"><div class="dialog-shell"><header class="dialog-header"><span class="eyebrow"><span data-i18n="ui.116">SAMPLE DETAILS</span></span><div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="a11y.language"><button type="button" data-language="zh" lang="zh-CN" aria-label="切换为中文" aria-pressed="false">中</button><button type="button" data-language="en" lang="en" aria-label="Switch to English" aria-pressed="true">EN</button></div><button class="icon-button" id="close-dialog" aria-label="Close sample details" data-i18n-aria-label="a11y.closeSample" type="button">×</button></header><div id="detail-content"></div></div></dialog>
+  <dialog id="paper-page-dialog" class="paper-page-dialog" aria-labelledby="paper-page-hint"><header class="paper-page-header"><p id="paper-page-hint">Article first page · Click the page to enlarge</p><button id="paper-page-close" type="button" aria-label="Close article preview" data-i18n-aria-label="pub.close">×</button></header><div class="paper-page-body"><img id="paper-page-image" alt="" tabindex="0" role="button" aria-label="Enlarge or fit article first page" data-i18n-aria-label="pub.toggleZoom"></div></dialog>
+</body>
+</html>

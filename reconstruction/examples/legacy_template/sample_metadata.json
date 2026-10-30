@@ -1,0 +1,29 @@
+{
+  "acquisition_id": "20241213_151351",
+  "date": "2024-12-13",
+  "source_collection": "WXH",
+  "source_sample_id": "20241213_151351",
+  "signal_storage_axes": "FTC",
+  "signal_shape": [
+    50,
+    4096,
+    1024
+  ],
+  "signal_dtype": "float32",
+  "PA_frames": 50,
+  "PA_path": "2024/2024-12-13/20241213_151351/PA/Data_20241213_151351_PA.mat",
+  "GT_products": [
+    "GT20"
+  ],
+  "reconstruction_parameters_available": true,
+  "included_regardless_of_enhancement_training_selection": true,
+  "dataset_management": {
+    "collection": "WXH",
+    "animal_id": null,
+    "split": null,
+    "high_quality": null,
+    "source_category_basis": "Source folder label; specimen identity not independently verified",
+    "provisional_leakage_group": "3D-PACT-DATA/mouse_whole_body_20241213/dualside_illu/rep1",
+    "training_inclusion": "not_added_to_existing_frozen_training_run"
+  }
+}

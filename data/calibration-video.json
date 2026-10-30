@@ -1,0 +1,289 @@
+{
+  "movie": "assets/media/fov-sound-speed.mp4",
+  "movie_sha256": "f04a4319905fca19a32c2acf40c3431733b59b89bc15faca25f09f6bda14633f",
+  "poster": "assets/images/showcase/calibration-poster.webp",
+  "poster_sha256": "e1f4336f6f3e9366b9ff4de11b26f116808e5e8530ea33bae92c9cac595c242d",
+  "duration_seconds": 32,
+  "fps": 24,
+  "frame_count": 768,
+  "frame_size": [
+    1280,
+    720
+  ],
+  "acquisition_id": "20241213_151351",
+  "frames_1based": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "source_kind": "BP recomputed locally from PA data on the recorded final FOV",
+  "source_sha256": {
+    "localization20/mips.npz": "287f95336f23c02f64ab35a56afcaade42b4d1a117f1f6aebac4129d70fa3135",
+    "localization20/parameters.json": "2bb7df0ae0823d556c5632728f6845cde4a5208a4b72e82c15ac66162600f32c",
+    "fov_selection.json": "f34dcc3bc2ed3ca9a03be0965bc2d02e1be6a1935651b5e91f5a4cedeffea2f1",
+    "aligned_sweep/mips.npz": "c5c2e7a255451a0b8167e93ae5f8f1507faef1cecfb503c4c0a2b6aed7e94163",
+    "aligned_sweep/parameters.json": "6aed00e097c07fedc21191e40d51539fc6dc7dda150020e5ec66d8ddd5fd4cf1",
+    "aligned_sweep/result.json": "8085a8b035a41fe36486fe5dda7c8b71f376ab7d985a4cbfefeb25e8b4213630"
+  },
+  "fov": {
+    "scout_grid": {
+      "center_mm": [
+        0.0,
+        0.0,
+        -2.0
+      ],
+      "coordinate_frame": "after_additional_Rz",
+      "grid_rule": "round_length_times_density_inclusive_endpoints",
+      "resolution_px_mm": 2.0,
+      "sampling_rule": "legacy_round_inclusive",
+      "space_mm": [
+        80.0,
+        80.0,
+        20.0
+      ],
+      "shape_xyz": [
+        160,
+        160,
+        40
+      ],
+      "extent_xyz_mm": [
+        [
+          -40.0,
+          40.00000762939453
+        ],
+        [
+          -40.0,
+          40.00000762939453
+        ],
+        [
+          -12.0,
+          8.000001907348633
+        ]
+      ],
+      "actual_spacing_mm": [
+        0.5031446814537048,
+        0.5031446814537048,
+        0.5128205418586731
+      ]
+    },
+    "center_native_mm": [
+      -0.19450178906415572,
+      3.419497085443836,
+      -2.0
+    ],
+    "center_rotated_mm": [
+      0.5292920293875519,
+      3.3838796094032144,
+      -2.0
+    ],
+    "angle_deg": -12.145418126852595,
+    "fitted_rectangle_xy_mm": [
+      [
+        -10.907968845217372,
+        -28.836293649652468
+      ],
+      [
+        22.839511205713872,
+        -21.57347508006705
+      ],
+      [
+        10.518965267089062,
+        35.67528782054014
+      ],
+      [
+        -23.228514783842183,
+        28.41246925095472
+      ]
+    ],
+    "target_space_xyz_mm": [
+      40.0,
+      80.0,
+      20.0
+    ],
+    "scout_flags": [
+      "foreground_touches_search_limit"
+    ],
+    "applied_to_speed_reconstruction": true,
+    "display": "Scout orientation preview followed by true BP on the recorded final FOV"
+  },
+  "speed": {
+    "grid": {
+      "center_mm": [
+        0.5292920293875519,
+        3.3838796094032144,
+        -2.0
+      ],
+      "coordinate_frame": "after_additional_Rz",
+      "grid_rule": "round_length_times_density_inclusive_endpoints",
+      "resolution_px_mm": 10.0,
+      "sampling_rule": "legacy_round_inclusive",
+      "space_mm": [
+        40.0,
+        80.0,
+        20.0
+      ]
+    },
+    "speeds_m_s": [
+      1488.0,
+      1488.5,
+      1489.0,
+      1489.5,
+      1490.0,
+      1490.5,
+      1491.0,
+      1491.5,
+      1492.0,
+      1492.5,
+      1493.0,
+      1493.5,
+      1494.0,
+      1494.5,
+      1495.0,
+      1495.5,
+      1496.0,
+      1496.5,
+      1497.0,
+      1497.5,
+      1498.0,
+      1498.5,
+      1499.0
+    ],
+    "scores": [
+      0.0625552815821608,
+      0.06376799555609149,
+      0.06510644640605134,
+      0.06616848539563495,
+      0.0671929112820548,
+      0.06806157575285648,
+      0.06876277234853027,
+      0.06927232147928852,
+      0.06935813383369513,
+      0.06921794609983463,
+      0.06847350909046657,
+      0.06730622165327063,
+      0.06596483263198316,
+      0.06441599707146928,
+      0.06279016730029376,
+      0.06116691828099133,
+      0.05958532753341564,
+      0.05821824564789949,
+      0.05711626379988456,
+      0.05627092829958397,
+      0.05561366198582489,
+      0.05522587478191717,
+      0.054843631535027325
+    ],
+    "method": "full_global_normalized_gradient",
+    "selected_m_s": 1492.0,
+    "score_source_sha256": "f66a7ab9e7aba28c29833c699e816cce96471994516bd831be8c83256f0a5d26",
+    "common_support_pixels": 203452,
+    "inset_xy_mm": [
+      -7.0,
+      7.0,
+      -8.0,
+      8.0
+    ]
+  },
+  "display": {
+    "scout_linear_window": [
+      0.00025012209080159663,
+      0.010004883632063866
+    ],
+    "speed_linear_window": [
+      0.00030556248966604474,
+      0.012222499586641788
+    ],
+    "window_shared_across_speeds": true,
+    "gamma": 1,
+    "scout_shape_yx": [
+      160,
+      160
+    ],
+    "speed_shape_syx": [
+      23,
+      800,
+      400
+    ]
+  },
+  "chapters": [
+    {
+      "start": 0,
+      "end": 6,
+      "key": "film.locate"
+    },
+    {
+      "start": 6,
+      "end": 12,
+      "key": "film.orient"
+    },
+    {
+      "start": 12,
+      "end": 27,
+      "key": "film.sweep"
+    },
+    {
+      "start": 27,
+      "end": 32,
+      "key": "film.select"
+    }
+  ],
+  "captions": [
+    {
+      "start": 0,
+      "end": 6,
+      "text": {
+        "en": "A measured 20-exposure BP scout defines the visible signal support and principal long axis.",
+        "zh": "使用实测 20 帧 BP 大视场图，提取可见信号区域并确定长轴。"
+      }
+    },
+    {
+      "start": 6,
+      "end": 12,
+      "text": {
+        "en": "Use the recorded 40 × 80 × 20 mm FOV and −12.145° Z correction for the following BP reconstructions.",
+        "zh": "后续 BP 重建统一采用已经确定的 40 × 80 × 20 mm 视野与 −12.145° Z 轴校正。"
+      }
+    },
+    {
+      "start": 12,
+      "end": 20,
+      "text": {
+        "en": "Reconstruct every speed on the same final FOV with the same 20 exposures. All candidates share one display window.",
+        "zh": "所有声速使用同一批 20 帧，在确定后的 FOV 内重建，并共用同一显示窗。"
+      }
+    },
+    {
+      "start": 20,
+      "end": 27,
+      "text": {
+        "en": "Each point is recomputed from a complete floating-point BP MIP. The curve follows measured candidates without fitting.",
+        "zh": "每个评分来自完整浮点 BP MIP，曲线依次连接实际候选点。"
+      }
+    },
+    {
+      "start": 27,
+      "end": 32,
+      "text": {
+        "en": "The full-MIP normalized-gradient score peaks at 1492.0 m/s for this acquisition.",
+        "zh": "该采集的全 MIP 归一化梯度评分在 1492.0 m/s 达到最高。"
+      }
+    }
+  ]
+}

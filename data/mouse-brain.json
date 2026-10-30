@@ -1,0 +1,239 @@
+{
+  "id": "mouse-brain",
+  "title": {
+    "zh": "小鼠脑 · 全脑血管",
+    "en": "Mouse brain · whole-brain vessels"
+  },
+  "is_demo": false,
+  "category": "animal",
+  "mode": "rotation",
+  "split": "unspecified",
+  "tags": [
+    "animal",
+    "rotation",
+    "3D",
+    "official release"
+  ],
+  "description": {
+    "zh": "数据集对应文件：Data_20230705_160311_PA.mat（800 nm 采集）。当前展示结果对应 3D-PanoPACT 的 mousebrain，为多波长复合三维体，展示皮层与深层血管网络。",
+    "en": "Dataset file: Data_20230705_160311_PA.mat (800 nm acquisition). The displayed result corresponds to 3D-PanoPACT mousebrain, a multi-wavelength compound volume showing cortical and deeper vascular networks."
+  },
+  "preview": "assets/images/showcase/mouse-brain-depth.webp",
+  "views": {
+    "depth": "assets/images/showcase/mouse-brain-depth.webp",
+    "gray": "assets/images/showcase/mouse-brain-gray.webp",
+    "volume": "assets/images/showcase/mouse-brain-volume.webp"
+  },
+  "dimensions": [
+    213,
+    366,
+    385
+  ],
+  "axis_order": [
+    "z",
+    "y",
+    "x"
+  ],
+  "spacing_mm": [
+    0.04,
+    0.04,
+    0.04
+  ],
+  "wavelength_nm": null,
+  "intensity_unit": "a.u.",
+  "data_version": "figshare-v3",
+  "acquisition_id": "3DPanoPACT-Fig3",
+  "display": {
+    "palette": "3D-PanoPACT Trunk",
+    "depth_scale": "Relative position within the displayed Z slab, 0–1",
+    "z_extent_mm": [
+      1.8,
+      10.28
+    ],
+    "extent_xyz_mm": [
+      [
+        1.4000000000000001,
+        16.76
+      ],
+      [
+        0.96,
+        15.56
+      ],
+      [
+        1.8,
+        10.28
+      ]
+    ],
+    "view_extent_xyz_mm": {
+      "depth": [
+        [
+          1.4000000000000001,
+          16.76
+        ],
+        [
+          0.96,
+          15.56
+        ],
+        [
+          1.8,
+          10.28
+        ]
+      ],
+      "gray": [
+        [
+          1.4000000000000001,
+          16.76
+        ],
+        [
+          0.96,
+          15.56
+        ],
+        [
+          1.8,
+          10.28
+        ]
+      ],
+      "volume": [
+        [
+          1.4000000000000001,
+          16.76
+        ],
+        [
+          0.96,
+          15.56
+        ],
+        [
+          1.8,
+          10.28
+        ]
+      ]
+    },
+    "intensity_window": [
+      0.001226186708238369,
+      0.7578402941558539
+    ],
+    "gamma": 1,
+    "added_fluence_gain": false,
+    "xy_crop_pixels": [
+      35,
+      24,
+      420,
+      390
+    ],
+    "crop_frame": "Rotated physical display frame; common XYZ crop for depth, gray and volume",
+    "rotation_deg": 0,
+    "rotation_convention": "Positive is counterclockwise in the displayed XY image",
+    "compact_preview": true,
+    "asset_revision": "2e43beefd245",
+    "scale_bars": {
+      "depth": {
+        "length_mm": 5,
+        "length_pixels": 125.0,
+        "pixels_per_mm": 25.0,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "gray": {
+        "length_mm": 5,
+        "length_pixels": 125.0,
+        "pixels_per_mm": 25.0,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "volume": {
+        "length_mm": 5,
+        "length_pixels": 261.3296495290083,
+        "pixels_per_mm": 52.26592990580166,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    "view_notes": {
+      "zh": "三种视图使用同一旋转、同一 XYZ 物理范围和线性窗。",
+      "en": "All three views share one rotation, XYZ field and linear window."
+    },
+    "scale_calibration": {
+      "method": "Scale transferred from matched local BP coordinates",
+      "spacing_xyz_mm": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "kind": "Display calibration; native MAT axis arrays absent",
+      "isotropic_grid_assumption": true,
+      "matched_local_acquisition": "20230705_160311",
+      "correspondence_inliers": 53,
+      "xy_estimates_mm": [
+        0.0400489,
+        0.04000645
+      ],
+      "timestamp_match": "Morphology identifies the specimen, not a unique acquisition timestamp",
+      "rounding": "0.04 mm common display grid"
+    },
+    "native_axis_coordinates_mm": null
+  },
+  "provenance": {
+    "source_id": "Brain_Anatomy_functions_Fig.3_Fig.4/whole_brain_STINT_processed.mat",
+    "acquisition": {
+      "zh": "数据集采集编号 20230705_160311；展示结果：3D-PanoPACT mousebrain，多波长复合",
+      "en": "Dataset acquisition 20230705_160311; displayed result: 3D-PanoPACT mousebrain, multi-wavelength compound"
+    },
+    "reconstruction": {
+      "zh": "作者发布的 STINT 三维处理体",
+      "en": "Author-released STINT processed volume"
+    },
+    "standardization_reference": "docs/data-guide.html",
+    "official_release": {
+      "title": "3D-PanoPACT_Data_Code",
+      "authors": [
+        "Xuanhao Wang",
+        "Yuqian Meng",
+        "Xiali Gao"
+      ],
+      "doi": "10.6084/m9.figshare.28443374.v3",
+      "url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+      "version": 3,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "article_doi": "10.1038/s41467-025-65054-x",
+      "acquisition_timestamp": null,
+      "changes": "Axis reordering, shared XYZ crop, linear display window and re-rendering with the PACTHub depth palette and camera.",
+      "source_data": {
+        "file": "Brain_Anatomy_functions_Fig.3_Fig.4/whole_brain_STINT_processed.mat",
+        "variable": "whole_brain_STINT_processed",
+        "shape_hdf5": [
+          300,
+          450,
+          400
+        ],
+        "sha256": "4bfbcefdabcacfb2e37f13bfbb94e25a9f1e708faf39bdad58be10a758cf0bcd",
+        "size_bytes": 180935209,
+        "data_type": "Numeric three-dimensional reconstruction volume"
+      },
+      "acquisition_annotation": {
+        "dataset_name": "20230705_160311",
+        "source": "Dataset author interpretation, 2026-10-26",
+        "composition": "multi-wavelength",
+        "composition_status": "author-inferred",
+        "wavelengths_nm": null,
+        "note": {
+          "zh": "鼠脑按数据作者的判断标注为多波长复合，具体波长组合及复合权重尚未核实。",
+          "en": "The brain is labeled as a multi-wavelength compound following the dataset author's interpretation; the wavelength combination and weights have not been verified."
+        },
+        "experiment_directory": "mousebrain_20230705/Baseline",
+        "dataset_rf_file": "Data_20230705_160311_PA.mat",
+        "dataset_relative_path": "WXH/Animal/20230705/20230705_160311/PA_Data/Data_20230705_160311_PA.mat",
+        "dataset_wavelength_nm": 800,
+        "displayed_result": "3D-PanoPACT mousebrain",
+        "relationship": "Associated specimen acquisition; the displayed multi-wavelength release has no verified unique RF input manifest."
+      }
+    }
+  },
+  "files": [],
+  "acquisition_name": "20230705_160311",
+  "acquisition_summary": {
+    "zh": "多波长复合",
+    "en": "Multi-wavelength compound"
+  },
+  "wavelength_description": {
+    "zh": "多波长复合",
+    "en": "Multi-wavelength compound"
+  }
+}

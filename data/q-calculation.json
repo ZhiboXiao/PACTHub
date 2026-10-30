@@ -1,0 +1,87 @@
+{
+  "reference": "Manuscript vascular control; seed 4099",
+  "candidate": "Gaussian blur, sigma 0.30 mm applied to vessel signal; background retained",
+  "shape_zyx": [
+    96,
+    128,
+    96
+  ],
+  "spacing_mm": [
+    0.2,
+    0.2,
+    0.2
+  ],
+  "gain": 1,
+  "local_contrast_sigma_mm": 0.4,
+  "hessian_scales_mm": [
+    0.2,
+    0.35,
+    0.5
+  ],
+  "support_thresholds": [
+    0.1,
+    0.3
+  ],
+  "noise_multipliers": [
+    3,
+    6
+  ],
+  "boundary_margin_mm": 1,
+  "component_min_volume_mm3": 0.064,
+  "component_min_extent_mm": 1,
+  "weak_strong_split": 0.15336203575134277,
+  "support_voxels": 3256,
+  "weak_voxels": 1628,
+  "strong_voxels": 1628,
+  "formula": "h(I)=max(I-G_0.4mm*I,0); D_s=2 sum min(g hX,hR) / sum(g hX+hR), over reference mask M_s; Q=100 sqrt(D_weak D_strong)",
+  "scores": [
+    {
+      "name": "Background removed",
+      "Q": 96.8694260523254,
+      "D_weak": 0.9501404468070889,
+      "D_strong": 0.9876103827850354,
+      "SSIM": 0.013534209918173142,
+      "PSNR": 15.877552114059572,
+      "MSE": 0.04255849329353382,
+      "L1": 0.19896931714023708,
+      "raw_L1": 0.19896931714023708,
+      "data_range": 1.2834256887435913,
+      "nL1": 0.29919006438517476,
+      "gain": 1.0
+    },
+    {
+      "name": "Gaussian blur / 0.30 mm",
+      "Q": 67.74512398327313,
+      "D_weak": 0.7619666235083387,
+      "D_strong": 0.6023100857591336,
+      "SSIM": 0.9942413405321546,
+      "PSNR": 41.499377173707224,
+      "MSE": 0.00011662824437991841,
+      "L1": 0.0008165070255409369,
+      "raw_L1": 0.0008165070255409369,
+      "data_range": 1.2834256887435913,
+      "nL1": 0.0012277812129714452,
+      "gain": 1.0
+    },
+    {
+      "name": "Weak branch removed",
+      "Q": 87.04260891690066,
+      "D_weak": 0.7906567906869331,
+      "D_strong": 0.9582433056039427,
+      "SSIM": 0.9956318917187588,
+      "PSNR": 48.54331390179329,
+      "MSE": 2.3036158889832356e-05,
+      "L1": 0.00015499597696412416,
+      "raw_L1": 0.00015499597696412416,
+      "data_range": 1.2834256887435913,
+      "nL1": 0.00023306737437639536,
+      "gain": 1.0
+    }
+  ],
+  "metrics_domain": "Full 3D volumes. SSIM includes all valid full-volume window centres; MIPs are display only.",
+  "code_sha256": {
+    "unified_metrics.py": "51b40da3691f6db202b40219a16765512d297ad7e46cf4516a0cdb534b92e8b4",
+    "reference_foreground.py": "5dca7f9916863b9b8e8bdad9ca0932944f1f1cc6284437b83d9bd8318a794337",
+    "run_all.py": "73ee264bd3cb6bfccfcc40cc96a61652098330e4b80b1b7d160ac8242e70a64e"
+  }
+}

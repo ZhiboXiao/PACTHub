@@ -1,0 +1,1721 @@
+[
+  {
+    "id": "mouse-rotation",
+    "title": {
+      "zh": "小鼠 · 旋转成像",
+      "en": "Mouse · rotation"
+    },
+    "is_demo": false,
+    "category": "animal",
+    "mode": "rotation",
+    "split": "unspecified",
+    "tags": [
+      "animal",
+      "rotation",
+      "3D",
+      "BP"
+    ],
+    "description": {
+      "zh": "作者提供的三维小鼠处理体，以轴向深度投影与斜向三维视图呈现血管空间分布。",
+      "en": "Author-supplied processed mouse volume, shown as axial depth projections and an oblique 3D view."
+    },
+    "preview": "assets/images/showcase/mouse-rotation-depth.webp",
+    "views": {
+      "depth": "assets/images/showcase/mouse-rotation-depth.webp",
+      "gray": "assets/images/showcase/mouse-rotation-gray.webp",
+      "volume": "assets/images/showcase/mouse-rotation-volume.webp"
+    },
+    "dimensions": [
+      200,
+      720,
+      510
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": null,
+    "wavelength_nm": null,
+    "intensity_unit": "a.u.",
+    "data_version": "showcase-2026-10-25",
+    "display": {
+      "palette": "3D-PanoPACT Trunk",
+      "depth_scale": "Relative position within the displayed Z slab, 0–1",
+      "z_extent_mm": null,
+      "intensity_window": [
+        0,
+        0.3530499339103699
+      ],
+      "gamma": 1,
+      "added_fluence_gain": false,
+      "xy_crop_pixels": null,
+      "rotation_deg": 0,
+      "view_notes": {
+        "zh": "灰度为强度；颜色为相对深度。各样本独立线性窗。",
+        "en": "Grayscale encodes intensity; colour encodes relative depth. Each specimen has an independent linear window."
+      },
+      "scale_bars": {
+        "depth": {
+          "length_mm": 5,
+          "length_pixels": 80.65472078169799,
+          "pixels_per_mm": 16.1309441563396,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "gray": {
+          "length_mm": 5,
+          "length_pixels": 80.65472078169799,
+          "pixels_per_mm": 16.1309441563396,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "volume": {
+          "length_mm": 5,
+          "length_pixels": 137.47963769607614,
+          "pixels_per_mm": 27.495927539215227,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        }
+      },
+      "scale_calibration": {
+        "method": "Transfer original Figure 6b 5-mm scale bar through matched volume-box projection",
+        "original_bar_emu": 228790,
+        "original_image_width_emu": 1971164,
+        "original_image_width_pixels": 1471,
+        "original_bar_pixels": 170.7367271317861,
+        "matched_camera_scale": 0.8052142032098348,
+        "current_render_pixels_per_mm": 27.495927539215227,
+        "display_mm_per_voxel_inferred": 0.06199265153410077,
+        "native_coordinate_axes_available": false
+      }
+    },
+    "provenance": {
+      "source_id": "3D-PanoPACT / wholebody_pa_img_processed.mat",
+      "acquisition": {
+        "zh": "旋转采集；作者保存的处理后三维体",
+        "en": "Rotation acquisition; author-saved processed volume"
+      },
+      "reconstruction": {
+        "zh": "沿用作者处理体；轴向 MIP 与斜向最大强度体绘制",
+        "en": "Author processing retained; axial MIP and oblique maximum-intensity ray casting"
+      },
+      "standardization_reference": "docs/data-guide.html"
+    },
+    "files": [],
+    "acquisition_id": "20241213_150841"
+  },
+  {
+    "id": "mouse-scan",
+    "title": {
+      "zh": "小鼠 · 扫描与旋转",
+      "en": "Mouse · scan + rotation"
+    },
+    "is_demo": false,
+    "category": "animal",
+    "mode": "scan",
+    "split": "unspecified",
+    "tags": [
+      "animal",
+      "scan",
+      "3D",
+      "BP"
+    ],
+    "description": {
+      "zh": "70 个位置扩展全身覆盖。两种带通 BP 三维体等权相加，深度显示保留 0.3 Frangi。",
+      "en": "Seventy positions extend whole-body coverage. Two bandpass BP volumes are added with equal weights; depth display retains a 0.3 Frangi contribution."
+    },
+    "preview": "assets/images/showcase/mouse-scan-depth.webp",
+    "views": {
+      "depth": "assets/images/showcase/mouse-scan-depth.webp",
+      "gray": "assets/images/showcase/mouse-scan-gray.webp",
+      "volume": "assets/images/showcase/mouse-scan-volume.webp"
+    },
+    "dimensions": [
+      265,
+      1051,
+      641
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": "a.u.",
+    "data_version": "showcase-2026-10-25",
+    "display": {
+      "palette": "3D-PanoPACT Trunk",
+      "depth_scale": "Relative position within the displayed Z slab, 0–1",
+      "z_extent_mm": [
+        1.9,
+        21.9
+      ],
+      "intensity_window": [
+        0,
+        0.35828831791877747
+      ],
+      "gamma": 1,
+      "added_fluence_gain": false,
+      "xy_crop_pixels": [
+        70,
+        45,
+        590,
+        1010
+      ],
+      "rotation_deg": 2,
+      "view_notes": {
+        "zh": "灰度为强度；颜色为相对深度。各样本独立线性窗。",
+        "en": "Grayscale encodes intensity; colour encodes relative depth. Each specimen has an independent linear window."
+      },
+      "scale_bars": {
+        "depth": {
+          "length_mm": 10,
+          "length_pixels": 100,
+          "pixels_per_mm": 10,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "gray": {
+          "length_mm": 10,
+          "length_pixels": 100,
+          "pixels_per_mm": 10,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "volume": {
+          "length_mm": 10,
+          "length_pixels": 119.40034993341156,
+          "pixels_per_mm": 11.940034993341156,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        }
+      },
+      "crop_frame": "Screen XY after 2-degree physical CCW rotation",
+      "cropped_extent_xy_mm": [
+        -7.0,
+        44.900000000000006,
+        -79.9,
+        16.5
+      ]
+    },
+    "provenance": {
+      "source_id": "20260114_192341_Scan1",
+      "acquisition": {
+        "zh": "7×10 位置；6×8 mm 步距；每位置 20 次曝光",
+        "en": "7×10 positions; 6×8 mm steps; 20 exposures per position"
+      },
+      "reconstruction": {
+        "zh": "1508.5 m/s BP；1.44–5.76 + 0.5–8 MHz；等权逐体素相加",
+        "en": "1508.5 m/s BP; 1.44–5.76 + 0.5–8 MHz; unit-weight voxelwise sum"
+      },
+      "standardization_reference": "docs/data-guide.html"
+    },
+    "files": [],
+    "acquisition_id": "20260114_192341_Scan1"
+  },
+  {
+    "id": "leaf",
+    "title": {
+      "zh": "叶片 · 分支结构",
+      "en": "Leaf · branching structure"
+    },
+    "is_demo": false,
+    "category": "phantom",
+    "mode": "rotation",
+    "split": "unspecified",
+    "tags": [
+      "phantom",
+      "rotation",
+      "3D",
+      "BP"
+    ],
+    "description": {
+      "zh": "叶脉网络提供多尺度分支与细弱结构，用于观察结构连续性与空间覆盖。",
+      "en": "A leaf-vein network provides branching and weak structures at multiple scales for examining continuity and coverage."
+    },
+    "preview": "assets/images/showcase/leaf-depth.webp",
+    "views": {
+      "depth": "assets/images/showcase/leaf-depth.webp",
+      "gray": "assets/images/showcase/leaf-gray.webp",
+      "volume": "assets/images/showcase/leaf-volume.webp"
+    },
+    "dimensions": [
+      200,
+      480,
+      350
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.10050249099731445,
+      0.10012435913085938,
+      0.100250244140625
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": "a.u.",
+    "data_version": "showcase-2026-10-25",
+    "display": {
+      "palette": "3D-PanoPACT Trunk",
+      "depth_scale": "Relative position within the displayed Z slab, 0–1",
+      "z_extent_mm": [
+        -12.0,
+        8.0
+      ],
+      "intensity_window": [
+        0.0016758660785853863,
+        0.027787916362285614
+      ],
+      "gamma": 1,
+      "added_fluence_gain": false,
+      "xy_crop_pixels": [
+        25,
+        160,
+        375,
+        640
+      ],
+      "rotation_deg": 0,
+      "view_notes": {
+        "zh": "灰度为强度；颜色为相对深度。各样本独立线性窗。",
+        "en": "Grayscale encodes intensity; colour encodes relative depth. Each specimen has an independent linear window."
+      },
+      "scale_bars": {
+        "depth": {
+          "length_mm": 5,
+          "length_pixels": 49.87519025875191,
+          "pixels_per_mm": 9.975038051750381,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "gray": {
+          "length_mm": 5,
+          "length_pixels": 49.87519025875191,
+          "pixels_per_mm": 9.975038051750381,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "volume": {
+          "length_mm": 5,
+          "length_pixels": 111.41641463463236,
+          "pixels_per_mm": 22.28328292692647,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        }
+      }
+    },
+    "provenance": {
+      "source_id": "20241115_104329",
+      "acquisition": {
+        "zh": "20 次曝光 BP 体",
+        "en": "20-exposure BP volume"
+      },
+      "reconstruction": {
+        "zh": "BP；原有物理 XY 裁剪；保留完整 Z",
+        "en": "BP; established physical XY crop; all Z slices retained"
+      },
+      "standardization_reference": "docs/data-guide.html"
+    },
+    "files": [],
+    "acquisition_id": "20241115_104329"
+  },
+  {
+    "id": "hand",
+    "title": {
+      "zh": "人手 · 血管网络",
+      "en": "Hand · vascular network"
+    },
+    "is_demo": false,
+    "category": "human",
+    "mode": "rotation",
+    "split": "unspecified",
+    "tags": [
+      "human",
+      "rotation",
+      "3D",
+      "BP"
+    ],
+    "description": {
+      "zh": "人手血管的深度投影与三维展示，与小鼠和叶片采用一致的深度色系。",
+      "en": "Depth projections and 3D views of human-hand vasculature use the same depth palette as the mouse and leaf."
+    },
+    "preview": "assets/images/showcase/hand-depth.webp",
+    "views": {
+      "depth": "assets/images/showcase/hand-depth.webp",
+      "gray": "assets/images/showcase/hand-gray.webp",
+      "volume": "assets/images/showcase/hand-volume.webp"
+    },
+    "dimensions": [
+      200,
+      800,
+      570
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.10050249099731445,
+      0.10012435913085938,
+      0.10012435913085938
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": "a.u.",
+    "data_version": "showcase-2026-10-25",
+    "display": {
+      "palette": "3D-PanoPACT Trunk",
+      "depth_scale": "Relative position within the displayed Z slab, 0–1",
+      "z_extent_mm": [
+        2.857147216796875,
+        22.857147216796875
+      ],
+      "intensity_window": [
+        0.0021854322403669357,
+        0.03483181446790695
+      ],
+      "gamma": 1,
+      "added_fluence_gain": false,
+      "xy_crop_pixels": [
+        110,
+        0,
+        680,
+        800
+      ],
+      "rotation_deg": 0,
+      "view_notes": {
+        "zh": "灰度为强度；颜色为相对深度。各样本独立线性窗。",
+        "en": "Grayscale encodes intensity; colour encodes relative depth. Each specimen has an independent linear window."
+      },
+      "scale_bars": {
+        "depth": {
+          "length_mm": 5,
+          "length_pixels": 49.93789766449499,
+          "pixels_per_mm": 9.987579532898998,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "gray": {
+          "length_mm": 5,
+          "length_pixels": 49.93789766449499,
+          "pixels_per_mm": 9.987579532898998,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "volume": {
+          "length_mm": 5,
+          "length_pixels": 69.60056680457602,
+          "pixels_per_mm": 13.920113360915204,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        }
+      }
+    },
+    "provenance": {
+      "source_id": "20241128_194710",
+      "acquisition": {
+        "zh": "20 次曝光 BP 体",
+        "en": "20-exposure BP volume"
+      },
+      "reconstruction": {
+        "zh": "BP；原有物理 XY 裁剪；保留完整 Z",
+        "en": "BP; established physical XY crop; all Z slices retained"
+      },
+      "standardization_reference": "docs/data-guide.html"
+    },
+    "files": [],
+    "acquisition_id": "20241128_194710"
+  },
+  {
+    "id": "mouse-brain",
+    "title": {
+      "zh": "小鼠脑 · 全脑血管",
+      "en": "Mouse brain · whole-brain vessels"
+    },
+    "is_demo": false,
+    "category": "animal",
+    "mode": "rotation",
+    "split": "unspecified",
+    "tags": [
+      "animal",
+      "rotation",
+      "3D",
+      "official release"
+    ],
+    "description": {
+      "zh": "数据集对应文件：Data_20230705_160311_PA.mat（800 nm 采集）。当前展示结果对应 3D-PanoPACT 的 mousebrain，为多波长复合三维体，展示皮层与深层血管网络。",
+      "en": "Dataset file: Data_20230705_160311_PA.mat (800 nm acquisition). The displayed result corresponds to 3D-PanoPACT mousebrain, a multi-wavelength compound volume showing cortical and deeper vascular networks."
+    },
+    "preview": "assets/images/showcase/mouse-brain-depth.webp",
+    "views": {
+      "depth": "assets/images/showcase/mouse-brain-depth.webp",
+      "gray": "assets/images/showcase/mouse-brain-gray.webp",
+      "volume": "assets/images/showcase/mouse-brain-volume.webp"
+    },
+    "dimensions": [
+      213,
+      366,
+      385
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.04,
+      0.04,
+      0.04
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": "a.u.",
+    "data_version": "figshare-v3",
+    "acquisition_id": "3DPanoPACT-Fig3",
+    "display": {
+      "palette": "3D-PanoPACT Trunk",
+      "depth_scale": "Relative position within the displayed Z slab, 0–1",
+      "z_extent_mm": [
+        1.8,
+        10.28
+      ],
+      "extent_xyz_mm": [
+        [
+          1.4000000000000001,
+          16.76
+        ],
+        [
+          0.96,
+          15.56
+        ],
+        [
+          1.8,
+          10.28
+        ]
+      ],
+      "view_extent_xyz_mm": {
+        "depth": [
+          [
+            1.4000000000000001,
+            16.76
+          ],
+          [
+            0.96,
+            15.56
+          ],
+          [
+            1.8,
+            10.28
+          ]
+        ],
+        "gray": [
+          [
+            1.4000000000000001,
+            16.76
+          ],
+          [
+            0.96,
+            15.56
+          ],
+          [
+            1.8,
+            10.28
+          ]
+        ],
+        "volume": [
+          [
+            1.4000000000000001,
+            16.76
+          ],
+          [
+            0.96,
+            15.56
+          ],
+          [
+            1.8,
+            10.28
+          ]
+        ]
+      },
+      "intensity_window": [
+        0.001226186708238369,
+        0.7578402941558539
+      ],
+      "gamma": 1,
+      "added_fluence_gain": false,
+      "xy_crop_pixels": [
+        35,
+        24,
+        420,
+        390
+      ],
+      "crop_frame": "Rotated physical display frame; common XYZ crop for depth, gray and volume",
+      "rotation_deg": 0,
+      "rotation_convention": "Positive is counterclockwise in the displayed XY image",
+      "compact_preview": true,
+      "asset_revision": "2e43beefd245",
+      "scale_bars": {
+        "depth": {
+          "length_mm": 5,
+          "length_pixels": 125.0,
+          "pixels_per_mm": 25.0,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "gray": {
+          "length_mm": 5,
+          "length_pixels": 125.0,
+          "pixels_per_mm": 25.0,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "volume": {
+          "length_mm": 5,
+          "length_pixels": 261.3296495290083,
+          "pixels_per_mm": 52.26592990580166,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        }
+      },
+      "view_notes": {
+        "zh": "三种视图使用同一旋转、同一 XYZ 物理范围和线性窗。",
+        "en": "All three views share one rotation, XYZ field and linear window."
+      },
+      "scale_calibration": {
+        "method": "Scale transferred from matched local BP coordinates",
+        "spacing_xyz_mm": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "kind": "Display calibration; native MAT axis arrays absent",
+        "isotropic_grid_assumption": true,
+        "matched_local_acquisition": "20230705_160311",
+        "correspondence_inliers": 53,
+        "xy_estimates_mm": [
+          0.0400489,
+          0.04000645
+        ],
+        "timestamp_match": "Morphology identifies the specimen, not a unique acquisition timestamp",
+        "rounding": "0.04 mm common display grid"
+      },
+      "native_axis_coordinates_mm": null
+    },
+    "provenance": {
+      "source_id": "Brain_Anatomy_functions_Fig.3_Fig.4/whole_brain_STINT_processed.mat",
+      "acquisition": {
+        "zh": "数据集采集编号 20230705_160311；展示结果：3D-PanoPACT mousebrain，多波长复合",
+        "en": "Dataset acquisition 20230705_160311; displayed result: 3D-PanoPACT mousebrain, multi-wavelength compound"
+      },
+      "reconstruction": {
+        "zh": "作者发布的 STINT 三维处理体",
+        "en": "Author-released STINT processed volume"
+      },
+      "standardization_reference": "docs/data-guide.html",
+      "official_release": {
+        "title": "3D-PanoPACT_Data_Code",
+        "authors": [
+          "Xuanhao Wang",
+          "Yuqian Meng",
+          "Xiali Gao"
+        ],
+        "doi": "10.6084/m9.figshare.28443374.v3",
+        "url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+        "version": 3,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "article_doi": "10.1038/s41467-025-65054-x",
+        "acquisition_timestamp": null,
+        "changes": "Axis reordering, shared XYZ crop, linear display window and re-rendering with the PACTHub depth palette and camera.",
+        "source_data": {
+          "file": "Brain_Anatomy_functions_Fig.3_Fig.4/whole_brain_STINT_processed.mat",
+          "variable": "whole_brain_STINT_processed",
+          "shape_hdf5": [
+            300,
+            450,
+            400
+          ],
+          "sha256": "4bfbcefdabcacfb2e37f13bfbb94e25a9f1e708faf39bdad58be10a758cf0bcd",
+          "size_bytes": 180935209,
+          "data_type": "Numeric three-dimensional reconstruction volume"
+        },
+        "acquisition_annotation": {
+          "dataset_name": "20230705_160311",
+          "source": "Dataset author interpretation, 2026-10-26",
+          "composition": "multi-wavelength",
+          "composition_status": "author-inferred",
+          "wavelengths_nm": null,
+          "note": {
+            "zh": "鼠脑按数据作者的判断标注为多波长复合，具体波长组合及复合权重尚未核实。",
+            "en": "The brain is labeled as a multi-wavelength compound following the dataset author's interpretation; the wavelength combination and weights have not been verified."
+          },
+          "experiment_directory": "mousebrain_20230705/Baseline",
+          "dataset_rf_file": "Data_20230705_160311_PA.mat",
+          "dataset_relative_path": "WXH/Animal/20230705/20230705_160311/PA_Data/Data_20230705_160311_PA.mat",
+          "dataset_wavelength_nm": 800,
+          "displayed_result": "3D-PanoPACT mousebrain",
+          "relationship": "Associated specimen acquisition; the displayed multi-wavelength release has no verified unique RF input manifest."
+        }
+      }
+    },
+    "files": [],
+    "acquisition_name": "20230705_160311",
+    "acquisition_summary": {
+      "zh": "多波长复合",
+      "en": "Multi-wavelength compound"
+    },
+    "wavelength_description": {
+      "zh": "多波长复合",
+      "en": "Multi-wavelength compound"
+    }
+  },
+  {
+    "id": "mouse-body",
+    "title": {
+      "zh": "小鼠 · 背侧全躯干",
+      "en": "Mouse · dorsal whole trunk"
+    },
+    "is_demo": false,
+    "category": "animal",
+    "mode": "scan",
+    "split": "unspecified",
+    "tags": [
+      "animal",
+      "scan",
+      "3D",
+      "official release"
+    ],
+    "description": {
+      "zh": "当前展示结果对应 3D-PanoPACT 的背侧全躯干扫描结果。相关候选采集 ID 可定位到数据集中的实际 PA_Data 文件；官方体与具体采集及帧的对应关系尚待确认。",
+      "en": "The displayed volume corresponds to the 3D-PanoPACT dorsal whole-trunk scan. The candidate acquisition IDs identify actual PA_Data files in the dataset; the exact acquisition and frame mapping of the released volume remains unconfirmed."
+    },
+    "preview": "assets/images/showcase/mouse-body-depth.webp",
+    "views": {
+      "depth": "assets/images/showcase/mouse-body-depth.webp",
+      "gray": "assets/images/showcase/mouse-body-gray.webp",
+      "volume": "assets/images/showcase/mouse-body-volume.webp"
+    },
+    "dimensions": [
+      250,
+      875,
+      375
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.08332719117596238,
+      0.08332719117596238,
+      0.08332719117596238
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": "a.u.",
+    "data_version": "figshare-v3",
+    "acquisition_id": "3DPanoPACT-Fig5d",
+    "display": {
+      "palette": "3D-PanoPACT Trunk",
+      "depth_scale": "Relative position within the displayed Z slab, 0–1",
+      "z_extent_mm": [
+        0.0,
+        20.74847060281463
+      ],
+      "extent_xyz_mm": [
+        [
+          0.0,
+          31.16436949980993
+        ],
+        [
+          0.0,
+          72.82796508779111
+        ],
+        [
+          0.0,
+          20.74847060281463
+        ]
+      ],
+      "view_extent_xyz_mm": {
+        "depth": [
+          [
+            0.0,
+            31.16436949980993
+          ],
+          [
+            0.0,
+            72.82796508779111
+          ],
+          [
+            0.0,
+            20.74847060281463
+          ]
+        ],
+        "gray": [
+          [
+            0.0,
+            31.16436949980993
+          ],
+          [
+            0.0,
+            72.82796508779111
+          ],
+          [
+            0.0,
+            20.74847060281463
+          ]
+        ],
+        "volume": [
+          [
+            0.0,
+            31.16436949980993
+          ],
+          [
+            0.0,
+            72.82796508779111
+          ],
+          [
+            0.0,
+            20.74847060281463
+          ]
+        ]
+      },
+      "intensity_window": [
+        0.007402953691780567,
+        0.3553848575353629
+      ],
+      "gamma": 1,
+      "added_fluence_gain": false,
+      "xy_crop_pixels": [
+        0,
+        0,
+        375,
+        875
+      ],
+      "crop_frame": "Rotated physical display frame; common XYZ crop for depth, gray and volume",
+      "rotation_deg": 180,
+      "rotation_convention": "Positive is counterclockwise in the displayed XY image",
+      "compact_preview": true,
+      "asset_revision": "9c3b47152760",
+      "scale_bars": {
+        "depth": {
+          "length_mm": 5,
+          "length_pixels": 60.004422679284595,
+          "pixels_per_mm": 12.000884535856919,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "gray": {
+          "length_mm": 5,
+          "length_pixels": 60.004422679284595,
+          "pixels_per_mm": 12.000884535856919,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "volume": {
+          "length_mm": 5,
+          "length_pixels": 60.523427605444965,
+          "pixels_per_mm": 12.104685521088992,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        }
+      },
+      "view_notes": {
+        "zh": "三种视图使用同一旋转、同一 XYZ 物理范围和线性窗。",
+        "en": "All three views share one rotation, XYZ field and linear window."
+      },
+      "scale_calibration": {
+        "method": "Scale transferred from manuscript Fig.5d 5-mm bar",
+        "spacing_xyz_mm": [
+          0.08332719117596238,
+          0.08332719117596238,
+          0.08332719117596238
+        ],
+        "kind": "Display calibration; native MAT axis arrays absent",
+        "isotropic_grid_assumption": true,
+        "reference": "Figure 5.pptx / image3.png and 5 mm scale line",
+        "reference_image_size": [
+          1490,
+          3150
+        ],
+        "reference_crop_lr": [
+          0.06939,
+          0.05385
+        ],
+        "reference_width_emu": 1556589,
+        "scale_bar_emu": 252079,
+        "matched_image_pixels_per_volume_pixel": 3.5257088437562936,
+        "correspondence_inliers": 1514
+      },
+      "native_axis_coordinates_mm": null,
+      "spatial_crop_applied": false
+    },
+    "provenance": {
+      "source_id": "Whole-trunk_Dynamics_Reconstruction_Fig.5/backside_view_time_point.mat",
+      "acquisition": {
+        "zh": "候选数据集采集：20230908_163425 - 20230908_164045；8 组，4 个位置",
+        "en": "Candidate dataset acquisitions: 20230908_163425 - 20230908_164045; 8 acquisitions across 4 positions"
+      },
+      "reconstruction": {
+        "zh": "作者发布的 STINT 三维处理体",
+        "en": "Author-released STINT processed volume"
+      },
+      "standardization_reference": "docs/data-guide.html",
+      "official_release": {
+        "title": "3D-PanoPACT_Data_Code",
+        "authors": [
+          "Xuanhao Wang",
+          "Yuqian Meng",
+          "Xiali Gao"
+        ],
+        "doi": "10.6084/m9.figshare.28443374.v3",
+        "url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+        "version": 3,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "article_doi": "10.1038/s41467-025-65054-x",
+        "acquisition_timestamp": null,
+        "changes": "Axis reordering, 180-degree XY orientation, full released XYZ extent, fixed linear display window and re-rendering with the PACTHub depth palette and camera. No spatial volume crop.",
+        "acquisition_annotation": {
+          "dataset_name": "WholebodyProbeTracking/data_0908/MouseData/Back",
+          "source": "Author reconstruction code and local experiment directory",
+          "composition": "scan",
+          "exact_input_frame_mapping": null,
+          "dataset_acquisition_ids": [
+            "20230908_163425",
+            "20230908_163505",
+            "20230908_163556",
+            "20230908_163645",
+            "20230908_163737",
+            "20230908_163846",
+            "20230908_163945",
+            "20230908_164045"
+          ],
+          "dataset_acquisition_groups": [
+            {
+              "position": "p1",
+              "acquisitions": [
+                {
+                  "id": "20230908_163425",
+                  "file": "Data_20230908_163425_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230908/20230908_163425/PA_Data/Data_20230908_163425_PA.mat"
+                },
+                {
+                  "id": "20230908_163505",
+                  "file": "Data_20230908_163505_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230908/20230908_163505/PA_Data/Data_20230908_163505_PA.mat"
+                }
+              ]
+            },
+            {
+              "position": "p2",
+              "acquisitions": [
+                {
+                  "id": "20230908_163556",
+                  "file": "Data_20230908_163556_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230908/20230908_163556/PA_Data/Data_20230908_163556_PA.mat"
+                },
+                {
+                  "id": "20230908_163645",
+                  "file": "Data_20230908_163645_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230908/20230908_163645/PA_Data/Data_20230908_163645_PA.mat"
+                }
+              ]
+            },
+            {
+              "position": "p3",
+              "acquisitions": [
+                {
+                  "id": "20230908_163737",
+                  "file": "Data_20230908_163737_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230908/20230908_163737/PA_Data/Data_20230908_163737_PA.mat"
+                },
+                {
+                  "id": "20230908_163846",
+                  "file": "Data_20230908_163846_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230908/20230908_163846/PA_Data/Data_20230908_163846_PA.mat"
+                }
+              ]
+            },
+            {
+              "position": "p4",
+              "acquisitions": [
+                {
+                  "id": "20230908_163945",
+                  "file": "Data_20230908_163945_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230908/20230908_163945/PA_Data/Data_20230908_163945_PA.mat"
+                },
+                {
+                  "id": "20230908_164045",
+                  "file": "Data_20230908_164045_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230908/20230908_164045/PA_Data/Data_20230908_164045_PA.mat"
+                }
+              ]
+            }
+          ],
+          "dataset_id_source": "Standardized WXH dataset index and source-intake audit, 2026-10-26",
+          "matching_status": "candidate_acquisitions; exact released-volume input mapping unverified"
+        },
+        "source_data": {
+          "file": "Whole-trunk_Dynamics_Reconstruction_Fig.5/backside_view_time_point.mat",
+          "variable": "backside_view_img",
+          "shape_hdf5": [
+            250,
+            375,
+            875
+          ],
+          "sha256": "63402f8aa478b497957adba654b5a44891a6b3a3f398c7a1b836293b8dce96f2",
+          "size_bytes": 176270934,
+          "data_type": "Numeric three-dimensional reconstruction volume"
+        }
+      }
+    },
+    "files": [],
+    "acquisition_name": "20230908_163425 - 20230908_164045",
+    "acquisition_summary": {
+      "zh": "扫描复合",
+      "en": "Scan compound"
+    },
+    "acquisition_groups": [
+      {
+        "position": "p1",
+        "acquisitions": [
+          {
+            "id": "20230908_163425",
+            "file": "Data_20230908_163425_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230908/20230908_163425/PA_Data/Data_20230908_163425_PA.mat"
+          },
+          {
+            "id": "20230908_163505",
+            "file": "Data_20230908_163505_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230908/20230908_163505/PA_Data/Data_20230908_163505_PA.mat"
+          }
+        ]
+      },
+      {
+        "position": "p2",
+        "acquisitions": [
+          {
+            "id": "20230908_163556",
+            "file": "Data_20230908_163556_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230908/20230908_163556/PA_Data/Data_20230908_163556_PA.mat"
+          },
+          {
+            "id": "20230908_163645",
+            "file": "Data_20230908_163645_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230908/20230908_163645/PA_Data/Data_20230908_163645_PA.mat"
+          }
+        ]
+      },
+      {
+        "position": "p3",
+        "acquisitions": [
+          {
+            "id": "20230908_163737",
+            "file": "Data_20230908_163737_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230908/20230908_163737/PA_Data/Data_20230908_163737_PA.mat"
+          },
+          {
+            "id": "20230908_163846",
+            "file": "Data_20230908_163846_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230908/20230908_163846/PA_Data/Data_20230908_163846_PA.mat"
+          }
+        ]
+      },
+      {
+        "position": "p4",
+        "acquisitions": [
+          {
+            "id": "20230908_163945",
+            "file": "Data_20230908_163945_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230908/20230908_163945/PA_Data/Data_20230908_163945_PA.mat"
+          },
+          {
+            "id": "20230908_164045",
+            "file": "Data_20230908_164045_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230908/20230908_164045/PA_Data/Data_20230908_164045_PA.mat"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mouse-liver",
+    "title": {
+      "zh": "小鼠肝脏 · 单次曝光",
+      "en": "Mouse liver · single exposure"
+    },
+    "is_demo": false,
+    "category": "animal",
+    "mode": "single",
+    "split": "unspecified",
+    "tags": [
+      "animal",
+      "single",
+      "3D",
+      "official release"
+    ],
+    "description": {
+      "zh": "当前展示结果对应 3D-PanoPACT 的肝脏单次曝光结果。相关候选采集 ID 可定位到数据集中的实际 PA_Data 文件；官方体与具体采集及帧的对应关系尚待确认。",
+      "en": "The displayed volume corresponds to the 3D-PanoPACT single-exposure liver result. The candidate acquisition IDs identify actual PA_Data files in the dataset; the exact acquisition and frame mapping of the released volume remains unconfirmed."
+    },
+    "preview": "assets/images/showcase/mouse-liver-depth.webp",
+    "views": {
+      "depth": "assets/images/showcase/mouse-liver-depth.webp",
+      "gray": "assets/images/showcase/mouse-liver-gray.webp",
+      "volume": "assets/images/showcase/mouse-liver-volume.webp"
+    },
+    "dimensions": [
+      260,
+      378,
+      378
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.05636050537648447,
+      0.05636050537648447,
+      0.05636050537648447
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": "a.u.",
+    "data_version": "figshare-v3",
+    "acquisition_id": "3DPanoPACT-Fig2a",
+    "display": {
+      "palette": "3D-PanoPACT Trunk",
+      "depth_scale": "Relative position within the displayed Z slab, 0–1",
+      "z_extent_mm": [
+        0.0,
+        14.597370892509478
+      ],
+      "extent_xyz_mm": [
+        [
+          0.6763260645178136,
+          21.92423659145246
+        ],
+        [
+          0.6763260645178136,
+          21.92423659145246
+        ],
+        [
+          0.0,
+          14.597370892509478
+        ]
+      ],
+      "view_extent_xyz_mm": {
+        "depth": [
+          [
+            0.6763260645178136,
+            21.92423659145246
+          ],
+          [
+            0.6763260645178136,
+            21.92423659145246
+          ],
+          [
+            0.0,
+            14.597370892509478
+          ]
+        ],
+        "gray": [
+          [
+            0.6763260645178136,
+            21.92423659145246
+          ],
+          [
+            0.6763260645178136,
+            21.92423659145246
+          ],
+          [
+            0.0,
+            14.597370892509478
+          ]
+        ],
+        "volume": [
+          [
+            0.6763260645178136,
+            21.92423659145246
+          ],
+          [
+            0.6763260645178136,
+            21.92423659145246
+          ],
+          [
+            0.0,
+            14.597370892509478
+          ]
+        ]
+      },
+      "intensity_window": [
+        0.11267522349953651,
+        0.8187442017197607
+      ],
+      "gamma": 1,
+      "added_fluence_gain": false,
+      "xy_crop_pixels": [
+        12,
+        12,
+        390,
+        390
+      ],
+      "crop_frame": "Rotated physical display frame; common XYZ crop for depth, gray and volume",
+      "rotation_deg": 0,
+      "rotation_convention": "Positive is counterclockwise in the displayed XY image",
+      "compact_preview": true,
+      "asset_revision": "f9795262e8f2",
+      "scale_bars": {
+        "depth": {
+          "length_mm": 5,
+          "length_pixels": 88.7146054954676,
+          "pixels_per_mm": 17.742921099093518,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "gray": {
+          "length_mm": 5,
+          "length_pixels": 88.7146054954676,
+          "pixels_per_mm": 17.742921099093518,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "volume": {
+          "length_mm": 5,
+          "length_pixels": 176.64202941701228,
+          "pixels_per_mm": 35.32840588340245,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        }
+      },
+      "view_notes": {
+        "zh": "三种视图使用同一旋转、同一 XYZ 物理范围和线性窗。",
+        "en": "All three views share one rotation, XYZ field and linear window."
+      },
+      "scale_calibration": {
+        "method": "Transfer manuscript Fig.2a 5-mm bar through orthographic volume-box projection",
+        "spacing_xyz_mm": [
+          0.05636050537648447,
+          0.05636050537648447,
+          0.05636050537648447
+        ],
+        "kind": "Display calibration; native MAT axes absent",
+        "isotropic_grid_assumption": true,
+        "reference_image": "Figure 2.pptx / image1.png",
+        "reference_image_width_emu": 3366000,
+        "reference_bar_emu": 282208,
+        "reference_working_width_pixels": 1200,
+        "reference_corner_pixels": [
+          [
+            510.0,
+            64.0
+          ],
+          [
+            838.0,
+            184.0
+          ],
+          [
+            636.0,
+            266.0
+          ],
+          [
+            308.0,
+            146.0
+          ],
+          [
+            510.0,
+            482.0
+          ],
+          [
+            838.0,
+            602.0
+          ],
+          [
+            636.0,
+            684.0
+          ],
+          [
+            308.0,
+            564.0
+          ]
+        ],
+        "world_corner_voxels_xyz": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            399.0,
+            0.0,
+            0.0
+          ],
+          [
+            399.0,
+            0.0,
+            259.0
+          ],
+          [
+            0.0,
+            0.0,
+            259.0
+          ],
+          [
+            0.0,
+            399.0,
+            0.0
+          ],
+          [
+            399.0,
+            399.0,
+            0.0
+          ],
+          [
+            399.0,
+            399.0,
+            259.0
+          ],
+          [
+            0.0,
+            399.0,
+            259.0
+          ]
+        ],
+        "projection_pixels_per_voxel": [
+          1.133161150189692,
+          1.1349865148779625
+        ],
+        "projection_fit_rms_pixels": 1.3816916405723228e-12
+      },
+      "native_axis_coordinates_mm": null,
+      "post_crop_flip_axes_zyx": [
+        1
+      ]
+    },
+    "provenance": {
+      "source_id": "Real-time_liver_dynamics_Fig.2/liver_singleframe_processed.mat",
+      "acquisition": {
+        "zh": "候选数据集采集：20230112_153445 - 20230112_160337；15 组，5 个位置",
+        "en": "Candidate dataset acquisitions: 20230112_153445 - 20230112_160337; 15 acquisitions across 5 positions"
+      },
+      "reconstruction": {
+        "zh": "作者发布的单次曝光三维处理体",
+        "en": "Author-released single-exposure processed volume"
+      },
+      "standardization_reference": "docs/data-guide.html",
+      "official_release": {
+        "title": "3D-PanoPACT_Data_Code",
+        "authors": [
+          "Xuanhao Wang",
+          "Yuqian Meng",
+          "Xiali Gao"
+        ],
+        "doi": "10.6084/m9.figshare.28443374.v3",
+        "url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+        "version": 3,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "article_doi": "10.1038/s41467-025-65054-x",
+        "acquisition_timestamp": null,
+        "changes": "Axis reordering, a common XYZ crop, an up-down Y-axis flip of the selected numeric volume, linear display and three-view rendering from the released single-frame volume.",
+        "acquisition_annotation": {
+          "dataset_name": "liver/20230112",
+          "source": "Local liver experiment family",
+          "exact_input_frame_mapping": null,
+          "dataset_acquisition_ids": [
+            "20230112_153445",
+            "20230112_153542",
+            "20230112_153636",
+            "20230112_154020",
+            "20230112_154112",
+            "20230112_154204",
+            "20230112_154436",
+            "20230112_154525",
+            "20230112_154613",
+            "20230112_154814",
+            "20230112_155126",
+            "20230112_155311",
+            "20230112_160140",
+            "20230112_160237",
+            "20230112_160337"
+          ],
+          "dataset_acquisition_groups": [
+            {
+              "position": "pos1_LIVER",
+              "acquisitions": [
+                {
+                  "id": "20230112_153445",
+                  "file": "Data_20230112_153445_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_153445/PA_Data/Data_20230112_153445_PA.mat"
+                },
+                {
+                  "id": "20230112_153542",
+                  "file": "Data_20230112_153542_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_153542/PA_Data/Data_20230112_153542_PA.mat"
+                },
+                {
+                  "id": "20230112_153636",
+                  "file": "Data_20230112_153636_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_153636/PA_Data/Data_20230112_153636_PA.mat"
+                }
+              ]
+            },
+            {
+              "position": "pos2",
+              "acquisitions": [
+                {
+                  "id": "20230112_154020",
+                  "file": "Data_20230112_154020_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_154020/PA_Data/Data_20230112_154020_PA.mat"
+                },
+                {
+                  "id": "20230112_154112",
+                  "file": "Data_20230112_154112_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_154112/PA_Data/Data_20230112_154112_PA.mat"
+                },
+                {
+                  "id": "20230112_154204",
+                  "file": "Data_20230112_154204_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_154204/PA_Data/Data_20230112_154204_PA.mat"
+                }
+              ]
+            },
+            {
+              "position": "pos3",
+              "acquisitions": [
+                {
+                  "id": "20230112_154436",
+                  "file": "Data_20230112_154436_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_154436/PA_Data/Data_20230112_154436_PA.mat"
+                },
+                {
+                  "id": "20230112_154525",
+                  "file": "Data_20230112_154525_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_154525/PA_Data/Data_20230112_154525_PA.mat"
+                },
+                {
+                  "id": "20230112_154613",
+                  "file": "Data_20230112_154613_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_154613/PA_Data/Data_20230112_154613_PA.mat"
+                }
+              ]
+            },
+            {
+              "position": "pos4",
+              "acquisitions": [
+                {
+                  "id": "20230112_154814",
+                  "file": "Data_20230112_154814_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_154814/PA_Data/Data_20230112_154814_PA.mat"
+                },
+                {
+                  "id": "20230112_155126",
+                  "file": "Data_20230112_155126_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_155126/PA_Data/Data_20230112_155126_PA.mat"
+                },
+                {
+                  "id": "20230112_155311",
+                  "file": "Data_20230112_155311_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_155311/PA_Data/Data_20230112_155311_PA.mat"
+                }
+              ]
+            },
+            {
+              "position": "pos5",
+              "acquisitions": [
+                {
+                  "id": "20230112_160140",
+                  "file": "Data_20230112_160140_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_160140/PA_Data/Data_20230112_160140_PA.mat"
+                },
+                {
+                  "id": "20230112_160237",
+                  "file": "Data_20230112_160237_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_160237/PA_Data/Data_20230112_160237_PA.mat"
+                },
+                {
+                  "id": "20230112_160337",
+                  "file": "Data_20230112_160337_PA.mat",
+                  "dataset_relative_path": "WXH/Animal/20230112/20230112_160337/PA_Data/Data_20230112_160337_PA.mat"
+                }
+              ]
+            }
+          ],
+          "dataset_id_source": "Standardized WXH dataset index and source-intake audit, 2026-10-26",
+          "matching_status": "candidate_acquisitions; exact released-volume input mapping unverified"
+        },
+        "source_data": {
+          "file": "Real-time_liver_dynamics_Fig.2/liver_singleframe_processed.mat",
+          "variable": "pa_img_pro",
+          "shape_hdf5": [
+            260,
+            400,
+            400
+          ],
+          "sha256": "f863d2552b1a9c5166b6ae8a6827bcde304a8692b017ba7628f7cbdf392ea76f",
+          "size_bytes": 117851842,
+          "data_type": "Numeric three-dimensional reconstruction volume"
+        }
+      }
+    },
+    "files": [],
+    "acquisition_name": "20230112_153445 - 20230112_160337",
+    "acquisition_summary": {
+      "zh": "单次曝光",
+      "en": "Single exposure"
+    },
+    "acquisition_groups": [
+      {
+        "position": "pos1_LIVER",
+        "acquisitions": [
+          {
+            "id": "20230112_153445",
+            "file": "Data_20230112_153445_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_153445/PA_Data/Data_20230112_153445_PA.mat"
+          },
+          {
+            "id": "20230112_153542",
+            "file": "Data_20230112_153542_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_153542/PA_Data/Data_20230112_153542_PA.mat"
+          },
+          {
+            "id": "20230112_153636",
+            "file": "Data_20230112_153636_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_153636/PA_Data/Data_20230112_153636_PA.mat"
+          }
+        ]
+      },
+      {
+        "position": "pos2",
+        "acquisitions": [
+          {
+            "id": "20230112_154020",
+            "file": "Data_20230112_154020_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_154020/PA_Data/Data_20230112_154020_PA.mat"
+          },
+          {
+            "id": "20230112_154112",
+            "file": "Data_20230112_154112_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_154112/PA_Data/Data_20230112_154112_PA.mat"
+          },
+          {
+            "id": "20230112_154204",
+            "file": "Data_20230112_154204_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_154204/PA_Data/Data_20230112_154204_PA.mat"
+          }
+        ]
+      },
+      {
+        "position": "pos3",
+        "acquisitions": [
+          {
+            "id": "20230112_154436",
+            "file": "Data_20230112_154436_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_154436/PA_Data/Data_20230112_154436_PA.mat"
+          },
+          {
+            "id": "20230112_154525",
+            "file": "Data_20230112_154525_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_154525/PA_Data/Data_20230112_154525_PA.mat"
+          },
+          {
+            "id": "20230112_154613",
+            "file": "Data_20230112_154613_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_154613/PA_Data/Data_20230112_154613_PA.mat"
+          }
+        ]
+      },
+      {
+        "position": "pos4",
+        "acquisitions": [
+          {
+            "id": "20230112_154814",
+            "file": "Data_20230112_154814_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_154814/PA_Data/Data_20230112_154814_PA.mat"
+          },
+          {
+            "id": "20230112_155126",
+            "file": "Data_20230112_155126_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_155126/PA_Data/Data_20230112_155126_PA.mat"
+          },
+          {
+            "id": "20230112_155311",
+            "file": "Data_20230112_155311_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_155311/PA_Data/Data_20230112_155311_PA.mat"
+          }
+        ]
+      },
+      {
+        "position": "pos5",
+        "acquisitions": [
+          {
+            "id": "20230112_160140",
+            "file": "Data_20230112_160140_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_160140/PA_Data/Data_20230112_160140_PA.mat"
+          },
+          {
+            "id": "20230112_160237",
+            "file": "Data_20230112_160237_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_160237/PA_Data/Data_20230112_160237_PA.mat"
+          },
+          {
+            "id": "20230112_160337",
+            "file": "Data_20230112_160337_PA.mat",
+            "dataset_relative_path": "WXH/Animal/20230112/20230112_160337/PA_Data/Data_20230112_160337_PA.mat"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "square-phantom",
+    "title": {
+      "zh": "方形靶仿体 · 多尺度结构",
+      "en": "Square-target phantom · multiple scales"
+    },
+    "is_demo": false,
+    "category": "phantom",
+    "mode": "rotation",
+    "split": "unspecified",
+    "tags": [
+      "phantom",
+      "rotation",
+      "3D",
+      "BP"
+    ],
+    "description": {
+      "zh": "三个不同大小的方形靶展示实体内部与边缘的光声响应。三种视图来自同一组 20 次曝光 BP 重建。",
+      "en": "Three square targets of different sizes show photoacoustic responses within and along the edges of solid objects. All views use the same 20-exposure BP volume."
+    },
+    "preview": "assets/images/showcase/square-phantom-depth.webp",
+    "views": {
+      "depth": "assets/images/showcase/square-phantom-depth.webp",
+      "gray": "assets/images/showcase/square-phantom-gray.webp",
+      "volume": "assets/images/showcase/square-phantom-volume.webp"
+    },
+    "dimensions": [
+      38,
+      130,
+      140
+    ],
+    "axis_order": [
+      "z",
+      "y",
+      "x"
+    ],
+    "spacing_mm": [
+      0.10050251334905624,
+      0.10012515634298325,
+      0.10025062412023544
+    ],
+    "wavelength_nm": null,
+    "intensity_unit": "a.u.",
+    "data_version": "showcase-2026-10-25",
+    "acquisition_id": "20230920_150300",
+    "display": {
+      "palette": "3D-PanoPACT Trunk",
+      "depth_scale": "Relative position within the displayed Z slab, 0–1",
+      "z_extent_mm": [
+        -0.9447231292724609,
+        2.773869514465332
+      ],
+      "extent_xyz_mm": [
+        [
+          -6.947536617517471,
+          6.987300135195255
+        ],
+        [
+          -6.888482131063938,
+          6.027663037180901
+        ],
+        [
+          -0.9447231292724609,
+          2.773869514465332
+        ]
+      ],
+      "view_extent_xyz_mm": {
+        "depth": [
+          [
+            -6.947536617517471,
+            6.987300135195255
+          ],
+          [
+            -6.888482131063938,
+            6.027663037180901
+          ],
+          [
+            -0.9447231292724609,
+            2.773869514465332
+          ]
+        ],
+        "gray": [
+          [
+            -6.947536617517471,
+            6.987300135195255
+          ],
+          [
+            -6.888482131063938,
+            6.027663037180901
+          ],
+          [
+            -0.9447231292724609,
+            2.773869514465332
+          ]
+        ],
+        "volume": [
+          [
+            -6.947536617517471,
+            6.987300135195255
+          ],
+          [
+            -6.888482131063938,
+            6.027663037180901
+          ],
+          [
+            -0.9447231292724609,
+            2.773869514465332
+          ]
+        ]
+      },
+      "intensity_window": [
+        0.007446743082255125,
+        0.04929733648896217
+      ],
+      "gamma": 1,
+      "added_fluence_gain": false,
+      "xy_crop_pixels": [
+        100,
+        305,
+        240,
+        435
+      ],
+      "crop_frame": "Rotated physical display frame; common XYZ crop for depth, gray and volume",
+      "rotation_deg": 0,
+      "rotation_convention": "Positive is counterclockwise in the displayed XY image",
+      "compact_preview": true,
+      "asset_revision": "f5fbd3f4351a",
+      "scale_bars": {
+        "depth": {
+          "length_mm": 2,
+          "length_pixels": 19.95000048679301,
+          "pixels_per_mm": 9.975000243396504,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "gray": {
+          "length_mm": 2,
+          "length_pixels": 19.95000048679301,
+          "pixels_per_mm": 9.975000243396504,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        },
+        "volume": {
+          "length_mm": 2,
+          "length_pixels": 125.57759687163237,
+          "pixels_per_mm": 62.78879843581618,
+          "position": "lower right of preview frame; calibrated HTML overlay"
+        }
+      },
+      "view_notes": {
+        "zh": "三种视图使用同一旋转、同一 XYZ 物理范围和线性窗。",
+        "en": "All three views share one rotation, XYZ field and linear window."
+      }
+    },
+    "provenance": {
+      "source_id": "3D-PACT-DATA/FollowingExperiments/LowFrequencyTarget/WithRotation",
+      "acquisition": {
+        "zh": "20 次曝光；采集编号 20230920_150300",
+        "en": "20 exposures; acquisition 20230920_150300"
+      },
+      "reconstruction": {
+        "zh": "BP；声速 1494.5 m/s；0.5–6 MHz 带通",
+        "en": "BP; 1494.5 m/s; 0.5–6 MHz bandpass"
+      },
+      "standardization_reference": "docs/data-guide.html"
+    },
+    "files": []
+  }
+]

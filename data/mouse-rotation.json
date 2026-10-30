@@ -1,0 +1,103 @@
+{
+  "id": "mouse-rotation",
+  "title": {
+    "zh": "小鼠 · 旋转成像",
+    "en": "Mouse · rotation"
+  },
+  "is_demo": false,
+  "category": "animal",
+  "mode": "rotation",
+  "split": "unspecified",
+  "tags": [
+    "animal",
+    "rotation",
+    "3D",
+    "BP"
+  ],
+  "description": {
+    "zh": "作者提供的三维小鼠处理体，以轴向深度投影与斜向三维视图呈现血管空间分布。",
+    "en": "Author-supplied processed mouse volume, shown as axial depth projections and an oblique 3D view."
+  },
+  "preview": "assets/images/showcase/mouse-rotation-depth.webp",
+  "views": {
+    "depth": "assets/images/showcase/mouse-rotation-depth.webp",
+    "gray": "assets/images/showcase/mouse-rotation-gray.webp",
+    "volume": "assets/images/showcase/mouse-rotation-volume.webp"
+  },
+  "dimensions": [
+    200,
+    720,
+    510
+  ],
+  "axis_order": [
+    "z",
+    "y",
+    "x"
+  ],
+  "spacing_mm": null,
+  "wavelength_nm": null,
+  "intensity_unit": "a.u.",
+  "data_version": "showcase-2026-10-25",
+  "display": {
+    "palette": "3D-PanoPACT Trunk",
+    "depth_scale": "Relative position within the displayed Z slab, 0–1",
+    "z_extent_mm": null,
+    "intensity_window": [
+      0,
+      0.3530499339103699
+    ],
+    "gamma": 1,
+    "added_fluence_gain": false,
+    "xy_crop_pixels": null,
+    "rotation_deg": 0,
+    "view_notes": {
+      "zh": "灰度为强度；颜色为相对深度。各样本独立线性窗。",
+      "en": "Grayscale encodes intensity; colour encodes relative depth. Each specimen has an independent linear window."
+    },
+    "scale_bars": {
+      "depth": {
+        "length_mm": 5,
+        "length_pixels": 80.65472078169799,
+        "pixels_per_mm": 16.1309441563396,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "gray": {
+        "length_mm": 5,
+        "length_pixels": 80.65472078169799,
+        "pixels_per_mm": 16.1309441563396,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "volume": {
+        "length_mm": 5,
+        "length_pixels": 137.47963769607614,
+        "pixels_per_mm": 27.495927539215227,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    "scale_calibration": {
+      "method": "Transfer original Figure 6b 5-mm scale bar through matched volume-box projection",
+      "original_bar_emu": 228790,
+      "original_image_width_emu": 1971164,
+      "original_image_width_pixels": 1471,
+      "original_bar_pixels": 170.7367271317861,
+      "matched_camera_scale": 0.8052142032098348,
+      "current_render_pixels_per_mm": 27.495927539215227,
+      "display_mm_per_voxel_inferred": 0.06199265153410077,
+      "native_coordinate_axes_available": false
+    }
+  },
+  "provenance": {
+    "source_id": "3D-PanoPACT / wholebody_pa_img_processed.mat",
+    "acquisition": {
+      "zh": "旋转采集；作者保存的处理后三维体",
+      "en": "Rotation acquisition; author-saved processed volume"
+    },
+    "reconstruction": {
+      "zh": "沿用作者处理体；轴向 MIP 与斜向最大强度体绘制",
+      "en": "Author processing retained; axial MIP and oblique maximum-intensity ray casting"
+    },
+    "standardization_reference": "docs/data-guide.html"
+  },
+  "files": [],
+  "acquisition_id": "20241213_150841"
+}

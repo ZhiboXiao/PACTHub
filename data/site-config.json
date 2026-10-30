@@ -1,0 +1,109 @@
+{
+  "site_title": "PACTHub",
+  "demo_mode": false,
+  "release_version": null,
+  "license": null,
+  "citation": null,
+  "doi": null,
+  "downloads": [
+    {
+      "id": "zenodo",
+      "title": {
+        "zh": "代表性样本集 · Zenodo",
+        "en": "Representative samples · Zenodo"
+      },
+      "description": {
+        "zh": "数据集的部分样本，提供固定 DOI 与可引用的数据记录。",
+        "en": "A subset of the dataset, archived with a persistent DOI and a citable data record."
+      },
+      "url": "https://doi.org/10.5281/zenodo.23496053",
+      "version": null,
+      "size_label": "45.28 GB · CC BY 4.0",
+      "sha256": null,
+      "action_label": {
+        "zh": "打开 Zenodo",
+        "en": "Open Zenodo"
+      },
+      "open_in_new_tab": true
+    },
+    {
+      "id": "full",
+      "title": {
+        "zh": "数据集 · Google Drive",
+        "en": "Dataset · Google Drive"
+      },
+      "description": {
+        "zh": "标准化的三维光声成像数据、样本索引与发布说明。",
+        "en": "Standardized 3D photoacoustic imaging data, sample index and release notes."
+      },
+      "url": "https://drive.google.com/drive/folders/1zBrduTKe5gnsNmlOfsDCgB9y5JTp5x3b",
+      "version": null,
+      "size_label": null,
+      "sha256": null,
+      "action_label": {
+        "zh": "打开 Google Drive",
+        "en": "Open Google Drive"
+      },
+      "open_in_new_tab": true
+    }
+  ],
+  "overview_summary": null,
+  "paper": {
+    "title": null,
+    "summary": null,
+    "url": null
+  },
+  "team": {
+    "members": [],
+    "contribution": {
+      "zh": "通过 GitHub Issues 反馈数据和使用问题。",
+      "en": "Share data and usage feedback through GitHub Issues."
+    },
+    "contribution_url": "https://github.com/ZhiboXiao/PACTHub/issues"
+  },
+  "hero": {
+    "mp4_url": "assets/media/hero-orbit-desktop.mp4?v=20261027-immersive",
+    "mobile_mp4_url": "assets/media/hero-orbit-mobile.mp4?v=20261027-immersive",
+    "webm_url": null,
+    "poster_url": "assets/images/hero-orbit-desktop.webp?v=20261027-immersive",
+    "mobile_poster_url": "assets/images/hero-orbit-mobile.webp?v=20261027-immersive",
+    "object_position": "50% 50%",
+    "loop_start_seconds": 0,
+    "default_variant": "compact"
+  },
+  "dataset_citations": {
+    "dataset": {
+      "title": "PACTHub",
+      "creators": [
+        {
+          "name": "Xiao, Zhibo",
+          "orcid": "0009-0008-9991-8925"
+        }
+      ],
+      "publisher": "Zenodo",
+      "publication_date": "2026-10-20",
+      "doi": "10.5281/zenodo.23496053",
+      "url": "https://doi.org/10.5281/zenodo.23496053",
+      "scope": "representative sample subset",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "citation": "Xiao, Z. (2026). PACTHub [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23496053",
+      "bibtex_file": "assets/citations/pacthub-dataset.bib",
+      "metadata_source": "https://zenodo.org/api/records/23496053"
+    },
+    "paper": {
+      "status": "forthcoming",
+      "title": null,
+      "url": null,
+      "citation": null,
+      "bibtex_file": null
+    }
+  },
+  "dataset_scale": {
+    "samples": 1464,
+    "exposures": 99810,
+    "as_of": "2026-10-27",
+    "counting_unit": "Acquisition groups before scan stitching; exposures are PA frames.",
+    "confirmed_duplicate_copies_excluded": 5
+  }
+}

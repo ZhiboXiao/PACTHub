@@ -1,0 +1,115 @@
+{
+  "sample_id": "20260114_192341_Scan1",
+  "source_name": "scan_sum.h5",
+  "source_sha256": "4dc2cb0a9123b09350b512d5f2c4e959771e7767516f00e97ac4c94da6d90c5e",
+  "source": "Equal-weight voxelwise BP sum: 1.44–5.76 MHz + 0.5–8 MHz",
+  "display_shape_zyx": [
+    201,
+    965,
+    520
+  ],
+  "voxel_spacing_mm": [
+    0.1,
+    0.1,
+    0.1
+  ],
+  "xy_rotation_deg": 2,
+  "rotation_centre_xy_mm": [
+    18,
+    -32
+  ],
+  "xy_crop_screen_pixels": [
+    70,
+    45,
+    590,
+    1010
+  ],
+  "z_slab_mm": [
+    1.9,
+    21.9
+  ],
+  "display_window": [
+    0,
+    6.43388557434082
+  ],
+  "gamma": 1,
+  "frangi_weight": 0,
+  "fluence_gain": false,
+  "display_mask": {
+    "method": "Intersection of orthogonal foreground envelopes; presentation only",
+    "projection_gaussian_sigma_voxels": 2,
+    "seed_threshold": 0.8,
+    "closing_ellipse_voxels": 51,
+    "minimum_satellite_area_pixels": 30,
+    "satellite_max_distance_mm": 5,
+    "xy_satellite_centre_fraction": [
+      0.2,
+      0.8
+    ],
+    "dilation_ellipse_voxels": 31,
+    "inward_feather_mm": 0.8,
+    "outside_value": 0,
+    "original_source_modified": false,
+    "target_roi_audit": {
+      "target_mip_max_abs_change": 0.0,
+      "target_mip_changed_pixels": 0
+    }
+  },
+  "render": "3D maximum-intensity ray casting, linear interpolation, fixed display window",
+  "ray_step_mm": 0.065,
+  "frame_size": [
+    1080,
+    1080
+  ],
+  "fps": 24,
+  "duration_seconds": 24,
+  "bounding_box": false,
+  "camera_projection": "parallel",
+  "camera_full_parallel_scale_mm": 56,
+  "camera_initial_yaw_tilt_deg": [
+    28.4,
+    -17.7
+  ],
+  "orbit_degrees": 360,
+  "focus_reference_roi_xywh_pixels": [
+    233,
+    392,
+    89,
+    89
+  ],
+  "closest_field_mm": 27.96115202883839,
+  "closest_view_from_previous_film_seconds": 16,
+  "playback_end": "Seamless return to opening camera",
+  "reference_template_match_correlation": 0.9929325580596924,
+  "sections": [
+    {
+      "start": 0,
+      "end": 10.5,
+      "action": "3D orbit and frontal alignment"
+    },
+    {
+      "start": 10.5,
+      "end": 15.2,
+      "action": "Whole specimen to central vascular field"
+    },
+    {
+      "start": 15.2,
+      "end": 18,
+      "action": "Settle at the previous 16-second vascular field and hold"
+    },
+    {
+      "start": 18,
+      "end": 22,
+      "action": "Smooth zoom out to the whole-body field"
+    },
+    {
+      "start": 22,
+      "end": 24,
+      "action": "Return to the opening 3D pose"
+    }
+  ],
+  "movie": "assets/media/overview-scan-detail.mp4",
+  "poster": "assets/images/showcase/overview-film-poster.webp",
+  "movie_sha256": "b11cf77295807be76ba0aab9f0c21472cbd9190e94822f62fc34d76359a46f3b",
+  "poster_sha256": "7837b9d3ac94c119fc164ea9c1cb7f1e8926998c0fcbd2abad3890d860c9077a"
+}

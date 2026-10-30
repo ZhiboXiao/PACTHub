@@ -1,0 +1,111 @@
+{
+  "id": "mouse-scan",
+  "title": {
+    "zh": "小鼠 · 扫描与旋转",
+    "en": "Mouse · scan + rotation"
+  },
+  "is_demo": false,
+  "category": "animal",
+  "mode": "scan",
+  "split": "unspecified",
+  "tags": [
+    "animal",
+    "scan",
+    "3D",
+    "BP"
+  ],
+  "description": {
+    "zh": "70 个位置扩展全身覆盖。两种带通 BP 三维体等权相加，深度显示保留 0.3 Frangi。",
+    "en": "Seventy positions extend whole-body coverage. Two bandpass BP volumes are added with equal weights; depth display retains a 0.3 Frangi contribution."
+  },
+  "preview": "assets/images/showcase/mouse-scan-depth.webp",
+  "views": {
+    "depth": "assets/images/showcase/mouse-scan-depth.webp",
+    "gray": "assets/images/showcase/mouse-scan-gray.webp",
+    "volume": "assets/images/showcase/mouse-scan-volume.webp"
+  },
+  "dimensions": [
+    265,
+    1051,
+    641
+  ],
+  "axis_order": [
+    "z",
+    "y",
+    "x"
+  ],
+  "spacing_mm": [
+    0.1,
+    0.1,
+    0.1
+  ],
+  "wavelength_nm": null,
+  "intensity_unit": "a.u.",
+  "data_version": "showcase-2026-10-25",
+  "display": {
+    "palette": "3D-PanoPACT Trunk",
+    "depth_scale": "Relative position within the displayed Z slab, 0–1",
+    "z_extent_mm": [
+      1.9,
+      21.9
+    ],
+    "intensity_window": [
+      0,
+      0.35828831791877747
+    ],
+    "gamma": 1,
+    "added_fluence_gain": false,
+    "xy_crop_pixels": [
+      70,
+      45,
+      590,
+      1010
+    ],
+    "rotation_deg": 2,
+    "view_notes": {
+      "zh": "灰度为强度；颜色为相对深度。各样本独立线性窗。",
+      "en": "Grayscale encodes intensity; colour encodes relative depth. Each specimen has an independent linear window."
+    },
+    "scale_bars": {
+      "depth": {
+        "length_mm": 10,
+        "length_pixels": 100,
+        "pixels_per_mm": 10,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "gray": {
+        "length_mm": 10,
+        "length_pixels": 100,
+        "pixels_per_mm": 10,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      },
+      "volume": {
+        "length_mm": 10,
+        "length_pixels": 119.40034993341156,
+        "pixels_per_mm": 11.940034993341156,
+        "position": "lower right of preview frame; calibrated HTML overlay"
+      }
+    },
+    "crop_frame": "Screen XY after 2-degree physical CCW rotation",
+    "cropped_extent_xy_mm": [
+      -7.0,
+      44.900000000000006,
+      -79.9,
+      16.5
+    ]
+  },
+  "provenance": {
+    "source_id": "20260114_192341_Scan1",
+    "acquisition": {
+      "zh": "7×10 位置；6×8 mm 步距；每位置 20 次曝光",
+      "en": "7×10 positions; 6×8 mm steps; 20 exposures per position"
+    },
+    "reconstruction": {
+      "zh": "1508.5 m/s BP；1.44–5.76 + 0.5–8 MHz；等权逐体素相加",
+      "en": "1508.5 m/s BP; 1.44–5.76 + 0.5–8 MHz; unit-weight voxelwise sum"
+    },
+    "standardization_reference": "docs/data-guide.html"
+  },
+  "files": [],
+  "acquisition_id": "20260114_192341_Scan1"
+}

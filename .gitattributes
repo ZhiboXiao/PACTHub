@@ -1,0 +1,4 @@
+reconstruction/** text eol=lf
+scripts/package_reconstruction.py text eol=lf
+.github/workflows/reconstruction.yml text eol=lf
+assets/downloads/*.zip binary

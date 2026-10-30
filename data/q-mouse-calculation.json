@@ -1,0 +1,72 @@
+{
+  "reference": "D09 measured mouse; 50-exposure BP",
+  "reference_display_label": "GT",
+  "candidate": "Same acquisition; 5-exposure BP",
+  "candidate_display_label": "Test image",
+  "shape_zyx": [
+    101,
+    401,
+    201
+  ],
+  "spacing_zyx_mm": [
+    0.2,
+    0.2,
+    0.2
+  ],
+  "source_sha256": {
+    "BP_50": "9f7a0d826a1df9f1d003bf4ae0b071a205fd69eb056637ad795ac34d74585540",
+    "BP_5": "f313d3c80ce33ed7f8d0a37cf8e782cd745e9bec507a15ee35ac61bcb6b66fa6"
+  },
+  "local_contrast_sigma_mm": 0.4,
+  "global_gain": 8.845761997095943,
+  "gain_method": "One nonnegative least-squares amplitude factor over the complete paired volumes",
+  "support": {
+    "reference_only": true,
+    "voxels": 52153,
+    "weak": 26077,
+    "strong": 26076,
+    "split": 221.24740600585938,
+    "hessian_scales_mm": [
+      0.2,
+      0.35,
+      0.5
+    ],
+    "thresholds": [
+      0.1,
+      0.3
+    ],
+    "noise_multipliers": [
+      3,
+      6
+    ],
+    "boundary_margin_mm": 1,
+    "component_min_volume_mm3": 0.064,
+    "component_min_extent_mm": 1
+  },
+  "score": {
+    "Q": 82.53475740607392,
+    "D_weak": 0.7871648138265196,
+    "D_strong": 0.8653824536395935,
+    "SSIM": 0.7876312726135245,
+    "PSNR": 33.482798284617694,
+    "MSE": 4418.268804911527,
+    "L1": 50.29692254687487,
+    "raw_L1": 136.2802346751831,
+    "data_range": 3138.81689453125,
+    "nL1": 0.0628940561170841,
+    "gain": 8.845761997095943
+  },
+  "agreement_with_manuscript": true,
+  "masks_equal_manuscript": true,
+  "display": {
+    "vertical_flip_relative_to_previous": true,
+    "projection_row_order": "Native Y order; accumulation proceeds from first to last Y row",
+    "reconstruction_window": "Unchanged: zero to BP50 MIP p99.5"
+  },
+  "calculation_domain": "3D; projections are illustrations. Animation progressively accumulates actual 3D voxel contributions along Y; playback does not represent computation speed.",
+  "formula": "h(I)=max(I-G_0.4mm*I,0); D_s=2 sum_Ms min(g hX,hR)/sum_Ms(g hX+hR); Q=100 sqrt(D_weak D_strong)",
+  "code_sha256": {
+    "unified_metrics.py": "51b40da3691f6db202b40219a16765512d297ad7e46cf4516a0cdb534b92e8b4",
+    "reference_foreground.py": "5dca7f9916863b9b8e8bdad9ca0932944f1f1cc6284437b83d9bd8318a794337"
+  }
+}

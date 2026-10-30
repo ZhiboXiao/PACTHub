@@ -1,0 +1,109 @@
+{
+  "source": {
+    "file": "../figshareData/Whole-trunk_Dynamics_Reconstruction_Fig.5/frontal_view_time_point.mat",
+    "variable": "frontal_view_img",
+    "native_hdf5_shape": [
+      250,
+      375,
+      875
+    ],
+    "sha256": "1da1461cfc6744af01cb0dfd735af6e1dff428652f30f6c4a4a070d70004eb66",
+    "release_doi": "10.6084/m9.figshare.28443374.v3",
+    "release_url": "https://figshare.com/articles/dataset/3D-PanoPACT_Data_Code/28443374/3",
+    "license": "CC BY 4.0",
+    "figure": "Figure 5b",
+    "article_doi": "10.1038/s41467-025-65054-x"
+  },
+  "presentation": {
+    "orientation": "Native [Z,X,Y] -> [Z,Y,X], display X reversed to match Figure 5b; PE/TE screen-left, LL/RL screen-right during horizontal pose.",
+    "gray_window": [
+      0.02,
+      0.4
+    ],
+    "extra_frangi": false,
+    "extra_fluence_gain": false,
+    "depth_palette": "Author colorMIP trunk LUT",
+    "orbit": {
+      "axis": "Specimen Y (long axis)",
+      "y_swing_deg": 12,
+      "cycles": 2,
+      "cycle_seconds": 6,
+      "camera_tilt_deg": 0,
+      "fixed_screen_angle_deg": 0
+    },
+    "background": "Fixed temporal-union display envelopes; depth-movie pedestal RGB [12,10,0] subtracted; no alteration of source MAT or original movie.",
+    "depth_transition": "A duplicate slides from the gray position to the right and becomes the existing depth image. No particles.",
+    "timeline_seconds": {
+      "orbit": [
+        0,
+        13
+      ],
+      "stand_and_move": [
+        13,
+        18
+      ],
+      "front_hold": [
+        18,
+        19
+      ],
+      "duplicate_and_move": [
+        19,
+        21
+      ],
+      "crossfade": [
+        21,
+        23.0
+      ],
+      "original_dynamic_movie": [
+        23.0,
+        38.8
+      ]
+    },
+    "loop_start_seconds": 23.8,
+    "original_dynamic_movie": "assets/media/hero-pact.mp4",
+    "layouts": {
+      "desktop": {
+        "size": [
+          1920,
+          1080
+        ],
+        "pair": [
+          975,
+          140,
+          0.96
+        ],
+        "start": [
+          960,
+          540
+        ],
+        "zoom": 2.34
+      },
+      "mobile": {
+        "size": [
+          1080,
+          1080
+        ],
+        "pair": [
+          12,
+          3,
+          1.23
+        ],
+        "start": [
+          540,
+          540
+        ],
+        "zoom": 1.25
+      }
+    }
+  },
+  "outputs": {
+    "desktop": {
+      "file": "assets/media/hero-fig5b-horizontal-desktop.mp4",
+      "size_bytes": 10978800
+    },
+    "mobile": {
+      "file": "assets/media/hero-fig5b-horizontal-mobile.mp4",
+      "size_bytes": 9654545
+    }
+  }
+}

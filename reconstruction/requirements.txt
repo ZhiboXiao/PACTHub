@@ -1,0 +1,8 @@
+numpy>=1.24
+scipy>=1.10
+h5py>=3.8
+Pillow>=9
+opencv-python-headless>=4.8
+scikit-image>=0.21
+# CUDA BP: install cupy-cuda12x for the installed CUDA runtime.
+# MB: install a compatible CUDA PyTorch build and ninja; nvcc is required.
